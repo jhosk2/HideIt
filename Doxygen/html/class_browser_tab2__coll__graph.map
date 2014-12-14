@@ -1,8 +1,0 @@
-<map id="BrowserTab2" name="BrowserTab2">
-<area shape="rect" id="node6" href="$class_show_terminate_popup.html" title="{ShowTerminatePopup\n|&#45; __pPopup_Terminate\l&#45; ID_BUTTON_TERMINATE\l&#45; ID_BUTTON_CANCEL\l|+ ShowTerminatePopup()\l+ ~ShowTerminatePopup()\l+ ShowPopup()\l+ HidePopup()\l+ OnActionPerformed()\l}" alt="" coords="871,830,1051,995"/>
-<area shape="rect" id="node15" href="$class_list_view_item_popup.html" title="{ListViewItemPopup\n|&#45; __pPopup\l&#45; currentFilePath\l&#45; ID_BUTTON_OPEN_POPUP\l&#45; ID_BUTTON_CLOSE_POPUP\l&#45; ID_BUTTON_ENCRYPTION_FILE\l&#45; ID_BUTTON_OPEN_FILE\l&#45; FILESTATE_ENCRYPTION\l&#45; FILESTATE_DECRYPTION\l|+ ListViewItemPopup()\l+ ~ListViewItemPopup()\l+ ShowPopup()\l+ HidePopup()\l+ OnActionPerformed()\l&#45; ExecuteTextFile()\l}" alt="" coords="699,345,923,599"/>
-<area shape="rect" id="node8" href="$class_popup_event_listener_terminate.html" title="File Browser에서 Back Button을 누르면 호출 되는 Class. " alt="" coords="998,404,1193,540"/>
-<area shape="rect" id="node10" href="$class_proxy_sensor.html" title="File Browser에서 근접 센서를 위한 Class. " alt="" coords="1147,845,1286,981"/>
-<area shape="rect" id="node12" href="$class_folder_browser.html" title="File Browsing을 해주는 Class. " alt="" coords="599,661,834,1164"/>
-<area shape="rect" id="node16" href="$class_popup_event_listener.html" title="File Browser에서 파일 선택시 Popup창을 구성해주는 Class. " alt="" coords="670,147,846,283"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Kernel" name="Kernel">
-<area shape="rect" id="node3" href="$class_o_n_e___c_l_a_s_s___q.html" title="{ONE_CLASS_Q\n|&#45; cache\l&#45; QD\l|+ ONE_CLASS_Q()\l+ get_Q()\l+ get_QD()\l+ swap_index()\l+ ~ONE_CLASS_Q()\l}" alt="" coords="5,586,151,737"/>
-<area shape="rect" id="node4" href="$class_s_v_c___q.html" title="{SVC_Q\n|&#45; y\l&#45; cache\l&#45; QD\l|+ SVC_Q()\l+ get_Q()\l+ get_QD()\l+ swap_index()\l+ ~SVC_Q()\l}" alt="" coords="175,579,285,744"/>
-<area shape="rect" id="node5" href="$class_s_v_r___q.html" title="{SVR_Q\n|&#45; l\l&#45; cache\l&#45; sign\l&#45; index\l&#45; next_buffer\l&#45; buffer\l&#45; QD\l|+ SVR_Q()\l+ swap_index()\l+ get_Q()\l+ get_QD()\l+ ~SVR_Q()\l}" alt="" coords="309,549,420,773"/>
-<area shape="rect" id="node2" href="$class_q_matrix.html" title="{QMatrix\n||+ get_Q()\l+ get_QD()\l+ swap_index()\l+ ~QMatrix()\l}" alt="" coords="175,5,285,127"/>
-</map>

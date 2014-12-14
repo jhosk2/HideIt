@@ -1,8 +1,0 @@
-<map id="CalculatorForm::SetLabelTextSize" name="CalculatorForm::SetLabelTextSize">
-<area shape="rect" id="node2" href="$class_calculator_form.html#ad23e66a668778e9354b831dbac18a689" title="CalculatorForm::AddOperand" alt="" coords="241,5,431,32"/>
-<area shape="rect" id="node4" href="$class_calculator_form.html#a5c68963771fb4527131e84d4963d7c14" title="CalculatorForm::AddOperator" alt="" coords="241,56,431,83"/>
-<area shape="rect" id="node5" href="$class_calculator_form.html#af7bffc0f7f761c4b89fb12a8020c161e" title="CalculatorForm::AddEngineer" alt="" coords="240,107,432,133"/>
-<area shape="rect" id="node6" href="$class_calculator_form.html#a1f4a4d59cba6dad371b5519fb254e6f2" title="CalculatorForm::SpecialExpression" alt="" coords="223,157,449,184"/>
-<area shape="rect" id="node7" href="$class_calculator_form.html#ac298449ce5bedae6a69ccd2f13594ce2" title="CalculatorForm::OnOrientation\lChanged" alt="" coords="237,209,435,250"/>
-<area shape="rect" id="node3" href="$class_calculator_form.html#af30252093893f4cb4d5578e919d3381f" title="CalculatorForm::OnAction\lPerformed" alt="" coords="497,74,669,115"/>
-</map>

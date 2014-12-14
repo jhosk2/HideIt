@@ -1,9 +1,0 @@
-<map id="inc/AppResourceId.h" name="inc/AppResourceId.h">
-<area shape="rect" id="node2" href="$_app_resource_id_8cpp.html" title="src/AppResourceId.cpp" alt="" coords="5,87,163,114"/>
-<area shape="rect" id="node3" href="$_calculator_form_8cpp.html" title="src/Calculator/Calculator\lForm.cpp" alt="" coords="187,80,351,121"/>
-<area shape="rect" id="node4" href="$_browser_main_form_8cpp.html" title="src/FileBrowser/BrowserMain\lForm.cpp" alt="" coords="375,80,566,121"/>
-<area shape="rect" id="node5" href="$_browser_tab1_8cpp.html" title="src/FileBrowser/BrowserTab1.cpp" alt="" coords="591,87,807,114"/>
-<area shape="rect" id="node6" href="$_browser_tab2_8cpp.html" title="src/FileBrowser/BrowserTab2.cpp" alt="" coords="831,87,1047,114"/>
-<area shape="rect" id="node7" href="$_setting_password_form_8cpp.html" title="src/Setting/SettingPassword\lForm.cpp" alt="" coords="1071,80,1257,121"/>
-<area shape="rect" id="node8" href="$_text_viewer_form_8cpp.html" title="src/TextViewerForm.cpp" alt="" coords="1281,87,1444,114"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="svm_predict_probability" name="svm_predict_probability">
-<area shape="rect" id="node2" href="$svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="251,5,313,32"/>
-<area shape="rect" id="node5" href="$class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="211,56,353,83"/>
-<area shape="rect" id="node3" href="$svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="466,5,563,32"/>
-<area shape="rect" id="node4" href="$class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="696,5,843,32"/>
-<area shape="rect" id="node6" href="$class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="401,56,628,83"/>
-<area shape="rect" id="node7" href="$class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="676,56,863,83"/>
-<area shape="rect" id="node8" href="$class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="911,56,1125,83"/>
-</map>

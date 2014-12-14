@@ -1,5 +1,0 @@
-<map id="TextViewerForm" name="TextViewerForm">
-<area shape="rect" id="node8" href="$class_show_terminate_popup.html" title="{ShowTerminatePopup\n|&#45; __pPopup_Terminate\l&#45; ID_BUTTON_TERMINATE\l&#45; ID_BUTTON_CANCEL\l|+ ShowTerminatePopup()\l+ ~ShowTerminatePopup()\l+ ShowPopup()\l+ HidePopup()\l+ OnActionPerformed()\l}" alt="" coords="133,331,313,496"/>
-<area shape="rect" id="node6" href="$class_proxy_sensor.html" title="File Browser에서 근접 센서를 위한 Class. " alt="" coords="690,345,829,481"/>
-<area shape="rect" id="node9" href="$class_popup_event_listener_terminate.html" title="File Browser에서 Back Button을 누르면 호출 되는 Class. " alt="" coords="190,132,385,268"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="svm_predict" name="svm_predict">
-<area shape="rect" id="node2" href="$svm_8cpp.html#aabe5223ca8496af644883d8063007db2" title="svm_predict_values" alt="" coords="144,31,279,57"/>
-<area shape="rect" id="node3" href="$class_kernel.html#a6ff0d4ac64bf7fba29d2ca3433dd5127" title="Kernel::k_function" alt="" coords="327,31,453,57"/>
-<area shape="rect" id="node4" href="$class_kernel.html#af258ecfb8ca0182e6a79c06291586e5b" title="Kernel::dot" alt="" coords="501,5,587,32"/>
-<area shape="rect" id="node5" href="$svm_8cpp.html#a07a43a87f274795074408da4b34d46c4" title="powi" alt="" coords="520,56,568,83"/>
-</map>

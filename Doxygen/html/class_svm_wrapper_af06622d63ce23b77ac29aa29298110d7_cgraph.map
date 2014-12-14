@@ -1,7 +1,0 @@
-<map id="SvmWrapper::init" name="SvmWrapper::init">
-<area shape="rect" id="node2" href="$svm_8h.html#a569bb1a06e5181dfb19d66587463af4b" title="svm_load_model" alt="" coords="209,31,327,57"/>
-<area shape="rect" id="node5" href="$class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1" title="SvmWrapper::GetModelPath" alt="" coords="175,81,361,108"/>
-<area shape="rect" id="node6" href="$svm_8h.html#aeb231380b36264637caeccdae4fbad1a" title="svm_check_probability\l_model" alt="" coords="191,133,345,174"/>
-<area shape="rect" id="node3" href="$svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97" title="read_model_header" alt="" coords="409,5,544,32"/>
-<area shape="rect" id="node4" href="$svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="443,56,510,83"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="FolderBrowser" name="FolderBrowser">
-<area shape="rect" id="node4" href="$class_list_view_item_popup.html" title="{ListViewItemPopup\n|&#45; __pPopup\l&#45; currentFilePath\l&#45; ID_BUTTON_OPEN_POPUP\l&#45; ID_BUTTON_CLOSE_POPUP\l&#45; ID_BUTTON_ENCRYPTION_FILE\l&#45; ID_BUTTON_OPEN_FILE\l&#45; FILESTATE_ENCRYPTION\l&#45; FILESTATE_DECRYPTION\l|+ ListViewItemPopup()\l+ ~ListViewItemPopup()\l+ ShowPopup()\l+ HidePopup()\l+ OnActionPerformed()\l&#45; ExecuteTextFile()\l}" alt="" coords="206,712,430,965"/>
-<area shape="rect" id="node6" href="$class_popup_event_listener.html" title="File Browser에서 파일 선택시 Popup창을 구성해주는 Class. " alt="" coords="170,330,346,466"/>
-</map>

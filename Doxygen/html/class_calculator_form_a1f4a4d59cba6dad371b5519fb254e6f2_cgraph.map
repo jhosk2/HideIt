@@ -1,6 +1,0 @@
-<map id="CalculatorForm::SpecialExpression" name="CalculatorForm::SpecialExpression">
-<area shape="rect" id="node2" href="$class_calculator_form.html#ac55d87afff38e894b348eeb01a058c70" title="CalculatorForm::SetLabel\lTextSize" alt="" coords="291,5,461,47"/>
-<area shape="rect" id="node3" href="$class_calculator_form.html#af8fd474cf2173be9fa0dbbdfc114b5b3" title="CalculatorForm::Before" alt="" coords="520,134,675,161"/>
-<area shape="rect" id="node4" href="$class_calculator_form.html#a47822c0c78fff69b9d3ebdb8a5f9a7a4" title="CalculatorForm::ShowError\lPopup" alt="" coords="287,123,465,164"/>
-<area shape="rect" id="node5" href="$class_calculator_form.html#ac322abae9350aee54dba283e68c94d5d" title="CalculatorForm::CheckBefore\lOperand" alt="" coords="280,188,472,229"/>
-</map>

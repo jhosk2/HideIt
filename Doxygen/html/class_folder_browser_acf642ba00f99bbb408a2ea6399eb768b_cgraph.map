@@ -1,6 +1,0 @@
-<map id="FolderBrowser::OnIconListViewItemStateChanged" name="FolderBrowser::OnIconListViewItemStateChanged">
-<area shape="rect" id="node2" href="$class_folder_browser.html#ae5aef032f95d4d1ef70ed3bfdb74344a" title="FolderBrowser::GotoDirectoryItem" alt="" coords="228,5,447,32"/>
-<area shape="rect" id="node5" href="$class_list_view_item_popup.html#a6e5821dcd07b75edad9775650c8d5a63" title="ListViewItemPopup::\lShowPopup" alt="" coords="267,57,408,98"/>
-<area shape="rect" id="node3" href="$class_folder_browser.html#a00c58611b113347764a8ca6bb7b14eca" title="FolderBrowser::GotoDirectory" alt="" coords="495,5,688,32"/>
-<area shape="rect" id="node4" href="$class_folder_browser.html#a24d476da0efca9d46c266108d9e33d88" title="FolderBrowser::IsFiltered" alt="" coords="736,5,903,32"/>
-</map>

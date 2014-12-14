@@ -1,7 +1,0 @@
-<map id="SVC_Q" name="SVC_Q">
-<area shape="rect" id="node2" href="$class_kernel.html" title="{Kernel\n|# kernel_function\l&#45; x_square\l&#45; kernel_type\l&#45; degree\l&#45; gamma\l&#45; coef0\l|+ Kernel()\l+ ~Kernel()\l+ get_Q()\l+ get_QD()\l+ swap_index()\l+ k_function()\l&#45; kernel_linear()\l&#45; kernel_poly()\l&#45; kernel_rbf()\l&#45; kernel_sigmoid()\l&#45; kernel_precomputed()\l&#45; dot()\l}" alt="" coords="83,204,238,516"/>
-<area shape="rect" id="node3" href="$class_q_matrix.html" title="{QMatrix\n||+ get_Q()\l+ get_QD()\l+ swap_index()\l+ ~QMatrix()\l}" alt="" coords="5,5,116,127"/>
-<area shape="rect" id="node4" href="$structsvm__node.html" title="{svm_node\n|+ index\l+ value\l|}" alt="" coords="141,20,221,112"/>
-<area shape="rect" id="node5" href="$class_cache.html" title="{Cache\n|&#45; l\l&#45; size\l|+ Cache()\l+ ~Cache()\l+ get_data()\l+ swap_index()\l&#45; lru_delete()\l&#45; lru_insert()\l}" alt="" coords="263,277,373,443"/>
-<area shape="rect" id="node6" href="$struct_cache_1_1head__t.html" title="{Cache::head_t\n|+ data\l+ len\l|}" alt="" coords="265,20,371,112"/>
-</map>

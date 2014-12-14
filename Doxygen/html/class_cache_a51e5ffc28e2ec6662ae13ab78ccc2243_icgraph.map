@@ -1,9 +1,0 @@
-<map id="Cache::lru_insert" name="Cache::lru_insert">
-<area shape="rect" id="node2" href="$class_cache.html#aca49263fb34641e208884cc223b25317" title="Cache::get_data" alt="" coords="182,81,299,108"/>
-<area shape="rect" id="node6" href="$class_cache.html#aaff2dc955f9492c044c98a5f09cfddcc" title="Cache::swap_index" alt="" coords="173,157,308,184"/>
-<area shape="rect" id="node3" href="$class_s_v_c___q.html#a9341b6030b3fdc88466e4a602b5abff0" title="SVC_Q::get_Q" alt="" coords="398,5,507,32"/>
-<area shape="rect" id="node4" href="$class_o_n_e___c_l_a_s_s___q.html#a1f8501234022e017cf46c4dfb2da9d31" title="ONE_CLASS_Q::get_Q" alt="" coords="373,56,533,83"/>
-<area shape="rect" id="node5" href="$class_s_v_r___q.html#aba55078d17e7815f093ffa154f3cee9d" title="SVR_Q::get_Q" alt="" coords="398,107,507,133"/>
-<area shape="rect" id="node7" href="$class_s_v_c___q.html#a9c889db8ee0156ed5bcdaa4d6bc4e245" title="SVC_Q::swap_index" alt="" coords="381,157,524,184"/>
-<area shape="rect" id="node8" href="$class_o_n_e___c_l_a_s_s___q.html#ad8bc86ca742c27d82718346388f83fad" title="ONE_CLASS_Q::swap_index" alt="" coords="356,208,549,235"/>
-</map>

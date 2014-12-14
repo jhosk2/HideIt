@@ -1,8 +1,0 @@
-<map id="CalculatorForm::OnInitializing" name="CalculatorForm::OnInitializing">
-<area shape="rect" id="node2" href="$class_calculator_form.html#a52e5c1d6ce0269a59bebb3921206a7f8" title="CalculatorForm::AddCalculator\lPanel" alt="" coords="245,5,444,47"/>
-<area shape="rect" id="node3" href="$class_calculator_form.html#a06eb55916ba3f358cbe5502eb5f12cff" title="CalculatorForm::AddError\lPopup" alt="" coords="260,71,429,112"/>
-<area shape="rect" id="node7" href="$class_calculator_form.html#ab703941d3327dc7ec09c377427786ecd" title="CalculatorForm::AddList_Init" alt="" coords="251,137,438,163"/>
-<area shape="rect" id="node4" href="$_calculator_form_8cpp.html#a3efdfa9e0e3df2363389bb8cc1fbb4ac" title="POPUP_DIMENSION" alt="" coords="497,27,644,54"/>
-<area shape="rect" id="node5" href="$_calculator_form_8cpp.html#a71dcdf817688131706205d3b70932daa" title="POPUP_LABEL_RECT" alt="" coords="492,78,649,105"/>
-<area shape="rect" id="node6" href="$_calculator_form_8cpp.html#a74c6359e95c3c71ca337eba85c026a3f" title="POPUP_BTN_RECT" alt="" coords="500,129,641,155"/>
-</map>

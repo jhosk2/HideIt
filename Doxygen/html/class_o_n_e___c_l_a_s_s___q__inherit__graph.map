@@ -1,4 +1,0 @@
-<map id="ONE_CLASS_Q" name="ONE_CLASS_Q">
-<area shape="rect" id="node2" href="$class_kernel.html" title="{Kernel\n|# kernel_function\l&#45; x\l&#45; x_square\l&#45; kernel_type\l&#45; degree\l&#45; gamma\l&#45; coef0\l|+ Kernel()\l+ ~Kernel()\l+ get_Q()\l+ get_QD()\l+ swap_index()\l+ k_function()\l&#45; kernel_linear()\l&#45; kernel_poly()\l&#45; kernel_rbf()\l&#45; kernel_sigmoid()\l&#45; kernel_precomputed()\l&#45; dot()\l}" alt="" coords="5,175,160,501"/>
-<area shape="rect" id="node3" href="$class_q_matrix.html" title="{QMatrix\n||+ get_Q()\l+ get_QD()\l+ swap_index()\l+ ~QMatrix()\l}" alt="" coords="27,5,138,127"/>
-</map>
