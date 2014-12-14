@@ -17,10 +17,11 @@ HideIt은 타이젠 네이티브 기반의 어플리케이션으로서, 기기 �
 - **Github에서 Clone받기**: 
 
    <a href="https://github.com/jhosk2/HideIt.git" target="_blank">최신 git</a> 를 Clone합니다.
+   
 
-### Usage
+### 사용법
 
-1. Create a [LolChat](src/main/java/com/github/theholywaffle/lolchatapi/LolChat.java) object with the correct [ChatServer](src/main/java/com/github/theholywaffle/lolchatapi/ChatServer.java) of your region.
+1. Tizen
 2. Add any listeners.
 3. Login.
 4. ...
