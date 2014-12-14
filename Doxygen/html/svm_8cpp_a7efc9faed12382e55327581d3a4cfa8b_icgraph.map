@@ -1,0 +1,7 @@
+<map id="multiclass_probability" name="multiclass_probability">
+<area shape="rect" id="node2" href="$svm_8cpp.html#aa605ffa3e514ec953de3963f804b011c" title="svm_predict_probability" alt="" coords="200,31,357,57"/>
+<area shape="rect" id="node3" href="$svm_8cpp.html#a3f5a9c2ab91444d122c461511af9efd2" title="svm_cross_validation" alt="" coords="405,31,549,57"/>
+<area shape="rect" id="node4" href="$svm_8cpp.html#a18e6f0da08035830a3f53829c3b26508" title="svm_svr_probability" alt="" coords="597,5,732,32"/>
+<area shape="rect" id="node5" href="$svm_8cpp.html#ae6e4f84556602fab57ec5a330514b613" title="svm_train" alt="" coords="780,31,857,57"/>
+<area shape="rect" id="node6" href="$svm_8cpp.html#ae862a4ec5aef90b7ded1cd2a602271f6" title="svm_binary_svc_probability" alt="" coords="905,31,1084,57"/>
+</map>

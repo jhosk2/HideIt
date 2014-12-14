@@ -1,0 +1,158 @@
+\hypertarget{class_popup_event_listener}{\section{Popup\+Event\+Listener 클래스 참조}
+\label{class_popup_event_listener}\index{Popup\+Event\+Listener@{Popup\+Event\+Listener}}
+}
+
+
+File Browser에서 파일 선택시 Popup창을 구성해주는 Class.  
+
+
+
+
+{\ttfamily \#include $<$List\+View\+Item\+Popup.\+h$>$}
+
+
+
+Popup\+Event\+Listener에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_popup_event_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Popup\+Event\+Listener에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_popup_event_listener__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_popup_event_listener_ad26fa7e35c0fdd52ad6a6bdd4d3e3901}{On\+Key\+Pressed} (Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&key\+Event\+Info)
+\item 
+virtual bool \hyperlink{class_popup_event_listener_aeadbfbf16cf4be6ac6655ef94fc1cd50}{On\+Key\+Released} (Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&key\+Event\+Info)
+\item 
+virtual bool \hyperlink{class_popup_event_listener_a6ab53e0c9d7ab3a17c25b1bd820a4f13}{On\+Preview\+Key\+Pressed} (Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&key\+Event\+Info)
+\item 
+virtual bool \hyperlink{class_popup_event_listener_af38f07d911d13001455e8ac4bab4cd3e}{On\+Preview\+Key\+Released} (Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&key\+Event\+Info)
+\item 
+virtual bool \hyperlink{class_popup_event_listener_a2cce7fb106a3b8a4ab66a26284d64a83}{Translate\+Key\+Event\+Info} (Tizen\+::\+Ui\+::\+Control \&source, Tizen\+::\+Ui\+::\+Key\+Event\+Info \&key\+Event\+Info)
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+File Browser에서 파일 선택시 Popup창을 구성해주는 Class. 
+
+Open, Encryption, Decryption, Close 기능을 제공해 준다. \begin{DoxyDate}{날짜}
+2014-\/12-\/13 
+\end{DoxyDate}
+\begin{DoxyVersion}{버전}
+0.\+0.\+1 
+\end{DoxyVersion}
+
+
+List\+View\+Item\+Popup.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_popup_event_listener_ad26fa7e35c0fdd52ad6a6bdd4d3e3901}{\index{Popup\+Event\+Listener@{Popup\+Event\+Listener}!On\+Key\+Pressed@{On\+Key\+Pressed}}
+\index{On\+Key\+Pressed@{On\+Key\+Pressed}!Popup\+Event\+Listener@{Popup\+Event\+Listener}}
+\subsubsection[{On\+Key\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Popup\+Event\+Listener\+::\+On\+Key\+Pressed (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&}]{key\+Event\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_popup_event_listener_ad26fa7e35c0fdd52ad6a6bdd4d3e3901}
+
+
+List\+View\+Item\+Popup.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+27 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \};
+\end{DoxyCode}
+\hypertarget{class_popup_event_listener_aeadbfbf16cf4be6ac6655ef94fc1cd50}{\index{Popup\+Event\+Listener@{Popup\+Event\+Listener}!On\+Key\+Released@{On\+Key\+Released}}
+\index{On\+Key\+Released@{On\+Key\+Released}!Popup\+Event\+Listener@{Popup\+Event\+Listener}}
+\subsubsection[{On\+Key\+Released}]{\setlength{\rightskip}{0pt plus 5cm}bool Popup\+Event\+Listener\+::\+On\+Key\+Released (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&}]{key\+Event\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_popup_event_listener_aeadbfbf16cf4be6ac6655ef94fc1cd50}
+
+
+List\+View\+Item\+Popup.\+cpp 파일의 33 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+34                                           \{
+35     KeyCode key = keyEventInfo.GetKeyCode();
+36     \textcolor{keywordflow}{if} (key == KEY\_BACK || key == KEY\_ESC) \{
+37         Popup* pPopup = \textcolor{keyword}{static\_cast<}Popup *\textcolor{keyword}{>}(&source);
+38         pPopup->SetShowState(\textcolor{keyword}{false});
+39         pPopup->Invalidate(\textcolor{keyword}{true});
+40     \}
+41 
+42     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+43 \}
+\end{DoxyCode}
+\hypertarget{class_popup_event_listener_a6ab53e0c9d7ab3a17c25b1bd820a4f13}{\index{Popup\+Event\+Listener@{Popup\+Event\+Listener}!On\+Preview\+Key\+Pressed@{On\+Preview\+Key\+Pressed}}
+\index{On\+Preview\+Key\+Pressed@{On\+Preview\+Key\+Pressed}!Popup\+Event\+Listener@{Popup\+Event\+Listener}}
+\subsubsection[{On\+Preview\+Key\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Popup\+Event\+Listener\+::\+On\+Preview\+Key\+Pressed (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&}]{key\+Event\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_popup_event_listener_a6ab53e0c9d7ab3a17c25b1bd820a4f13}
+
+
+List\+View\+Item\+Popup.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+29 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \};
+\end{DoxyCode}
+\hypertarget{class_popup_event_listener_af38f07d911d13001455e8ac4bab4cd3e}{\index{Popup\+Event\+Listener@{Popup\+Event\+Listener}!On\+Preview\+Key\+Released@{On\+Preview\+Key\+Released}}
+\index{On\+Preview\+Key\+Released@{On\+Preview\+Key\+Released}!Popup\+Event\+Listener@{Popup\+Event\+Listener}}
+\subsubsection[{On\+Preview\+Key\+Released}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Popup\+Event\+Listener\+::\+On\+Preview\+Key\+Released (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Ui\+::\+Key\+Event\+Info \&}]{key\+Event\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_popup_event_listener_af38f07d911d13001455e8ac4bab4cd3e}
+
+
+List\+View\+Item\+Popup.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+30 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \};
+\end{DoxyCode}
+\hypertarget{class_popup_event_listener_a2cce7fb106a3b8a4ab66a26284d64a83}{\index{Popup\+Event\+Listener@{Popup\+Event\+Listener}!Translate\+Key\+Event\+Info@{Translate\+Key\+Event\+Info}}
+\index{Translate\+Key\+Event\+Info@{Translate\+Key\+Event\+Info}!Popup\+Event\+Listener@{Popup\+Event\+Listener}}
+\subsubsection[{Translate\+Key\+Event\+Info}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Popup\+Event\+Listener\+::\+Translate\+Key\+Event\+Info (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{Tizen\+::\+Ui\+::\+Key\+Event\+Info \&}]{key\+Event\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_popup_event_listener_a2cce7fb106a3b8a4ab66a26284d64a83}
+
+
+List\+View\+Item\+Popup.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+31 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \};
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_list_view_item_popup_8h}{List\+View\+Item\+Popup.\+h}\item 
+src/\+File\+Browser/\hyperlink{_list_view_item_popup_8cpp}{List\+View\+Item\+Popup.\+cpp}\end{DoxyCompactItemize}

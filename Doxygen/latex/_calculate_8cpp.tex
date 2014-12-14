@@ -1,0 +1,126 @@
+\hypertarget{_calculate_8cpp}{\section{src/\+Calculator/\+Calculate.cpp 파일 참조}
+\label{_calculate_8cpp}\index{src/\+Calculator/\+Calculate.\+cpp@{src/\+Calculator/\+Calculate.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}Calculate.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Scene\+Register.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$F\+App.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Base.\+h$>$}\\*
+{\ttfamily \#include $<$F\+System.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$cwchar$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+Calculate.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculate_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_calculate_8cpp_a392fb874e547e582e9c66a08a1f23326}{M\+A\+X}~1024
+\item 
+\#define \hyperlink{_calculate_8cpp_a5c3a83864bf5991d09aa5c2abb911bf0}{T\+O\+K\+E\+N}~20
+\item 
+\#define \hyperlink{_calculate_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+P\+I}~3.\+14159265358979323846
+\item 
+\#define \hyperlink{_calculate_8cpp_a9bf5d952c5c93c70f9e66c9794d406c9}{M\+\_\+\+E}~2.\+7182818284590452354
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+static const double \hyperlink{_calculate_8cpp_a043810f41cc510e36a892f3b65fac5cb}{R\+E\+S\+U\+L\+T\+\_\+\+O\+K} = 901
+\item 
+static const double \hyperlink{_calculate_8cpp_a4e8ad5244efbb3d9d9904a8a9234f87d}{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F} = 902
+\item 
+static const double \hyperlink{_calculate_8cpp_a113621396df65ce36c6b41262ff2f884}{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W} = 903
+\item 
+static const double \hyperlink{_calculate_8cpp_abe8ff5843b2a2564327d8986ceaf3a31}{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D} = 904
+\item 
+char $\ast$ \hyperlink{_calculate_8cpp_aef049744926e9e447a8f35698ce25f96}{Table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{_calculate_8cpp_a9bf5d952c5c93c70f9e66c9794d406c9}{\index{Calculate.\+cpp@{Calculate.\+cpp}!M\+\_\+\+E@{M\+\_\+\+E}}
+\index{M\+\_\+\+E@{M\+\_\+\+E}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{M\+\_\+\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+E~2.\+7182818284590452354}}\label{_calculate_8cpp_a9bf5d952c5c93c70f9e66c9794d406c9}
+
+
+Calculate.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{\index{Calculate.\+cpp@{Calculate.\+cpp}!M\+\_\+\+P\+I@{M\+\_\+\+P\+I}}
+\index{M\+\_\+\+P\+I@{M\+\_\+\+P\+I}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{M\+\_\+\+P\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+P\+I~3.\+14159265358979323846}}\label{_calculate_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}
+
+
+Calculate.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_a392fb874e547e582e9c66a08a1f23326}{\index{Calculate.\+cpp@{Calculate.\+cpp}!M\+A\+X@{M\+A\+X}}
+\index{M\+A\+X@{M\+A\+X}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X~1024}}\label{_calculate_8cpp_a392fb874e547e582e9c66a08a1f23326}
+
+
+Calculate.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_a5c3a83864bf5991d09aa5c2abb911bf0}{\index{Calculate.\+cpp@{Calculate.\+cpp}!T\+O\+K\+E\+N@{T\+O\+K\+E\+N}}
+\index{T\+O\+K\+E\+N@{T\+O\+K\+E\+N}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{T\+O\+K\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+K\+E\+N~20}}\label{_calculate_8cpp_a5c3a83864bf5991d09aa5c2abb911bf0}
+
+
+Calculate.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{변수 문서화}
+\hypertarget{_calculate_8cpp_a4e8ad5244efbb3d9d9904a8a9234f87d}{\index{Calculate.\+cpp@{Calculate.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F = 902\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculate_8cpp_a4e8ad5244efbb3d9d9904a8a9234f87d}
+
+
+Calculate.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_abe8ff5843b2a2564327d8986ceaf3a31}{\index{Calculate.\+cpp@{Calculate.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D = 904\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculate_8cpp_abe8ff5843b2a2564327d8986ceaf3a31}
+
+
+Calculate.\+cpp 파일의 32 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_a043810f41cc510e36a892f3b65fac5cb}{\index{Calculate.\+cpp@{Calculate.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+O\+K@{R\+E\+S\+U\+L\+T\+\_\+\+O\+K}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+O\+K@{R\+E\+S\+U\+L\+T\+\_\+\+O\+K}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+O\+K = 901\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculate_8cpp_a043810f41cc510e36a892f3b65fac5cb}
+
+
+Calculate.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_a113621396df65ce36c6b41262ff2f884}{\index{Calculate.\+cpp@{Calculate.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W@{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W@{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W = 903\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculate_8cpp_a113621396df65ce36c6b41262ff2f884}
+
+
+Calculate.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculate_8cpp_aef049744926e9e447a8f35698ce25f96}{\index{Calculate.\+cpp@{Calculate.\+cpp}!Table@{Table}}
+\index{Table@{Table}!Calculate.\+cpp@{Calculate.\+cpp}}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Table\mbox{[}$\,$\mbox{]}}}\label{_calculate_8cpp_aef049744926e9e447a8f35698ce25f96}
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+= \{
+        
+        \textcolor{stringliteral}{"fabs"}, \textcolor{stringliteral}{"fac"}, \textcolor{stringliteral}{"sqrt"}, \textcolor{stringliteral}{"pow"}, \textcolor{stringliteral}{"exp"}, \textcolor{stringliteral}{"ln"}, \textcolor{stringliteral}{"log"}, \textcolor{stringliteral}{"dtor"},
+        \textcolor{stringliteral}{"rtod"}, 
+        \textcolor{stringliteral}{"sin"}, \textcolor{stringliteral}{"cos"}, \textcolor{stringliteral}{"tan"}, \textcolor{stringliteral}{"sinh"}, \textcolor{stringliteral}{"cosh"}, \textcolor{stringliteral}{"tanh"}, \textcolor{stringliteral}{"asin"}, \textcolor{stringliteral}{"acos"}, \textcolor{stringliteral}{"atan"},
+        \textcolor{stringliteral}{"atan2"}, \textcolor{stringliteral}{"step"}, \textcolor{stringliteral}{"ramp"}, \textcolor{stringliteral}{""}, 
+        \}
+\end{DoxyCode}
+
+
+Calculate.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+

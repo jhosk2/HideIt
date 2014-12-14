@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>HideIt: src/HideItFormFactory.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">HideIt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_hide_it_form_factory_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">HideItFormFactory.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_hide_it_form_factory_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright (c) 2012 Samsung Electronics Co., Ltd.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Licensed under the Flora License, Version 1.1 (the License);</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//     http://floralicense.org/license/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// distributed under the License is distributed on an AS IS BASIS,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// limitations under the License.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;new&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_hide_it_form_factory_8h.html">HideItFormFactory.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_calculator_form_8h.html">CalculatorForm.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_setting_password_form_8h.html">SettingPasswordForm.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_browser_main_form_8h.html">BrowserMainForm.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_text_viewer_form_8h.html">TextViewerForm.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_ui_1_1_scenes.html">Tizen::Ui::Scenes</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Definitions of extern.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_hide_it_form_factory_8cpp.html#a425a611240e669d4b6bccb6c70fd1e1b">   28</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="_hide_it_form_factory_8cpp.html#a425a611240e669d4b6bccb6c70fd1e1b">FORM_CALCULATOR</a> = L<span class="stringliteral">&quot;CalculatorForm&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_hide_it_form_factory_8cpp.html#a52c03680a60f4c67df2e836a73c1dfa7">   29</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="_hide_it_form_factory_8cpp.html#a52c03680a60f4c67df2e836a73c1dfa7">FORM_SETTING</a> = L<span class="stringliteral">&quot;SettingPasswordForm&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_hide_it_form_factory_8cpp.html#a6c375be4c97a7149bf3d7ad641ff0022">   30</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="_hide_it_form_factory_8cpp.html#a6c375be4c97a7149bf3d7ad641ff0022">FORM_FILEBROWSER</a> = L<span class="stringliteral">&quot;FileBrowserForm&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="_hide_it_form_factory_8cpp.html#a0684aff53dd7aa5443c992372709015b">   31</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="_hide_it_form_factory_8cpp.html#a0684aff53dd7aa5443c992372709015b">FORM_TEXTVIEWER</a> = L<span class="stringliteral">&quot;TextViewerForm&quot;</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_hide_it_form_factory.html#a2b0ab388d9986c38663f0e70f73962c4">   33</a></span>&#160;<a class="code" href="class_hide_it_form_factory.html#a2b0ab388d9986c38663f0e70f73962c4">HideItFormFactory::HideItFormFactory</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_hide_it_form_factory.html#a812daa61d41c252a29cd65804dbe1573">   36</a></span>&#160;<a class="code" href="class_hide_it_form_factory.html#a812daa61d41c252a29cd65804dbe1573">HideItFormFactory::~HideItFormFactory</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;Tizen::Ui::Controls::Form*</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_hide_it_form_factory.html#a6add8bfadf5e59c6d4221f85161640fb">   40</a></span>&#160;<a class="code" href="class_hide_it_form_factory.html#a6add8bfadf5e59c6d4221f85161640fb">HideItFormFactory::CreateFormN</a>(<span class="keyword">const</span> Tizen::Base::String&amp; formId,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">const</span> Tizen::Ui::Scenes::SceneId&amp; sceneId) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    SceneManager* pSceneManager = SceneManager::GetInstance();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    AppAssert(pSceneManager);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Tizen::Ui::Controls::Form* pNewForm = null;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (formId == <a class="code" href="_hide_it_form_factory_8cpp.html#a425a611240e669d4b6bccb6c70fd1e1b">FORM_CALCULATOR</a>) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_calculator_form.html">CalculatorForm</a>* pForm = <span class="keyword">new</span> (std::nothrow) <a class="code" href="class_calculator_form.html">CalculatorForm</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        pForm-&gt;<a class="code" href="class_calculator_form.html#a51137823626f92e48605c6d9aa2e220f">Initialize</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        pSceneManager-&gt;AddSceneEventListener(sceneId, *pForm);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        pNewForm = pForm;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (formId == <a class="code" href="_hide_it_form_factory_8cpp.html#a52c03680a60f4c67df2e836a73c1dfa7">FORM_SETTING</a>) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_setting_password_form.html">SettingPasswordForm</a>* pForm = <span class="keyword">new</span> (std::nothrow) <a class="code" href="class_setting_password_form.html">SettingPasswordForm</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        pForm-&gt;<a class="code" href="class_setting_password_form.html#ace791336d606d28535b440aeafc18fff">Initialize</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        pSceneManager-&gt;AddSceneEventListener(sceneId, *pForm);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        pNewForm = pForm;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (formId == <a class="code" href="_hide_it_form_factory_8cpp.html#a6c375be4c97a7149bf3d7ad641ff0022">FORM_FILEBROWSER</a>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="class_browser_main_form.html">BrowserMainForm</a>* pForm = <span class="keyword">new</span> (std::nothrow) <a class="code" href="class_browser_main_form.html">BrowserMainForm</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        pForm-&gt;<a class="code" href="class_browser_main_form.html#a738a1181319a716227fd2ae0feb26c98">Initialize</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        pSceneManager-&gt;AddSceneEventListener(sceneId, *pForm);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        pNewForm = pForm;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (formId == <a class="code" href="_hide_it_form_factory_8cpp.html#a0684aff53dd7aa5443c992372709015b">FORM_TEXTVIEWER</a>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_text_viewer_form.html">TextViewerForm</a>* pForm = <span class="keyword">new</span> (std::nothrow) <a class="code" href="class_text_viewer_form.html">TextViewerForm</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        pForm-&gt;<a class="code" href="class_text_viewer_form.html#a4ad26f2e53b8f74ce5d3faefc551b2e6">Initialize</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        pSceneManager-&gt;AddSceneEventListener(sceneId, *pForm);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        pNewForm = pForm;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> pNewForm;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="_calculator_form_8h_html"><div class="ttname"><a href="_calculator_form_8h.html">CalculatorForm.h</a></div></div>
+<div class="ttc" id="class_calculator_form_html"><div class="ttname"><a href="class_calculator_form.html">CalculatorForm</a></div><div class="ttdoc">Calculator Form을 구성해주는 Class. </div><div class="ttdef"><b>Definition:</b> <a href="_calculator_form_8h_source.html#l00024">CalculatorForm.h:24</a></div></div>
+<div class="ttc" id="class_browser_main_form_html_a738a1181319a716227fd2ae0feb26c98"><div class="ttname"><a href="class_browser_main_form.html#a738a1181319a716227fd2ae0feb26c98">BrowserMainForm::Initialize</a></div><div class="ttdeci">bool Initialize(void)</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8cpp_source.html#l00026">BrowserMainForm.cpp:26</a></div></div>
+<div class="ttc" id="_hide_it_form_factory_8cpp_html_a52c03680a60f4c67df2e836a73c1dfa7"><div class="ttname"><a href="_hide_it_form_factory_8cpp.html#a52c03680a60f4c67df2e836a73c1dfa7">FORM_SETTING</a></div><div class="ttdeci">const wchar_t * FORM_SETTING</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00029">HideItFormFactory.cpp:29</a></div></div>
+<div class="ttc" id="_hide_it_form_factory_8h_html"><div class="ttname"><a href="_hide_it_form_factory_8h.html">HideItFormFactory.h</a></div></div>
+<div class="ttc" id="class_browser_main_form_html"><div class="ttname"><a href="class_browser_main_form.html">BrowserMainForm</a></div><div class="ttdoc">File Browser Form을 구성해주는 Class. </div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00019">BrowserMainForm.h:19</a></div></div>
+<div class="ttc" id="class_hide_it_form_factory_html_a2b0ab388d9986c38663f0e70f73962c4"><div class="ttname"><a href="class_hide_it_form_factory.html#a2b0ab388d9986c38663f0e70f73962c4">HideItFormFactory::HideItFormFactory</a></div><div class="ttdeci">HideItFormFactory(void)</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00033">HideItFormFactory.cpp:33</a></div></div>
+<div class="ttc" id="class_setting_password_form_html"><div class="ttname"><a href="class_setting_password_form.html">SettingPasswordForm</a></div><div class="ttdoc">File Browser에서 User Password를 지정해 주는 Form을 구성하는 Classs. </div><div class="ttdef"><b>Definition:</b> <a href="_setting_password_form_8h_source.html#l00025">SettingPasswordForm.h:25</a></div></div>
+<div class="ttc" id="_setting_password_form_8h_html"><div class="ttname"><a href="_setting_password_form_8h.html">SettingPasswordForm.h</a></div></div>
+<div class="ttc" id="class_hide_it_form_factory_html_a6add8bfadf5e59c6d4221f85161640fb"><div class="ttname"><a href="class_hide_it_form_factory.html#a6add8bfadf5e59c6d4221f85161640fb">HideItFormFactory::CreateFormN</a></div><div class="ttdeci">virtual Tizen::Ui::Controls::Form * CreateFormN(const Tizen::Base::String &amp;formId, const Tizen::Ui::Scenes::SceneId &amp;sceneId)</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00040">HideItFormFactory.cpp:40</a></div></div>
+<div class="ttc" id="_text_viewer_form_8h_html"><div class="ttname"><a href="_text_viewer_form_8h.html">TextViewerForm.h</a></div></div>
+<div class="ttc" id="_hide_it_form_factory_8cpp_html_a0684aff53dd7aa5443c992372709015b"><div class="ttname"><a href="_hide_it_form_factory_8cpp.html#a0684aff53dd7aa5443c992372709015b">FORM_TEXTVIEWER</a></div><div class="ttdeci">const wchar_t * FORM_TEXTVIEWER</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00031">HideItFormFactory.cpp:31</a></div></div>
+<div class="ttc" id="class_setting_password_form_html_ace791336d606d28535b440aeafc18fff"><div class="ttname"><a href="class_setting_password_form.html#ace791336d606d28535b440aeafc18fff">SettingPasswordForm::Initialize</a></div><div class="ttdeci">bool Initialize(void)</div><div class="ttdef"><b>Definition:</b> <a href="_setting_password_form_8cpp_source.html#l00029">SettingPasswordForm.cpp:29</a></div></div>
+<div class="ttc" id="_hide_it_form_factory_8cpp_html_a425a611240e669d4b6bccb6c70fd1e1b"><div class="ttname"><a href="_hide_it_form_factory_8cpp.html#a425a611240e669d4b6bccb6c70fd1e1b">FORM_CALCULATOR</a></div><div class="ttdeci">const wchar_t * FORM_CALCULATOR</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00028">HideItFormFactory.cpp:28</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_ui_1_1_scenes_html"><div class="ttname"><a href="namespace_tizen_1_1_ui_1_1_scenes.html">Scenes</a></div></div>
+<div class="ttc" id="class_text_viewer_form_html"><div class="ttname"><a href="class_text_viewer_form.html">TextViewerForm</a></div><div class="ttdoc">Text File을 읽어 화면에 출력 해주는 Class. </div><div class="ttdef"><b>Definition:</b> <a href="_text_viewer_form_8h_source.html#l00020">TextViewerForm.h:20</a></div></div>
+<div class="ttc" id="_browser_main_form_8h_html"><div class="ttname"><a href="_browser_main_form_8h.html">BrowserMainForm.h</a></div></div>
+<div class="ttc" id="class_text_viewer_form_html_a4ad26f2e53b8f74ce5d3faefc551b2e6"><div class="ttname"><a href="class_text_viewer_form.html#a4ad26f2e53b8f74ce5d3faefc551b2e6">TextViewerForm::Initialize</a></div><div class="ttdeci">bool Initialize(void)</div><div class="ttdef"><b>Definition:</b> <a href="_text_viewer_form_8cpp_source.html#l00028">TextViewerForm.cpp:28</a></div></div>
+<div class="ttc" id="class_calculator_form_html_a51137823626f92e48605c6d9aa2e220f"><div class="ttname"><a href="class_calculator_form.html#a51137823626f92e48605c6d9aa2e220f">CalculatorForm::Initialize</a></div><div class="ttdeci">bool Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="_calculator_form_8cpp_source.html#l00088">CalculatorForm.cpp:88</a></div></div>
+<div class="ttc" id="class_hide_it_form_factory_html_a812daa61d41c252a29cd65804dbe1573"><div class="ttname"><a href="class_hide_it_form_factory.html#a812daa61d41c252a29cd65804dbe1573">HideItFormFactory::~HideItFormFactory</a></div><div class="ttdeci">virtual ~HideItFormFactory(void)</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00036">HideItFormFactory.cpp:36</a></div></div>
+<div class="ttc" id="_hide_it_form_factory_8cpp_html_a6c375be4c97a7149bf3d7ad641ff0022"><div class="ttname"><a href="_hide_it_form_factory_8cpp.html#a6c375be4c97a7149bf3d7ad641ff0022">FORM_FILEBROWSER</a></div><div class="ttdeci">const wchar_t * FORM_FILEBROWSER</div><div class="ttdef"><b>Definition:</b> <a href="_hide_it_form_factory_8cpp_source.html#l00030">HideItFormFactory.cpp:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_hide_it_form_factory_8cpp.html">HideItFormFactory.cpp</a></li>
+    <li class="footer">생성시간 : 일 12월 14 2014 18:23:36, 프로젝트명 : HideIt, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

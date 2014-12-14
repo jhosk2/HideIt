@@ -1,0 +1,3162 @@
+\hypertarget{svm_8cpp}{\section{src/\+Calculator/svm.cpp 파일 참조}
+\label{svm_8cpp}\index{src/\+Calculator/svm.\+cpp@{src/\+Calculator/svm.\+cpp}}
+}
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$float.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+{\ttfamily \#include $<$locale.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}svm.\+h\char`\"{}}\\*
+svm.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_cache}{Cache}
+\item 
+struct \hyperlink{struct_cache_1_1head__t}{Cache\+::head\+\_\+t}
+\item 
+class \hyperlink{class_q_matrix}{Q\+Matrix}
+\item 
+class \hyperlink{class_kernel}{Kernel}
+\item 
+class \hyperlink{class_solver}{Solver}
+\item 
+struct \hyperlink{struct_solver_1_1_solution_info}{Solver\+::\+Solution\+Info}
+\item 
+class \hyperlink{class_solver___n_u}{Solver\+\_\+\+N\+U}
+\item 
+class \hyperlink{class_s_v_c___q}{S\+V\+C\+\_\+\+Q}
+\item 
+class \hyperlink{class_o_n_e___c_l_a_s_s___q}{O\+N\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+Q}
+\item 
+class \hyperlink{class_s_v_r___q}{S\+V\+R\+\_\+\+Q}
+\item 
+struct \hyperlink{structdecision__function}{decision\+\_\+function}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{I\+N\+F}~H\+U\+G\+E\+\_\+\+V\+A\+L
+\item 
+\#define \hyperlink{svm_8cpp_a3d8c9c145887af5174ba4cc6789862ad}{T\+A\+U}~1e-\/12
+\item 
+\#define \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(type, n)~(type $\ast$)malloc((n)$\ast$sizeof(type))
+\item 
+\#define \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{F\+S\+C\+A\+N\+F}(\+\_\+stream, \+\_\+format, \+\_\+var)~do\{ if (fscanf(\+\_\+stream, \+\_\+format, \+\_\+var) != 1) return false; \}while(0)
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef float \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat}
+\item 
+typedef signed char \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static T \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min} (T \hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}, T y)
+\item 
+{\footnotesize template$<$class T $>$ }\\static T \hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max} (T \hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}, T y)
+\item 
+{\footnotesize template$<$class T $>$ }\\static void \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap} (T \&\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}, T \&y)
+\item 
+{\footnotesize template$<$class S , class T $>$ }\\static void \hyperlink{svm_8cpp_af2d4d35f18533f3571dad9ce21f8e1cc}{clone} (T $\ast$\&dst, S $\ast$src, int n)
+\item 
+static double \hyperlink{svm_8cpp_a07a43a87f274795074408da4b34d46c4}{powi} (double base, int times)
+\item 
+static void \hyperlink{svm_8cpp_a4edee28127eebfbcdab94b75c57341c5}{print\+\_\+string\+\_\+stdout} (const char $\ast$s)
+\item 
+static void \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info} (const char $\ast$fmt,...)
+\item 
+static void \hyperlink{svm_8cpp_a11814ad6e8976823b61af65e6e36ca1a}{solve\+\_\+c\+\_\+svc} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double $\ast$alpha, \hyperlink{struct_solver_1_1_solution_info}{Solver\+::\+Solution\+Info} $\ast$si, double Cp, double Cn)
+\item 
+static void \hyperlink{svm_8cpp_a221d17018ed0cd7f218523dbbb9aab4d}{solve\+\_\+nu\+\_\+svc} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double $\ast$alpha, \hyperlink{struct_solver_1_1_solution_info}{Solver\+::\+Solution\+Info} $\ast$si)
+\item 
+static void \hyperlink{svm_8cpp_a7a8a956d5b08b55756ceaaf63a5d2a87}{solve\+\_\+one\+\_\+class} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double $\ast$alpha, \hyperlink{struct_solver_1_1_solution_info}{Solver\+::\+Solution\+Info} $\ast$si)
+\item 
+static void \hyperlink{svm_8cpp_a57df27962e3c80e9c2de6c3163850c79}{solve\+\_\+epsilon\+\_\+svr} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double $\ast$alpha, \hyperlink{struct_solver_1_1_solution_info}{Solver\+::\+Solution\+Info} $\ast$si)
+\item 
+static void \hyperlink{svm_8cpp_add71d0d022422b58f690572f521f0f78}{solve\+\_\+nu\+\_\+svr} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double $\ast$alpha, \hyperlink{struct_solver_1_1_solution_info}{Solver\+::\+Solution\+Info} $\ast$si)
+\item 
+static \hyperlink{structdecision__function}{decision\+\_\+function} \hyperlink{svm_8cpp_a402bb8c57abf732699dce636892faca7}{svm\+\_\+train\+\_\+one} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double Cp, double Cn)
+\item 
+static void \hyperlink{svm_8cpp_a1da8eb99e9a14699eb36a30bc8f2bedb}{sigmoid\+\_\+train} (int l, const double $\ast$dec\+\_\+values, const double $\ast$labels, double \&A, double \&B)
+\item 
+static double \hyperlink{svm_8cpp_a681fcc7268133ceb472773fd30b97839}{sigmoid\+\_\+predict} (double decision\+\_\+value, double A, double B)
+\item 
+static void \hyperlink{svm_8cpp_a7efc9faed12382e55327581d3a4cfa8b}{multiclass\+\_\+probability} (int k, double $\ast$$\ast$r, double $\ast$p)
+\item 
+static void \hyperlink{svm_8cpp_ae862a4ec5aef90b7ded1cd2a602271f6}{svm\+\_\+binary\+\_\+svc\+\_\+probability} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, double Cp, double Cn, double \&prob\+A, double \&prob\+B)
+\item 
+static double \hyperlink{svm_8cpp_a18e6f0da08035830a3f53829c3b26508}{svm\+\_\+svr\+\_\+probability} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param)
+\item 
+static void \hyperlink{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09}{svm\+\_\+group\+\_\+classes} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, int $\ast$nr\+\_\+class\+\_\+ret, int $\ast$$\ast$label\+\_\+ret, int $\ast$$\ast$start\+\_\+ret, int $\ast$$\ast$count\+\_\+ret, int $\ast$perm)
+\item 
+\hyperlink{structsvm__model}{svm\+\_\+model} $\ast$ \hyperlink{svm_8cpp_ae6e4f84556602fab57ec5a330514b613}{svm\+\_\+train} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param)
+\item 
+void \hyperlink{svm_8cpp_a3f5a9c2ab91444d122c461511af9efd2}{svm\+\_\+cross\+\_\+validation} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param, int nr\+\_\+fold, double $\ast$target)
+\item 
+int \hyperlink{svm_8cpp_a28e647915c662f2862abadb987784875}{svm\+\_\+get\+\_\+svm\+\_\+type} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+int \hyperlink{svm_8cpp_a187f866fb5372371ad53090c691d8528}{svm\+\_\+get\+\_\+nr\+\_\+class} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+void \hyperlink{svm_8cpp_a0256f035fcd831cc9627d7da8657f65c}{svm\+\_\+get\+\_\+labels} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model}, int $\ast$label)
+\item 
+void \hyperlink{svm_8cpp_a9f83cf22bf61483173a4d699568fb5f8}{svm\+\_\+get\+\_\+sv\+\_\+indices} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model}, int $\ast$indices)
+\item 
+int \hyperlink{svm_8cpp_a5cda65b236b83631dcb3d1c6e437e3ad}{svm\+\_\+get\+\_\+nr\+\_\+sv} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+double \hyperlink{svm_8cpp_a40c2f7a0d7e827b1b987959d2e847844}{svm\+\_\+get\+\_\+svr\+\_\+probability} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+double \hyperlink{svm_8cpp_aabe5223ca8496af644883d8063007db2}{svm\+\_\+predict\+\_\+values} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model}, const \hyperlink{structsvm__node}{svm\+\_\+node} $\ast$\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}, double $\ast$dec\+\_\+values)
+\item 
+double \hyperlink{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef}{svm\+\_\+predict} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model}, const \hyperlink{structsvm__node}{svm\+\_\+node} $\ast$\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x})
+\item 
+double \hyperlink{svm_8cpp_aa605ffa3e514ec953de3963f804b011c}{svm\+\_\+predict\+\_\+probability} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model}, const \hyperlink{structsvm__node}{svm\+\_\+node} $\ast$\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}, double $\ast$prob\+\_\+estimates)
+\item 
+int \hyperlink{svm_8cpp_af5b82bcc256ba9d6034d94f28d3c8512}{svm\+\_\+save\+\_\+model} (const char $\ast$model\+\_\+file\+\_\+name, const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+static char $\ast$ \hyperlink{svm_8cpp_aa324656b7bb4eb3ee42699d33c21ef7a}{readline} (F\+I\+L\+E $\ast$input)
+\item 
+bool \hyperlink{svm_8cpp_ac948c7ac7389151985a1e96151bcfa97}{read\+\_\+model\+\_\+header} (F\+I\+L\+E $\ast$\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141210192340_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp}, \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+\hyperlink{structsvm__model}{svm\+\_\+model} $\ast$ \hyperlink{svm_8cpp_a3e6ebc4bfaa5017e9336a28d8841097c}{svm\+\_\+load\+\_\+model} (const char $\ast$model\+\_\+file\+\_\+name)
+\item 
+void \hyperlink{svm_8cpp_aacfd6b0d366697f63c942036b93370d4}{svm\+\_\+free\+\_\+model\+\_\+content} (\hyperlink{structsvm__model}{svm\+\_\+model} $\ast$model\+\_\+ptr)
+\item 
+void \hyperlink{svm_8cpp_a300e06f7195c7ccb83571580d5865923}{svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model} (\hyperlink{structsvm__model}{svm\+\_\+model} $\ast$$\ast$model\+\_\+ptr\+\_\+ptr)
+\item 
+void \hyperlink{svm_8cpp_a192f7f718da0b288dacc446d72b5a77a}{svm\+\_\+destroy\+\_\+param} (\hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param)
+\item 
+const char $\ast$ \hyperlink{svm_8cpp_a73fd8a0ae428e25666c89c1e29274984}{svm\+\_\+check\+\_\+parameter} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} $\ast$prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} $\ast$param)
+\item 
+int \hyperlink{svm_8cpp_a15f0af9b6487b426e68b467f1949e975}{svm\+\_\+check\+\_\+probability\+\_\+model} (const \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})
+\item 
+void \hyperlink{svm_8cpp_a308f7948988441f4a1a5c8c8abc367be}{svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function} (void($\ast$print\+\_\+func)(const char $\ast$))
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{svm_8cpp_a9ba41253b462f42e64917cc38e0f2cc7}{libsvm\+\_\+version} = \hyperlink{svm_8h_ac7f5361b69ddd196a885f142b3c1d261}{L\+I\+B\+S\+V\+M\+\_\+\+V\+E\+R\+S\+I\+O\+N}
+\item 
+static void($\ast$ \hyperlink{svm_8cpp_a9a4e68dbfe2b342ff45c12c638ec39cb}{svm\+\_\+print\+\_\+string} )(const char $\ast$) = \&\hyperlink{svm_8cpp_a4edee28127eebfbcdab94b75c57341c5}{print\+\_\+string\+\_\+stdout}
+\item 
+static const char $\ast$ \hyperlink{svm_8cpp_a3be459e452f7ebeaae824e941e766770}{svm\+\_\+type\+\_\+table} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$ \hyperlink{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}{kernel\+\_\+type\+\_\+table} \mbox{[}$\,$\mbox{]}
+\item 
+static char $\ast$ \hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line} = N\+U\+L\+L
+\item 
+static int \hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\+\_\+line\+\_\+len}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{\index{svm.\+cpp@{svm.\+cpp}!F\+S\+C\+A\+N\+F@{F\+S\+C\+A\+N\+F}}
+\index{F\+S\+C\+A\+N\+F@{F\+S\+C\+A\+N\+F}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{F\+S\+C\+A\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+S\+C\+A\+N\+F(
+\begin{DoxyParamCaption}
+\item[{}]{\+\_\+stream, }
+\item[{}]{\+\_\+format, }
+\item[{}]{\+\_\+var}
+\end{DoxyParamCaption}
+)~do\{ if (fscanf(\+\_\+stream, \+\_\+format, \+\_\+var) != 1) return false; \}while(0)}}\label{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}
+
+
+svm.\+cpp 파일의 2763 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{\index{svm.\+cpp@{svm.\+cpp}!I\+N\+F@{I\+N\+F}}
+\index{I\+N\+F@{I\+N\+F}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{I\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+F~H\+U\+G\+E\+\_\+\+V\+A\+L}}\label{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}
+
+
+svm.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{\index{svm.\+cpp@{svm.\+cpp}!Malloc@{Malloc}}
+\index{Malloc@{Malloc}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{Malloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define Malloc(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(type $\ast$)malloc((n)$\ast$sizeof(type))}}\label{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}
+
+
+svm.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a3d8c9c145887af5174ba4cc6789862ad}{\index{svm.\+cpp@{svm.\+cpp}!T\+A\+U@{T\+A\+U}}
+\index{T\+A\+U@{T\+A\+U}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{T\+A\+U}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+U~1e-\/12}}\label{svm_8cpp_a3d8c9c145887af5174ba4cc6789862ad}
+
+
+svm.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{타입정의 문서화}
+\hypertarget{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{\index{svm.\+cpp@{svm.\+cpp}!Qfloat@{Qfloat}}
+\index{Qfloat@{Qfloat}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{Qfloat}]{\setlength{\rightskip}{0pt plus 5cm}typedef float {\bf Qfloat}}}\label{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}
+
+
+svm.\+cpp 파일의 12 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{\index{svm.\+cpp@{svm.\+cpp}!schar@{schar}}
+\index{schar@{schar}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{schar}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf schar}}}\label{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}
+
+
+svm.\+cpp 파일의 13 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\hypertarget{svm_8cpp_af2d4d35f18533f3571dad9ce21f8e1cc}{\index{svm.\+cpp@{svm.\+cpp}!clone@{clone}}
+\index{clone@{clone}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class S , class T $>$ static void clone (
+\begin{DoxyParamCaption}
+\item[{T $\ast$\&}]{dst, }
+\item[{S $\ast$}]{src, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{svm_8cpp_af2d4d35f18533f3571dad9ce21f8e1cc}
+
+
+svm.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+22 \{
+23     dst = \textcolor{keyword}{new} T[n];
+24     memcpy((\textcolor{keywordtype}{void} *)dst,(\textcolor{keywordtype}{void} *)src,\textcolor{keyword}{sizeof}(T)*n);
+25 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_af2d4d35f18533f3571dad9ce21f8e1cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_ab834c069665121a3467868539fde9101}{\index{svm.\+cpp@{svm.\+cpp}!info@{info}}
+\index{info@{info}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}static void info (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_ab834c069665121a3467868539fde9101}
+
+
+svm.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{keywordtype}{char} buf[BUFSIZ];
+51     va\_list ap;
+52     va\_start(ap,fmt);
+53     vsprintf(buf,fmt,ap);
+54     va\_end(ap);
+55     (*svm\_print\_string)(buf);
+56 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_ab834c069665121a3467868539fde9101_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{\index{svm.\+cpp@{svm.\+cpp}!max@{max}}
+\index{max@{max}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T max (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}
+
+
+svm.\+cpp 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+18 \{ \textcolor{keywordflow}{return} (\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}>y)?\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}:y; \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{\index{svm.\+cpp@{svm.\+cpp}!min@{min}}
+\index{min@{min}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T min (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}
+
+
+svm.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+15 \{ \textcolor{keywordflow}{return} (\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}<y)?\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}:y; \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a7efc9faed12382e55327581d3a4cfa8b}{\index{svm.\+cpp@{svm.\+cpp}!multiclass\+\_\+probability@{multiclass\+\_\+probability}}
+\index{multiclass\+\_\+probability@{multiclass\+\_\+probability}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{multiclass\+\_\+probability}]{\setlength{\rightskip}{0pt plus 5cm}static void multiclass\+\_\+probability (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{double $\ast$$\ast$}]{r, }
+\item[{double $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a7efc9faed12382e55327581d3a4cfa8b}
+
+
+svm.\+cpp 파일의 1829 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1830 \{
+1831     \textcolor{keywordtype}{int} t,j;
+1832     \textcolor{keywordtype}{int} iter = 0, max\_iter=\hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(100,k);
+1833     \textcolor{keywordtype}{double} **Q=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double} *,k);
+1834     \textcolor{keywordtype}{double} *Qp=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},k);
+1835     \textcolor{keywordtype}{double} pQp, eps=0.005/k;
+1836     
+1837     \textcolor{keywordflow}{for} (t=0;t<k;t++)
+1838     \{
+1839         p[t]=1.0/k;  \textcolor{comment}{// Valid if k = 1}
+1840         Q[t]=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},k);
+1841         Q[t][t]=0;
+1842         \textcolor{keywordflow}{for} (j=0;j<t;j++)
+1843         \{
+1844             Q[t][t]+=r[j][t]*r[j][t];
+1845             Q[t][j]=Q[j][t];
+1846         \}
+1847         \textcolor{keywordflow}{for} (j=t+1;j<k;j++)
+1848         \{
+1849             Q[t][t]+=r[j][t]*r[j][t];
+1850             Q[t][j]=-r[j][t]*r[t][j];
+1851         \}
+1852     \}
+1853     \textcolor{keywordflow}{for} (iter=0;iter<max\_iter;iter++)
+1854     \{
+1855         \textcolor{comment}{// stopping condition, recalculate QP,pQP for numerical accuracy}
+1856         pQp=0;
+1857         \textcolor{keywordflow}{for} (t=0;t<k;t++)
+1858         \{
+1859             Qp[t]=0;
+1860             \textcolor{keywordflow}{for} (j=0;j<k;j++)
+1861                 Qp[t]+=Q[t][j]*p[j];
+1862             pQp+=p[t]*Qp[t];
+1863         \}
+1864         \textcolor{keywordtype}{double} max\_error=0;
+1865         \textcolor{keywordflow}{for} (t=0;t<k;t++)
+1866         \{
+1867             \textcolor{keywordtype}{double} error=fabs(Qp[t]-pQp);
+1868             \textcolor{keywordflow}{if} (error>max\_error)
+1869                 max\_error=error;
+1870         \}
+1871         \textcolor{keywordflow}{if} (max\_error<eps) \textcolor{keywordflow}{break};
+1872         
+1873         \textcolor{keywordflow}{for} (t=0;t<k;t++)
+1874         \{
+1875             \textcolor{keywordtype}{double} diff=(-Qp[t]+pQp)/Q[t][t];
+1876             p[t]+=diff;
+1877             pQp=(pQp+diff*(diff*Q[t][t]+2*Qp[t]))/(1+diff)/(1+diff);
+1878             \textcolor{keywordflow}{for} (j=0;j<k;j++)
+1879             \{
+1880                 Qp[j]=(Qp[j]+diff*Q[t][j])/(1+diff);
+1881                 p[j]/=(1+diff);
+1882             \}
+1883         \}
+1884     \}
+1885     \textcolor{keywordflow}{if} (iter>=max\_iter)
+1886         \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"Exceeds max\_iter in multiclass\_prob\(\backslash\)n"});
+1887     \textcolor{keywordflow}{for}(t=0;t<k;t++) free(Q[t]);
+1888     free(Q);
+1889     free(Qp);
+1890 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{svm_8cpp_a7efc9faed12382e55327581d3a4cfa8b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a7efc9faed12382e55327581d3a4cfa8b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a07a43a87f274795074408da4b34d46c4}{\index{svm.\+cpp@{svm.\+cpp}!powi@{powi}}
+\index{powi@{powi}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{powi}]{\setlength{\rightskip}{0pt plus 5cm}static double powi (
+\begin{DoxyParamCaption}
+\item[{double}]{base, }
+\item[{int}]{times}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{svm_8cpp_a07a43a87f274795074408da4b34d46c4}
+
+
+svm.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{keywordtype}{double} tmp = base, ret = 1.0;
+29 
+30     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} t=times; t>0; t/=2)
+31     \{
+32         \textcolor{keywordflow}{if}(t%2==1) ret*=tmp;
+33         tmp = tmp * tmp;
+34     \}
+35     \textcolor{keywordflow}{return} ret;
+36 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a07a43a87f274795074408da4b34d46c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a4edee28127eebfbcdab94b75c57341c5}{\index{svm.\+cpp@{svm.\+cpp}!print\+\_\+string\+\_\+stdout@{print\+\_\+string\+\_\+stdout}}
+\index{print\+\_\+string\+\_\+stdout@{print\+\_\+string\+\_\+stdout}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{print\+\_\+string\+\_\+stdout}]{\setlength{\rightskip}{0pt plus 5cm}static void print\+\_\+string\+\_\+stdout (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a4edee28127eebfbcdab94b75c57341c5}
+
+
+svm.\+cpp 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+42 \{
+43     fputs(s,stdout);
+44     fflush(stdout);
+45 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{svm_8cpp_a4edee28127eebfbcdab94b75c57341c5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_ac948c7ac7389151985a1e96151bcfa97}{\index{svm.\+cpp@{svm.\+cpp}!read\+\_\+model\+\_\+header@{read\+\_\+model\+\_\+header}}
+\index{read\+\_\+model\+\_\+header@{read\+\_\+model\+\_\+header}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{read\+\_\+model\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}bool read\+\_\+model\+\_\+header (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{fp, }
+\item[{{\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_ac948c7ac7389151985a1e96151bcfa97}
+
+
+svm.\+cpp 파일의 2764 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2765 \{
+2766     \hyperlink{structsvm__parameter}{svm\_parameter}& param = model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param};
+2767     \textcolor{keywordtype}{char} cmd[81];
+2768     \textcolor{keywordflow}{while}(1)
+2769     \{
+2770         \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%80s"},cmd);
+2771 
+2772         \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"svm\_type"})==0)
+2773         \{
+2774             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%80s"},cmd);
+2775             \textcolor{keywordtype}{int} i;
+2776             \textcolor{keywordflow}{for}(i=0;\hyperlink{svm_8cpp_a3be459e452f7ebeaae824e941e766770}{svm\_type\_table}[i];i++)
+2777             \{
+2778                 \textcolor{keywordflow}{if}(strcmp(\hyperlink{svm_8cpp_a3be459e452f7ebeaae824e941e766770}{svm\_type\_table}[i],cmd)==0)
+2779                 \{
+2780                     param.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type}=i;
+2781                     \textcolor{keywordflow}{break};
+2782                 \}
+2783             \}
+2784             \textcolor{keywordflow}{if}(\hyperlink{svm_8cpp_a3be459e452f7ebeaae824e941e766770}{svm\_type\_table}[i] == NULL)
+2785             \{
+2786                 fprintf(stderr,\textcolor{stringliteral}{"unknown svm type.\(\backslash\)n"});
+2787                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+2788             \}
+2789         \}
+2790         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"kernel\_type"})==0)
+2791         \{       
+2792             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%80s"},cmd);
+2793             \textcolor{keywordtype}{int} i;
+2794             \textcolor{keywordflow}{for}(i=0;\hyperlink{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}{kernel\_type\_table}[i];i++)
+2795             \{
+2796                 \textcolor{keywordflow}{if}(strcmp(\hyperlink{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}{kernel\_type\_table}[i],cmd)==0)
+2797                 \{
+2798                     param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type}=i;
+2799                     \textcolor{keywordflow}{break};
+2800                 \}
+2801             \}
+2802             \textcolor{keywordflow}{if}(\hyperlink{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}{kernel\_type\_table}[i] == NULL)
+2803             \{
+2804                 fprintf(stderr,\textcolor{stringliteral}{"unknown kernel function.\(\backslash\)n"});   
+2805                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+2806             \}
+2807         \}
+2808         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"degree"})==0)
+2809             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%d"},&param.\hyperlink{structsvm__parameter_afef1c4508ec0045c236a3308b0fa5138}{degree});
+2810         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"gamma"})==0)
+2811             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%lf"},&param.\hyperlink{structsvm__parameter_a91667b90506e171482b5fc619377110d}{gamma});
+2812         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"coef0"})==0)
+2813             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%lf"},&param.\hyperlink{structsvm__parameter_a3ab3555a96a578bea6e5285a5db0a4db}{coef0});
+2814         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"nr\_class"})==0)
+2815             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%d"},&model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class});
+2816         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"total\_sv"})==0)
+2817             \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%d"},&model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l});
+2818         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"rho"})==0)
+2819         \{
+2820             \textcolor{keywordtype}{int} n = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} * (model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}-1)/2;
+2821             model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},n);
+2822             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)
+2823                 \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%lf"},&model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho}[i]);
+2824         \}
+2825         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"label"})==0)
+2826         \{
+2827             \textcolor{keywordtype}{int} n = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2828             model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},n);
+2829             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)
+2830                 \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%d"},&model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[i]);
+2831         \}
+2832         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"probA"})==0)
+2833         \{
+2834             \textcolor{keywordtype}{int} n = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} * (model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}-1)/2;
+2835             model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},n);
+2836             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)
+2837                 \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%lf"},&model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}[i]);
+2838         \}
+2839         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"probB"})==0)
+2840         \{
+2841             \textcolor{keywordtype}{int} n = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} * (model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}-1)/2;
+2842             model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},n);
+2843             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)
+2844                 \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%lf"},&model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}[i]);
+2845         \}
+2846         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"nr\_sv"})==0)
+2847         \{
+2848             \textcolor{keywordtype}{int} n = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2849             model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},n);
+2850             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)
+2851                 \hyperlink{svm_8cpp_aeba4ad0e39f319d353d955b419eebe31}{FSCANF}(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp},\textcolor{stringliteral}{"%d"},&model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV}[i]);
+2852         \}
+2853         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(cmd,\textcolor{stringliteral}{"SV"})==0)
+2854         \{
+2855             \textcolor{keywordflow}{while}(1)
+2856             \{
+2857                 \textcolor{keywordtype}{int} c = getc(\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp});
+2858                 \textcolor{keywordflow}{if}(c==EOF || c==\textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{break};
+2859             \}
+2860             \textcolor{keywordflow}{break};
+2861         \}
+2862         \textcolor{keywordflow}{else}
+2863         \{
+2864             fprintf(stderr,\textcolor{stringliteral}{"unknown text in model file: [%s]\(\backslash\)n"},cmd);
+2865             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+2866         \}
+2867     \}
+2868 
+2869     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+2870 
+2871 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_ac948c7ac7389151985a1e96151bcfa97_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_aa324656b7bb4eb3ee42699d33c21ef7a}{\index{svm.\+cpp@{svm.\+cpp}!readline@{readline}}
+\index{readline@{readline}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{readline}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ readline (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_aa324656b7bb4eb3ee42699d33c21ef7a}
+
+
+svm.\+cpp 파일의 2738 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2739 \{
+2740     \textcolor{keywordtype}{int} len;
+2741 
+2742     \textcolor{keywordflow}{if}(fgets(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line},\hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\_line\_len},input) == NULL)
+2743         \textcolor{keywordflow}{return} NULL;
+2744 
+2745     \textcolor{keywordflow}{while}(strrchr(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line},\textcolor{charliteral}{'\(\backslash\)n'}) == NULL)
+2746     \{
+2747         \hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\_line\_len} *= 2;
+2748         \hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line} = (\textcolor{keywordtype}{char} *) realloc(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line},\hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\_line\_len});
+2749         len = (int) strlen(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line});
+2750         \textcolor{keywordflow}{if}(fgets(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line}+len,\hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\_line\_len}-len,input) == NULL)
+2751             \textcolor{keywordflow}{break};
+2752     \}
+2753     \textcolor{keywordflow}{return} \hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line};
+2754 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_aa324656b7bb4eb3ee42699d33c21ef7a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a681fcc7268133ceb472773fd30b97839}{\index{svm.\+cpp@{svm.\+cpp}!sigmoid\+\_\+predict@{sigmoid\+\_\+predict}}
+\index{sigmoid\+\_\+predict@{sigmoid\+\_\+predict}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{sigmoid\+\_\+predict}]{\setlength{\rightskip}{0pt plus 5cm}static double sigmoid\+\_\+predict (
+\begin{DoxyParamCaption}
+\item[{double}]{decision\+\_\+value, }
+\item[{double}]{A, }
+\item[{double}]{B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a681fcc7268133ceb472773fd30b97839}
+
+
+svm.\+cpp 파일의 1818 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1819 \{
+1820     \textcolor{keywordtype}{double} fApB = decision\_value*A+B;
+1821     \textcolor{comment}{// 1-p used later; avoid catastrophic cancellation}
+1822     \textcolor{keywordflow}{if} (fApB >= 0)
+1823         \textcolor{keywordflow}{return} exp(-fApB)/(1.0+exp(-fApB));
+1824     \textcolor{keywordflow}{else}
+1825         \textcolor{keywordflow}{return} 1.0/(1+exp(fApB)) ;
+1826 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a681fcc7268133ceb472773fd30b97839_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a1da8eb99e9a14699eb36a30bc8f2bedb}{\index{svm.\+cpp@{svm.\+cpp}!sigmoid\+\_\+train@{sigmoid\+\_\+train}}
+\index{sigmoid\+\_\+train@{sigmoid\+\_\+train}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{sigmoid\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}static void sigmoid\+\_\+train (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{const double $\ast$}]{dec\+\_\+values, }
+\item[{const double $\ast$}]{labels, }
+\item[{double \&}]{A, }
+\item[{double \&}]{B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a1da8eb99e9a14699eb36a30bc8f2bedb}
+
+
+svm.\+cpp 파일의 1705 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1708 \{
+1709     \textcolor{keywordtype}{double} prior1=0, prior0 = 0;
+1710     \textcolor{keywordtype}{int} i;
+1711 
+1712     \textcolor{keywordflow}{for} (i=0;i<l;i++)
+1713         \textcolor{keywordflow}{if} (labels[i] > 0) prior1+=1;
+1714         \textcolor{keywordflow}{else} prior0+=1;
+1715     
+1716     \textcolor{keywordtype}{int} max\_iter=100;   \textcolor{comment}{// Maximal number of iterations}
+1717     \textcolor{keywordtype}{double} min\_step=1e-10;  \textcolor{comment}{// Minimal step taken in line search}
+1718     \textcolor{keywordtype}{double} sigma=1e-12; \textcolor{comment}{// For numerically strict PD of Hessian}
+1719     \textcolor{keywordtype}{double} eps=1e-5;
+1720     \textcolor{keywordtype}{double} hiTarget=(prior1+1.0)/(prior1+2.0);
+1721     \textcolor{keywordtype}{double} loTarget=1/(prior0+2.0);
+1722     \textcolor{keywordtype}{double} *t=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},l);
+1723     \textcolor{keywordtype}{double} fApB,p,q,h11,h22,h21,g1,g2,det,dA,dB,gd,stepsize;
+1724     \textcolor{keywordtype}{double} newA,newB,newf,d1,d2;
+1725     \textcolor{keywordtype}{int} iter;
+1726     
+1727     \textcolor{comment}{// Initial Point and Initial Fun Value}
+1728     A=0.0; B=log((prior0+1.0)/(prior1+1.0));
+1729     \textcolor{keywordtype}{double} fval = 0.0;
+1730 
+1731     \textcolor{keywordflow}{for} (i=0;i<l;i++)
+1732     \{
+1733         \textcolor{keywordflow}{if} (labels[i]>0) t[i]=hiTarget;
+1734         \textcolor{keywordflow}{else} t[i]=loTarget;
+1735         fApB = dec\_values[i]*A+B;
+1736         \textcolor{keywordflow}{if} (fApB>=0)
+1737             fval += t[i]*fApB + log(1+exp(-fApB));
+1738         \textcolor{keywordflow}{else}
+1739             fval += (t[i] - 1)*fApB +log(1+exp(fApB));
+1740     \}
+1741     \textcolor{keywordflow}{for} (iter=0;iter<max\_iter;iter++)
+1742     \{
+1743         \textcolor{comment}{// Update Gradient and Hessian (use H' = H + sigma I)}
+1744         h11=sigma; \textcolor{comment}{// numerically ensures strict PD}
+1745         h22=sigma;
+1746         h21=0.0;g1=0.0;g2=0.0;
+1747         \textcolor{keywordflow}{for} (i=0;i<l;i++)
+1748         \{
+1749             fApB = dec\_values[i]*A+B;
+1750             \textcolor{keywordflow}{if} (fApB >= 0)
+1751             \{
+1752                 p=exp(-fApB)/(1.0+exp(-fApB));
+1753                 q=1.0/(1.0+exp(-fApB));
+1754             \}
+1755             \textcolor{keywordflow}{else}
+1756             \{
+1757                 p=1.0/(1.0+exp(fApB));
+1758                 q=exp(fApB)/(1.0+exp(fApB));
+1759             \}
+1760             d2=p*q;
+1761             h11+=dec\_values[i]*dec\_values[i]*d2;
+1762             h22+=d2;
+1763             h21+=dec\_values[i]*d2;
+1764             d1=t[i]-p;
+1765             g1+=dec\_values[i]*d1;
+1766             g2+=d1;
+1767         \}
+1768 
+1769         \textcolor{comment}{// Stopping Criteria}
+1770         \textcolor{keywordflow}{if} (fabs(g1)<eps && fabs(g2)<eps)
+1771             \textcolor{keywordflow}{break};
+1772 
+1773         \textcolor{comment}{// Finding Newton direction: -inv(H') * g}
+1774         det=h11*h22-h21*h21;
+1775         dA=-(h22*g1 - h21 * g2) / det;
+1776         dB=-(-h21*g1+ h11 * g2) / det;
+1777         gd=g1*dA+g2*dB;
+1778 
+1779 
+1780         stepsize = 1;       \textcolor{comment}{// Line Search}
+1781         \textcolor{keywordflow}{while} (stepsize >= min\_step)
+1782         \{
+1783             newA = A + stepsize * dA;
+1784             newB = B + stepsize * dB;
+1785 
+1786             \textcolor{comment}{// New function value}
+1787             newf = 0.0;
+1788             \textcolor{keywordflow}{for} (i=0;i<l;i++)
+1789             \{
+1790                 fApB = dec\_values[i]*newA+newB;
+1791                 \textcolor{keywordflow}{if} (fApB >= 0)
+1792                     newf += t[i]*fApB + log(1+exp(-fApB));
+1793                 \textcolor{keywordflow}{else}
+1794                     newf += (t[i] - 1)*fApB +log(1+exp(fApB));
+1795             \}
+1796             \textcolor{comment}{// Check sufficient decrease}
+1797             \textcolor{keywordflow}{if} (newf<fval+0.0001*stepsize*gd)
+1798             \{
+1799                 A=newA;B=newB;fval=newf;
+1800                 \textcolor{keywordflow}{break};
+1801             \}
+1802             \textcolor{keywordflow}{else}
+1803                 stepsize = stepsize / 2.0;
+1804         \}
+1805 
+1806         \textcolor{keywordflow}{if} (stepsize < min\_step)
+1807         \{
+1808             \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"Line search fails in two-class probability estimates\(\backslash\)n"});
+1809             \textcolor{keywordflow}{break};
+1810         \}
+1811     \}
+1812 
+1813     \textcolor{keywordflow}{if} (iter>=max\_iter)
+1814         \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"Reaching maximal iterations in two-class probability estimates\(\backslash\)n"});
+1815     free(t);
+1816 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{svm_8cpp_a1da8eb99e9a14699eb36a30bc8f2bedb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a1da8eb99e9a14699eb36a30bc8f2bedb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a11814ad6e8976823b61af65e6e36ca1a}{\index{svm.\+cpp@{svm.\+cpp}!solve\+\_\+c\+\_\+svc@{solve\+\_\+c\+\_\+svc}}
+\index{solve\+\_\+c\+\_\+svc@{solve\+\_\+c\+\_\+svc}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{solve\+\_\+c\+\_\+svc}]{\setlength{\rightskip}{0pt plus 5cm}static void solve\+\_\+c\+\_\+svc (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double $\ast$}]{alpha, }
+\item[{{\bf Solver\+::\+Solution\+Info} $\ast$}]{si, }
+\item[{double}]{Cp, }
+\item[{double}]{Cn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a11814ad6e8976823b61af65e6e36ca1a}
+
+
+svm.\+cpp 파일의 1440 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1443 \{
+1444     \textcolor{keywordtype}{int} l = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+1445     \textcolor{keywordtype}{double} *minus\_ones = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[l];
+1446     \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} *y = \textcolor{keyword}{new} \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar}[l];
+1447 
+1448     \textcolor{keywordtype}{int} i;
+1449 
+1450     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1451     \{
+1452         alpha[i] = 0;
+1453         minus\_ones[i] = -1;
+1454         \textcolor{keywordflow}{if}(prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i] > 0) y[i] = +1; \textcolor{keywordflow}{else} y[i] = -1;
+1455     \}
+1456 
+1457     \hyperlink{class_solver}{Solver} s;
+1458     s.\hyperlink{class_solver_aa3ab5672a26826f9dc1ac9145620a823}{Solve}(l, \hyperlink{class_s_v_c___q}{SVC\_Q}(*prob,*param,y), minus\_ones, y,
+1459         alpha, Cp, Cn, param->\hyperlink{structsvm__parameter_a1feab5a4e0d5842a20e544f3f944f841}{eps}, si, param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking});
+1460 
+1461     \textcolor{keywordtype}{double} sum\_alpha=0;
+1462     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1463         sum\_alpha += alpha[i];
+1464 
+1465     \textcolor{keywordflow}{if} (Cp==Cn)
+1466         \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"nu = %f\(\backslash\)n"}, sum\_alpha/(Cp*prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}));
+1467 
+1468     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1469         alpha[i] *= y[i];
+1470 
+1471     \textcolor{keyword}{delete}[] minus\_ones;
+1472     \textcolor{keyword}{delete}[] y;
+1473 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a11814ad6e8976823b61af65e6e36ca1a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a11814ad6e8976823b61af65e6e36ca1a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a57df27962e3c80e9c2de6c3163850c79}{\index{svm.\+cpp@{svm.\+cpp}!solve\+\_\+epsilon\+\_\+svr@{solve\+\_\+epsilon\+\_\+svr}}
+\index{solve\+\_\+epsilon\+\_\+svr@{solve\+\_\+epsilon\+\_\+svr}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{solve\+\_\+epsilon\+\_\+svr}]{\setlength{\rightskip}{0pt plus 5cm}static void solve\+\_\+epsilon\+\_\+svr (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double $\ast$}]{alpha, }
+\item[{{\bf Solver\+::\+Solution\+Info} $\ast$}]{si}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a57df27962e3c80e9c2de6c3163850c79}
+
+
+svm.\+cpp 파일의 1562 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1565 \{
+1566     \textcolor{keywordtype}{int} l = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+1567     \textcolor{keywordtype}{double} *alpha2 = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2*l];
+1568     \textcolor{keywordtype}{double} *linear\_term = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2*l];
+1569     \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} *y = \textcolor{keyword}{new} \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar}[2*l];
+1570     \textcolor{keywordtype}{int} i;
+1571 
+1572     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1573     \{
+1574         alpha2[i] = 0;
+1575         linear\_term[i] = param->\hyperlink{structsvm__parameter_a3b60d7ce96137a64caca81095d1a188b}{p} - prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i];
+1576         y[i] = 1;
+1577 
+1578         alpha2[i+l] = 0;
+1579         linear\_term[i+l] = param->\hyperlink{structsvm__parameter_a3b60d7ce96137a64caca81095d1a188b}{p} + prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i];
+1580         y[i+l] = -1;
+1581     \}
+1582 
+1583     \hyperlink{class_solver}{Solver} s;
+1584     s.\hyperlink{class_solver_aa3ab5672a26826f9dc1ac9145620a823}{Solve}(2*l, \hyperlink{class_s_v_r___q}{SVR\_Q}(*prob,*param), linear\_term, y,
+1585         alpha2, param->\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C}, param->\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C}, param->\hyperlink{structsvm__parameter_a1feab5a4e0d5842a20e544f3f944f841}{eps}, si, param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking});
+1586 
+1587     \textcolor{keywordtype}{double} sum\_alpha = 0;
+1588     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1589     \{
+1590         alpha[i] = alpha2[i] - alpha2[i+l];
+1591         sum\_alpha += fabs(alpha[i]);
+1592     \}
+1593     \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"nu = %f\(\backslash\)n"},sum\_alpha/(param->\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C}*l));
+1594 
+1595     \textcolor{keyword}{delete}[] alpha2;
+1596     \textcolor{keyword}{delete}[] linear\_term;
+1597     \textcolor{keyword}{delete}[] y;
+1598 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a57df27962e3c80e9c2de6c3163850c79_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a57df27962e3c80e9c2de6c3163850c79_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a221d17018ed0cd7f218523dbbb9aab4d}{\index{svm.\+cpp@{svm.\+cpp}!solve\+\_\+nu\+\_\+svc@{solve\+\_\+nu\+\_\+svc}}
+\index{solve\+\_\+nu\+\_\+svc@{solve\+\_\+nu\+\_\+svc}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{solve\+\_\+nu\+\_\+svc}]{\setlength{\rightskip}{0pt plus 5cm}static void solve\+\_\+nu\+\_\+svc (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double $\ast$}]{alpha, }
+\item[{{\bf Solver\+::\+Solution\+Info} $\ast$}]{si}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a221d17018ed0cd7f218523dbbb9aab4d}
+
+
+svm.\+cpp 파일의 1475 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1478 \{
+1479     \textcolor{keywordtype}{int} i;
+1480     \textcolor{keywordtype}{int} l = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+1481     \textcolor{keywordtype}{double} nu = param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu};
+1482 
+1483     \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} *y = \textcolor{keyword}{new} \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar}[l];
+1484 
+1485     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1486         \textcolor{keywordflow}{if}(prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i]>0)
+1487             y[i] = +1;
+1488         \textcolor{keywordflow}{else}
+1489             y[i] = -1;
+1490 
+1491     \textcolor{keywordtype}{double} sum\_pos = nu*l/2;
+1492     \textcolor{keywordtype}{double} sum\_neg = nu*l/2;
+1493 
+1494     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1495         \textcolor{keywordflow}{if}(y[i] == +1)
+1496         \{
+1497             alpha[i] = \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(1.0,sum\_pos);
+1498             sum\_pos -= alpha[i];
+1499         \}
+1500         \textcolor{keywordflow}{else}
+1501         \{
+1502             alpha[i] = \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(1.0,sum\_neg);
+1503             sum\_neg -= alpha[i];
+1504         \}
+1505 
+1506     \textcolor{keywordtype}{double} *zeros = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[l];
+1507 
+1508     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1509         zeros[i] = 0;
+1510 
+1511     \hyperlink{class_solver___n_u}{Solver\_NU} s;
+1512     s.\hyperlink{class_solver___n_u_a3852f49023c0032934508156d7a9f132}{Solve}(l, \hyperlink{class_s_v_c___q}{SVC\_Q}(*prob,*param,y), zeros, y,
+1513         alpha, 1.0, 1.0, param->\hyperlink{structsvm__parameter_a1feab5a4e0d5842a20e544f3f944f841}{eps}, si,  param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking});
+1514     \textcolor{keywordtype}{double} r = si->\hyperlink{struct_solver_1_1_solution_info_a3db948f9e914e1f9976523cfdc7c1bbe}{r};
+1515 
+1516     \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"C = %f\(\backslash\)n"},1/r);
+1517 
+1518     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1519         alpha[i] *= y[i]/r;
+1520 
+1521     si->\hyperlink{struct_solver_1_1_solution_info_a8091f45a336af39e232f3845e25f2266}{rho} /= r;
+1522     si->\hyperlink{struct_solver_1_1_solution_info_adf1d775e9152a7b1742057cd638ed2ae}{obj} /= (r*r);
+1523     si->\hyperlink{struct_solver_1_1_solution_info_a94c4cb7f402752326cc975ec57a8688f}{upper\_bound\_p} = 1/r;
+1524     si->\hyperlink{struct_solver_1_1_solution_info_a07ab9dc3265855f483922988bdaaf986}{upper\_bound\_n} = 1/r;
+1525 
+1526     \textcolor{keyword}{delete}[] y;
+1527     \textcolor{keyword}{delete}[] zeros;
+1528 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a221d17018ed0cd7f218523dbbb9aab4d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a221d17018ed0cd7f218523dbbb9aab4d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_add71d0d022422b58f690572f521f0f78}{\index{svm.\+cpp@{svm.\+cpp}!solve\+\_\+nu\+\_\+svr@{solve\+\_\+nu\+\_\+svr}}
+\index{solve\+\_\+nu\+\_\+svr@{solve\+\_\+nu\+\_\+svr}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{solve\+\_\+nu\+\_\+svr}]{\setlength{\rightskip}{0pt plus 5cm}static void solve\+\_\+nu\+\_\+svr (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double $\ast$}]{alpha, }
+\item[{{\bf Solver\+::\+Solution\+Info} $\ast$}]{si}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_add71d0d022422b58f690572f521f0f78}
+
+
+svm.\+cpp 파일의 1600 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1603 \{
+1604     \textcolor{keywordtype}{int} l = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+1605     \textcolor{keywordtype}{double} C = param->\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C};
+1606     \textcolor{keywordtype}{double} *alpha2 = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2*l];
+1607     \textcolor{keywordtype}{double} *linear\_term = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2*l];
+1608     \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} *y = \textcolor{keyword}{new} \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar}[2*l];
+1609     \textcolor{keywordtype}{int} i;
+1610 
+1611     \textcolor{keywordtype}{double} sum = C * param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu} * l / 2;
+1612     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1613     \{
+1614         alpha2[i] = alpha2[i+l] = \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(sum,C);
+1615         sum -= alpha2[i];
+1616 
+1617         linear\_term[i] = - prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i];
+1618         y[i] = 1;
+1619 
+1620         linear\_term[i+l] = prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i];
+1621         y[i+l] = -1;
+1622     \}
+1623 
+1624     \hyperlink{class_solver___n_u}{Solver\_NU} s;
+1625     s.\hyperlink{class_solver___n_u_a3852f49023c0032934508156d7a9f132}{Solve}(2*l, \hyperlink{class_s_v_r___q}{SVR\_Q}(*prob,*param), linear\_term, y,
+1626         alpha2, C, C, param->\hyperlink{structsvm__parameter_a1feab5a4e0d5842a20e544f3f944f841}{eps}, si, param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking});
+1627 
+1628     \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"epsilon = %f\(\backslash\)n"},-si->\hyperlink{struct_solver_1_1_solution_info_a3db948f9e914e1f9976523cfdc7c1bbe}{r});
+1629 
+1630     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1631         alpha[i] = alpha2[i] - alpha2[i+l];
+1632 
+1633     \textcolor{keyword}{delete}[] alpha2;
+1634     \textcolor{keyword}{delete}[] linear\_term;
+1635     \textcolor{keyword}{delete}[] y;
+1636 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_add71d0d022422b58f690572f521f0f78_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_add71d0d022422b58f690572f521f0f78_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a7a8a956d5b08b55756ceaaf63a5d2a87}{\index{svm.\+cpp@{svm.\+cpp}!solve\+\_\+one\+\_\+class@{solve\+\_\+one\+\_\+class}}
+\index{solve\+\_\+one\+\_\+class@{solve\+\_\+one\+\_\+class}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{solve\+\_\+one\+\_\+class}]{\setlength{\rightskip}{0pt plus 5cm}static void solve\+\_\+one\+\_\+class (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double $\ast$}]{alpha, }
+\item[{{\bf Solver\+::\+Solution\+Info} $\ast$}]{si}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a7a8a956d5b08b55756ceaaf63a5d2a87}
+
+
+svm.\+cpp 파일의 1530 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1533 \{
+1534     \textcolor{keywordtype}{int} l = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+1535     \textcolor{keywordtype}{double} *zeros = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[l];
+1536     \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} *ones = \textcolor{keyword}{new} \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar}[l];
+1537     \textcolor{keywordtype}{int} i;
+1538 
+1539     \textcolor{keywordtype}{int} n = (int)(param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu}*prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});    \textcolor{comment}{// # of alpha's at upper bound}
+1540 
+1541     \textcolor{keywordflow}{for}(i=0;i<n;i++)
+1542         alpha[i] = 1;
+1543     \textcolor{keywordflow}{if}(n<prob->l)
+1544         alpha[n] = param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu} * prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l} - n;
+1545     \textcolor{keywordflow}{for}(i=n+1;i<l;i++)
+1546         alpha[i] = 0;
+1547 
+1548     \textcolor{keywordflow}{for}(i=0;i<l;i++)
+1549     \{
+1550         zeros[i] = 0;
+1551         ones[i] = 1;
+1552     \}
+1553 
+1554     \hyperlink{class_solver}{Solver} s;
+1555     s.\hyperlink{class_solver_aa3ab5672a26826f9dc1ac9145620a823}{Solve}(l, \hyperlink{class_o_n_e___c_l_a_s_s___q}{ONE\_CLASS\_Q}(*prob,*param), zeros, ones,
+1556         alpha, 1.0, 1.0, param->\hyperlink{structsvm__parameter_a1feab5a4e0d5842a20e544f3f944f841}{eps}, si, param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking});
+1557 
+1558     \textcolor{keyword}{delete}[] zeros;
+1559     \textcolor{keyword}{delete}[] ones;
+1560 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a7a8a956d5b08b55756ceaaf63a5d2a87_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a7a8a956d5b08b55756ceaaf63a5d2a87_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_ae862a4ec5aef90b7ded1cd2a602271f6}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+binary\+\_\+svc\+\_\+probability@{svm\+\_\+binary\+\_\+svc\+\_\+probability}}
+\index{svm\+\_\+binary\+\_\+svc\+\_\+probability@{svm\+\_\+binary\+\_\+svc\+\_\+probability}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+binary\+\_\+svc\+\_\+probability}]{\setlength{\rightskip}{0pt plus 5cm}static void svm\+\_\+binary\+\_\+svc\+\_\+probability (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double}]{Cp, }
+\item[{double}]{Cn, }
+\item[{double \&}]{prob\+A, }
+\item[{double \&}]{prob\+B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_ae862a4ec5aef90b7ded1cd2a602271f6}
+
+
+svm.\+cpp 파일의 1893 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1896 \{
+1897     \textcolor{keywordtype}{int} i;
+1898     \textcolor{keywordtype}{int} nr\_fold = 5;
+1899     \textcolor{keywordtype}{int} *perm = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+1900     \textcolor{keywordtype}{double} *dec\_values = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+1901 
+1902     \textcolor{comment}{// random shuffle}
+1903     \textcolor{keywordflow}{for}(i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++) perm[i]=i;
+1904     \textcolor{keywordflow}{for}(i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+1905     \{
+1906         \textcolor{keywordtype}{int} j = i+rand()%(prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}-i);
+1907         \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(perm[i],perm[j]);
+1908     \}
+1909     \textcolor{keywordflow}{for}(i=0;i<nr\_fold;i++)
+1910     \{
+1911         \textcolor{keywordtype}{int} begin = i*prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}/nr\_fold;
+1912         \textcolor{keywordtype}{int} end = (i+1)*prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}/nr\_fold;
+1913         \textcolor{keywordtype}{int} j,k;
+1914         \textcolor{keyword}{struct} \hyperlink{structsvm__problem}{svm\_problem} subprob;
+1915 
+1916         subprob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l} = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}-(end-begin);
+1917         subprob.x = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keyword}{struct} \hyperlink{structsvm__node}{svm\_node}*,subprob.l);
+1918         subprob.y = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},subprob.l);
+1919             
+1920         k=0;
+1921         \textcolor{keywordflow}{for}(j=0;j<begin;j++)
+1922         \{
+1923             subprob.x[k] = prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]];
+1924             subprob.y[k] = prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[perm[j]];
+1925             ++k;
+1926         \}
+1927         \textcolor{keywordflow}{for}(j=end;j<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};j++)
+1928         \{
+1929             subprob.x[k] = prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]];
+1930             subprob.y[k] = prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[perm[j]];
+1931             ++k;
+1932         \}
+1933         \textcolor{keywordtype}{int} p\_count=0,n\_count=0;
+1934         \textcolor{keywordflow}{for}(j=0;j<k;j++)
+1935             \textcolor{keywordflow}{if}(subprob.y[j]>0)
+1936                 p\_count++;
+1937             \textcolor{keywordflow}{else}
+1938                 n\_count++;
+1939 
+1940         \textcolor{keywordflow}{if}(p\_count==0 && n\_count==0)
+1941             \textcolor{keywordflow}{for}(j=begin;j<end;j++)
+1942                 dec\_values[perm[j]] = 0;
+1943         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(p\_count > 0 && n\_count == 0)
+1944             \textcolor{keywordflow}{for}(j=begin;j<end;j++)
+1945                 dec\_values[perm[j]] = 1;
+1946         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(p\_count == 0 && n\_count > 0)
+1947             \textcolor{keywordflow}{for}(j=begin;j<end;j++)
+1948                 dec\_values[perm[j]] = -1;
+1949         \textcolor{keywordflow}{else}
+1950         \{
+1951             \hyperlink{structsvm__parameter}{svm\_parameter} subparam = *param;
+1952             subparam.\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability}=0;
+1953             subparam.\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C}=1.0;
+1954             subparam.\hyperlink{structsvm__parameter_a44014738d1db5444f7f9a1ebf74e4214}{nr\_weight}=2;
+1955             subparam.\hyperlink{structsvm__parameter_a06753922bb0282240f35ae7683f8d69a}{weight\_label} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},2);
+1956             subparam.\hyperlink{structsvm__parameter_afff750f99180b5ddf735404496b6c196}{weight} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},2);
+1957             subparam.\hyperlink{structsvm__parameter_a06753922bb0282240f35ae7683f8d69a}{weight\_label}[0]=+1;
+1958             subparam.\hyperlink{structsvm__parameter_a06753922bb0282240f35ae7683f8d69a}{weight\_label}[1]=-1;
+1959             subparam.\hyperlink{structsvm__parameter_afff750f99180b5ddf735404496b6c196}{weight}[0]=Cp;
+1960             subparam.\hyperlink{structsvm__parameter_afff750f99180b5ddf735404496b6c196}{weight}[1]=Cn;
+1961             \textcolor{keyword}{struct }\hyperlink{structsvm__model}{svm\_model} *submodel = \hyperlink{svm_8cpp_ae6e4f84556602fab57ec5a330514b613}{svm\_train}(&subprob,&subparam);
+1962             \textcolor{keywordflow}{for}(j=begin;j<end;j++)
+1963             \{
+1964                 \hyperlink{svm_8cpp_aabe5223ca8496af644883d8063007db2}{svm\_predict\_values}(submodel,prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]],&(dec\_values[perm[j]]));
+1965                 \textcolor{comment}{// ensure +1 -1 order; reason not using CV subroutine}
+1966                 dec\_values[perm[j]] *= submodel->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[0];
+1967             \}       
+1968             \hyperlink{svm_8cpp_a300e06f7195c7ccb83571580d5865923}{svm\_free\_and\_destroy\_model}(&submodel);
+1969             \hyperlink{svm_8cpp_a192f7f718da0b288dacc446d72b5a77a}{svm\_destroy\_param}(&subparam);
+1970         \}
+1971         free(subprob.x);
+1972         free(subprob.y);
+1973     \}       
+1974     \hyperlink{svm_8cpp_a1da8eb99e9a14699eb36a30bc8f2bedb}{sigmoid\_train}(prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l},dec\_values,prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y},\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA},\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB});
+1975     free(dec\_values);
+1976     free(perm);
+1977 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_ae862a4ec5aef90b7ded1cd2a602271f6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_ae862a4ec5aef90b7ded1cd2a602271f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a73fd8a0ae428e25666c89c1e29274984}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+check\+\_\+parameter@{svm\+\_\+check\+\_\+parameter}}
+\index{svm\+\_\+check\+\_\+parameter@{svm\+\_\+check\+\_\+parameter}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+check\+\_\+parameter}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ svm\+\_\+check\+\_\+parameter (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a73fd8a0ae428e25666c89c1e29274984}
+
+
+svm.\+cpp 파일의 3029 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+3030 \{
+3031     \textcolor{comment}{// svm\_type}
+3032 
+3033     \textcolor{keywordtype}{int} svm\_type = param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type};
+3034     \textcolor{keywordflow}{if}(svm\_type != \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} &&
+3035        svm\_type != \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC} &&
+3036        svm\_type != \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS} &&
+3037        svm\_type != \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} &&
+3038        svm\_type != \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR})
+3039         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"unknown svm type"};
+3040     
+3041     \textcolor{comment}{// kernel\_type, degree}
+3042     
+3043     \textcolor{keywordtype}{int} kernel\_type = param->\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type};
+3044     \textcolor{keywordflow}{if}(kernel\_type != \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR} &&
+3045        kernel\_type != \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd}{POLY} &&
+3046        kernel\_type != \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f}{RBF} &&
+3047        kernel\_type != \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883}{SIGMOID} &&
+3048        kernel\_type != \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285}{PRECOMPUTED})
+3049         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"unknown kernel type"};
+3050 
+3051     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a91667b90506e171482b5fc619377110d}{gamma} < 0)
+3052         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"gamma < 0"};
+3053 
+3054     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afef1c4508ec0045c236a3308b0fa5138}{degree} < 0)
+3055         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"degree of polynomial kernel < 0"};
+3056 
+3057     \textcolor{comment}{// cache\_size,eps,C,nu,p,shrinking}
+3058 
+3059     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a00286b7e0767e45d68ac7abceb60c821}{cache\_size} <= 0)
+3060         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"cache\_size <= 0"};
+3061 
+3062     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a1feab5a4e0d5842a20e544f3f944f841}{eps} <= 0)
+3063         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"eps <= 0"};
+3064 
+3065     \textcolor{keywordflow}{if}(svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} ||
+3066        svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} ||
+3067        svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR})
+3068         \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C} <= 0)
+3069             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"C <= 0"};
+3070 
+3071     \textcolor{keywordflow}{if}(svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC} ||
+3072        svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS} ||
+3073        svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR})
+3074         \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu} <= 0 || param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu} > 1)
+3075             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"nu <= 0 or nu > 1"};
+3076 
+3077     \textcolor{keywordflow}{if}(svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR})
+3078         \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a3b60d7ce96137a64caca81095d1a188b}{p} < 0)
+3079             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"p < 0"};
+3080 
+3081     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking} != 0 &&
+3082        param->\hyperlink{structsvm__parameter_afdbccdf6a24be650d75804b783edc347}{shrinking} != 1)
+3083         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"shrinking != 0 and shrinking != 1"};
+3084 
+3085     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability} != 0 &&
+3086        param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability} != 1)
+3087         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"probability != 0 and probability != 1"};
+3088 
+3089     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability} == 1 &&
+3090        svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS})
+3091         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"one-class SVM probability output not supported yet"};
+3092 
+3093 
+3094     \textcolor{comment}{// check whether nu-svc is feasible}
+3095     
+3096     \textcolor{keywordflow}{if}(svm\_type == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC})
+3097     \{
+3098         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+3099         \textcolor{keywordtype}{int} max\_nr\_class = 16;
+3100         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = 0;
+3101         \textcolor{keywordtype}{int} *\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},max\_nr\_class);
+3102         \textcolor{keywordtype}{int} *count = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},max\_nr\_class);
+3103 
+3104         \textcolor{keywordtype}{int} i;
+3105         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+3106         \{
+3107             \textcolor{keywordtype}{int} this\_label = (int)prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i];
+3108             \textcolor{keywordtype}{int} j;
+3109             \textcolor{keywordflow}{for}(j=0;j<nr\_class;j++)
+3110                 \textcolor{keywordflow}{if}(this\_label == label[j])
+3111                 \{
+3112                     ++count[j];
+3113                     \textcolor{keywordflow}{break};
+3114                 \}
+3115             \textcolor{keywordflow}{if}(j == nr\_class)
+3116             \{
+3117                 \textcolor{keywordflow}{if}(nr\_class == max\_nr\_class)
+3118                 \{
+3119                     max\_nr\_class *= 2;
+3120                     label = (\textcolor{keywordtype}{int} *)realloc(label,max\_nr\_class*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+3121                     count = (\textcolor{keywordtype}{int} *)realloc(count,max\_nr\_class*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+3122                 \}
+3123                 label[\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}] = this\_label;
+3124                 count[\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}] = 1;
+3125                 ++\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+3126             \}
+3127         \}
+3128     
+3129         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+3130         \{
+3131             \textcolor{keywordtype}{int} n1 = count[i];
+3132             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=i+1;j<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};j++)
+3133             \{
+3134                 \textcolor{keywordtype}{int} n2 = count[j];
+3135                 \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a4c20c566cb61d5808e8cabd7adbc35c1}{nu}*(n1+n2)/2 > \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(n1,n2))
+3136                 \{
+3137                     free(label);
+3138                     free(count);
+3139                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"specified nu is infeasible"};
+3140                 \}
+3141             \}
+3142         \}
+3143         free(label);
+3144         free(count);
+3145     \}
+3146 
+3147     \textcolor{keywordflow}{return} NULL;
+3148 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{svm_8cpp_a73fd8a0ae428e25666c89c1e29274984_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a15f0af9b6487b426e68b467f1949e975}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+check\+\_\+probability\+\_\+model@{svm\+\_\+check\+\_\+probability\+\_\+model}}
+\index{svm\+\_\+check\+\_\+probability\+\_\+model@{svm\+\_\+check\+\_\+probability\+\_\+model}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+check\+\_\+probability\+\_\+model}]{\setlength{\rightskip}{0pt plus 5cm}int svm\+\_\+check\+\_\+probability\+\_\+model (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a15f0af9b6487b426e68b467f1949e975}
+
+
+svm.\+cpp 파일의 3150 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+3151 \{
+3152     \textcolor{keywordflow}{return} ((model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} || model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.
+      \hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC}) &&
+3153         model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}!=NULL && model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}!=NULL) ||
+3154         ((model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} || model->
+      \hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR}) &&
+3155          model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}!=NULL);
+3156 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a3f5a9c2ab91444d122c461511af9efd2}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+cross\+\_\+validation@{svm\+\_\+cross\+\_\+validation}}
+\index{svm\+\_\+cross\+\_\+validation@{svm\+\_\+cross\+\_\+validation}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+cross\+\_\+validation}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+cross\+\_\+validation (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{int}]{nr\+\_\+fold, }
+\item[{double $\ast$}]{target}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a3f5a9c2ab91444d122c461511af9efd2}
+
+
+svm.\+cpp 파일의 2339 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2340 \{
+2341     \textcolor{keywordtype}{int} i;
+2342     \textcolor{keywordtype}{int} *fold\_start;
+2343     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+2344     \textcolor{keywordtype}{int} *perm = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},l);
+2345     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2346     \textcolor{keywordflow}{if} (nr\_fold > l)
+2347     \{
+2348         nr\_fold = \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};
+2349         fprintf(stderr,\textcolor{stringliteral}{"WARNING: # folds > # data. Will use # folds = # data instead (i.e., leave-one-out
+       cross validation)\(\backslash\)n"});
+2350     \}
+2351     fold\_start = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_fold+1);
+2352     \textcolor{comment}{// stratified cv may not give leave-one-out rate}
+2353     \textcolor{comment}{// Each class to l folds -> some folds may have zero elements}
+2354     \textcolor{keywordflow}{if}((param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} ||
+2355         param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC}) && nr\_fold < l)
+2356     \{
+2357         \textcolor{keywordtype}{int} *start = NULL;
+2358         \textcolor{keywordtype}{int} *\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = NULL;
+2359         \textcolor{keywordtype}{int} *count = NULL;
+2360         \hyperlink{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09}{svm\_group\_classes}(prob,&nr\_class,&label,&start,&count,perm);
+2361 
+2362         \textcolor{comment}{// random shuffle and then data grouped by fold using the array perm}
+2363         \textcolor{keywordtype}{int} *fold\_count = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_fold);
+2364         \textcolor{keywordtype}{int} c;
+2365         \textcolor{keywordtype}{int} *index = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},l);
+2366         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2367             index[i]=perm[i];
+2368         \textcolor{keywordflow}{for} (c=0; c<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}; c++) 
+2369             \textcolor{keywordflow}{for}(i=0;i<count[c];i++)
+2370             \{
+2371                 \textcolor{keywordtype}{int} j = i+rand()%(count[c]-i);
+2372                 \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(index[start[c]+j],index[start[c]+i]);
+2373             \}
+2374         \textcolor{keywordflow}{for}(i=0;i<nr\_fold;i++)
+2375         \{
+2376             fold\_count[i] = 0;
+2377             \textcolor{keywordflow}{for} (c=0; c<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};c++)
+2378                 fold\_count[i]+=(i+1)*count[c]/nr\_fold-i*count[c]/nr\_fold;
+2379         \}
+2380         fold\_start[0]=0;
+2381         \textcolor{keywordflow}{for} (i=1;i<=nr\_fold;i++)
+2382             fold\_start[i] = fold\_start[i-1]+fold\_count[i-1];
+2383         \textcolor{keywordflow}{for} (c=0; c<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};c++)
+2384             \textcolor{keywordflow}{for}(i=0;i<nr\_fold;i++)
+2385             \{
+2386                 \textcolor{keywordtype}{int} begin = start[c]+i*count[c]/nr\_fold;
+2387                 \textcolor{keywordtype}{int} end = start[c]+(i+1)*count[c]/nr\_fold;
+2388                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=begin;j<end;j++)
+2389                 \{
+2390                     perm[fold\_start[i]] = index[j];
+2391                     fold\_start[i]++;
+2392                 \}
+2393             \}
+2394         fold\_start[0]=0;
+2395         \textcolor{keywordflow}{for} (i=1;i<=nr\_fold;i++)
+2396             fold\_start[i] = fold\_start[i-1]+fold\_count[i-1];
+2397         free(start);
+2398         free(label);
+2399         free(count);
+2400         free(index);
+2401         free(fold\_count);
+2402     \}
+2403     \textcolor{keywordflow}{else}
+2404     \{
+2405         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++) perm[i]=i;
+2406         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2407         \{
+2408             \textcolor{keywordtype}{int} j = i+rand()%(l-i);
+2409             \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(perm[i],perm[j]);
+2410         \}
+2411         \textcolor{keywordflow}{for}(i=0;i<=nr\_fold;i++)
+2412             fold\_start[i]=i*l/nr\_fold;
+2413     \}
+2414 
+2415     \textcolor{keywordflow}{for}(i=0;i<nr\_fold;i++)
+2416     \{
+2417         \textcolor{keywordtype}{int} begin = fold\_start[i];
+2418         \textcolor{keywordtype}{int} end = fold\_start[i+1];
+2419         \textcolor{keywordtype}{int} j,k;
+2420         \textcolor{keyword}{struct }\hyperlink{structsvm__problem}{svm\_problem} subprob;
+2421 
+2422         subprob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l} = l-(end-begin);
+2423         subprob.x = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keyword}{struct} \hyperlink{structsvm__node}{svm\_node}*,subprob.l);
+2424         subprob.y = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},subprob.l);
+2425             
+2426         k=0;
+2427         \textcolor{keywordflow}{for}(j=0;j<begin;j++)
+2428         \{
+2429             subprob.x[k] = prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]];
+2430             subprob.y[k] = prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[perm[j]];
+2431             ++k;
+2432         \}
+2433         \textcolor{keywordflow}{for}(j=end;j<\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};j++)
+2434         \{
+2435             subprob.x[k] = prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]];
+2436             subprob.y[k] = prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[perm[j]];
+2437             ++k;
+2438         \}
+2439         \textcolor{keyword}{struct }\hyperlink{structsvm__model}{svm\_model} *submodel = \hyperlink{svm_8cpp_ae6e4f84556602fab57ec5a330514b613}{svm\_train}(&subprob,param);
+2440         \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability} && 
+2441            (param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} || param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == 
+      \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC}))
+2442         \{
+2443             \textcolor{keywordtype}{double} *prob\_estimates=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},\hyperlink{svm_8cpp_a187f866fb5372371ad53090c691d8528}{svm\_get\_nr\_class}(submodel));
+2444             \textcolor{keywordflow}{for}(j=begin;j<end;j++)
+2445                 target[perm[j]] = \hyperlink{svm_8cpp_aa605ffa3e514ec953de3963f804b011c}{svm\_predict\_probability}(submodel,prob->
+      \hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]],prob\_estimates);
+2446             free(prob\_estimates);
+2447         \}
+2448         \textcolor{keywordflow}{else}
+2449             \textcolor{keywordflow}{for}(j=begin;j<end;j++)
+2450                 target[perm[j]] = \hyperlink{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef}{svm\_predict}(submodel,prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[j]]);
+2451         \hyperlink{svm_8cpp_a300e06f7195c7ccb83571580d5865923}{svm\_free\_and\_destroy\_model}(&submodel);
+2452         free(subprob.x);
+2453         free(subprob.y);
+2454     \}       
+2455     free(fold\_start);
+2456     free(perm);
+2457 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a3f5a9c2ab91444d122c461511af9efd2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a3f5a9c2ab91444d122c461511af9efd2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a192f7f718da0b288dacc446d72b5a77a}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+destroy\+\_\+param@{svm\+\_\+destroy\+\_\+param}}
+\index{svm\+\_\+destroy\+\_\+param@{svm\+\_\+destroy\+\_\+param}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+destroy\+\_\+param}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+destroy\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{{\bf svm\+\_\+parameter} $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a192f7f718da0b288dacc446d72b5a77a}
+
+
+svm.\+cpp 파일의 3023 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+3024 \{
+3025     free(param->\hyperlink{structsvm__parameter_a06753922bb0282240f35ae7683f8d69a}{weight\_label});
+3026     free(param->\hyperlink{structsvm__parameter_afff750f99180b5ddf735404496b6c196}{weight});
+3027 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a192f7f718da0b288dacc446d72b5a77a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a300e06f7195c7ccb83571580d5865923}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model@{svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model}}
+\index{svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model@{svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+free\+\_\+and\+\_\+destroy\+\_\+model (
+\begin{DoxyParamCaption}
+\item[{{\bf svm\+\_\+model} $\ast$$\ast$}]{model\+\_\+ptr\+\_\+ptr}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a300e06f7195c7ccb83571580d5865923}
+
+
+svm.\+cpp 파일의 3013 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+3014 \{
+3015     \textcolor{keywordflow}{if}(model\_ptr\_ptr != NULL && *model\_ptr\_ptr != NULL)
+3016     \{
+3017         \hyperlink{svm_8cpp_aacfd6b0d366697f63c942036b93370d4}{svm\_free\_model\_content}(*model\_ptr\_ptr);
+3018         free(*model\_ptr\_ptr);
+3019         *model\_ptr\_ptr = NULL;
+3020     \}
+3021 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a300e06f7195c7ccb83571580d5865923_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a300e06f7195c7ccb83571580d5865923_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_aacfd6b0d366697f63c942036b93370d4}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+free\+\_\+model\+\_\+content@{svm\+\_\+free\+\_\+model\+\_\+content}}
+\index{svm\+\_\+free\+\_\+model\+\_\+content@{svm\+\_\+free\+\_\+model\+\_\+content}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+free\+\_\+model\+\_\+content}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+free\+\_\+model\+\_\+content (
+\begin{DoxyParamCaption}
+\item[{{\bf svm\+\_\+model} $\ast$}]{model\+\_\+ptr}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_aacfd6b0d366697f63c942036b93370d4}
+
+
+svm.\+cpp 파일의 2978 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2979 \{
+2980     \textcolor{keywordflow}{if}(model\_ptr->\hyperlink{structsvm__model_a2ae57ce1fa43497d151aff26c21a13a1}{free\_sv} && model\_ptr->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} > 0 && model\_ptr->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV} != NULL)
+2981         free((\textcolor{keywordtype}{void} *)(model\_ptr->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV}[0]));
+2982     \textcolor{keywordflow}{if}(model\_ptr->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef})
+2983     \{
+2984         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<model\_ptr->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}-1;i++)
+2985             free(model\_ptr->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[i]);
+2986     \}
+2987 
+2988     free(model\_ptr->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV});
+2989     model\_ptr->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV} = NULL;
+2990 
+2991     free(model\_ptr->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef});
+2992     model\_ptr->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef} = NULL;
+2993 
+2994     free(model\_ptr->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho});
+2995     model\_ptr->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho} = NULL;
+2996 
+2997     free(model\_ptr->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label});
+2998     model\_ptr->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}= NULL;
+2999 
+3000     free(model\_ptr->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA});
+3001     model\_ptr->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA} = NULL;
+3002 
+3003     free(model\_ptr->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB});
+3004     model\_ptr->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}= NULL;
+3005 
+3006     free(model\_ptr->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices});
+3007     model\_ptr->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices} = NULL;
+3008 
+3009     free(model\_ptr->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV});
+3010     model\_ptr->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = NULL;
+3011 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_aacfd6b0d366697f63c942036b93370d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a0256f035fcd831cc9627d7da8657f65c}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+get\+\_\+labels@{svm\+\_\+get\+\_\+labels}}
+\index{svm\+\_\+get\+\_\+labels@{svm\+\_\+get\+\_\+labels}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+get\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+get\+\_\+labels (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model, }
+\item[{int $\ast$}]{label}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a0256f035fcd831cc9627d7da8657f65c}
+
+
+svm.\+cpp 파일의 2470 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2471 \{
+2472     \textcolor{keywordflow}{if} (model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} != NULL)
+2473         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2474             \hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[i] = model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[i];
+2475 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a187f866fb5372371ad53090c691d8528}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+get\+\_\+nr\+\_\+class@{svm\+\_\+get\+\_\+nr\+\_\+class}}
+\index{svm\+\_\+get\+\_\+nr\+\_\+class@{svm\+\_\+get\+\_\+nr\+\_\+class}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+get\+\_\+nr\+\_\+class}]{\setlength{\rightskip}{0pt plus 5cm}int svm\+\_\+get\+\_\+nr\+\_\+class (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a187f866fb5372371ad53090c691d8528}
+
+
+svm.\+cpp 파일의 2465 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2466 \{
+2467     \textcolor{keywordflow}{return} model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2468 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a187f866fb5372371ad53090c691d8528_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a5cda65b236b83631dcb3d1c6e437e3ad}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+get\+\_\+nr\+\_\+sv@{svm\+\_\+get\+\_\+nr\+\_\+sv}}
+\index{svm\+\_\+get\+\_\+nr\+\_\+sv@{svm\+\_\+get\+\_\+nr\+\_\+sv}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+get\+\_\+nr\+\_\+sv}]{\setlength{\rightskip}{0pt plus 5cm}int svm\+\_\+get\+\_\+nr\+\_\+sv (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a5cda65b236b83631dcb3d1c6e437e3ad}
+
+
+svm.\+cpp 파일의 2484 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2485 \{
+2486     \textcolor{keywordflow}{return} model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};
+2487 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a9f83cf22bf61483173a4d699568fb5f8}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+get\+\_\+sv\+\_\+indices@{svm\+\_\+get\+\_\+sv\+\_\+indices}}
+\index{svm\+\_\+get\+\_\+sv\+\_\+indices@{svm\+\_\+get\+\_\+sv\+\_\+indices}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+get\+\_\+sv\+\_\+indices}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+get\+\_\+sv\+\_\+indices (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model, }
+\item[{int $\ast$}]{indices}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a9f83cf22bf61483173a4d699568fb5f8}
+
+
+svm.\+cpp 파일의 2477 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2478 \{
+2479     \textcolor{keywordflow}{if} (model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices} != NULL)
+2480         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2481             indices[i] = model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices}[i];
+2482 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a28e647915c662f2862abadb987784875}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+get\+\_\+svm\+\_\+type@{svm\+\_\+get\+\_\+svm\+\_\+type}}
+\index{svm\+\_\+get\+\_\+svm\+\_\+type@{svm\+\_\+get\+\_\+svm\+\_\+type}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+get\+\_\+svm\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}int svm\+\_\+get\+\_\+svm\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a28e647915c662f2862abadb987784875}
+
+
+svm.\+cpp 파일의 2460 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2461 \{
+2462     \textcolor{keywordflow}{return} model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type};
+2463 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a40c2f7a0d7e827b1b987959d2e847844}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+get\+\_\+svr\+\_\+probability@{svm\+\_\+get\+\_\+svr\+\_\+probability}}
+\index{svm\+\_\+get\+\_\+svr\+\_\+probability@{svm\+\_\+get\+\_\+svr\+\_\+probability}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+get\+\_\+svr\+\_\+probability}]{\setlength{\rightskip}{0pt plus 5cm}double svm\+\_\+get\+\_\+svr\+\_\+probability (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a40c2f7a0d7e827b1b987959d2e847844}
+
+
+svm.\+cpp 파일의 2489 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2490 \{
+2491     \textcolor{keywordflow}{if} ((model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} || model->
+      \hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR}) &&
+2492         model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}!=NULL)
+2493         \textcolor{keywordflow}{return} model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}[0];
+2494     \textcolor{keywordflow}{else}
+2495     \{
+2496         fprintf(stderr,\textcolor{stringliteral}{"Model doesn't contain information for SVR probability inference\(\backslash\)n"});
+2497         \textcolor{keywordflow}{return} 0;
+2498     \}
+2499 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+group\+\_\+classes@{svm\+\_\+group\+\_\+classes}}
+\index{svm\+\_\+group\+\_\+classes@{svm\+\_\+group\+\_\+classes}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+group\+\_\+classes}]{\setlength{\rightskip}{0pt plus 5cm}static void svm\+\_\+group\+\_\+classes (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{int $\ast$}]{nr\+\_\+class\+\_\+ret, }
+\item[{int $\ast$$\ast$}]{label\+\_\+ret, }
+\item[{int $\ast$$\ast$}]{start\+\_\+ret, }
+\item[{int $\ast$$\ast$}]{count\+\_\+ret, }
+\item[{int $\ast$}]{perm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09}
+
+
+svm.\+cpp 파일의 2014 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2015 \{
+2016     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+2017     \textcolor{keywordtype}{int} max\_nr\_class = 16;
+2018     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = 0;
+2019     \textcolor{keywordtype}{int} *\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},max\_nr\_class);
+2020     \textcolor{keywordtype}{int} *count = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},max\_nr\_class);
+2021     \textcolor{keywordtype}{int} *data\_label = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},l);
+2022     \textcolor{keywordtype}{int} i;
+2023 
+2024     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2025     \{
+2026         \textcolor{keywordtype}{int} this\_label = (int)prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i];
+2027         \textcolor{keywordtype}{int} j;
+2028         \textcolor{keywordflow}{for}(j=0;j<nr\_class;j++)
+2029         \{
+2030             \textcolor{keywordflow}{if}(this\_label == label[j])
+2031             \{
+2032                 ++count[j];
+2033                 \textcolor{keywordflow}{break};
+2034             \}
+2035         \}
+2036         data\_label[i] = j;
+2037         \textcolor{keywordflow}{if}(j == nr\_class)
+2038         \{
+2039             \textcolor{keywordflow}{if}(nr\_class == max\_nr\_class)
+2040             \{
+2041                 max\_nr\_class *= 2;
+2042                 label = (\textcolor{keywordtype}{int} *)realloc(label,max\_nr\_class*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+2043                 count = (\textcolor{keywordtype}{int} *)realloc(count,max\_nr\_class*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+2044             \}
+2045             label[\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}] = this\_label;
+2046             count[\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class}] = 1;
+2047             ++\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2048         \}
+2049     \}
+2050 
+2051     \textcolor{comment}{//}
+2052     \textcolor{comment}{// Labels are ordered by their first occurrence in the training set. }
+2053     \textcolor{comment}{// However, for two-class sets with -1/+1 labels and -1 appears first, }
+2054     \textcolor{comment}{// we swap labels to ensure that internally the binary SVM has positive data corresponding to the +1
+       instances.}
+2055     \textcolor{comment}{//}
+2056     \textcolor{keywordflow}{if} (nr\_class == 2 && label[0] == -1 && label[1] == 1)
+2057     \{
+2058         \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(label[0],label[1]);
+2059         \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(count[0],count[1]);
+2060         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2061         \{
+2062             \textcolor{keywordflow}{if}(data\_label[i] == 0)
+2063                 data\_label[i] = 1;
+2064             \textcolor{keywordflow}{else}
+2065                 data\_label[i] = 0;
+2066         \}
+2067     \}
+2068 
+2069     \textcolor{keywordtype}{int} *start = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2070     start[0] = 0;
+2071     \textcolor{keywordflow}{for}(i=1;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2072         start[i] = start[i-1]+count[i-1];
+2073     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2074     \{
+2075         perm[start[data\_label[i]]] = i;
+2076         ++start[data\_label[i]];
+2077     \}
+2078     start[0] = 0;
+2079     \textcolor{keywordflow}{for}(i=1;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2080         start[i] = start[i-1]+count[i-1];
+2081 
+2082     *nr\_class\_ret = \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2083     *label\_ret = \hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label};
+2084     *start\_ret = start;
+2085     *count\_ret = count;
+2086     free(data\_label);
+2087 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a3e6ebc4bfaa5017e9336a28d8841097c}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+load\+\_\+model@{svm\+\_\+load\+\_\+model}}
+\index{svm\+\_\+load\+\_\+model@{svm\+\_\+load\+\_\+model}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+load\+\_\+model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf svm\+\_\+model}$\ast$ svm\+\_\+load\+\_\+model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{model\+\_\+file\+\_\+name}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a3e6ebc4bfaa5017e9336a28d8841097c}
+
+
+svm.\+cpp 파일의 2873 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2874 \{
+2875     FILE *\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp} = fopen(model\_file\_name,\textcolor{stringliteral}{"rb"});
+2876     \textcolor{keywordflow}{if}(fp==NULL) \textcolor{keywordflow}{return} NULL;
+2877 
+2878     \textcolor{keywordtype}{char} *old\_locale = strdup(setlocale(LC\_ALL, NULL));
+2879     setlocale(LC\_ALL, \textcolor{stringliteral}{"C"});
+2880 
+2881     \textcolor{comment}{// read parameters}
+2882 
+2883     \hyperlink{structsvm__model}{svm\_model} *\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__model}{svm\_model},1);
+2884     model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho} = NULL;
+2885     model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA} = NULL;
+2886     model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB} = NULL;
+2887     model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices} = NULL;
+2888     model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = NULL;
+2889     model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = NULL;
+2890     
+2891     \textcolor{comment}{// read header}
+2892     \textcolor{keywordflow}{if} (!\hyperlink{svm_8cpp_ac948c7ac7389151985a1e96151bcfa97}{read\_model\_header}(fp, model))
+2893     \{
+2894         fprintf(stderr, \textcolor{stringliteral}{"ERROR: fscanf failed to read model\(\backslash\)n"});
+2895         setlocale(LC\_ALL, old\_locale);
+2896         free(old\_locale);
+2897         free(model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho});
+2898         free(model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label});
+2899         free(model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV});
+2900         free(model);
+2901         \textcolor{keywordflow}{return} NULL;
+2902     \}
+2903     
+2904     \textcolor{comment}{// read sv\_coef and SV}
+2905 
+2906     \textcolor{keywordtype}{int} elements = 0;
+2907     \textcolor{keywordtype}{long} pos = ftell(fp);
+2908 
+2909     \hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\_line\_len} = 1024;
+2910     \hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{char},\hyperlink{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{max\_line\_len});
+2911     \textcolor{keywordtype}{char} *p,*endptr,*idx,*val;
+2912 
+2913     \textcolor{keywordflow}{while}(\hyperlink{svm_8cpp_aa324656b7bb4eb3ee42699d33c21ef7a}{readline}(fp)!=NULL)
+2914     \{
+2915         p = strtok(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line},\textcolor{stringliteral}{":"});
+2916         \textcolor{keywordflow}{while}(1)
+2917         \{
+2918             p = strtok(NULL,\textcolor{stringliteral}{":"});
+2919             \textcolor{keywordflow}{if}(p == NULL)
+2920                 \textcolor{keywordflow}{break};
+2921             ++elements;
+2922         \}
+2923     \}
+2924     elements += model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};
+2925 
+2926     fseek(fp,pos,SEEK\_SET);
+2927 
+2928     \textcolor{keywordtype}{int} m = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} - 1;
+2929     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};
+2930     model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double} *,m);
+2931     \textcolor{keywordtype}{int} i;
+2932     \textcolor{keywordflow}{for}(i=0;i<m;i++)
+2933         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[i] = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},l);
+2934     model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__node}{svm\_node}*,l);
+2935     \hyperlink{structsvm__node}{svm\_node} *x\_space = NULL;
+2936     \textcolor{keywordflow}{if}(l>0) x\_space = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__node}{svm\_node},elements);
+2937 
+2938     \textcolor{keywordtype}{int} j=0;
+2939     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2940     \{
+2941         \hyperlink{svm_8cpp_aa324656b7bb4eb3ee42699d33c21ef7a}{readline}(fp);
+2942         model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV}[i] = &x\_space[j];
+2943 
+2944         p = strtok(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line}, \textcolor{stringliteral}{" \(\backslash\)t"});
+2945         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[0][i] = strtod(p,&endptr);
+2946         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=1;k<m;k++)
+2947         \{
+2948             p = strtok(NULL, \textcolor{stringliteral}{" \(\backslash\)t"});
+2949             model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[k][i] = strtod(p,&endptr);
+2950         \}
+2951 
+2952         \textcolor{keywordflow}{while}(1)
+2953         \{
+2954             idx = strtok(NULL, \textcolor{stringliteral}{":"});
+2955             val = strtok(NULL, \textcolor{stringliteral}{" \(\backslash\)t"});
+2956 
+2957             \textcolor{keywordflow}{if}(val == NULL)
+2958                 \textcolor{keywordflow}{break};
+2959             x\_space[j].\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} = (int) strtol(idx,&endptr,10);
+2960             x\_space[j].\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} = strtod(val,&endptr);
+2961 
+2962             ++j;
+2963         \}
+2964         x\_space[j++].\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} = -1;
+2965     \}
+2966     free(\hyperlink{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{line});
+2967 
+2968     setlocale(LC\_ALL, old\_locale);
+2969     free(old\_locale);
+2970 
+2971     \textcolor{keywordflow}{if} (ferror(fp) != 0 || fclose(fp) != 0)
+2972         \textcolor{keywordflow}{return} NULL;
+2973 
+2974     model->\hyperlink{structsvm__model_a2ae57ce1fa43497d151aff26c21a13a1}{free\_sv} = 1;  \textcolor{comment}{// XXX}
+2975     \textcolor{keywordflow}{return} \hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model};
+2976 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{svm_8cpp_a3e6ebc4bfaa5017e9336a28d8841097c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a3e6ebc4bfaa5017e9336a28d8841097c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+predict@{svm\+\_\+predict}}
+\index{svm\+\_\+predict@{svm\+\_\+predict}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+predict}]{\setlength{\rightskip}{0pt plus 5cm}double svm\+\_\+predict (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model, }
+\item[{const {\bf svm\+\_\+node} $\ast$}]{x}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef}
+
+
+svm.\+cpp 파일의 2577 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2578 \{
+2579     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2580     \textcolor{keywordtype}{double} *dec\_values;
+2581     \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS} ||
+2582        model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} ||
+2583        model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR})
+2584         dec\_values = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double}, 1);
+2585     \textcolor{keywordflow}{else} 
+2586         dec\_values = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double}, nr\_class*(nr\_class-1)/2);
+2587     \textcolor{keywordtype}{double} pred\_result = \hyperlink{svm_8cpp_aabe5223ca8496af644883d8063007db2}{svm\_predict\_values}(model, x, dec\_values);
+2588     free(dec\_values);
+2589     \textcolor{keywordflow}{return} pred\_result;
+2590 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_aa605ffa3e514ec953de3963f804b011c}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+predict\+\_\+probability@{svm\+\_\+predict\+\_\+probability}}
+\index{svm\+\_\+predict\+\_\+probability@{svm\+\_\+predict\+\_\+probability}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+predict\+\_\+probability}]{\setlength{\rightskip}{0pt plus 5cm}double svm\+\_\+predict\+\_\+probability (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model, }
+\item[{const {\bf svm\+\_\+node} $\ast$}]{x, }
+\item[{double $\ast$}]{prob\+\_\+estimates}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_aa605ffa3e514ec953de3963f804b011c}
+
+
+svm.\+cpp 파일의 2592 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2594 \{
+2595     \textcolor{keywordflow}{if} ((model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} || model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.
+      \hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC}) &&
+2596         model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}!=NULL && model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}!=NULL)
+2597     \{
+2598         \textcolor{keywordtype}{int} i;
+2599         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2600         \textcolor{keywordtype}{double} *dec\_values = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double}, nr\_class*(nr\_class-1)/2);
+2601         \hyperlink{svm_8cpp_aabe5223ca8496af644883d8063007db2}{svm\_predict\_values}(model, x, dec\_values);
+2602 
+2603         \textcolor{keywordtype}{double} min\_prob=1e-7;
+2604         \textcolor{keywordtype}{double} **pairwise\_prob=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double} *,nr\_class);
+2605         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2606             pairwise\_prob[i]=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nr\_class);
+2607         \textcolor{keywordtype}{int} k=0;
+2608         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2609             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=i+1;j<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};j++)
+2610             \{
+2611                 pairwise\_prob[i][j]=\hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(\hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(\hyperlink{svm_8cpp_a681fcc7268133ceb472773fd30b97839}{sigmoid\_predict}(dec\_values[k],model->
+      \hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}[k],model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}[k]),min\_prob),1-min\_prob);
+2612                 pairwise\_prob[j][i]=1-pairwise\_prob[i][j];
+2613                 k++;
+2614             \}
+2615         \hyperlink{svm_8cpp_a7efc9faed12382e55327581d3a4cfa8b}{multiclass\_probability}(nr\_class,pairwise\_prob,prob\_estimates);
+2616 
+2617         \textcolor{keywordtype}{int} prob\_max\_idx = 0;
+2618         \textcolor{keywordflow}{for}(i=1;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2619             \textcolor{keywordflow}{if}(prob\_estimates[i] > prob\_estimates[prob\_max\_idx])
+2620                 prob\_max\_idx = i;
+2621         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2622             free(pairwise\_prob[i]);
+2623         free(dec\_values);
+2624         free(pairwise\_prob);
+2625         \textcolor{keywordflow}{return} model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[prob\_max\_idx];
+2626     \}
+2627     \textcolor{keywordflow}{else} 
+2628         \textcolor{keywordflow}{return} \hyperlink{svm_8cpp_a1e5816ec29e6c51bc3daeab47cb7e8ef}{svm\_predict}(model, x);
+2629 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_aa605ffa3e514ec953de3963f804b011c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_aa605ffa3e514ec953de3963f804b011c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_aabe5223ca8496af644883d8063007db2}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+predict\+\_\+values@{svm\+\_\+predict\+\_\+values}}
+\index{svm\+\_\+predict\+\_\+values@{svm\+\_\+predict\+\_\+values}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+predict\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}double svm\+\_\+predict\+\_\+values (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model, }
+\item[{const {\bf svm\+\_\+node} $\ast$}]{x, }
+\item[{double $\ast$}]{dec\+\_\+values}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_aabe5223ca8496af644883d8063007db2}
+
+
+svm.\+cpp 파일의 2501 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2502 \{
+2503     \textcolor{keywordtype}{int} i;
+2504     \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS} ||
+2505        model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} ||
+2506        model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR})
+2507     \{
+2508         \textcolor{keywordtype}{double} *\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef} = model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[0];
+2509         \textcolor{keywordtype}{double} sum = 0;
+2510         \textcolor{keywordflow}{for}(i=0;i<model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2511             sum += sv\_coef[i] * \hyperlink{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127}{Kernel::k\_function}(x,model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV}[i],model->
+      \hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param});
+2512         sum -= model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho}[0];
+2513         *dec\_values = sum;
+2514 
+2515         \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param}.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS})
+2516             \textcolor{keywordflow}{return} (sum>0)?1:-1;
+2517         \textcolor{keywordflow}{else}
+2518             \textcolor{keywordflow}{return} sum;
+2519     \}
+2520     \textcolor{keywordflow}{else}
+2521     \{
+2522         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2523         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};
+2524         
+2525         \textcolor{keywordtype}{double} *kvalue = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},l);
+2526         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2527             kvalue[i] = \hyperlink{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127}{Kernel::k\_function}(x,model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV}[i],model->
+      \hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param});
+2528 
+2529         \textcolor{keywordtype}{int} *start = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2530         start[0] = 0;
+2531         \textcolor{keywordflow}{for}(i=1;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2532             start[i] = start[i-1]+model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV}[i-1];
+2533 
+2534         \textcolor{keywordtype}{int} *vote = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2535         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2536             vote[i] = 0;
+2537 
+2538         \textcolor{keywordtype}{int} p=0;
+2539         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2540             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=i+1;j<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};j++)
+2541             \{
+2542                 \textcolor{keywordtype}{double} sum = 0;
+2543                 \textcolor{keywordtype}{int} si = start[i];
+2544                 \textcolor{keywordtype}{int} sj = start[j];
+2545                 \textcolor{keywordtype}{int} ci = model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV}[i];
+2546                 \textcolor{keywordtype}{int} cj = model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV}[j];
+2547                 
+2548                 \textcolor{keywordtype}{int} k;
+2549                 \textcolor{keywordtype}{double} *coef1 = model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[j-1];
+2550                 \textcolor{keywordtype}{double} *coef2 = model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[i];
+2551                 \textcolor{keywordflow}{for}(k=0;k<ci;k++)
+2552                     sum += coef1[si+k] * kvalue[si+k];
+2553                 \textcolor{keywordflow}{for}(k=0;k<cj;k++)
+2554                     sum += coef2[sj+k] * kvalue[sj+k];
+2555                 sum -= model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho}[p];
+2556                 dec\_values[p] = sum;
+2557 
+2558                 \textcolor{keywordflow}{if}(dec\_values[p] > 0)
+2559                     ++vote[i];
+2560                 \textcolor{keywordflow}{else}
+2561                     ++vote[j];
+2562                 p++;
+2563             \}
+2564 
+2565         \textcolor{keywordtype}{int} vote\_max\_idx = 0;
+2566         \textcolor{keywordflow}{for}(i=1;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2567             \textcolor{keywordflow}{if}(vote[i] > vote[vote\_max\_idx])
+2568                 vote\_max\_idx = i;
+2569 
+2570         free(kvalue);
+2571         free(start);
+2572         free(vote);
+2573         \textcolor{keywordflow}{return} model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[vote\_max\_idx];
+2574     \}
+2575 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_aabe5223ca8496af644883d8063007db2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_aabe5223ca8496af644883d8063007db2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_af5b82bcc256ba9d6034d94f28d3c8512}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+save\+\_\+model@{svm\+\_\+save\+\_\+model}}
+\index{svm\+\_\+save\+\_\+model@{svm\+\_\+save\+\_\+model}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+save\+\_\+model}]{\setlength{\rightskip}{0pt plus 5cm}int svm\+\_\+save\+\_\+model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{model\+\_\+file\+\_\+name, }
+\item[{const {\bf svm\+\_\+model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_af5b82bcc256ba9d6034d94f28d3c8512}
+
+
+svm.\+cpp 파일의 2641 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2642 \{
+2643     FILE *\hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_a3baae9b5c592a9305d36e70a7ce56fef}{fp} = fopen(model\_file\_name,\textcolor{stringliteral}{"w"});
+2644     \textcolor{keywordflow}{if}(fp==NULL) \textcolor{keywordflow}{return} -1;
+2645 
+2646     \textcolor{keywordtype}{char} *old\_locale = strdup(setlocale(LC\_ALL, NULL));
+2647     setlocale(LC\_ALL, \textcolor{stringliteral}{"C"});
+2648 
+2649     \textcolor{keyword}{const} \hyperlink{structsvm__parameter}{svm\_parameter}& \hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param} = model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param};
+2650 
+2651     fprintf(fp,\textcolor{stringliteral}{"svm\_type %s\(\backslash\)n"}, \hyperlink{svm_8cpp_a3be459e452f7ebeaae824e941e766770}{svm\_type\_table}[param.\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type}]);
+2652     fprintf(fp,\textcolor{stringliteral}{"kernel\_type %s\(\backslash\)n"}, \hyperlink{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}{kernel\_type\_table}[param.
+      \hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type}]);
+2653 
+2654     \textcolor{keywordflow}{if}(param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd}{POLY})
+2655         fprintf(fp,\textcolor{stringliteral}{"degree %d\(\backslash\)n"}, param.\hyperlink{structsvm__parameter_afef1c4508ec0045c236a3308b0fa5138}{degree});
+2656 
+2657     \textcolor{keywordflow}{if}(param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd}{POLY} || param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == 
+      \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f}{RBF} || param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883}{SIGMOID})
+2658         fprintf(fp,\textcolor{stringliteral}{"gamma %g\(\backslash\)n"}, param.\hyperlink{structsvm__parameter_a91667b90506e171482b5fc619377110d}{gamma});
+2659 
+2660     \textcolor{keywordflow}{if}(param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd}{POLY} || param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == 
+      \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883}{SIGMOID})
+2661         fprintf(fp,\textcolor{stringliteral}{"coef0 %g\(\backslash\)n"}, param.\hyperlink{structsvm__parameter_a3ab3555a96a578bea6e5285a5db0a4db}{coef0});
+2662 
+2663     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2664     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};
+2665     fprintf(fp, \textcolor{stringliteral}{"nr\_class %d\(\backslash\)n"}, nr\_class);
+2666     fprintf(fp, \textcolor{stringliteral}{"total\_sv %d\(\backslash\)n"},l);
+2667     
+2668     \{
+2669         fprintf(fp, \textcolor{stringliteral}{"rho"});
+2670         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<nr\_class*(nr\_class-1)/2;i++)
+2671             fprintf(fp,\textcolor{stringliteral}{" %g"},model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho}[i]);
+2672         fprintf(fp, \textcolor{stringliteral}{"\(\backslash\)n"});
+2673     \}
+2674     
+2675     \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label})
+2676     \{
+2677         fprintf(fp, \textcolor{stringliteral}{"label"});
+2678         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2679             fprintf(fp,\textcolor{stringliteral}{" %d"},model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[i]);
+2680         fprintf(fp, \textcolor{stringliteral}{"\(\backslash\)n"});
+2681     \}
+2682 
+2683     \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}) \textcolor{comment}{// regression has probA only}
+2684     \{
+2685         fprintf(fp, \textcolor{stringliteral}{"probA"});
+2686         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<nr\_class*(nr\_class-1)/2;i++)
+2687             fprintf(fp,\textcolor{stringliteral}{" %g"},model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}[i]);
+2688         fprintf(fp, \textcolor{stringliteral}{"\(\backslash\)n"});
+2689     \}
+2690     \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB})
+2691     \{
+2692         fprintf(fp, \textcolor{stringliteral}{"probB"});
+2693         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<nr\_class*(nr\_class-1)/2;i++)
+2694             fprintf(fp,\textcolor{stringliteral}{" %g"},model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}[i]);
+2695         fprintf(fp, \textcolor{stringliteral}{"\(\backslash\)n"});
+2696     \}
+2697 
+2698     \textcolor{keywordflow}{if}(model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV})
+2699     \{
+2700         fprintf(fp, \textcolor{stringliteral}{"nr\_sv"});
+2701         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2702             fprintf(fp,\textcolor{stringliteral}{" %d"},model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV}[i]);
+2703         fprintf(fp, \textcolor{stringliteral}{"\(\backslash\)n"});
+2704     \}
+2705 
+2706     fprintf(fp, \textcolor{stringliteral}{"SV\(\backslash\)n"});
+2707     \textcolor{keyword}{const} \textcolor{keywordtype}{double} * \textcolor{keyword}{const} *\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef} = model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef};
+2708     \textcolor{keyword}{const} \hyperlink{structsvm__node}{svm\_node} * \textcolor{keyword}{const} *\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV} = model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV};
+2709 
+2710     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2711     \{
+2712         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<nr\_class-1;j++)
+2713             fprintf(fp, \textcolor{stringliteral}{"%.16g "},sv\_coef[j][i]);
+2714 
+2715         \textcolor{keyword}{const} \hyperlink{structsvm__node}{svm\_node} *p = SV[i];
+2716 
+2717         \textcolor{keywordflow}{if}(param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type} == \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285}{PRECOMPUTED})
+2718             fprintf(fp,\textcolor{stringliteral}{"0:%d "},(\textcolor{keywordtype}{int})(p->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value}));
+2719         \textcolor{keywordflow}{else}
+2720             \textcolor{keywordflow}{while}(p->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} != -1)
+2721             \{
+2722                 fprintf(fp,\textcolor{stringliteral}{"%d:%.8g "},p->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index},p->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value});
+2723                 p++;
+2724             \}
+2725         fprintf(fp, \textcolor{stringliteral}{"\(\backslash\)n"});
+2726     \}
+2727 
+2728     setlocale(LC\_ALL, old\_locale);
+2729     free(old\_locale);
+2730 
+2731     \textcolor{keywordflow}{if} (ferror(fp) != 0 || fclose(fp) != 0) \textcolor{keywordflow}{return} -1;
+2732     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;
+2733 \}
+\end{DoxyCode}
+\hypertarget{svm_8cpp_a308f7948988441f4a1a5c8c8abc367be}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function@{svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function}}
+\index{svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function@{svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function}]{\setlength{\rightskip}{0pt plus 5cm}void svm\+\_\+set\+\_\+print\+\_\+string\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(const char $\ast$)}]{print\+\_\+func}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_a308f7948988441f4a1a5c8c8abc367be}
+
+
+svm.\+cpp 파일의 3158 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+3159 \{
+3160     \textcolor{keywordflow}{if}(print\_func == NULL)
+3161         \hyperlink{svm_8cpp_a9a4e68dbfe2b342ff45c12c638ec39cb}{svm\_print\_string} = &\hyperlink{svm_8cpp_a4edee28127eebfbcdab94b75c57341c5}{print\_string\_stdout};
+3162     \textcolor{keywordflow}{else}
+3163         \hyperlink{svm_8cpp_a9a4e68dbfe2b342ff45c12c638ec39cb}{svm\_print\_string} = print\_func;
+3164 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{svm_8cpp_a308f7948988441f4a1a5c8c8abc367be_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a18e6f0da08035830a3f53829c3b26508}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+svr\+\_\+probability@{svm\+\_\+svr\+\_\+probability}}
+\index{svm\+\_\+svr\+\_\+probability@{svm\+\_\+svr\+\_\+probability}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+svr\+\_\+probability}]{\setlength{\rightskip}{0pt plus 5cm}static double svm\+\_\+svr\+\_\+probability (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a18e6f0da08035830a3f53829c3b26508}
+
+
+svm.\+cpp 파일의 1980 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1982 \{
+1983     \textcolor{keywordtype}{int} i;
+1984     \textcolor{keywordtype}{int} nr\_fold = 5;
+1985     \textcolor{keywordtype}{double} *ymv = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+1986     \textcolor{keywordtype}{double} mae = 0;
+1987 
+1988     \hyperlink{structsvm__parameter}{svm\_parameter} newparam = *\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param};
+1989     newparam.\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability} = 0;
+1990     \hyperlink{svm_8cpp_a3f5a9c2ab91444d122c461511af9efd2}{svm\_cross\_validation}(prob,&newparam,nr\_fold,ymv);
+1991     \textcolor{keywordflow}{for}(i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+1992     \{
+1993         ymv[i]=prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i]-ymv[i];
+1994         mae += fabs(ymv[i]);
+1995     \}       
+1996     mae /= prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+1997     \textcolor{keywordtype}{double} std=sqrt(2*mae*mae);
+1998     \textcolor{keywordtype}{int} count=0;
+1999     mae=0;
+2000     \textcolor{keywordflow}{for}(i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+2001         \textcolor{keywordflow}{if} (fabs(ymv[i]) > 5*std) 
+2002             count=count+1;
+2003         \textcolor{keywordflow}{else} 
+2004             mae+=fabs(ymv[i]);
+2005     mae /= (prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}-count);
+2006     \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"Prob. model for test data: target value = predicted value + z,\(\backslash\)nz: Laplace distribution
+       e^(-|z|/sigma)/(2sigma),sigma= %g\(\backslash\)n"},mae);
+2007     free(ymv);
+2008     \textcolor{keywordflow}{return} mae;
+2009 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a18e6f0da08035830a3f53829c3b26508_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a18e6f0da08035830a3f53829c3b26508_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_ae6e4f84556602fab57ec5a330514b613}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+train@{svm\+\_\+train}}
+\index{svm\+\_\+train@{svm\+\_\+train}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}{\bf svm\+\_\+model}$\ast$ svm\+\_\+train (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}\label{svm_8cpp_ae6e4f84556602fab57ec5a330514b613}
+
+
+svm.\+cpp 파일의 2092 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2093 \{
+2094     \hyperlink{structsvm__model}{svm\_model} *\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__model}{svm\_model},1);
+2095     model->\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param} = *\hyperlink{structsvm__model_a95f43f398a173e63d0ce26911d0a9273}{param};
+2096     model->\hyperlink{structsvm__model_a2ae57ce1fa43497d151aff26c21a13a1}{free\_sv} = 0;  \textcolor{comment}{// XXX}
+2097 
+2098     \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS} ||
+2099        param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} ||
+2100        param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR})
+2101     \{
+2102         \textcolor{comment}{// regression or one-class-svm}
+2103         model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = 2;
+2104         model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = NULL;
+2105         model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = NULL;
+2106         model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA} = NULL; model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB} = NULL;
+2107         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double} *,1);
+2108 
+2109         \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability} && 
+2110            (param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR} ||
+2111             param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type} == \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR}))
+2112         \{
+2113             model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},1);
+2114             model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}[0] = \hyperlink{svm_8cpp_a18e6f0da08035830a3f53829c3b26508}{svm\_svr\_probability}(prob,param);
+2115         \}
+2116 
+2117         \hyperlink{structdecision__function}{decision\_function} f = \hyperlink{svm_8cpp_a402bb8c57abf732699dce636892faca7}{svm\_train\_one}(prob,param,0,0);
+2118         model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},1);
+2119         model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho}[0] = f.\hyperlink{structdecision__function_ae2aeeaa508803351b22d4454b81cb375}{rho};
+2120 
+2121         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = 0;
+2122         \textcolor{keywordtype}{int} i;
+2123         \textcolor{keywordflow}{for}(i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+2124             \textcolor{keywordflow}{if}(fabs(f.\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha}[i]) > 0) ++\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV};
+2125         model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = \hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV};
+2126         model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__node}{svm\_node} *,nSV);
+2127         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[0] = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nSV);
+2128         model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nSV);
+2129         \textcolor{keywordtype}{int} j = 0;
+2130         \textcolor{keywordflow}{for}(i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+2131             \textcolor{keywordflow}{if}(fabs(f.\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha}[i]) > 0)
+2132             \{
+2133                 model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV}[j] = prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[i];
+2134                 model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[0][j] = f.\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha}[i];
+2135                 model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices}[j] = i+1;
+2136                 ++j;
+2137             \}       
+2138 
+2139         free(f.\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha});
+2140     \}
+2141     \textcolor{keywordflow}{else}
+2142     \{
+2143         \textcolor{comment}{// classification}
+2144         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};
+2145         \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2146         \textcolor{keywordtype}{int} *\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = NULL;
+2147         \textcolor{keywordtype}{int} *start = NULL;
+2148         \textcolor{keywordtype}{int} *count = NULL;
+2149         \textcolor{keywordtype}{int} *perm = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},l);
+2150 
+2151         \textcolor{comment}{// group training data of the same class}
+2152         \hyperlink{svm_8cpp_a2b0ace14a7145bfefeded6747d596c09}{svm\_group\_classes}(prob,&nr\_class,&label,&start,&count,perm);
+2153         \textcolor{keywordflow}{if}(nr\_class == 1) 
+2154             \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"WARNING: training data in only one class. See README for details.\(\backslash\)n"});
+2155         
+2156         \hyperlink{structsvm__node}{svm\_node} **\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__node}{svm\_node} *,l);
+2157         \textcolor{keywordtype}{int} i;
+2158         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2159             x[i] = prob->\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[perm[i]];
+2160 
+2161         \textcolor{comment}{// calculate weighted C}
+2162 
+2163         \textcolor{keywordtype}{double} *weighted\_C = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double}, nr\_class);
+2164         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2165             weighted\_C[i] = param->\hyperlink{structsvm__parameter_af4f905a3f7d589d86964289af3c9d812}{C};
+2166         \textcolor{keywordflow}{for}(i=0;i<param->nr\_weight;i++)
+2167         \{   
+2168             \textcolor{keywordtype}{int} j;
+2169             \textcolor{keywordflow}{for}(j=0;j<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};j++)
+2170                 \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_a06753922bb0282240f35ae7683f8d69a}{weight\_label}[i] == label[j])
+2171                     \textcolor{keywordflow}{break};
+2172             \textcolor{keywordflow}{if}(j == nr\_class)
+2173                 fprintf(stderr,\textcolor{stringliteral}{"WARNING: class label %d specified in weight is not found\(\backslash\)n"}, param->
+      \hyperlink{structsvm__parameter_a06753922bb0282240f35ae7683f8d69a}{weight\_label}[i]);
+2174             \textcolor{keywordflow}{else}
+2175                 weighted\_C[j] *= param->\hyperlink{structsvm__parameter_afff750f99180b5ddf735404496b6c196}{weight}[i];
+2176         \}
+2177 
+2178         \textcolor{comment}{// train k*(k-1)/2 models}
+2179         
+2180         \textcolor{keywordtype}{bool} *nonzero = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{bool},l);
+2181         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2182             nonzero[i] = \textcolor{keyword}{false};
+2183         \hyperlink{structdecision__function}{decision\_function} *f = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structdecision__function}{decision\_function},nr\_class*(
+      nr\_class-1)/2);
+2184 
+2185         \textcolor{keywordtype}{double} *\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}=NULL,*\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}=NULL;
+2186         \textcolor{keywordflow}{if} (param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability})
+2187         \{
+2188             probA=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nr\_class*(nr\_class-1)/2);
+2189             probB=\hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nr\_class*(nr\_class-1)/2);
+2190         \}
+2191 
+2192         \textcolor{keywordtype}{int} p = 0;
+2193         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2194             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=i+1;j<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};j++)
+2195             \{
+2196                 \hyperlink{structsvm__problem}{svm\_problem} sub\_prob;
+2197                 \textcolor{keywordtype}{int} si = start[i], sj = start[j];
+2198                 \textcolor{keywordtype}{int} ci = count[i], cj = count[j];
+2199                 sub\_prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l} = ci+cj;
+2200                 sub\_prob.\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__node}{svm\_node} *,sub\_prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+2201                 sub\_prob.\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},sub\_prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+2202                 \textcolor{keywordtype}{int} k;
+2203                 \textcolor{keywordflow}{for}(k=0;k<ci;k++)
+2204                 \{
+2205                     sub\_prob.\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[k] = x[si+k];
+2206                     sub\_prob.\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[k] = +1;
+2207                 \}
+2208                 \textcolor{keywordflow}{for}(k=0;k<cj;k++)
+2209                 \{
+2210                     sub\_prob.\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}[ci+k] = x[sj+k];
+2211                     sub\_prob.\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[ci+k] = -1;
+2212                 \}
+2213 
+2214                 \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability})
+2215                     \hyperlink{svm_8cpp_ae862a4ec5aef90b7ded1cd2a602271f6}{svm\_binary\_svc\_probability}(&sub\_prob,param,weighted\_C[i],
+      weighted\_C[j],probA[p],probB[p]);
+2216 
+2217                 f[p] = \hyperlink{svm_8cpp_a402bb8c57abf732699dce636892faca7}{svm\_train\_one}(&sub\_prob,param,weighted\_C[i],weighted\_C[j]);
+2218                 \textcolor{keywordflow}{for}(k=0;k<ci;k++)
+2219                     \textcolor{keywordflow}{if}(!nonzero[si+k] && fabs(f[p].alpha[k]) > 0)
+2220                         nonzero[si+k] = \textcolor{keyword}{true};
+2221                 \textcolor{keywordflow}{for}(k=0;k<cj;k++)
+2222                     \textcolor{keywordflow}{if}(!nonzero[sj+k] && fabs(f[p].alpha[ci+k]) > 0)
+2223                         nonzero[sj+k] = \textcolor{keyword}{true};
+2224                 free(sub\_prob.\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x});
+2225                 free(sub\_prob.\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y});
+2226                 ++p;
+2227             \}
+2228 
+2229         \textcolor{comment}{// build output}
+2230 
+2231         model->\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class} = \hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};
+2232         
+2233         model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2234         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2235             model->\hyperlink{structsvm__model_ac66d192809e92b95875bdf8ebb749060}{label}[i] = label[i];
+2236         
+2237         model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nr\_class*(nr\_class-1)/2);
+2238         \textcolor{keywordflow}{for}(i=0;i<nr\_class*(nr\_class-1)/2;i++)
+2239             model->\hyperlink{structsvm__model_a16e4dea1508f93ece4384ec35c991887}{rho}[i] = f[i].\hyperlink{structdecision__function_ae2aeeaa508803351b22d4454b81cb375}{rho};
+2240 
+2241         \textcolor{keywordflow}{if}(param->\hyperlink{structsvm__parameter_afac0ef02879d7e27e17ac2a75115a7d9}{probability})
+2242         \{
+2243             model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nr\_class*(nr\_class-1)/2);
+2244             model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},nr\_class*(nr\_class-1)/2);
+2245             \textcolor{keywordflow}{for}(i=0;i<nr\_class*(nr\_class-1)/2;i++)
+2246             \{
+2247                 model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}[i] = probA[i];
+2248                 model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}[i] = probB[i];
+2249             \}
+2250         \}
+2251         \textcolor{keywordflow}{else}
+2252         \{
+2253             model->\hyperlink{structsvm__model_adf5f28fcdd3ca1c5b23c1f6167710a04}{probA}=NULL;
+2254             model->\hyperlink{structsvm__model_a73ba8feaaf3c2c38c6bb81f7bcb5809e}{probB}=NULL;
+2255         \}
+2256 
+2257         \textcolor{keywordtype}{int} total\_sv = 0;
+2258         \textcolor{keywordtype}{int} *nz\_count = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2259         model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2260         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2261         \{
+2262             \textcolor{keywordtype}{int} nSV = 0;
+2263             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<count[i];j++)
+2264                 \textcolor{keywordflow}{if}(nonzero[start[i]+j])
+2265                 \{   
+2266                     ++\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV};
+2267                     ++total\_sv;
+2268                 \}
+2269             model->\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV}[i] = \hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV};
+2270             nz\_count[i] = \hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV};
+2271         \}
+2272         
+2273         \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"Total nSV = %d\(\backslash\)n"},total\_sv);
+2274 
+2275         model->\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l} = total\_sv;
+2276         model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\hyperlink{structsvm__node}{svm\_node} *,total\_sv);
+2277         model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},total\_sv);
+2278         p = 0;
+2279         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_ab858d7eed0bd3cc4c33c094872643d0a}{l};i++)
+2280             \textcolor{keywordflow}{if}(nonzero[i])
+2281             \{
+2282                 model->\hyperlink{structsvm__model_a96da6fe173a7150dae95bf55d5539e45}{SV}[p] = x[i];
+2283                 model->\hyperlink{structsvm__model_add7f649bf78428c38a282ed8776fa433}{sv\_indices}[p++] = perm[i] + 1;
+2284             \}
+2285 
+2286         \textcolor{keywordtype}{int} *nz\_start = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{int},nr\_class);
+2287         nz\_start[0] = 0;
+2288         \textcolor{keywordflow}{for}(i=1;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2289             nz\_start[i] = nz\_start[i-1]+nz\_count[i-1];
+2290 
+2291         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef} = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double} *,nr\_class-1);
+2292         \textcolor{keywordflow}{for}(i=0;i<nr\_class-1;i++)
+2293             model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[i] = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},total\_sv);
+2294 
+2295         p = 0;
+2296         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};i++)
+2297             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=i+1;j<\hyperlink{structsvm__model_a5af6e0cfb063e8aac03c99aa9d319116}{nr\_class};j++)
+2298             \{
+2299                 \textcolor{comment}{// classifier (i,j): coefficients with}
+2300                 \textcolor{comment}{// i are in sv\_coef[j-1][nz\_start[i]...],}
+2301                 \textcolor{comment}{// j are in sv\_coef[i][nz\_start[j]...]}
+2302 
+2303                 \textcolor{keywordtype}{int} si = start[i];
+2304                 \textcolor{keywordtype}{int} sj = start[j];
+2305                 \textcolor{keywordtype}{int} ci = count[i];
+2306                 \textcolor{keywordtype}{int} cj = count[j];
+2307                 
+2308                 \textcolor{keywordtype}{int} q = nz\_start[i];
+2309                 \textcolor{keywordtype}{int} k;
+2310                 \textcolor{keywordflow}{for}(k=0;k<ci;k++)
+2311                     \textcolor{keywordflow}{if}(nonzero[si+k])
+2312                         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[j-1][q++] = f[p].\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha}[k];
+2313                 q = nz\_start[j];
+2314                 \textcolor{keywordflow}{for}(k=0;k<cj;k++)
+2315                     \textcolor{keywordflow}{if}(nonzero[sj+k])
+2316                         model->\hyperlink{structsvm__model_a978084d722ac886100ffcc35fc931143}{sv\_coef}[i][q++] = f[p].\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha}[ci+k];
+2317                 ++p;
+2318             \}
+2319         
+2320         free(label);
+2321         free(probA);
+2322         free(probB);
+2323         free(count);
+2324         free(perm);
+2325         free(start);
+2326         free(x);
+2327         free(weighted\_C);
+2328         free(nonzero);
+2329         \textcolor{keywordflow}{for}(i=0;i<nr\_class*(nr\_class-1)/2;i++)
+2330             free(f[i].alpha);
+2331         free(f);
+2332         free(nz\_count);
+2333         free(nz\_start);
+2334     \}
+2335     \textcolor{keywordflow}{return} \hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model};
+2336 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_ae6e4f84556602fab57ec5a330514b613_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_ae6e4f84556602fab57ec5a330514b613_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a402bb8c57abf732699dce636892faca7}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+train\+\_\+one@{svm\+\_\+train\+\_\+one}}
+\index{svm\+\_\+train\+\_\+one@{svm\+\_\+train\+\_\+one}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+train\+\_\+one}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf decision\+\_\+function} svm\+\_\+train\+\_\+one (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} $\ast$}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} $\ast$}]{param, }
+\item[{double}]{Cp, }
+\item[{double}]{Cn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a402bb8c57abf732699dce636892faca7}
+
+
+svm.\+cpp 파일의 1647 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1650 \{
+1651     \textcolor{keywordtype}{double} *alpha = \hyperlink{svm_8cpp_a9191047fd644a5f519152ecb4aa60357}{Malloc}(\textcolor{keywordtype}{double},prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+1652     \hyperlink{struct_solver_1_1_solution_info}{Solver::SolutionInfo} si;
+1653     \textcolor{keywordflow}{switch}(param->\hyperlink{structsvm__parameter_a3afb37272180a903df05f7b649b338f4}{svm\_type})
+1654     \{
+1655         \textcolor{keywordflow}{case} \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC}:
+1656             \hyperlink{svm_8cpp_a11814ad6e8976823b61af65e6e36ca1a}{solve\_c\_svc}(prob,param,alpha,&si,Cp,Cn);
+1657             \textcolor{keywordflow}{break};
+1658         \textcolor{keywordflow}{case} \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC}:
+1659             \hyperlink{svm_8cpp_a221d17018ed0cd7f218523dbbb9aab4d}{solve\_nu\_svc}(prob,param,alpha,&si);
+1660             \textcolor{keywordflow}{break};
+1661         \textcolor{keywordflow}{case} \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b}{ONE\_CLASS}:
+1662             \hyperlink{svm_8cpp_a7a8a956d5b08b55756ceaaf63a5d2a87}{solve\_one\_class}(prob,param,alpha,&si);
+1663             \textcolor{keywordflow}{break};
+1664         \textcolor{keywordflow}{case} \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR}:
+1665             \hyperlink{svm_8cpp_a57df27962e3c80e9c2de6c3163850c79}{solve\_epsilon\_svr}(prob,param,alpha,&si);
+1666             \textcolor{keywordflow}{break};
+1667         \textcolor{keywordflow}{case} \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR}:
+1668             \hyperlink{svm_8cpp_add71d0d022422b58f690572f521f0f78}{solve\_nu\_svr}(prob,param,alpha,&si);
+1669             \textcolor{keywordflow}{break};
+1670     \}
+1671 
+1672     \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"obj = %f, rho = %f\(\backslash\)n"},si.\hyperlink{struct_solver_1_1_solution_info_adf1d775e9152a7b1742057cd638ed2ae}{obj},si.\hyperlink{struct_solver_1_1_solution_info_a8091f45a336af39e232f3845e25f2266}{rho});
+1673 
+1674     \textcolor{comment}{// output SVs}
+1675 
+1676     \textcolor{keywordtype}{int} \hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV} = 0;
+1677     \textcolor{keywordtype}{int} nBSV = 0;
+1678     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<prob->\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+1679     \{
+1680         \textcolor{keywordflow}{if}(fabs(alpha[i]) > 0)
+1681         \{
+1682             ++\hyperlink{structsvm__model_a1d342c9b9e5e4a6377862e13123a25ef}{nSV};
+1683             \textcolor{keywordflow}{if}(prob->\hyperlink{structsvm__problem_a59dec12ff090571bc9592ba9fb306780}{y}[i] > 0)
+1684             \{
+1685                 \textcolor{keywordflow}{if}(fabs(alpha[i]) >= si.\hyperlink{struct_solver_1_1_solution_info_a94c4cb7f402752326cc975ec57a8688f}{upper\_bound\_p})
+1686                     ++nBSV;
+1687             \}
+1688             \textcolor{keywordflow}{else}
+1689             \{
+1690                 \textcolor{keywordflow}{if}(fabs(alpha[i]) >= si.\hyperlink{struct_solver_1_1_solution_info_a07ab9dc3265855f483922988bdaaf986}{upper\_bound\_n})
+1691                     ++nBSV;
+1692             \}
+1693         \}
+1694     \}
+1695 
+1696     \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"nSV = %d, nBSV = %d\(\backslash\)n"},nSV,nBSV);
+1697 
+1698     \hyperlink{structdecision__function}{decision\_function} f;
+1699     f.\hyperlink{structdecision__function_ab79ad1c39d091d4f8ad798abe4223772}{alpha} = alpha;
+1700     f.\hyperlink{structdecision__function_ae2aeeaa508803351b22d4454b81cb375}{rho} = si.\hyperlink{struct_solver_1_1_solution_info_a8091f45a336af39e232f3845e25f2266}{rho};
+1701     \textcolor{keywordflow}{return} f;
+1702 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a402bb8c57abf732699dce636892faca7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a402bb8c57abf732699dce636892faca7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{\index{svm.\+cpp@{svm.\+cpp}!swap@{swap}}
+\index{swap@{swap}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void swap (
+\begin{DoxyParamCaption}
+\item[{T \&}]{x, }
+\item[{T \&}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}
+
+
+svm.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+20 \{ T t=\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}; \hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x}=y; y=t; \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{변수 문서화}
+\hypertarget{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}{\index{svm.\+cpp@{svm.\+cpp}!kernel\+\_\+type\+\_\+table@{kernel\+\_\+type\+\_\+table}}
+\index{kernel\+\_\+type\+\_\+table@{kernel\+\_\+type\+\_\+table}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{kernel\+\_\+type\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ kernel\+\_\+type\+\_\+table\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a2812fc7dc5b3db65a9bf7da83e25bb3d}
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+=
+\{
+    \textcolor{stringliteral}{"linear"},\textcolor{stringliteral}{"polynomial"},\textcolor{stringliteral}{"rbf"},\textcolor{stringliteral}{"sigmoid"},\textcolor{stringliteral}{"precomputed"},NULL
+\}
+\end{DoxyCode}
+
+
+svm.\+cpp 파일의 2636 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a9ba41253b462f42e64917cc38e0f2cc7}{\index{svm.\+cpp@{svm.\+cpp}!libsvm\+\_\+version@{libsvm\+\_\+version}}
+\index{libsvm\+\_\+version@{libsvm\+\_\+version}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{libsvm\+\_\+version}]{\setlength{\rightskip}{0pt plus 5cm}int libsvm\+\_\+version = {\bf L\+I\+B\+S\+V\+M\+\_\+\+V\+E\+R\+S\+I\+O\+N}}}\label{svm_8cpp_a9ba41253b462f42e64917cc38e0f2cc7}
+
+
+svm.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}{\index{svm.\+cpp@{svm.\+cpp}!line@{line}}
+\index{line@{line}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ line = N\+U\+L\+L\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a8adb30f4f6669f927fd9232f686c637b}
+
+
+svm.\+cpp 파일의 2735 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}{\index{svm.\+cpp@{svm.\+cpp}!max\+\_\+line\+\_\+len@{max\+\_\+line\+\_\+len}}
+\index{max\+\_\+line\+\_\+len@{max\+\_\+line\+\_\+len}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{max\+\_\+line\+\_\+len}]{\setlength{\rightskip}{0pt plus 5cm}int max\+\_\+line\+\_\+len\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_acad24c15bee67d2026f56bc94a1188c7}
+
+
+svm.\+cpp 파일의 2736 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a9a4e68dbfe2b342ff45c12c638ec39cb}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+print\+\_\+string@{svm\+\_\+print\+\_\+string}}
+\index{svm\+\_\+print\+\_\+string@{svm\+\_\+print\+\_\+string}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+print\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ svm\+\_\+print\+\_\+string)(const char $\ast$) = \&{\bf print\+\_\+string\+\_\+stdout}\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a9a4e68dbfe2b342ff45c12c638ec39cb}
+
+
+svm.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+\hypertarget{svm_8cpp_a3be459e452f7ebeaae824e941e766770}{\index{svm.\+cpp@{svm.\+cpp}!svm\+\_\+type\+\_\+table@{svm\+\_\+type\+\_\+table}}
+\index{svm\+\_\+type\+\_\+table@{svm\+\_\+type\+\_\+table}!svm.\+cpp@{svm.\+cpp}}
+\subsubsection[{svm\+\_\+type\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ svm\+\_\+type\+\_\+table\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{svm_8cpp_a3be459e452f7ebeaae824e941e766770}
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+=
+\{
+    \textcolor{stringliteral}{"c\_svc"},\textcolor{stringliteral}{"nu\_svc"},\textcolor{stringliteral}{"one\_class"},\textcolor{stringliteral}{"epsilon\_svr"},\textcolor{stringliteral}{"nu\_svr"},NULL
+\}
+\end{DoxyCode}
+
+
+svm.\+cpp 파일의 2631 번째 라인에서 정의되었습니다.
+

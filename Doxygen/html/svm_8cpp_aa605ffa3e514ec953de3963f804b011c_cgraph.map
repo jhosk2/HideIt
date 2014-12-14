@@ -1,0 +1,12 @@
+<map id="svm_predict_probability" name="svm_predict_probability">
+<area shape="rect" id="node2" href="$svm_8cpp.html#aabe5223ca8496af644883d8063007db2" title="svm_predict_values" alt="" coords="405,31,540,57"/>
+<area shape="rect" id="node6" href="$svm_8cpp.html#a348440c5435269ac7c60d2e2d8916f48" title="min" alt="" coords="263,31,305,57"/>
+<area shape="rect" id="node7" href="$svm_8cpp.html#a7cba98555a7346b01e4cc06205527d8a" title="max" alt="" coords="449,183,496,209"/>
+<area shape="rect" id="node8" href="$svm_8cpp.html#a681fcc7268133ceb472773fd30b97839" title="sigmoid_predict" alt="" coords="227,132,341,159"/>
+<area shape="rect" id="node9" href="$svm_8cpp.html#a7efc9faed12382e55327581d3a4cfa8b" title="multiclass_probability" alt="" coords="211,233,357,260"/>
+<area shape="rect" id="node11" href="$svm_8cpp.html#a1e5816ec29e6c51bc3daeab47cb7e8ef" title="svm_predict" alt="" coords="239,81,329,108"/>
+<area shape="rect" id="node3" href="$class_kernel.html#a6ff0d4ac64bf7fba29d2ca3433dd5127" title="Kernel::k_function" alt="" coords="588,31,715,57"/>
+<area shape="rect" id="node4" href="$class_kernel.html#af258ecfb8ca0182e6a79c06291586e5b" title="Kernel::dot" alt="" coords="763,5,848,32"/>
+<area shape="rect" id="node5" href="$svm_8cpp.html#a07a43a87f274795074408da4b34d46c4" title="powi" alt="" coords="781,56,829,83"/>
+<area shape="rect" id="node10" href="$svm_8cpp.html#ab834c069665121a3467868539fde9101" title="info" alt="" coords="451,233,494,260"/>
+</map>

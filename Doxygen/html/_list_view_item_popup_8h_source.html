@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>HideIt: inc/ListViewItemPopup.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">HideIt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_list_view_item_popup_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ListViewItemPopup.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_list_view_item_popup_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * FileBrowserPopup.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Dec 1, 2014</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: 원빈</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef FILEBROWSERPOPUP_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define FILEBROWSERPOPUP_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;FUi.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="class_folder_browser.html">FolderBrowser</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="_list_view_item_popup_8h.html#a514e8b025bf71e7b0500f6f8efb635ce">FILE_STATE_FLAG</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_list_view_item_popup_8h.html#aeefc855c5d6a419e85109bcb9c1ae5e9">FILESTATE_ENCRYPTION</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_list_view_item_popup_8h.html#a2a28b5538cf5c338159be2e1c420261e">FILESTATE_DECRYPTION</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_popup_event_listener.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_popup_event_listener.html">PopupEventListener</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    : <span class="keyword">public</span> Tizen::Ui::IPropagatedKeyEventListener</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// key events for back-key</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_popup_event_listener.html#ad26fa7e35c0fdd52ad6a6bdd4d3e3901">   27</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_popup_event_listener.html#ad26fa7e35c0fdd52ad6a6bdd4d3e3901">OnKeyPressed</a>(Tizen::Ui::Control&amp; source, <span class="keyword">const</span> Tizen::Ui::KeyEventInfo&amp; keyEventInfo) { <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_popup_event_listener.html#aeadbfbf16cf4be6ac6655ef94fc1cd50">OnKeyReleased</a>(Tizen::Ui::Control&amp; source, <span class="keyword">const</span> Tizen::Ui::KeyEventInfo&amp; keyEventInfo);</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_popup_event_listener.html#a6ab53e0c9d7ab3a17c25b1bd820a4f13">   29</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_popup_event_listener.html#a6ab53e0c9d7ab3a17c25b1bd820a4f13">OnPreviewKeyPressed</a>(Tizen::Ui::Control&amp; source, <span class="keyword">const</span> Tizen::Ui::KeyEventInfo&amp; keyEventInfo) { <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_popup_event_listener.html#af38f07d911d13001455e8ac4bab4cd3e">   30</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_popup_event_listener.html#af38f07d911d13001455e8ac4bab4cd3e">OnPreviewKeyReleased</a>(Tizen::Ui::Control&amp; source, <span class="keyword">const</span> Tizen::Ui::KeyEventInfo&amp; keyEventInfo) { <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_popup_event_listener.html#a2cce7fb106a3b8a4ab66a26284d64a83">   31</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_popup_event_listener.html#a2cce7fb106a3b8a4ab66a26284d64a83">TranslateKeyEventInfo</a>(Tizen::Ui::Control&amp; source, Tizen::Ui::KeyEventInfo&amp; keyEventInfo) { <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_list_view_item_popup.html">ListViewItemPopup</a> :</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span> Tizen::Ui::IActionEventListener{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_list_view_item_popup.html#af87aac8b00f13e18b37cece6362879d4">ListViewItemPopup</a>(<a class="code" href="class_folder_browser.html">FolderBrowser</a>* folderBrowser);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_list_view_item_popup.html#a54ae38edf9c99233d8fc958efb1666b1">~ListViewItemPopup</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_list_view_item_popup.html#a6e5821dcd07b75edad9775650c8d5a63">ShowPopup</a>(<span class="keyword">const</span> Tizen::Base::String&amp; filename);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_list_view_item_popup.html#a5ae90134642d7aea3ae0b5389ea144a8">HidePopup</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_list_view_item_popup.html#ac46352b7db50a19ad67c15f0b1c238bc">OnActionPerformed</a>(<span class="keyword">const</span> Tizen::Ui::Control&amp; source, <span class="keywordtype">int</span> actionId);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_list_view_item_popup.html#a56169532269cb6c8e3cd61ddd6e605ce">ListViewItemPopup::ExecuteTextFile</a>(Tizen::Base::String filePath);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a33b5bebeb60329746d785d2b721748b0">   49</a></span>&#160;    <a class="code" href="class_folder_browser.html">FolderBrowser</a>* <a class="code" href="class_list_view_item_popup.html#a33b5bebeb60329746d785d2b721748b0">pFolderBrowser</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a039ba26046cd62bd44d24d60fa0cc2f6">   51</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_list_view_item_popup.html#a039ba26046cd62bd44d24d60fa0cc2f6">ID_BUTTON_OPEN_POPUP</a> = 501;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a5a64693bdce3cd6333f7973aa69f54f9">   52</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_list_view_item_popup.html#a5a64693bdce3cd6333f7973aa69f54f9">ID_BUTTON_CLOSE_POPUP</a> = 502;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a61acb07d5c6a128502350c9a309eb171">   53</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_list_view_item_popup.html#a61acb07d5c6a128502350c9a309eb171">ID_BUTTON_ENCRYPTION_FILE</a> = 503;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a01416363f91fad984fb0543c48a0d5ea">   54</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_list_view_item_popup.html#a01416363f91fad984fb0543c48a0d5ea">ID_BUTTON_OPEN_FILE</a> = 504;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#ab455af4bb5e9b8c13572ac0e06b05cff">   56</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_list_view_item_popup.html#ab455af4bb5e9b8c13572ac0e06b05cff">FILESTATE_ENCRYPTION</a> = 601;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a8f4af33ad25eb4228734b49c521d052c">   57</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_list_view_item_popup.html#a8f4af33ad25eb4228734b49c521d052c">FILESTATE_DECRYPTION</a> = 602;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#ae2763988a34f0ecbfb81aeb3cc2ca59a">   59</a></span>&#160;    Tizen::Ui::Controls::Popup* <a class="code" href="class_list_view_item_popup.html#ae2763988a34f0ecbfb81aeb3cc2ca59a">__pPopup</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a42979e0b89cd38da4f6046e678d21437">   60</a></span>&#160;    <a class="code" href="class_popup_event_listener.html">PopupEventListener</a>* <a class="code" href="class_list_view_item_popup.html#a42979e0b89cd38da4f6046e678d21437">__pPopupListener</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_list_view_item_popup.html#a395472f1d8380e5d2d9e18e80a90c3a7">   61</a></span>&#160;    Tizen::Base::String <a class="code" href="class_list_view_item_popup.html#a395472f1d8380e5d2d9e18e80a90c3a7">currentFilePath</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FILEBROWSERPOPUP_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_list_view_item_popup_html_a039ba26046cd62bd44d24d60fa0cc2f6"><div class="ttname"><a href="class_list_view_item_popup.html#a039ba26046cd62bd44d24d60fa0cc2f6">ListViewItemPopup::ID_BUTTON_OPEN_POPUP</a></div><div class="ttdeci">static const int ID_BUTTON_OPEN_POPUP</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00051">ListViewItemPopup.h:51</a></div></div>
+<div class="ttc" id="class_popup_event_listener_html"><div class="ttname"><a href="class_popup_event_listener.html">PopupEventListener</a></div><div class="ttdoc">File Browser에서 파일 선택시 Popup창을 구성해주는 Class. </div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00023">ListViewItemPopup.h:23</a></div></div>
+<div class="ttc" id="_list_view_item_popup_8h_html_a2a28b5538cf5c338159be2e1c420261e"><div class="ttname"><a href="_list_view_item_popup_8h.html#a2a28b5538cf5c338159be2e1c420261e">FILESTATE_DECRYPTION</a></div><div class="ttdeci">const int FILESTATE_DECRYPTION</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00031">ListViewItemPopup.cpp:31</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a5a64693bdce3cd6333f7973aa69f54f9"><div class="ttname"><a href="class_list_view_item_popup.html#a5a64693bdce3cd6333f7973aa69f54f9">ListViewItemPopup::ID_BUTTON_CLOSE_POPUP</a></div><div class="ttdeci">static const int ID_BUTTON_CLOSE_POPUP</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00052">ListViewItemPopup.h:52</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a42979e0b89cd38da4f6046e678d21437"><div class="ttname"><a href="class_list_view_item_popup.html#a42979e0b89cd38da4f6046e678d21437">ListViewItemPopup::__pPopupListener</a></div><div class="ttdeci">PopupEventListener * __pPopupListener</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00060">ListViewItemPopup.h:60</a></div></div>
+<div class="ttc" id="class_popup_event_listener_html_a2cce7fb106a3b8a4ab66a26284d64a83"><div class="ttname"><a href="class_popup_event_listener.html#a2cce7fb106a3b8a4ab66a26284d64a83">PopupEventListener::TranslateKeyEventInfo</a></div><div class="ttdeci">virtual bool TranslateKeyEventInfo(Tizen::Ui::Control &amp;source, Tizen::Ui::KeyEventInfo &amp;keyEventInfo)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00031">ListViewItemPopup.h:31</a></div></div>
+<div class="ttc" id="class_folder_browser_html"><div class="ttname"><a href="class_folder_browser.html">FolderBrowser</a></div><div class="ttdoc">File Browsing을 해주는 Class. </div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00046">FolderBrowser.h:46</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a33b5bebeb60329746d785d2b721748b0"><div class="ttname"><a href="class_list_view_item_popup.html#a33b5bebeb60329746d785d2b721748b0">ListViewItemPopup::pFolderBrowser</a></div><div class="ttdeci">FolderBrowser * pFolderBrowser</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00049">ListViewItemPopup.h:49</a></div></div>
+<div class="ttc" id="class_popup_event_listener_html_af38f07d911d13001455e8ac4bab4cd3e"><div class="ttname"><a href="class_popup_event_listener.html#af38f07d911d13001455e8ac4bab4cd3e">PopupEventListener::OnPreviewKeyReleased</a></div><div class="ttdeci">virtual bool OnPreviewKeyReleased(Tizen::Ui::Control &amp;source, const Tizen::Ui::KeyEventInfo &amp;keyEventInfo)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00030">ListViewItemPopup.h:30</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a395472f1d8380e5d2d9e18e80a90c3a7"><div class="ttname"><a href="class_list_view_item_popup.html#a395472f1d8380e5d2d9e18e80a90c3a7">ListViewItemPopup::currentFilePath</a></div><div class="ttdeci">Tizen::Base::String currentFilePath</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00061">ListViewItemPopup.h:61</a></div></div>
+<div class="ttc" id="class_popup_event_listener_html_a6ab53e0c9d7ab3a17c25b1bd820a4f13"><div class="ttname"><a href="class_popup_event_listener.html#a6ab53e0c9d7ab3a17c25b1bd820a4f13">PopupEventListener::OnPreviewKeyPressed</a></div><div class="ttdeci">virtual bool OnPreviewKeyPressed(Tizen::Ui::Control &amp;source, const Tizen::Ui::KeyEventInfo &amp;keyEventInfo)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00029">ListViewItemPopup.h:29</a></div></div>
+<div class="ttc" id="class_popup_event_listener_html_aeadbfbf16cf4be6ac6655ef94fc1cd50"><div class="ttname"><a href="class_popup_event_listener.html#aeadbfbf16cf4be6ac6655ef94fc1cd50">PopupEventListener::OnKeyReleased</a></div><div class="ttdeci">virtual bool OnKeyReleased(Tizen::Ui::Control &amp;source, const Tizen::Ui::KeyEventInfo &amp;keyEventInfo)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00033">ListViewItemPopup.cpp:33</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a61acb07d5c6a128502350c9a309eb171"><div class="ttname"><a href="class_list_view_item_popup.html#a61acb07d5c6a128502350c9a309eb171">ListViewItemPopup::ID_BUTTON_ENCRYPTION_FILE</a></div><div class="ttdeci">static const int ID_BUTTON_ENCRYPTION_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00053">ListViewItemPopup.h:53</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a5ae90134642d7aea3ae0b5389ea144a8"><div class="ttname"><a href="class_list_view_item_popup.html#a5ae90134642d7aea3ae0b5389ea144a8">ListViewItemPopup::HidePopup</a></div><div class="ttdeci">void HidePopup(void)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00104">ListViewItemPopup.cpp:104</a></div></div>
+<div class="ttc" id="_list_view_item_popup_8h_html_aeefc855c5d6a419e85109bcb9c1ae5e9"><div class="ttname"><a href="_list_view_item_popup_8h.html#aeefc855c5d6a419e85109bcb9c1ae5e9">FILESTATE_ENCRYPTION</a></div><div class="ttdeci">const int FILESTATE_ENCRYPTION</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00030">ListViewItemPopup.cpp:30</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_ac46352b7db50a19ad67c15f0b1c238bc"><div class="ttname"><a href="class_list_view_item_popup.html#ac46352b7db50a19ad67c15f0b1c238bc">ListViewItemPopup::OnActionPerformed</a></div><div class="ttdeci">virtual void OnActionPerformed(const Tizen::Ui::Control &amp;source, int actionId)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00108">ListViewItemPopup.cpp:108</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a01416363f91fad984fb0543c48a0d5ea"><div class="ttname"><a href="class_list_view_item_popup.html#a01416363f91fad984fb0543c48a0d5ea">ListViewItemPopup::ID_BUTTON_OPEN_FILE</a></div><div class="ttdeci">static const int ID_BUTTON_OPEN_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00054">ListViewItemPopup.h:54</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a54ae38edf9c99233d8fc958efb1666b1"><div class="ttname"><a href="class_list_view_item_popup.html#a54ae38edf9c99233d8fc958efb1666b1">ListViewItemPopup::~ListViewItemPopup</a></div><div class="ttdeci">virtual ~ListViewItemPopup()</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00091">ListViewItemPopup.cpp:91</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_ae2763988a34f0ecbfb81aeb3cc2ca59a"><div class="ttname"><a href="class_list_view_item_popup.html#ae2763988a34f0ecbfb81aeb3cc2ca59a">ListViewItemPopup::__pPopup</a></div><div class="ttdeci">Tizen::Ui::Controls::Popup * __pPopup</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00059">ListViewItemPopup.h:59</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_ab455af4bb5e9b8c13572ac0e06b05cff"><div class="ttname"><a href="class_list_view_item_popup.html#ab455af4bb5e9b8c13572ac0e06b05cff">ListViewItemPopup::FILESTATE_ENCRYPTION</a></div><div class="ttdeci">static const int FILESTATE_ENCRYPTION</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00056">ListViewItemPopup.h:56</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a8f4af33ad25eb4228734b49c521d052c"><div class="ttname"><a href="class_list_view_item_popup.html#a8f4af33ad25eb4228734b49c521d052c">ListViewItemPopup::FILESTATE_DECRYPTION</a></div><div class="ttdeci">static const int FILESTATE_DECRYPTION</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00057">ListViewItemPopup.h:57</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_af87aac8b00f13e18b37cece6362879d4"><div class="ttname"><a href="class_list_view_item_popup.html#af87aac8b00f13e18b37cece6362879d4">ListViewItemPopup::ListViewItemPopup</a></div><div class="ttdeci">ListViewItemPopup(FolderBrowser *folderBrowser)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00045">ListViewItemPopup.cpp:45</a></div></div>
+<div class="ttc" id="class_popup_event_listener_html_ad26fa7e35c0fdd52ad6a6bdd4d3e3901"><div class="ttname"><a href="class_popup_event_listener.html#ad26fa7e35c0fdd52ad6a6bdd4d3e3901">PopupEventListener::OnKeyPressed</a></div><div class="ttdeci">virtual bool OnKeyPressed(Tizen::Ui::Control &amp;source, const Tizen::Ui::KeyEventInfo &amp;keyEventInfo)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00027">ListViewItemPopup.h:27</a></div></div>
+<div class="ttc" id="_list_view_item_popup_8h_html_a514e8b025bf71e7b0500f6f8efb635ce"><div class="ttname"><a href="_list_view_item_popup_8h.html#a514e8b025bf71e7b0500f6f8efb635ce">FILE_STATE_FLAG</a></div><div class="ttdeci">int FILE_STATE_FLAG</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00029">ListViewItemPopup.cpp:29</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html"><div class="ttname"><a href="class_list_view_item_popup.html">ListViewItemPopup</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00035">ListViewItemPopup.h:35</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a56169532269cb6c8e3cd61ddd6e605ce"><div class="ttname"><a href="class_list_view_item_popup.html#a56169532269cb6c8e3cd61ddd6e605ce">ListViewItemPopup::ExecuteTextFile</a></div><div class="ttdeci">void ExecuteTextFile(Tizen::Base::String filePath)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00194">ListViewItemPopup.cpp:194</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html_a6e5821dcd07b75edad9775650c8d5a63"><div class="ttname"><a href="class_list_view_item_popup.html#a6e5821dcd07b75edad9775650c8d5a63">ListViewItemPopup::ShowPopup</a></div><div class="ttdeci">void ShowPopup(const Tizen::Base::String &amp;filename)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8cpp_source.html#l00097">ListViewItemPopup.cpp:97</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="_list_view_item_popup_8h.html">ListViewItemPopup.h</a></li>
+    <li class="footer">생성시간 : 일 12월 14 2014 18:23:35, 프로젝트명 : HideIt, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

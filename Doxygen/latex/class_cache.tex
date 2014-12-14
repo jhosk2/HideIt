@@ -1,0 +1,350 @@
+\hypertarget{class_cache}{\section{Cache 클래스 참조}
+\label{class_cache}\index{Cache@{Cache}}
+}
+
+
+Cache에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_cache__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_cache_1_1head__t}{head\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cache_a2823f543d4f9b92c29472b904961afe1}{Cache} (int \hyperlink{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{l}, long int \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size})
+\item 
+\hyperlink{class_cache_af8b171a6c49d88d3ba179477484b9d48}{$\sim$\+Cache} ()
+\item 
+int \hyperlink{class_cache_aca49263fb34641e208884cc223b25317}{get\+\_\+data} (const int index, \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} $\ast$$\ast$data, int len)
+\item 
+void \hyperlink{class_cache_aaff2dc955f9492c044c98a5f09cfddcc}{swap\+\_\+index} (int i, int j)
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{lru\+\_\+delete} (\hyperlink{struct_cache_1_1head__t}{head\+\_\+t} $\ast$h)
+\item 
+void \hyperlink{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243}{lru\+\_\+insert} (\hyperlink{struct_cache_1_1head__t}{head\+\_\+t} $\ast$h)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{l}
+\item 
+long int \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size}
+\item 
+\hyperlink{struct_cache_1_1head__t}{head\+\_\+t} $\ast$ \hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}
+\item 
+\hyperlink{struct_cache_1_1head__t}{head\+\_\+t} \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\+\_\+head}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+svm.\+cpp 파일의 67 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_cache_a2823f543d4f9b92c29472b904961afe1}{\index{Cache@{Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!Cache@{Cache}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}Cache\+::\+Cache (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{long int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_cache_a2823f543d4f9b92c29472b904961afe1}
+
+
+svm.\+cpp 파일의 94 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+94                                  :\hyperlink{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{l}(l\_),\hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size}(size\_)
+95 \{
+96     \hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head} = (head\_t *)calloc(\hyperlink{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{l},\textcolor{keyword}{sizeof}(head\_t)); \textcolor{comment}{// initialized to 0}
+97     \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} /= \textcolor{keyword}{sizeof}(\hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat});
+98     \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} -= \hyperlink{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{l} * \textcolor{keyword}{sizeof}(head\_t) / \textcolor{keyword}{sizeof}(\hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat});
+99     \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} = \hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(\hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size}, 2 * (\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}) \hyperlink{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{l}); \textcolor{comment}{// cache must be large enough for two columns}
+100     \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}.\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next} = \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}.\hyperlink{struct_cache_1_1head__t_a82b1a4d1a105769f85cce8d51c19860e}{prev} = &\hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head};
+101 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_cache_a2823f543d4f9b92c29472b904961afe1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cache_af8b171a6c49d88d3ba179477484b9d48}{\index{Cache@{Cache}!````~Cache@{$\sim$\+Cache}}
+\index{````~Cache@{$\sim$\+Cache}!Cache@{Cache}}
+\subsubsection[{$\sim$\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}Cache\+::$\sim$\+Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cache_af8b171a6c49d88d3ba179477484b9d48}
+
+
+svm.\+cpp 파일의 103 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+104 \{
+105     \textcolor{keywordflow}{for}(head\_t *h = \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}.\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next}; h != &\hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}; h=h->\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next})
+106         free(h->data);
+107     free(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head});
+108 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_cache_aca49263fb34641e208884cc223b25317}{\index{Cache@{Cache}!get\+\_\+data@{get\+\_\+data}}
+\index{get\+\_\+data@{get\+\_\+data}!Cache@{Cache}}
+\subsubsection[{get\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}int Cache\+::get\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{const int}]{index, }
+\item[{{\bf Qfloat} $\ast$$\ast$}]{data, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{class_cache_aca49263fb34641e208884cc223b25317}
+
+
+svm.\+cpp 파일의 126 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+127 \{
+128     head\_t *h = &\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[index];
+129     \textcolor{keywordflow}{if}(h->len) \hyperlink{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{lru\_delete}(h);
+130     \textcolor{keywordtype}{int} more = len - h->len;
+131 
+132     \textcolor{keywordflow}{if}(more > 0)
+133     \{
+134         \textcolor{comment}{// free old space}
+135         \textcolor{keywordflow}{while}(\hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} < more)
+136         \{
+137             head\_t *old = \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}.\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next};
+138             \hyperlink{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{lru\_delete}(old);
+139             free(old->data);
+140             \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} += old->len;
+141             old->data = 0;
+142             old->len = 0;
+143         \}
+144 
+145         \textcolor{comment}{// allocate new space}
+146         h->data = (\hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} *)realloc(h->data,\textcolor{keyword}{sizeof}(\hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat})*len);
+147         \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} -= more;
+148         \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(h->len,len);
+149     \}
+150 
+151     \hyperlink{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243}{lru\_insert}(h);
+152     *data = h->data;
+153     \textcolor{keywordflow}{return} len;
+154 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_cache_aca49263fb34641e208884cc223b25317_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_cache_aca49263fb34641e208884cc223b25317_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{\index{Cache@{Cache}!lru\+\_\+delete@{lru\+\_\+delete}}
+\index{lru\+\_\+delete@{lru\+\_\+delete}!Cache@{Cache}}
+\subsubsection[{lru\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}void Cache\+::lru\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{{\bf head\+\_\+t} $\ast$}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}
+
+
+svm.\+cpp 파일의 110 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+111 \{
+112     \textcolor{comment}{// delete from current location}
+113     h->prev->next = h->next;
+114     h->next->prev = h->prev;
+115 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cache_ab83abc6ded621fa2575e3a44421e0cb4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243}{\index{Cache@{Cache}!lru\+\_\+insert@{lru\+\_\+insert}}
+\index{lru\+\_\+insert@{lru\+\_\+insert}!Cache@{Cache}}
+\subsubsection[{lru\+\_\+insert}]{\setlength{\rightskip}{0pt plus 5cm}void Cache\+::lru\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf head\+\_\+t} $\ast$}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243}
+
+
+svm.\+cpp 파일의 117 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+118 \{
+119     \textcolor{comment}{// insert to last position}
+120     h->next = &\hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head};
+121     h->\hyperlink{struct_cache_1_1head__t_a82b1a4d1a105769f85cce8d51c19860e}{prev} = \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}.\hyperlink{struct_cache_1_1head__t_a82b1a4d1a105769f85cce8d51c19860e}{prev};
+122     h->\hyperlink{struct_cache_1_1head__t_a82b1a4d1a105769f85cce8d51c19860e}{prev}->\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next} = h;
+123     h->\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next}->\hyperlink{struct_cache_1_1head__t_a82b1a4d1a105769f85cce8d51c19860e}{prev} = h;
+124 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cache_aaff2dc955f9492c044c98a5f09cfddcc}{\index{Cache@{Cache}!swap\+\_\+index@{swap\+\_\+index}}
+\index{swap\+\_\+index@{swap\+\_\+index}!Cache@{Cache}}
+\subsubsection[{swap\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}void Cache\+::swap\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_cache_aaff2dc955f9492c044c98a5f09cfddcc}
+
+
+svm.\+cpp 파일의 156 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+157 \{
+158     \textcolor{keywordflow}{if}(i==j) \textcolor{keywordflow}{return};
+159 
+160     \textcolor{keywordflow}{if}(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[i].len) \hyperlink{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{lru\_delete}(&\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[i]);
+161     \textcolor{keywordflow}{if}(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[j].len) \hyperlink{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{lru\_delete}(&\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[j]);
+162     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[i].data,\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[j].data);
+163     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[i].len,\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[j].len);
+164     \textcolor{keywordflow}{if}(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[i].len) \hyperlink{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243}{lru\_insert}(&\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[i]);
+165     \textcolor{keywordflow}{if}(\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[j].len) \hyperlink{class_cache_a51e5ffc28e2ec6662ae13ab78ccc2243}{lru\_insert}(&\hyperlink{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{head}[j]);
+166 
+167     \textcolor{keywordflow}{if}(i>j) \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(i,j);
+168     \textcolor{keywordflow}{for}(head\_t *h = \hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}.\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next}; h!=&\hyperlink{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{lru\_head}; h=h->\hyperlink{struct_cache_1_1head__t_aa152a104ec07250949c234d164f5f3fd}{next})
+169     \{
+170         \textcolor{keywordflow}{if}(h->len > i)
+171         \{
+172             \textcolor{keywordflow}{if}(h->len > j)
+173                 \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(h->data[i],h->data[j]);
+174             \textcolor{keywordflow}{else}
+175             \{
+176                 \textcolor{comment}{// give up}
+177                 \hyperlink{class_cache_ab83abc6ded621fa2575e3a44421e0cb4}{lru\_delete}(h);
+178                 free(h->data);
+179                 \hyperlink{class_cache_af50a89d0734a160cf812384df64599f9}{size} += h->len;
+180                 h->data = 0;
+181                 h->len = 0;
+182             \}
+183         \}
+184     \}
+185 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_cache_aaff2dc955f9492c044c98a5f09cfddcc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cache_aaff2dc955f9492c044c98a5f09cfddcc_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}{\index{Cache@{Cache}!head@{head}}
+\index{head@{head}!Cache@{Cache}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf head\+\_\+t}$\ast$ Cache\+::head\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cache_aaf3674e8de1e3896dba64b4caac79f0a}
+
+
+svm.\+cpp 파일의 88 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}{\index{Cache@{Cache}!l@{l}}
+\index{l@{l}!Cache@{Cache}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}int Cache\+::l\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cache_a8f5881aa763cb4af5cfb7b6bda0cff35}
+
+
+svm.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}{\index{Cache@{Cache}!lru\+\_\+head@{lru\+\_\+head}}
+\index{lru\+\_\+head@{lru\+\_\+head}!Cache@{Cache}}
+\subsubsection[{lru\+\_\+head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf head\+\_\+t} Cache\+::lru\+\_\+head\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cache_a91fc6bd9c69ed37e8e0499da8d47794e}
+
+
+svm.\+cpp 파일의 89 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_cache_af50a89d0734a160cf812384df64599f9}{\index{Cache@{Cache}!size@{size}}
+\index{size@{size}!Cache@{Cache}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}long int Cache\+::size\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cache_af50a89d0734a160cf812384df64599f9}
+
+
+svm.\+cpp 파일의 80 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Calculator/\hyperlink{svm_8cpp}{svm.\+cpp}\end{DoxyCompactItemize}

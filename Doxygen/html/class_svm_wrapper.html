@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>HideIt: SvmWrapper 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">HideIt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li class="current"><a href="annotated.html"><span>클래스</span></a></li>
+      <li><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>클래스&#160;목록</span></a></li>
+      <li><a href="classes.html"><span>클래스&#160;색인</span></a></li>
+      <li><a href="inherits.html"><span>클래스&#160;계통도</span></a></li>
+      <li><a href="functions.html"><span>클래스&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_svm_wrapper.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pri-methods">Private 멤버 함수</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
+<a href="#pri-static-attribs">정적 Private 속성</a> &#124;
+<a href="class_svm_wrapper-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">SvmWrapper 클래스 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a>&gt;</code></p>
+<div class="dynheader">
+SvmWrapper에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper__coll__graph.png" border="0" usemap="#_svm_wrapper_coll__map" alt="Collaboration graph"/></div>
+<map name="_svm_wrapper_coll__map" id="_svm_wrapper_coll__map">
+<area shape="rect" id="node2" href="structsvm__node.html" title="{svm_node\n|+ index\l+ value\l|}" alt="" coords="5,101,85,193"/><area shape="rect" id="node3" href="structsvm__model.html" title="{svm_model\n|+ nr_class\l+ l\l+ sv_coef\l+ rho\l+ probA\l+ probB\l+ sv_indices\l+ label\l+ nSV\l+ free_sv\l|}" alt="" coords="86,351,181,560"/><area shape="rect" id="node4" href="structsvm__parameter.html" title="{svm_parameter\n|+ svm_type\l+ kernel_type\l+ degree\l+ gamma\l+ coef0\l+ cache_size\l+ eps\l+ C\l+ nr_weight\l+ weight_label\l+ weight\l+ nu\l+ p\l+ shrinking\l+ probability\l|}" alt="" coords="110,5,221,288"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a81d04cd6c08b9cb263c1f4a7151dd572"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a81d04cd6c08b9cb263c1f4a7151dd572">SvmWrapper</a> ()</td></tr>
+<tr class="separator:a81d04cd6c08b9cb263c1f4a7151dd572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454766365e910aa34b39dbba67d5caaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf">predictt</a> ()</td></tr>
+<tr class="separator:a454766365e910aa34b39dbba67d5caaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3adec2bc81b6c37416156465485e9c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c">predict</a> (const std::vector&lt; std::string &gt; &amp;input, <a class="el" href="_svm_wrapper_8h.html#a2af63b8bc735adf0b29b08f5ff28f3c3">FUNC</a> func)</td></tr>
+<tr class="separator:a2f3adec2bc81b6c37416156465485e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff945103751fb220525ddd4fd102bda1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1">GetModelPath</a> ()</td></tr>
+<tr class="separator:aff945103751fb220525ddd4fd102bda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6401e2559203adaff909ba3862d91ceb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a6401e2559203adaff909ba3862d91ceb">GetOutputPath</a> ()</td></tr>
+<tr class="separator:a6401e2559203adaff909ba3862d91ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 멤버 함수</h2></td></tr>
+<tr class="memitem:af06622d63ce23b77ac29aa29298110d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7">init</a> ()</td></tr>
+<tr class="separator:af06622d63ce23b77ac29aa29298110d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:a2acad681f29bd8269c5b11aa568222ec"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a></td></tr>
+<tr class="separator:a2acad681f29bd8269c5b11aa568222ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0dcde4c2d3ec163b487fdf6cc883bc"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsvm__node.html">svm_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a></td></tr>
+<tr class="separator:abf0dcde4c2d3ec163b487fdf6cc883bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cae78dd4b43d0dc1f2e4d2446b3568"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">predict_probability</a></td></tr>
+<tr class="separator:a18cae78dd4b43d0dc1f2e4d2446b3568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6921acb6aa7fdaf8a784c4e9df839ad1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a6921acb6aa7fdaf8a784c4e9df839ad1">max_line_len</a></td></tr>
+<tr class="separator:a6921acb6aa7fdaf8a784c4e9df839ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f77511deba1c80caa8e7150097d8d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">max_nr_attr</a></td></tr>
+<tr class="separator:ac3f77511deba1c80caa8e7150097d8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+정적 Private 속성</h2></td></tr>
+<tr class="memitem:a15817ef9250668698357b03178838c63"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a15817ef9250668698357b03178838c63">PORTRAIT</a> = 1</td></tr>
+<tr class="separator:a15817ef9250668698357b03178838c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00905fc7b3ee662dc4ae5aabb5e2aadc"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a00905fc7b3ee662dc4ae5aabb5e2aadc">LANDSCAPE</a> = 1</td></tr>
+<tr class="separator:a00905fc7b3ee662dc4ae5aabb5e2aadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110ad1be7ec6ee74987b023d96b1b9f2"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_svm_wrapper.html#a110ad1be7ec6ee74987b023d96b1b9f2">LANDREVERSE</a> = 1</td></tr>
+<tr class="separator:a110ad1be7ec6ee74987b023d96b1b9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a class="anchor" id="a81d04cd6c08b9cb263c1f4a7151dd572"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SvmWrapper::SvmWrapper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            :<a class="code" href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">predict_probability</a>(0),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;             <a class="code" href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">max_nr_attr</a>(64)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="ttc" id="class_svm_wrapper_html_a18cae78dd4b43d0dc1f2e4d2446b3568"><div class="ttname"><a href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">SvmWrapper::predict_probability</a></div><div class="ttdeci">int predict_probability</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00029">SvmWrapper.h:29</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_ac3f77511deba1c80caa8e7150097d8d6"><div class="ttname"><a href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">SvmWrapper::max_nr_attr</a></div><div class="ttdeci">int max_nr_attr</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00031">SvmWrapper.h:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a class="anchor" id="aff945103751fb220525ddd4fd102bda1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SvmWrapper::GetModelPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8cpp_source.html">SvmWrapper.cpp</a> 파일의 <a class="el" href="_svm_wrapper_8cpp_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                  {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Tizen::Base::String resPath = Tizen::App::App::GetInstance()-&gt;GetAppResourcePath();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//  switch(type)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//  {</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//  case PORTRAIT:</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//      resPath.Append(&quot;portrait.txt.model&quot;);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//      break;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//  case LANDSCAPE:</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//      resPath.Append(&quot;landscape.txt.model&quot;);</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//      break;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//  case LANDREVERSE:</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//      resPath.Append(&quot;reverse.txt.model&quot;);</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//      break;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//  }</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    resPath.Append(<span class="stringliteral">&quot;model.txt&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::string after;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::wstring before(resPath.GetPointer());</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    after.assign(before.begin(), before.end());</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> after.c_str();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_aff945103751fb220525ddd4fd102bda1_icgraph.png" border="0" usemap="#class_svm_wrapper_aff945103751fb220525ddd4fd102bda1_icgraph" alt=""/></div>
+<map name="class_svm_wrapper_aff945103751fb220525ddd4fd102bda1_icgraph" id="class_svm_wrapper_aff945103751fb220525ddd4fd102bda1_icgraph">
+<area shape="rect" id="node2" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="240,5,387,32"/><area shape="rect" id="node3" href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7" title="SvmWrapper::init" alt="" coords="253,56,374,83"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="435,56,577,83"/><area shape="rect" id="node5" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="625,56,852,83"/><area shape="rect" id="node6" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="900,56,1087,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="1135,56,1349,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6401e2559203adaff909ba3862d91ceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SvmWrapper::GetOutputPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8cpp_source.html">SvmWrapper.cpp</a> 파일의 <a class="el" href="_svm_wrapper_8cpp_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                   {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Tizen::Base::String resPath = Tizen::App::App::GetInstance()-&gt;GetAppDataPath();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    resPath.Append(<span class="stringliteral">&quot;result.txt&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::string after;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::wstring before(resPath.GetPointer());</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    after.assign(before.begin(), before.end());</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> after.c_str();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb_icgraph.png" border="0" usemap="#class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb_icgraph" alt=""/></div>
+<map name="class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb_icgraph" id="class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb_icgraph">
+<area shape="rect" id="node2" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="244,5,391,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af06622d63ce23b77ac29aa29298110d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SvmWrapper::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8cpp_source.html">SvmWrapper.cpp</a> 파일의 <a class="el" href="_svm_wrapper_8cpp_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>((<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>=<a class="code" href="svm_8h.html#a569bb1a06e5181dfb19d66587463af4b">svm_load_model</a>(<a class="code" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1">GetModelPath</a>().c_str()))==0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        AppLog(<span class="stringliteral">&quot;can&#39;t open model file %s\n&quot;</span>,<a class="code" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1">GetModelPath</a>().c_str());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a> = (<span class="keyword">struct </span><a class="code" href="structsvm__node.html">svm_node</a> *) malloc(<a class="code" href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">max_nr_attr</a>*<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsvm__node.html">svm_node</a>));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">predict_probability</a>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a">svm_check_probability_model</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>)==0)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            AppLog(<span class="stringliteral">&quot;Model does not support probabiliy estimates\n&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a">svm_check_probability_model</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>)!=0)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            AppLog(<span class="stringliteral">&quot;Model supports probability estimates, but disabled in prediction.\n&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="class_svm_wrapper_html_abf0dcde4c2d3ec163b487fdf6cc883bc"><div class="ttname"><a href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">SvmWrapper::x</a></div><div class="ttdeci">struct svm_node * x</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00027">SvmWrapper.h:27</a></div></div>
+<div class="ttc" id="svm_8h_html_aeb231380b36264637caeccdae4fbad1a"><div class="ttname"><a href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a">svm_check_probability_model</a></div><div class="ttdeci">int svm_check_probability_model(const struct svm_model *model)</div></div>
+<div class="ttc" id="class_svm_wrapper_html_a18cae78dd4b43d0dc1f2e4d2446b3568"><div class="ttname"><a href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">SvmWrapper::predict_probability</a></div><div class="ttdeci">int predict_probability</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00029">SvmWrapper.h:29</a></div></div>
+<div class="ttc" id="svm_8h_html_a569bb1a06e5181dfb19d66587463af4b"><div class="ttname"><a href="svm_8h.html#a569bb1a06e5181dfb19d66587463af4b">svm_load_model</a></div><div class="ttdeci">struct svm_model * svm_load_model(const char *model_file_name)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l02873">svm.cpp:2873</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_a2acad681f29bd8269c5b11aa568222ec"><div class="ttname"><a href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">SvmWrapper::model</a></div><div class="ttdeci">struct svm_model * model</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00026">SvmWrapper.h:26</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_aff945103751fb220525ddd4fd102bda1"><div class="ttname"><a href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1">SvmWrapper::GetModelPath</a></div><div class="ttdeci">std::string GetModelPath()</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8cpp_source.html#l00034">SvmWrapper.cpp:34</a></div></div>
+<div class="ttc" id="structsvm__node_html"><div class="ttname"><a href="structsvm__node.html">svm_node</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00012">svm.h:12</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_ac3f77511deba1c80caa8e7150097d8d6"><div class="ttname"><a href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">SvmWrapper::max_nr_attr</a></div><div class="ttdeci">int max_nr_attr</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00031">SvmWrapper.h:31</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_cgraph.png" border="0" usemap="#class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_cgraph" alt=""/></div>
+<map name="class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_cgraph" id="class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_cgraph">
+<area shape="rect" id="node2" href="svm_8h.html#a569bb1a06e5181dfb19d66587463af4b" title="svm_load_model" alt="" coords="209,31,327,57"/><area shape="rect" id="node5" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1" title="SvmWrapper::GetModelPath" alt="" coords="175,81,361,108"/><area shape="rect" id="node6" href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a" title="svm_check_probability\l_model" alt="" coords="191,133,345,174"/><area shape="rect" id="node3" href="svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97" title="read_model_header" alt="" coords="409,5,544,32"/><area shape="rect" id="node4" href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="443,56,510,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_icgraph.png" border="0" usemap="#class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_icgraph" alt=""/></div>
+<map name="class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_icgraph" id="class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_icgraph">
+<area shape="rect" id="node2" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="175,5,317,32"/><area shape="rect" id="node3" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="365,5,592,32"/><area shape="rect" id="node4" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="640,5,827,32"/><area shape="rect" id="node5" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="875,5,1089,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f3adec2bc81b6c37416156465485e9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SvmWrapper::predict </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_svm_wrapper_8h.html#a2af63b8bc735adf0b29b08f5ff28f3c3">FUNC</a>&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8cpp_source.html">SvmWrapper.cpp</a> 파일의 <a class="el" href="_svm_wrapper_8cpp_source.html#l00095">95</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> ( <span class="keyword">false</span> == <a class="code" href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7">init</a>() )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        AppLog(<span class="stringliteral">&quot;svm init fail&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> correct = 0;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> total = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">double</span> error = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">double</span> sump = 0, sumt = 0, sumpp = 0, sumtt = 0, sumpt = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span> svm_type=<a class="code" href="svm_8h.html#add0a326d36e24044cf958a420d6f4e19">svm_get_svm_type</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> nr_class=<a class="code" href="svm_8h.html#a73c7339cbc8a38eb9f1e8ad6fbe11ae8">svm_get_nr_class</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">double</span> *prob_estimates=NULL;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">predict_probability</a>)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">if</span> (svm_type==<a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309">NU_SVR</a> || svm_type==<a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a">EPSILON_SVR</a>)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            func(<span class="stringliteral">&quot;Prob. model for test data: target value = predicted value + z,\nz: Laplace distribution e^(-|z|/sigma)/(2sigma),sigma=%g\n&quot;</span>,<a class="code" href="svm_8h.html#a3f15a9a6c23b2f0927fc48ef2f549001">svm_get_svr_probability</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>));</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordtype">int</span> *labels=(<span class="keywordtype">int</span> *) malloc(nr_class*<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="svm_8h.html#a1eafdf09b884847a04a72cf22ddb95f2">svm_get_labels</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>,labels);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            prob_estimates = (<span class="keywordtype">double</span> *) malloc(nr_class*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            func(<span class="stringliteral">&quot;labels&quot;</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">for</span>(j=0;j&lt;nr_class;j++)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                func(<span class="stringliteral">&quot; %d&quot;</span>,labels[j]);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            func(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            free(labels);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="class_svm_wrapper.html#a6921acb6aa7fdaf8a784c4e9df839ad1">max_line_len</a> = 1024;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">double</span> predict_label=0;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::const_iterator itr = input.begin();itr!=input.end();++itr )</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">char</span> <a class="code" href="svm-predict_8c.html#a8adb30f4f6669f927fd9232f686c637b">line</a>[1024] ={0,};</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        strcpy( line, (*itr).c_str());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">double</span> target_label;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">char</span> *idx, *val, *label, *endptr;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">int</span> inst_max_index = -1; <span class="comment">// strtol gives 0 if wrong format, and precomputed kernel has &lt;index&gt; start from 0</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        label = strtok(line,<span class="stringliteral">&quot; \t\n&quot;</span>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span>(label == NULL) <span class="comment">// empty line</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            func(<span class="stringliteral">&quot;Wrong input format at line %d\n&quot;</span>, total+1);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        target_label = strtod(label,&amp;endptr);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span>(endptr == label || *endptr != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            func(<span class="stringliteral">&quot;Wrong input format at line %d\n&quot;</span>, total+1);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">if</span>(i&gt;=<a class="code" href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">max_nr_attr</a>-1)    <span class="comment">// need one more for index = -1</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <a class="code" href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">max_nr_attr</a> *= 2;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a> = (<span class="keyword">struct </span><a class="code" href="structsvm__node.html">svm_node</a> *) realloc(<a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>,<a class="code" href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">max_nr_attr</a>*<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structsvm__node.html">svm_node</a>));</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            idx = strtok(NULL,<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            val = strtok(NULL,<span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">if</span>(val == NULL)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            errno = 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>[i].<a class="code" href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">index</a> = (int) strtol(idx,&amp;endptr,10);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span>(endptr == idx || errno != 0 || *endptr != <span class="charliteral">&#39;\0&#39;</span> || <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>[i].<a class="code" href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">index</a> &lt;= inst_max_index)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                func(<span class="stringliteral">&quot;Wrong input format at line %d\n&quot;</span>, total+1);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                inst_max_index = <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>[i].<a class="code" href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">index</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            errno = 0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>[i].<a class="code" href="structsvm__node.html#a9ca47b8a156238d04213453f3b89e177">value</a> = strtod(val,&amp;endptr);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">if</span>(endptr == val || errno != 0 || (*endptr != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; !isspace(*endptr)))</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                func(<span class="stringliteral">&quot;Wrong input format at line %d\n&quot;</span>, total+1);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            ++i;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>[i].<a class="code" href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">index</a> = -1;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">predict_probability</a> &amp;&amp; (svm_type==<a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8">C_SVC</a> || svm_type==<a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc">NU_SVC</a>))</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            predict_label = <a class="code" href="svm_8h.html#a301070a1fda12e1257d76c08f97322a5">svm_predict_probability</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>,<a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>,prob_estimates);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            func(<span class="stringliteral">&quot;%g&quot;</span>,predict_label);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">for</span>(j=0;j&lt;nr_class;j++)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                func(<span class="stringliteral">&quot; %g&quot;</span>,prob_estimates[j]);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            func(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            predict_label = <a class="code" href="svm_8h.html#af7c913d98f7cd411b147f8990a97f576">svm_predict</a>(<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>,<a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            func(<span class="stringliteral">&quot;%g\n&quot;</span>,predict_label);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span>(predict_label == target_label)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            ++correct;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        error += (predict_label-target_label)*(predict_label-target_label);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        sump += predict_label;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        sumt += target_label;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        sumpp += predict_label*predict_label;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        sumtt += target_label*target_label;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        sumpt += predict_label*target_label;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        ++total;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (svm_type==<a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309">NU_SVR</a> || svm_type==<a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a">EPSILON_SVR</a>)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        func(<span class="stringliteral">&quot;Mean squared error = %g (regression)\n&quot;</span>,error/total);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        func(<span class="stringliteral">&quot;Squared correlation coefficient = %g (regression)\n&quot;</span>,</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            ((total*sumpt-sump*sumt)*(total*sumpt-sump*sumt))/</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            ((total*sumpp-sump*sump)*(total*sumtt-sumt*sumt))</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        func(<span class="stringliteral">&quot;Accuracy = %g%% (%d/%d) (classification)\n&quot;</span>,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            (<span class="keywordtype">double</span>)correct/total*100,correct,total);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">predict_probability</a>)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        free(prob_estimates);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="svm_8h.html#afa14733010ded94cc8f2ba177b0b24c8">svm_free_and_destroy_model</a>(&amp;<a class="code" href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">model</a>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    free(<a class="code" href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">x</a>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">return</span> predict_label;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="ttc" id="class_svm_wrapper_html_abf0dcde4c2d3ec163b487fdf6cc883bc"><div class="ttname"><a href="class_svm_wrapper.html#abf0dcde4c2d3ec163b487fdf6cc883bc">SvmWrapper::x</a></div><div class="ttdeci">struct svm_node * x</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00027">SvmWrapper.h:27</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_a18cae78dd4b43d0dc1f2e4d2446b3568"><div class="ttname"><a href="class_svm_wrapper.html#a18cae78dd4b43d0dc1f2e4d2446b3568">SvmWrapper::predict_probability</a></div><div class="ttdeci">int predict_probability</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00029">SvmWrapper.h:29</a></div></div>
+<div class="ttc" id="svm_8h_html_add0a326d36e24044cf958a420d6f4e19"><div class="ttname"><a href="svm_8h.html#add0a326d36e24044cf958a420d6f4e19">svm_get_svm_type</a></div><div class="ttdeci">int svm_get_svm_type(const struct svm_model *model)</div></div>
+<div class="ttc" id="structsvm__node_html_a9ca47b8a156238d04213453f3b89e177"><div class="ttname"><a href="structsvm__node.html#a9ca47b8a156238d04213453f3b89e177">svm_node::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00015">svm.h:15</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_a6921acb6aa7fdaf8a784c4e9df839ad1"><div class="ttname"><a href="class_svm_wrapper.html#a6921acb6aa7fdaf8a784c4e9df839ad1">SvmWrapper::max_line_len</a></div><div class="ttdeci">int max_line_len</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00030">SvmWrapper.h:30</a></div></div>
+<div class="ttc" id="svm_8h_html_a301070a1fda12e1257d76c08f97322a5"><div class="ttname"><a href="svm_8h.html#a301070a1fda12e1257d76c08f97322a5">svm_predict_probability</a></div><div class="ttdeci">double svm_predict_probability(const struct svm_model *model, const struct svm_node *x, double *prob_estimates)</div></div>
+<div class="ttc" id="svm-predict_8c_html_a8adb30f4f6669f927fd9232f686c637b"><div class="ttname"><a href="svm-predict_8c.html#a8adb30f4f6669f927fd9232f686c637b">line</a></div><div class="ttdeci">static char * line</div><div class="ttdef"><b>Definition:</b> <a href="svm-predict_8c_source.html#l00018">svm-predict.c:18</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_a2acad681f29bd8269c5b11aa568222ec"><div class="ttname"><a href="class_svm_wrapper.html#a2acad681f29bd8269c5b11aa568222ec">SvmWrapper::model</a></div><div class="ttdeci">struct svm_model * model</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00026">SvmWrapper.h:26</a></div></div>
+<div class="ttc" id="svm_8h_html_a73c7339cbc8a38eb9f1e8ad6fbe11ae8"><div class="ttname"><a href="svm_8h.html#a73c7339cbc8a38eb9f1e8ad6fbe11ae8">svm_get_nr_class</a></div><div class="ttdeci">int svm_get_nr_class(const struct svm_model *model)</div></div>
+<div class="ttc" id="structsvm__node_html_aa733ca75ee5a5c0f36af5ddb4c6394d9"><div class="ttname"><a href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">svm_node::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00014">svm.h:14</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8">C_SVC</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc">NU_SVC</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a3f15a9a6c23b2f0927fc48ef2f549001"><div class="ttname"><a href="svm_8h.html#a3f15a9a6c23b2f0927fc48ef2f549001">svm_get_svr_probability</a></div><div class="ttdeci">double svm_get_svr_probability(const struct svm_model *model)</div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a">EPSILON_SVR</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309">NU_SVR</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="structsvm__node_html"><div class="ttname"><a href="structsvm__node.html">svm_node</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00012">svm.h:12</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_ac3f77511deba1c80caa8e7150097d8d6"><div class="ttname"><a href="class_svm_wrapper.html#ac3f77511deba1c80caa8e7150097d8d6">SvmWrapper::max_nr_attr</a></div><div class="ttdeci">int max_nr_attr</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8h_source.html#l00031">SvmWrapper.h:31</a></div></div>
+<div class="ttc" id="svm_8h_html_af7c913d98f7cd411b147f8990a97f576"><div class="ttname"><a href="svm_8h.html#af7c913d98f7cd411b147f8990a97f576">svm_predict</a></div><div class="ttdeci">double svm_predict(const struct svm_model *model, const struct svm_node *x)</div></div>
+<div class="ttc" id="svm_8h_html_a1eafdf09b884847a04a72cf22ddb95f2"><div class="ttname"><a href="svm_8h.html#a1eafdf09b884847a04a72cf22ddb95f2">svm_get_labels</a></div><div class="ttdeci">void svm_get_labels(const struct svm_model *model, int *label)</div></div>
+<div class="ttc" id="class_svm_wrapper_html_af06622d63ce23b77ac29aa29298110d7"><div class="ttname"><a href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7">SvmWrapper::init</a></div><div class="ttdeci">bool init()</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8cpp_source.html#l00069">SvmWrapper.cpp:69</a></div></div>
+<div class="ttc" id="svm_8h_html_afa14733010ded94cc8f2ba177b0b24c8"><div class="ttname"><a href="svm_8h.html#afa14733010ded94cc8f2ba177b0b24c8">svm_free_and_destroy_model</a></div><div class="ttdeci">void svm_free_and_destroy_model(struct svm_model **model_ptr_ptr)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l03013">svm.cpp:3013</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_cgraph.png" border="0" usemap="#class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_cgraph" alt=""/></div>
+<map name="class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_cgraph" id="class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_cgraph">
+<area shape="rect" id="node2" href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7" title="SvmWrapper::init" alt="" coords="215,81,336,108"/><area shape="rect" id="node8" href="svm_8h.html#add0a326d36e24044cf958a420d6f4e19" title="svm_get_svm_type" alt="" coords="209,132,341,159"/><area shape="rect" id="node9" href="svm_8h.html#a73c7339cbc8a38eb9f1e8ad6fbe11ae8" title="svm_get_nr_class" alt="" coords="212,183,339,209"/><area shape="rect" id="node10" href="svm_8h.html#a3f15a9a6c23b2f0927fc48ef2f549001" title="svm_get_svr_probability" alt="" coords="196,233,355,260"/><area shape="rect" id="node11" href="svm_8h.html#a1eafdf09b884847a04a72cf22ddb95f2" title="svm_get_labels" alt="" coords="220,284,331,311"/><area shape="rect" id="node12" href="svm_8h.html#a301070a1fda12e1257d76c08f97322a5" title="svm_predict_probability" alt="" coords="197,335,354,361"/><area shape="rect" id="node13" href="svm_8h.html#af7c913d98f7cd411b147f8990a97f576" title="svm_predict" alt="" coords="230,385,321,412"/><area shape="rect" id="node14" href="svm_8h.html#afa14733010ded94cc8f2ba177b0b24c8" title="svm_free_and_destroy\l_model" alt="" coords="200,437,351,478"/><area shape="rect" id="node3" href="svm_8h.html#a569bb1a06e5181dfb19d66587463af4b" title="svm_load_model" alt="" coords="437,31,555,57"/><area shape="rect" id="node6" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1" title="SvmWrapper::GetModelPath" alt="" coords="403,81,589,108"/><area shape="rect" id="node7" href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a" title="svm_check_probability\l_model" alt="" coords="419,133,573,174"/><area shape="rect" id="node4" href="svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97" title="read_model_header" alt="" coords="637,5,772,32"/><area shape="rect" id="node5" href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="671,56,738,83"/><area shape="rect" id="node15" href="svm_8cpp.html#aacfd6b0d366697f63c942036b93370d4" title="svm_free_model_content" alt="" coords="413,444,579,471"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_icgraph.png" border="0" usemap="#class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_icgraph" alt=""/></div>
+<map name="class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_icgraph" id="class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_icgraph">
+<area shape="rect" id="node2" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="196,5,423,32"/><area shape="rect" id="node3" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="471,5,657,32"/><area shape="rect" id="node4" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="705,5,920,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a454766365e910aa34b39dbba67d5caaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SvmWrapper::predictt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8cpp_source.html">SvmWrapper.cpp</a> 파일의 <a class="el" href="_svm_wrapper_8cpp_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Tizen::Base::String resPath = Tizen::App::App::GetInstance()-&gt;GetAppResourcePath();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    resPath.Append(<span class="stringliteral">&quot;test.txt&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string after;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::wstring before(resPath.GetPointer());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    after.assign(before.begin(), before.end());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">char</span> ** argv = <span class="keyword">new</span> <span class="keywordtype">char</span>*[4];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    argv[0] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    argv[1] = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(after.c_str());</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    argv[2] = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1">GetModelPath</a>().c_str());</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    argv[3] = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code" href="class_svm_wrapper.html#a6401e2559203adaff909ba3862d91ceb">GetOutputPath</a>().c_str());</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="_svm_wrapper_8h.html#a3e290f6d7d61b2b843a4b8b1382f3958">predict_entry</a>(4, argv);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="class_svm_wrapper_html_a6401e2559203adaff909ba3862d91ceb"><div class="ttname"><a href="class_svm_wrapper.html#a6401e2559203adaff909ba3862d91ceb">SvmWrapper::GetOutputPath</a></div><div class="ttdeci">std::string GetOutputPath()</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8cpp_source.html#l00058">SvmWrapper.cpp:58</a></div></div>
+<div class="ttc" id="_svm_wrapper_8h_html_a3e290f6d7d61b2b843a4b8b1382f3958"><div class="ttname"><a href="_svm_wrapper_8h.html#a3e290f6d7d61b2b843a4b8b1382f3958">predict_entry</a></div><div class="ttdeci">int predict_entry(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="svm-predict_8c_source.html#l00171">svm-predict.c:171</a></div></div>
+<div class="ttc" id="class_svm_wrapper_html_aff945103751fb220525ddd4fd102bda1"><div class="ttname"><a href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1">SvmWrapper::GetModelPath</a></div><div class="ttdeci">std::string GetModelPath()</div><div class="ttdef"><b>Definition:</b> <a href="_svm_wrapper_8cpp_source.html#l00034">SvmWrapper.cpp:34</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf_cgraph.png" border="0" usemap="#class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf_cgraph" alt=""/></div>
+<map name="class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf_cgraph" id="class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf_cgraph">
+<area shape="rect" id="node2" href="class_svm_wrapper.html#aff945103751fb220525ddd4fd102bda1" title="SvmWrapper::GetModelPath" alt="" coords="202,35,389,61"/><area shape="rect" id="node3" href="class_svm_wrapper.html#a6401e2559203adaff909ba3862d91ceb" title="SvmWrapper::GetOutputPath" alt="" coords="200,85,391,112"/><area shape="rect" id="node4" href="_svm_wrapper_8h.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="247,136,344,163"/><area shape="rect" id="node5" href="svm-predict_8c.html#afbcd2ef701a510cd6c24fb0463ec6d7c" title="print_null" alt="" coords="478,5,553,32"/><area shape="rect" id="node6" href="svm-predict_8c.html#a8bbbfc2cd5ea26b69d3b880c6f509e93" title="exit_with_help" alt="" coords="463,56,567,83"/><area shape="rect" id="node7" href="svm_8h.html#a569bb1a06e5181dfb19d66587463af4b" title="svm_load_model" alt="" coords="456,107,575,133"/><area shape="rect" id="node10" href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a" title="svm_check_probability\l_model" alt="" coords="439,158,592,199"/><area shape="rect" id="node11" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="485,267,546,293"/><area shape="rect" id="node20" href="svm_8h.html#afa14733010ded94cc8f2ba177b0b24c8" title="svm_free_and_destroy\l_model" alt="" coords="440,415,591,457"/><area shape="rect" id="node8" href="svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97" title="read_model_header" alt="" coords="655,13,790,40"/><area shape="rect" id="node9" href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="689,64,756,91"/><area shape="rect" id="node12" href="svm_8h.html#add0a326d36e24044cf958a420d6f4e19" title="svm_get_svm_type" alt="" coords="657,115,789,141"/><area shape="rect" id="node13" href="svm_8h.html#a73c7339cbc8a38eb9f1e8ad6fbe11ae8" title="svm_get_nr_class" alt="" coords="659,165,786,192"/><area shape="rect" id="node14" href="svm_8h.html#a3f15a9a6c23b2f0927fc48ef2f549001" title="svm_get_svr_probability" alt="" coords="643,216,802,243"/><area shape="rect" id="node15" href="svm_8h.html#a1eafdf09b884847a04a72cf22ddb95f2" title="svm_get_labels" alt="" coords="667,267,778,293"/><area shape="rect" id="node16" href="svm-predict_8c.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="689,317,756,344"/><area shape="rect" id="node17" href="svm-predict_8c.html#ada0be431a4ed2ba4b1a09d4449f2c75b" title="exit_input_error" alt="" coords="667,368,778,395"/><area shape="rect" id="node18" href="svm_8h.html#a301070a1fda12e1257d76c08f97322a5" title="svm_predict_probability" alt="" coords="644,419,801,445"/><area shape="rect" id="node19" href="svm_8h.html#af7c913d98f7cd411b147f8990a97f576" title="svm_predict" alt="" coords="677,469,768,496"/><area shape="rect" id="node21" href="svm_8cpp.html#aacfd6b0d366697f63c942036b93370d4" title="svm_free_model_content" alt="" coords="640,520,805,547"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이타 문서화</h2>
+<a class="anchor" id="a110ad1be7ec6ee74987b023d96b1b9f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SvmWrapper::LANDREVERSE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00905fc7b3ee662dc4ae5aabb5e2aadc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SvmWrapper::LANDSCAPE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6921acb6aa7fdaf8a784c4e9df839ad1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SvmWrapper::max_line_len</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3f77511deba1c80caa8e7150097d8d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SvmWrapper::max_nr_attr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2acad681f29bd8269c5b11aa568222ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structsvm__model.html">svm_model</a>* SvmWrapper::model</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15817ef9250668698357b03178838c63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SvmWrapper::PORTRAIT = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18cae78dd4b43d0dc1f2e4d2446b3568"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SvmWrapper::predict_probability</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf0dcde4c2d3ec163b487fdf6cc883bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structsvm__node.html">svm_node</a>* SvmWrapper::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a> 파일의 <a class="el" href="_svm_wrapper_8h_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>inc/<a class="el" href="_svm_wrapper_8h_source.html">SvmWrapper.h</a></li>
+<li>src/Calculator/<a class="el" href="_svm_wrapper_8cpp_source.html">SvmWrapper.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_svm_wrapper.html">SvmWrapper</a></li>
+    <li class="footer">생성시간 : 일 12월 14 2014 18:23:51, 프로젝트명 : HideIt, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

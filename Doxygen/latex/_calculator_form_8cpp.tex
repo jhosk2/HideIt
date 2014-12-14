@@ -1,0 +1,550 @@
+\hypertarget{_calculator_form_8cpp}{\section{src/\+Calculator/\+Calculator\+Form.cpp 파일 참조}
+\label{_calculator_form_8cpp}\index{src/\+Calculator/\+Calculator\+Form.\+cpp@{src/\+Calculator/\+Calculator\+Form.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}Calculator\+Form.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}App\+Resource\+Id.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Calculate.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Scene\+Register.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$F\+Media.\+h$>$}\\*
+{\ttfamily \#include $<$F\+App.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+Calculator\+Form.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+static const Dimension \hyperlink{_calculator_form_8cpp_a3efdfa9e0e3df2363389bb8cc1fbb4ac}{P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N} (500, 200)
+\item 
+static const Rectangle \hyperlink{_calculator_form_8cpp_a71dcdf817688131706205d3b70932daa}{P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T} (0, 0, 500, 70)
+\item 
+static const Rectangle \hyperlink{_calculator_form_8cpp_a74c6359e95c3c71ca337eba85c026a3f}{P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T} (195, 70, 120, 50)
+\item 
+void \hyperlink{_calculator_form_8cpp_ab961cf377425a7b81fd62afffd8e89e1}{nullfunc} (const char $\ast$in,...)
+\item 
+std\+::string \hyperlink{_calculator_form_8cpp_a89016affff07b7f39247021035532b50}{string\+\_\+format} (const std\+::string fmt,...)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{_calculator_form_8cpp_ace8ca5226379bd4e27e83a4fa65b4730}{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0} = 600
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a1f5ddbd63e4020c3e1ab02f2a8a272ea}{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0} = 601
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a310731b27bb8f16b0f5fdfeae1f7ffb5}{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R} = 602
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a5f2b2f460e2ebcf757c348d74ed9ef68}{D\+O\+T} = 603
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a197d8d1c652619a50380202a7c4c722c}{O\+P\+E\+R\+A\+T\+O\+R} = 604
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a2e2495cea3bd7d632d8e9f822cca5398}{L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N} = 605
+\item 
+static const int \hyperlink{_calculator_form_8cpp_aa6eb89cee0001804b9de052a34777c2e}{E\+T\+C} = 606
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a7b20f1b443e093d5ec5e990e73b47232}{N\+O\+N\+E} = 607
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a454db45292332cab043f74d3acefa482}{D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N} = 701
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a4fc4627e993b733f1716e4f657fed196}{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y} = 702
+\item 
+static const int \hyperlink{_calculator_form_8cpp_aa80a5225e90cdfa081a9d871229028cd}{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C} = 703
+\item 
+static const int \hyperlink{_calculator_form_8cpp_ab34236baa7c9cb7ea0b2c833a27683da}{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S} = 704
+\item 
+static const int \hyperlink{_calculator_form_8cpp_aeb4c35ea92719283cfd04e4d553d35f9}{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T} = 705
+\item 
+static const int \hyperlink{_calculator_form_8cpp_ad415544fff20c80892fa7e5555722776}{R\+E\+S\+U\+L\+T\+\_\+\+O\+K} = 801
+\item 
+static const int \hyperlink{_calculator_form_8cpp_ae7b7d386a4346e31a05841a90ca2067d}{R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R} = 802
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a364808cb06bdb87add9aa111ff5ae3d4}{N\+O\+\_\+\+R\+E\+S\+U\+L\+T} = 803
+\item 
+static const double \hyperlink{_calculator_form_8cpp_a7df345a79a590f6ca3976c4cca33d866}{R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L} = 901
+\item 
+static const double \hyperlink{_calculator_form_8cpp_a4e8ad5244efbb3d9d9904a8a9234f87d}{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F} = 902
+\item 
+static const double \hyperlink{_calculator_form_8cpp_a113621396df65ce36c6b41262ff2f884}{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W} = 903
+\item 
+static const double \hyperlink{_calculator_form_8cpp_abe8ff5843b2a2564327d8986ceaf3a31}{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D} = 904
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a5231d80877ae945c17f323f927dd1bcf}{N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S} = 19
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a07008d1eb5c7e6f7b9e3459e232346a7}{N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S} = 34
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a1258c84a63ca70eeae6059a9eeb74b30}{M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S} = 15
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a86ae0b330fe83154bcbb21288d26418e}{M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T} = 9
+\item 
+static const int \hyperlink{_calculator_form_8cpp_abece60225b3a6a5859e110ffa820effc}{M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M} = 150
+\item 
+static const float \hyperlink{_calculator_form_8cpp_a6e36f77342e4ad6a98212d3ba1f857ed}{L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T} = 0.\+1f
+\item 
+static const int \hyperlink{_calculator_form_8cpp_ab8328f60e764077c3155976384c62598}{S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E} = 5
+\item 
+static const long \hyperlink{_calculator_form_8cpp_a55c96d4c37c123cde70068eb73d86b9e}{S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L} = 50
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a9a8b3c0366194868e0e8654c8177ecf5}{T\+I\+L\+T\+S\+T\+O\+P} = 0
+\item 
+static const int \hyperlink{_calculator_form_8cpp_aa1b5081998052b52a05c212786c5de75}{T\+I\+L\+T\+L\+E\+F\+T} = 1
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a923abea421f18f4d617bae7a5ce69991}{T\+I\+L\+T\+R\+I\+G\+H\+T} =2
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a2277fba22592235ca791c647adeb5d81}{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G} = 80
+\item 
+static const int \hyperlink{_calculator_form_8cpp_a27188ac505528eda27c40fa4aea59d0f}{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E} = 56
+\item 
+static const int \hyperlink{_calculator_form_8cpp_ae60d994cb4dcc441bca92b29461e8e50}{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L} = 32
+\item 
+static const int \hyperlink{_calculator_form_8cpp_aed8e9c49324ebdd0f39324bff6a882b2}{A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K} = 100
+\item 
+Tizen\+::\+Base\+::\+String \hyperlink{_calculator_form_8cpp_a8e641e0c730e6831fcb8e9caf57f5285}{p\+Expression} = \char`\"{}0\char`\"{}
+\item 
+int \hyperlink{_calculator_form_8cpp_a5a03127e257bb5f5d935e038dcf8d834}{p\+Num\+\_\+\+Paren} = 0
+\item 
+int \hyperlink{_calculator_form_8cpp_a564e048fb0774fad296f0ce77b108d23}{p\+Num\+\_\+\+Operand} \mbox{[}2\mbox{]} = \{ 0, 0 \}
+\item 
+int \hyperlink{_calculator_form_8cpp_afab1dc0f42edf6d2d70e1a3b9a23114b}{p\+Num\+\_\+\+Showing} = 1
+\item 
+bool \hyperlink{_calculator_form_8cpp_af728e21ac3463ebc5e7746a542efb32f}{p\+Dot\+Flag} = false
+\item 
+int \hyperlink{_calculator_form_8cpp_a710068ff7294670ef87617fd3e379c41}{p\+Result\+Flag} = \hyperlink{_calculator_form_8cpp_a364808cb06bdb87add9aa111ff5ae3d4}{N\+O\+\_\+\+R\+E\+S\+U\+L\+T}
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\hypertarget{_calculator_form_8cpp_ab961cf377425a7b81fd62afffd8e89e1}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!nullfunc@{nullfunc}}
+\index{nullfunc@{nullfunc}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{nullfunc}]{\setlength{\rightskip}{0pt plus 5cm}void nullfunc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{in, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_calculator_form_8cpp_ab961cf377425a7b81fd62afffd8e89e1}
+
+
+Calculator\+Form.\+cpp 파일의 1231 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1231                                    \{
+1232 
+1233 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8cpp_ab961cf377425a7b81fd62afffd8e89e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_calculator_form_8cpp_a74c6359e95c3c71ca337eba85c026a3f}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T@{P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T}}
+\index{P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T@{P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}static const Rectangle P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+R\+E\+C\+T (
+\begin{DoxyParamCaption}
+\item[{195}]{, }
+\item[{70}]{, }
+\item[{120}]{, }
+\item[{50}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a74c6359e95c3c71ca337eba85c026a3f}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8cpp_a74c6359e95c3c71ca337eba85c026a3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_calculator_form_8cpp_a3efdfa9e0e3df2363389bb8cc1fbb4ac}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N@{P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N}}
+\index{P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N@{P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}static const Dimension P\+O\+P\+U\+P\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N (
+\begin{DoxyParamCaption}
+\item[{500}]{, }
+\item[{200}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a3efdfa9e0e3df2363389bb8cc1fbb4ac}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8cpp_a3efdfa9e0e3df2363389bb8cc1fbb4ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_calculator_form_8cpp_a71dcdf817688131706205d3b70932daa}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T@{P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T}}
+\index{P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T@{P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}static const Rectangle P\+O\+P\+U\+P\+\_\+\+L\+A\+B\+E\+L\+\_\+\+R\+E\+C\+T (
+\begin{DoxyParamCaption}
+\item[{0}]{, }
+\item[{0}]{, }
+\item[{500}]{, }
+\item[{70}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a71dcdf817688131706205d3b70932daa}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8cpp_a71dcdf817688131706205d3b70932daa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_calculator_form_8cpp_a89016affff07b7f39247021035532b50}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!string\+\_\+format@{string\+\_\+format}}
+\index{string\+\_\+format@{string\+\_\+format}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{string\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string string\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_calculator_form_8cpp_a89016affff07b7f39247021035532b50}
+
+
+Calculator\+Form.\+cpp 파일의 1333 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1333                                                   \{
+1334     \textcolor{keywordtype}{int} size = ((int) fmt.size()) * 2 + 50; \textcolor{comment}{// use a rubric appropriate for your code}
+1335     std::string str;
+1336     va\_list ap;
+1337     \textcolor{keywordflow}{while} (1) \{ \textcolor{comment}{// maximum 2 passes on a POSIX system...}
+1338         str.resize(size);
+1339         va\_start(ap, fmt);
+1340         \textcolor{keywordtype}{int} n = vsnprintf((\textcolor{keywordtype}{char} *) str.data(), size, fmt.c\_str(), ap);
+1341         va\_end(ap);
+1342         \textcolor{keywordflow}{if} (n > -1 && n < size) \{ \textcolor{comment}{// everything worked}
+1343             str.resize(n);
+1344             \textcolor{keywordflow}{return} str;
+1345         \}
+1346         \textcolor{keywordflow}{if} (n > -1) \textcolor{comment}{// needed size returned}
+1347             size = n + 1; \textcolor{comment}{// for null char}
+1348         \textcolor{keywordflow}{else}
+1349             size *= 2; \textcolor{comment}{// guess at a larger size (o/s specific)}
+1350     \}
+1351     \textcolor{keywordflow}{return} str;
+1352 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8cpp_a89016affff07b7f39247021035532b50_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{변수 문서화}
+\hypertarget{_calculator_form_8cpp_aed8e9c49324ebdd0f39324bff6a882b2}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K@{A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K}}
+\index{A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K@{A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}const int A\+C\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+P\+O\+P\+U\+P\+\_\+\+B\+T\+N\+\_\+\+O\+K = 100\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_aed8e9c49324ebdd0f39324bff6a882b2}
+
+
+Calculator\+Form.\+cpp 파일의 63 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a4fc4627e993b733f1716e4f657fed196}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y}}
+\index{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}const int A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+M\+P\+T\+Y = 702\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a4fc4627e993b733f1716e4f657fed196}
+
+
+Calculator\+Form.\+cpp 파일의 28 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_aa80a5225e90cdfa081a9d871229028cd}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C}}
+\index{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C}]{\setlength{\rightskip}{0pt plus 5cm}const int A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+E\+T\+C = 703\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_aa80a5225e90cdfa081a9d871229028cd}
+
+
+Calculator\+Form.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_ab34236baa7c9cb7ea0b2c833a27683da}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S}}
+\index{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S}]{\setlength{\rightskip}{0pt plus 5cm}const int A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+M\+I\+N\+U\+S = 704\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_ab34236baa7c9cb7ea0b2c833a27683da}
+
+
+Calculator\+Form.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_aeb4c35ea92719283cfd04e4d553d35f9}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T}}
+\index{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T@{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int A\+D\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+A\+R\+T = 705\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_aeb4c35ea92719283cfd04e4d553d35f9}
+
+
+Calculator\+Form.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a454db45292332cab043f74d3acefa482}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N@{D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N}}
+\index{D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N@{D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N}]{\setlength{\rightskip}{0pt plus 5cm}const int D\+E\+L\+E\+T\+E\+\_\+\+S\+I\+G\+N = 701\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a454db45292332cab043f74d3acefa482}
+
+
+Calculator\+Form.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a5f2b2f460e2ebcf757c348d74ed9ef68}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!D\+O\+T@{D\+O\+T}}
+\index{D\+O\+T@{D\+O\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{D\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int D\+O\+T = 603\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a5f2b2f460e2ebcf757c348d74ed9ef68}
+
+
+Calculator\+Form.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_aa6eb89cee0001804b9de052a34777c2e}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!E\+T\+C@{E\+T\+C}}
+\index{E\+T\+C@{E\+T\+C}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{E\+T\+C}]{\setlength{\rightskip}{0pt plus 5cm}const int E\+T\+C = 606\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_aa6eb89cee0001804b9de052a34777c2e}
+
+
+Calculator\+Form.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a2e2495cea3bd7d632d8e9f822cca5398}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N@{L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N}}
+\index{L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N@{L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}const int L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N = 605\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a2e2495cea3bd7d632d8e9f822cca5398}
+
+
+Calculator\+Form.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a6e36f77342e4ad6a98212d3ba1f857ed}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T@{L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T}}
+\index{L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T@{L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}const float L\+O\+W\+P\+A\+S\+S\+W\+E\+I\+G\+H\+T = 0.\+1f\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a6e36f77342e4ad6a98212d3ba1f857ed}
+
+
+Calculator\+Form.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a1258c84a63ca70eeae6059a9eeb74b30}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S@{M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S}}
+\index{M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S@{M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X\+\_\+\+O\+P\+E\+R\+A\+N\+D\+S = 15\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a1258c84a63ca70eeae6059a9eeb74b30}
+
+
+Calculator\+Form.\+cpp 파일의 45 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_abece60225b3a6a5859e110ffa820effc}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M@{M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M}}
+\index{M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M@{M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X\+\_\+\+S\+H\+O\+W\+I\+N\+G\+\_\+\+N\+U\+M = 150\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_abece60225b3a6a5859e110ffa820effc}
+
+
+Calculator\+Form.\+cpp 파일의 47 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a86ae0b330fe83154bcbb21288d26418e}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T@{M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T}}
+\index{M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T@{M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X\+\_\+\+U\+N\+D\+E\+R\+\_\+\+D\+O\+T = 9\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a86ae0b330fe83154bcbb21288d26418e}
+
+
+Calculator\+Form.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a364808cb06bdb87add9aa111ff5ae3d4}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!N\+O\+\_\+\+R\+E\+S\+U\+L\+T@{N\+O\+\_\+\+R\+E\+S\+U\+L\+T}}
+\index{N\+O\+\_\+\+R\+E\+S\+U\+L\+T@{N\+O\+\_\+\+R\+E\+S\+U\+L\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{N\+O\+\_\+\+R\+E\+S\+U\+L\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int N\+O\+\_\+\+R\+E\+S\+U\+L\+T = 803\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a364808cb06bdb87add9aa111ff5ae3d4}
+
+
+Calculator\+Form.\+cpp 파일의 35 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a7b20f1b443e093d5ec5e990e73b47232}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!N\+O\+N\+E@{N\+O\+N\+E}}
+\index{N\+O\+N\+E@{N\+O\+N\+E}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{N\+O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int N\+O\+N\+E = 607\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a7b20f1b443e093d5ec5e990e73b47232}
+
+
+Calculator\+Form.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a07008d1eb5c7e6f7b9e3459e232346a7}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S@{N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S}}
+\index{N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S@{N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}const int N\+U\+M\+\_\+\+E\+N\+G\+\_\+\+B\+U\+T\+T\+O\+N\+S = 34\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a07008d1eb5c7e6f7b9e3459e232346a7}
+
+
+Calculator\+Form.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a5231d80877ae945c17f323f927dd1bcf}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S@{N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S}}
+\index{N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S@{N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}const int N\+U\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S = 19\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a5231d80877ae945c17f323f927dd1bcf}
+
+
+Calculator\+Form.\+cpp 파일의 42 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a310731b27bb8f16b0f5fdfeae1f7ffb5}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R@{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R}}
+\index{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R@{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}const int O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+O\+T\+\_\+\+N\+U\+M\+B\+E\+R = 602\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a310731b27bb8f16b0f5fdfeae1f7ffb5}
+
+
+Calculator\+Form.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_ace8ca5226379bd4e27e83a4fa65b4730}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0@{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0}}
+\index{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0@{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}const int O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+0 = 600\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_ace8ca5226379bd4e27e83a4fa65b4730}
+
+
+Calculator\+Form.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a1f5ddbd63e4020c3e1ab02f2a8a272ea}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0@{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0}}
+\index{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0@{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}const int O\+P\+E\+R\+A\+N\+D\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+N\+O\+T\+\_\+0 = 601\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a1f5ddbd63e4020c3e1ab02f2a8a272ea}
+
+
+Calculator\+Form.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a197d8d1c652619a50380202a7c4c722c}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!O\+P\+E\+R\+A\+T\+O\+R@{O\+P\+E\+R\+A\+T\+O\+R}}
+\index{O\+P\+E\+R\+A\+T\+O\+R@{O\+P\+E\+R\+A\+T\+O\+R}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{O\+P\+E\+R\+A\+T\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}const int O\+P\+E\+R\+A\+T\+O\+R = 604\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a197d8d1c652619a50380202a7c4c722c}
+
+
+Calculator\+Form.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_af728e21ac3463ebc5e7746a542efb32f}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!p\+Dot\+Flag@{p\+Dot\+Flag}}
+\index{p\+Dot\+Flag@{p\+Dot\+Flag}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{p\+Dot\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}bool p\+Dot\+Flag = false}}\label{_calculator_form_8cpp_af728e21ac3463ebc5e7746a542efb32f}
+
+
+Calculator\+Form.\+cpp 파일의 73 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a8e641e0c730e6831fcb8e9caf57f5285}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!p\+Expression@{p\+Expression}}
+\index{p\+Expression@{p\+Expression}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{p\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}Tizen\+::\+Base\+::\+String p\+Expression = \char`\"{}0\char`\"{}}}\label{_calculator_form_8cpp_a8e641e0c730e6831fcb8e9caf57f5285}
+
+
+Calculator\+Form.\+cpp 파일의 65 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a564e048fb0774fad296f0ce77b108d23}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!p\+Num\+\_\+\+Operand@{p\+Num\+\_\+\+Operand}}
+\index{p\+Num\+\_\+\+Operand@{p\+Num\+\_\+\+Operand}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{p\+Num\+\_\+\+Operand}]{\setlength{\rightskip}{0pt plus 5cm}int p\+Num\+\_\+\+Operand\mbox{[}2\mbox{]} = \{ 0, 0 \}}}\label{_calculator_form_8cpp_a564e048fb0774fad296f0ce77b108d23}
+
+
+Calculator\+Form.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a5a03127e257bb5f5d935e038dcf8d834}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!p\+Num\+\_\+\+Paren@{p\+Num\+\_\+\+Paren}}
+\index{p\+Num\+\_\+\+Paren@{p\+Num\+\_\+\+Paren}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{p\+Num\+\_\+\+Paren}]{\setlength{\rightskip}{0pt plus 5cm}int p\+Num\+\_\+\+Paren = 0}}\label{_calculator_form_8cpp_a5a03127e257bb5f5d935e038dcf8d834}
+
+
+Calculator\+Form.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_afab1dc0f42edf6d2d70e1a3b9a23114b}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!p\+Num\+\_\+\+Showing@{p\+Num\+\_\+\+Showing}}
+\index{p\+Num\+\_\+\+Showing@{p\+Num\+\_\+\+Showing}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{p\+Num\+\_\+\+Showing}]{\setlength{\rightskip}{0pt plus 5cm}int p\+Num\+\_\+\+Showing = 1}}\label{_calculator_form_8cpp_afab1dc0f42edf6d2d70e1a3b9a23114b}
+
+
+Calculator\+Form.\+cpp 파일의 71 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a710068ff7294670ef87617fd3e379c41}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!p\+Result\+Flag@{p\+Result\+Flag}}
+\index{p\+Result\+Flag@{p\+Result\+Flag}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{p\+Result\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}int p\+Result\+Flag = {\bf N\+O\+\_\+\+R\+E\+S\+U\+L\+T}}}\label{_calculator_form_8cpp_a710068ff7294670ef87617fd3e379c41}
+
+
+Calculator\+Form.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_ae7b7d386a4346e31a05841a90ca2067d}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R@{R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R@{R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R}]{\setlength{\rightskip}{0pt plus 5cm}const int R\+E\+S\+U\+L\+T\+\_\+\+E\+R\+R = 802\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_ae7b7d386a4346e31a05841a90ca2067d}
+
+
+Calculator\+Form.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a4e8ad5244efbb3d9d9904a8a9234f87d}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+F = 902\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a4e8ad5244efbb3d9d9904a8a9234f87d}
+
+
+Calculator\+Form.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_abe8ff5843b2a2564327d8986ceaf3a31}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D@{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D = 904\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_abe8ff5843b2a2564327d8986ceaf3a31}
+
+
+Calculator\+Form.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a7df345a79a590f6ca3976c4cca33d866}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L@{R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L@{R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+R\+M\+A\+L = 901\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a7df345a79a590f6ca3976c4cca33d866}
+
+
+Calculator\+Form.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_ad415544fff20c80892fa7e5555722776}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+O\+K@{R\+E\+S\+U\+L\+T\+\_\+\+O\+K}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+O\+K@{R\+E\+S\+U\+L\+T\+\_\+\+O\+K}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}const int R\+E\+S\+U\+L\+T\+\_\+\+O\+K = 801\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_ad415544fff20c80892fa7e5555722776}
+
+
+Calculator\+Form.\+cpp 파일의 33 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a113621396df65ce36c6b41262ff2f884}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W@{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W}}
+\index{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W@{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}const double R\+E\+S\+U\+L\+T\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W = 903\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a113621396df65ce36c6b41262ff2f884}
+
+
+Calculator\+Form.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_ab8328f60e764077c3155976384c62598}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E@{S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E@{S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int S\+A\+M\+P\+L\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+I\+Z\+E = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_ab8328f60e764077c3155976384c62598}
+
+
+Calculator\+Form.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a55c96d4c37c123cde70068eb73d86b9e}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L@{S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L}}
+\index{S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L@{S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}const long S\+E\+N\+S\+O\+R\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L = 50\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a55c96d4c37c123cde70068eb73d86b9e}
+
+
+Calculator\+Form.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a2277fba22592235ca791c647adeb5d81}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G@{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G}}
+\index{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G@{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+G = 80\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a2277fba22592235ca791c647adeb5d81}
+
+
+Calculator\+Form.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a27188ac505528eda27c40fa4aea59d0f}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E@{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E}}
+\index{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E@{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+D\+D\+L\+E = 56\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a27188ac505528eda27c40fa4aea59d0f}
+
+
+Calculator\+Form.\+cpp 파일의 57 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_ae60d994cb4dcc441bca92b29461e8e50}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L@{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L}}
+\index{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L@{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+E\+X\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+M\+A\+L\+L = 32\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_ae60d994cb4dcc441bca92b29461e8e50}
+
+
+Calculator\+Form.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_aa1b5081998052b52a05c212786c5de75}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!T\+I\+L\+T\+L\+E\+F\+T@{T\+I\+L\+T\+L\+E\+F\+T}}
+\index{T\+I\+L\+T\+L\+E\+F\+T@{T\+I\+L\+T\+L\+E\+F\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{T\+I\+L\+T\+L\+E\+F\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+I\+L\+T\+L\+E\+F\+T = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_aa1b5081998052b52a05c212786c5de75}
+
+
+Calculator\+Form.\+cpp 파일의 53 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a923abea421f18f4d617bae7a5ce69991}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!T\+I\+L\+T\+R\+I\+G\+H\+T@{T\+I\+L\+T\+R\+I\+G\+H\+T}}
+\index{T\+I\+L\+T\+R\+I\+G\+H\+T@{T\+I\+L\+T\+R\+I\+G\+H\+T}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{T\+I\+L\+T\+R\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+I\+L\+T\+R\+I\+G\+H\+T =2\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a923abea421f18f4d617bae7a5ce69991}
+
+
+Calculator\+Form.\+cpp 파일의 54 번째 라인에서 정의되었습니다.
+
+\hypertarget{_calculator_form_8cpp_a9a8b3c0366194868e0e8654c8177ecf5}{\index{Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}!T\+I\+L\+T\+S\+T\+O\+P@{T\+I\+L\+T\+S\+T\+O\+P}}
+\index{T\+I\+L\+T\+S\+T\+O\+P@{T\+I\+L\+T\+S\+T\+O\+P}!Calculator\+Form.\+cpp@{Calculator\+Form.\+cpp}}
+\subsubsection[{T\+I\+L\+T\+S\+T\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+I\+L\+T\+S\+T\+O\+P = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{_calculator_form_8cpp_a9a8b3c0366194868e0e8654c8177ecf5}
+
+
+Calculator\+Form.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+

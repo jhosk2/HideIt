@@ -1,0 +1,3 @@
+<map id="ShowTerminatePopup" name="ShowTerminatePopup">
+<area shape="rect" id="node3" href="$class_popup_event_listener_terminate.html" title="File Browser에서 Back Button을 누르면 호출 되는 Class. " alt="" coords="170,132,365,268"/>
+</map>

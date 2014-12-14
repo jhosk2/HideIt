@@ -1,0 +1,452 @@
+\hypertarget{class_text_viewer_form}{\section{Text\+Viewer\+Form 클래스 참조}
+\label{class_text_viewer_form}\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+}
+
+
+Text File을 읽어 화면에 출력 해주는 Class.  
+
+
+
+
+{\ttfamily \#include $<$Text\+Viewer\+Form.\+h$>$}
+
+
+
+Text\+Viewer\+Form에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_text_viewer_form__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Text\+Viewer\+Form에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_text_viewer_form__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_text_viewer_form_ada62cff12c9cfa681225802c67533d9d}{Text\+Viewer\+Form} (void)
+\item 
+virtual \hyperlink{class_text_viewer_form_a99d3e7fdee7c11c98b553d37bccbd561}{$\sim$\+Text\+Viewer\+Form} (void)
+\item 
+bool \hyperlink{class_text_viewer_form_a4ad26f2e53b8f74ce5d3faefc551b2e6}{Initialize} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+Tizen\+::\+Base\+::\+String \hyperlink{class_text_viewer_form_a5cea61f0286c8cda983e61760e9d5f47}{file\+Path}
+\item 
+Tizen\+::\+Ui\+::\+Controls\+::\+Text\+Box $\ast$ \hyperlink{class_text_viewer_form_af19e24e33e90149750d852ce35da7b38}{p\+Text\+Box}
+\item 
+Tizen\+::\+Graphics\+::\+Bitmap $\ast$ \hyperlink{class_text_viewer_form_ab424cff2021ff464552b4185579209f1}{\+\_\+\+\_\+p\+Tizen\+Bitmap}
+\item 
+\hyperlink{class_show_terminate_popup}{Show\+Terminate\+Popup} \hyperlink{class_text_viewer_form_afd589dc0e964f2615dfc9414ffffdb44}{popup}
+\item 
+\hyperlink{class_proxy_sensor}{Proxy\+Sensor} $\ast$ \hyperlink{class_text_viewer_form_a5235dd45fbd19e2a6c64949ee9803829}{sensor\+Proxy}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual result \hyperlink{class_text_viewer_form_a1174b7f39c5eaf5bc70598c54df20fb4}{On\+Initializing} (void)
+\item 
+virtual result \hyperlink{class_text_viewer_form_a152bcf154536f98c405bc8f35f545ca6}{On\+Terminating} (void)
+\item 
+virtual void \hyperlink{class_text_viewer_form_ae70d1e122343faa59719d604d1ae12b0}{On\+Action\+Performed} (const Tizen\+::\+Ui\+::\+Control \&source, int action\+Id)
+\item 
+virtual void \hyperlink{class_text_viewer_form_a1e6b94e7f974811b9ecc45dc6a7893ca}{On\+Form\+Back\+Requested} (Tizen\+::\+Ui\+::\+Controls\+::\+Form \&source)
+\item 
+virtual void \hyperlink{class_text_viewer_form_a71299da85593d79746ce82dae99b56d3}{On\+Scene\+Activated\+N} (const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&previous\+Scene\+Id, const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&current\+Scene\+Id, Tizen\+::\+Base\+::\+Collection\+::\+I\+List $\ast$p\+Args)
+\item 
+virtual void \hyperlink{class_text_viewer_form_af70565ab8d8365244043d0b9e390026b}{On\+Scene\+Deactivated} (const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&current\+Scene\+Id, const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&next\+Scene\+Id)
+\item 
+bool \hyperlink{class_text_viewer_form_a29ab38eb99aee639cd6a9d3f1d2aa6dd}{Read\+File} (const Tizen\+::\+Base\+::\+String \&str\+File\+Path, Tizen\+::\+Base\+::\+String \&str\+File\+Contents)
+\item 
+void \hyperlink{class_text_viewer_form_a42a0c06dc751be74e60b62406d44b90d}{Load\+Text} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+Text File을 읽어 화면에 출력 해주는 Class. 
+
+\begin{DoxyDate}{날짜}
+2014-\/12-\/13 
+\end{DoxyDate}
+\begin{DoxyVersion}{버전}
+0.\+0.\+1 
+\end{DoxyVersion}
+
+
+Text\+Viewer\+Form.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_text_viewer_form_ada62cff12c9cfa681225802c67533d9d}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{Text\+Viewer\+Form}]{\setlength{\rightskip}{0pt plus 5cm}Text\+Viewer\+Form\+::\+Text\+Viewer\+Form (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_text_viewer_form_ada62cff12c9cfa681225802c67533d9d}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+22                                    \{
+23 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_a99d3e7fdee7c11c98b553d37bccbd561}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!````~Text\+Viewer\+Form@{$\sim$\+Text\+Viewer\+Form}}
+\index{````~Text\+Viewer\+Form@{$\sim$\+Text\+Viewer\+Form}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{$\sim$\+Text\+Viewer\+Form}]{\setlength{\rightskip}{0pt plus 5cm}Text\+Viewer\+Form\+::$\sim$\+Text\+Viewer\+Form (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_text_viewer_form_a99d3e7fdee7c11c98b553d37bccbd561}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+25                                     \{
+26 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_text_viewer_form_a4ad26f2e53b8f74ce5d3faefc551b2e6}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Text\+Viewer\+Form\+::\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_text_viewer_form_a4ad26f2e53b8f74ce5d3faefc551b2e6}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 28 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+28                                     \{
+29     result r = Construct(\hyperlink{_app_resource_id_8h_a9faf6b36b7395bbfcc3a0c824e3db257}{IDF\_TEXTVIEWER\_FORM});
+30     TryReturn(r == E\_SUCCESS, \textcolor{keyword}{false}, \textcolor{stringliteral}{"Failed to construct form"});
+31 
+32     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+33 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_text_viewer_form_a4ad26f2e53b8f74ce5d3faefc551b2e6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_text_viewer_form_a42a0c06dc751be74e60b62406d44b90d}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!Load\+Text@{Load\+Text}}
+\index{Load\+Text@{Load\+Text}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{Load\+Text}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Viewer\+Form\+::\+Load\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_text_viewer_form_a42a0c06dc751be74e60b62406d44b90d}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 153 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+153                               \{
+154 
+155     String strFileContents, itemText;
+156 
+157     \textcolor{keywordtype}{int} endPos = 0;
+158 
+159     \textcolor{keywordflow}{if} (!\hyperlink{class_text_viewer_form_a29ab38eb99aee639cd6a9d3f1d2aa6dd}{ReadFile}(this->\hyperlink{class_text_viewer_form_a5cea61f0286c8cda983e61760e9d5f47}{filePath}, strFileContents))
+160         \textcolor{keywordflow}{return};
+161 
+162     \hyperlink{class_text_viewer_form_af19e24e33e90149750d852ce35da7b38}{pTextBox}->SetText(strFileContents);
+163     \hyperlink{class_text_viewer_form_af19e24e33e90149750d852ce35da7b38}{pTextBox}->RequestRedraw();
+164 
+165     \textcolor{keywordflow}{while} (strFileContents.GetLength() > 0) \{
+166         strFileContents.IndexOf(L\textcolor{stringliteral}{"\(\backslash\)n"}, 0, endPos);
+167 
+168         \textcolor{keywordflow}{if} (endPos < 1) \{
+169             itemText = strFileContents;
+170             itemText.Trim();
+171             strFileContents = L\textcolor{stringliteral}{""};
+172         \} \textcolor{keywordflow}{else} \{
+173             strFileContents.SubString(0, endPos, itemText);
+174             strFileContents.Remove(0, endPos + 1);
+175         \}
+176 
+177         \textcolor{keywordflow}{if} (itemText.GetLength() < 1)
+178             \textcolor{keywordflow}{continue};
+179         AppLog(\textcolor{stringliteral}{"%ls"}, itemText.GetPointer());
+180     \}
+181 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_ae70d1e122343faa59719d604d1ae12b0}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!On\+Action\+Performed@{On\+Action\+Performed}}
+\index{On\+Action\+Performed@{On\+Action\+Performed}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{On\+Action\+Performed}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Viewer\+Form\+::\+On\+Action\+Performed (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{int}]{action\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_text_viewer_form_ae70d1e122343faa59719d604d1ae12b0}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 70 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+71                       \{
+72     SceneManager* pSceneManager = SceneManager::GetInstance();
+73     AppAssert(pSceneManager);
+74 
+75 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_a1e6b94e7f974811b9ecc45dc6a7893ca}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!On\+Form\+Back\+Requested@{On\+Form\+Back\+Requested}}
+\index{On\+Form\+Back\+Requested@{On\+Form\+Back\+Requested}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{On\+Form\+Back\+Requested}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Viewer\+Form\+::\+On\+Form\+Back\+Requested (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Controls\+::\+Form \&}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_text_viewer_form_a1e6b94e7f974811b9ecc45dc6a7893ca}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 77 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+77                                                                     \{
+78 
+79     \textcolor{comment}{/*}
+80 \textcolor{comment}{     UiApp* pApp = UiApp::GetInstance();}
+81 \textcolor{comment}{     AppAssert(pApp);}
+82 \textcolor{comment}{     pApp->Terminate();}
+83 \textcolor{comment}{     */}
+84 
+85 
+86      SceneManager* pSceneManager = SceneManager::GetInstance();
+87      AppAssert(pSceneManager);
+88      pSceneManager->GoBackward(
+89      BackwardSceneTransition(SCENE\_TRANSITION\_ANIMATION\_TYPE\_RIGHT));
+90 
+91     \textcolor{comment}{//popup.ShowPopup();}
+92 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_a1174b7f39c5eaf5bc70598c54df20fb4}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!On\+Initializing@{On\+Initializing}}
+\index{On\+Initializing@{On\+Initializing}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{On\+Initializing}]{\setlength{\rightskip}{0pt plus 5cm}result Text\+Viewer\+Form\+::\+On\+Initializing (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_text_viewer_form_a1174b7f39c5eaf5bc70598c54df20fb4}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 35 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+35                                           \{
+36     result r = E\_SUCCESS;
+37 
+38     \textcolor{comment}{// TODO: Add your initialization code here}
+39     Header* pHeader = GetHeader();
+40     \textcolor{keywordflow}{if} (pHeader) \{
+41         Image pimage;
+42         r = pimage.Construct();
+43         String filepath = App::GetInstance()->GetAppDataPath();
+44         \hyperlink{class_text_viewer_form_ab424cff2021ff464552b4185579209f1}{\_\_pTizenBitmap} = pimage.DecodeN(filepath + L\textcolor{stringliteral}{"icon\_textviewer.png"},
+45                 BITMAP\_PIXEL\_FORMAT\_ARGB8888);
+46 
+47         \textcolor{comment}{// Set-up header}
+48         AppAssert(pHeader);
+49         pHeader->SetTitleIcon(\hyperlink{class_text_viewer_form_ab424cff2021ff464552b4185579209f1}{\_\_pTizenBitmap});
+50         pHeader->SetTitleText(\textcolor{stringliteral}{"TEXT VIEWER"});
+51     \}
+52 
+53     \textcolor{comment}{// Setup back event listener}
+54     SetFormBackEventListener(\textcolor{keyword}{this});
+55 
+56     \textcolor{comment}{// Get a button via resource ID}
+57 
+58     \hyperlink{class_text_viewer_form_af19e24e33e90149750d852ce35da7b38}{pTextBox} = \textcolor{keyword}{static\_cast<}TextBox*\textcolor{keyword}{>}(GetControl(\hyperlink{_app_resource_id_8h_a7af4cd90e710ffd1ff69533055de8f3d}{IDC\_TEXTBOX}));
+59 
+60     \textcolor{keywordflow}{return} r;
+61 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_a71299da85593d79746ce82dae99b56d3}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!On\+Scene\+Activated\+N@{On\+Scene\+Activated\+N}}
+\index{On\+Scene\+Activated\+N@{On\+Scene\+Activated\+N}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{On\+Scene\+Activated\+N}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Viewer\+Form\+::\+On\+Scene\+Activated\+N (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{previous\+Scene\+Id, }
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{current\+Scene\+Id, }
+\item[{Tizen\+::\+Base\+::\+Collection\+::\+I\+List $\ast$}]{p\+Args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_text_viewer_form_a71299da85593d79746ce82dae99b56d3}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 94 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+97                                          \{
+98     \textcolor{comment}{// TODO: Activate your scene here.}
+99     \textcolor{keywordflow}{if} (pArgs != null) \{
+100         \textcolor{keywordflow}{if} (pArgs->GetCount()) \{
+101             String* pStr = \textcolor{keyword}{dynamic\_cast<}String*\textcolor{keyword}{>}(pArgs->GetAt(0));
+102             \textcolor{keywordflow}{if} (pStr != null) \{
+103 
+104                 this->\hyperlink{class_text_viewer_form_a5cea61f0286c8cda983e61760e9d5f47}{filePath} = *pStr;
+105                 AppLog(\textcolor{stringliteral}{"in the textviewer : %S"}, this->\hyperlink{class_text_viewer_form_a5cea61f0286c8cda983e61760e9d5f47}{filePath}.GetPointer());
+106             \}
+107         \}
+108         pArgs->RemoveAll(\textcolor{keyword}{true});
+109         \textcolor{keyword}{delete} pArgs;
+110     \}
+111 
+112     \hyperlink{class_text_viewer_form_a42a0c06dc751be74e60b62406d44b90d}{LoadText}();
+113     \hyperlink{class_text_viewer_form_a5235dd45fbd19e2a6c64949ee9803829}{sensorProxy} = \textcolor{keyword}{new} \hyperlink{class_proxy_sensor}{ProxySensor}();
+114 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_af70565ab8d8365244043d0b9e390026b}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!On\+Scene\+Deactivated@{On\+Scene\+Deactivated}}
+\index{On\+Scene\+Deactivated@{On\+Scene\+Deactivated}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{On\+Scene\+Deactivated}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Viewer\+Form\+::\+On\+Scene\+Deactivated (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{current\+Scene\+Id, }
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{next\+Scene\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_text_viewer_form_af70565ab8d8365244043d0b9e390026b}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 116 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+118                                                  \{
+119     \textcolor{comment}{// TODO: Deactivate your scene here.}
+120     \hyperlink{class_text_viewer_form_a5235dd45fbd19e2a6c64949ee9803829}{sensorProxy}->\hyperlink{class_proxy_sensor_a26bdf3f2477f1ea84db56e4d4ebfc26e}{~ProxySensor}();
+121 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_a152bcf154536f98c405bc8f35f545ca6}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!On\+Terminating@{On\+Terminating}}
+\index{On\+Terminating@{On\+Terminating}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{On\+Terminating}]{\setlength{\rightskip}{0pt plus 5cm}result Text\+Viewer\+Form\+::\+On\+Terminating (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_text_viewer_form_a152bcf154536f98c405bc8f35f545ca6}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 63 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+63                                          \{
+64     result r = E\_SUCCESS;
+65 
+66     \textcolor{comment}{// TODO: Add your termination code here}
+67     \textcolor{keywordflow}{return} r;
+68 \}
+\end{DoxyCode}
+\hypertarget{class_text_viewer_form_a29ab38eb99aee639cd6a9d3f1d2aa6dd}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!Read\+File@{Read\+File}}
+\index{Read\+File@{Read\+File}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{Read\+File}]{\setlength{\rightskip}{0pt plus 5cm}bool Text\+Viewer\+Form\+::\+Read\+File (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Base\+::\+String \&}]{str\+File\+Path, }
+\item[{Tizen\+::\+Base\+::\+String \&}]{str\+File\+Contents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_text_viewer_form_a29ab38eb99aee639cd6a9d3f1d2aa6dd}
+
+
+Text\+Viewer\+Form.\+cpp 파일의 123 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+124                                  \{
+125     strFileContents = L\textcolor{stringliteral}{""};
+126     File file;
+127 
+128     result r = file.Construct(strFilePath, L\textcolor{stringliteral}{"r"});
+129 
+130     \textcolor{keywordflow}{if} (IsFailed(r)) \{
+131         AppLog(\textcolor{stringliteral}{"File::Consturct()is failed by %s"}, GetErrorMessage(r));
+132         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+133     \}
+134 
+135     FileAttributes fileAttrs;
+136     file.GetAttributes(strFilePath, fileAttrs);
+137     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} size = fileAttrs.GetFileSize();
+138 
+139     ByteBuffer readBuffer;
+140     readBuffer.Construct((\textcolor{keywordtype}{int}) size + 1);
+141     r = file.Read(readBuffer);
+142 
+143     \textcolor{keywordflow}{if} (IsFailed(r)) \{
+144         AppLog(\textcolor{stringliteral}{"File::Read()is failed by %s"}, GetErrorMessage(r));
+145         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+146     \}
+147 
+148     readBuffer.Flip();
+149     strFileContents = ((\textcolor{keywordtype}{char}*) readBuffer.GetPointer());
+150     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+151 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_text_viewer_form_ab424cff2021ff464552b4185579209f1}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!\+\_\+\+\_\+p\+Tizen\+Bitmap@{\+\_\+\+\_\+p\+Tizen\+Bitmap}}
+\index{\+\_\+\+\_\+p\+Tizen\+Bitmap@{\+\_\+\+\_\+p\+Tizen\+Bitmap}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{\+\_\+\+\_\+p\+Tizen\+Bitmap}]{\setlength{\rightskip}{0pt plus 5cm}Tizen\+::\+Graphics\+::\+Bitmap$\ast$ Text\+Viewer\+Form\+::\+\_\+\+\_\+p\+Tizen\+Bitmap\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_text_viewer_form_ab424cff2021ff464552b4185579209f1}
+
+
+Text\+Viewer\+Form.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_text_viewer_form_a5cea61f0286c8cda983e61760e9d5f47}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!file\+Path@{file\+Path}}
+\index{file\+Path@{file\+Path}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{file\+Path}]{\setlength{\rightskip}{0pt plus 5cm}Tizen\+::\+Base\+::\+String Text\+Viewer\+Form\+::file\+Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_text_viewer_form_a5cea61f0286c8cda983e61760e9d5f47}
+
+
+Text\+Viewer\+Form.\+h 파일의 45 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_text_viewer_form_afd589dc0e964f2615dfc9414ffffdb44}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!popup@{popup}}
+\index{popup@{popup}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{popup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Show\+Terminate\+Popup} Text\+Viewer\+Form\+::popup\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_text_viewer_form_afd589dc0e964f2615dfc9414ffffdb44}
+
+
+Text\+Viewer\+Form.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_text_viewer_form_af19e24e33e90149750d852ce35da7b38}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!p\+Text\+Box@{p\+Text\+Box}}
+\index{p\+Text\+Box@{p\+Text\+Box}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{p\+Text\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Tizen\+::\+Ui\+::\+Controls\+::\+Text\+Box$\ast$ Text\+Viewer\+Form\+::p\+Text\+Box\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_text_viewer_form_af19e24e33e90149750d852ce35da7b38}
+
+
+Text\+Viewer\+Form.\+h 파일의 46 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_text_viewer_form_a5235dd45fbd19e2a6c64949ee9803829}{\index{Text\+Viewer\+Form@{Text\+Viewer\+Form}!sensor\+Proxy@{sensor\+Proxy}}
+\index{sensor\+Proxy@{sensor\+Proxy}!Text\+Viewer\+Form@{Text\+Viewer\+Form}}
+\subsubsection[{sensor\+Proxy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Proxy\+Sensor}$\ast$ Text\+Viewer\+Form\+::sensor\+Proxy\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_text_viewer_form_a5235dd45fbd19e2a6c64949ee9803829}
+
+
+Text\+Viewer\+Form.\+h 파일의 49 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_text_viewer_form_8h}{Text\+Viewer\+Form.\+h}\item 
+src/\hyperlink{_text_viewer_form_8cpp}{Text\+Viewer\+Form.\+cpp}\end{DoxyCompactItemize}

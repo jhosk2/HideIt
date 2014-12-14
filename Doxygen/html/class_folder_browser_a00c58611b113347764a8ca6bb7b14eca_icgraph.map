@@ -1,0 +1,12 @@
+<map id="FolderBrowser::GotoDirectory" name="FolderBrowser::GotoDirectory">
+<area shape="rect" id="node2" href="$class_folder_browser.html#ab65db5bef6751cd9ee0cf2969641af73" title="FolderBrowser::FolderBrowser" alt="" coords="258,5,454,32"/>
+<area shape="rect" id="node3" href="$class_folder_browser.html#a696779b24f262b38abc391da85d6da37" title="FolderBrowser::GotoParent" alt="" coords="267,56,445,83"/>
+<area shape="rect" id="node4" href="$class_folder_browser.html#a0b3f244916ce95cecf88adcf07a533fa" title="FolderBrowser::GotoHideParent" alt="" coords="253,107,459,133"/>
+<area shape="rect" id="node5" href="$class_folder_browser.html#ae5aef032f95d4d1ef70ed3bfdb74344a" title="FolderBrowser::GotoDirectoryItem" alt="" coords="247,157,465,184"/>
+<area shape="rect" id="node7" href="$class_folder_browser.html#a9650b4b7549fab9669d6510118cf9964" title="FolderBrowser::OtherFolder\lInHideItFoler" alt="" coords="265,209,447,250"/>
+<area shape="rect" id="node8" href="$class_folder_browser.html#ab462a9486e5fc26ad711bbc261748462" title="FolderBrowser::ToHideItFolder" alt="" coords="258,275,454,301"/>
+<area shape="rect" id="node9" href="$class_folder_browser.html#a6d543b0062fbb2b1d5de68346fcce7a5" title="FolderBrowser::SetFilter" alt="" coords="275,325,437,352"/>
+<area shape="rect" id="node10" href="$class_folder_browser.html#a04d5bb9d0275ab67d6cc3b8d268b1b12" title="FolderBrowser::Refresh" alt="" coords="277,376,435,403"/>
+<area shape="rect" id="node6" href="$class_folder_browser.html#acf642ba00f99bbb408a2ea6399eb768b" title="FolderBrowser::OnIconList\lViewItemStateChanged" alt="" coords="513,150,688,191"/>
+<area shape="rect" id="node11" href="$class_list_view_item_popup.html#ac46352b7db50a19ad67c15f0b1c238bc" title="ListViewItemPopup::\lOnActionPerformed" alt="" coords="530,369,671,410"/>
+</map>

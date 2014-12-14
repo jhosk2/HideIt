@@ -1,0 +1,9 @@
+<map id="Kernel::k_function" name="Kernel::k_function">
+<area shape="rect" id="node2" href="$svm_8cpp.html#aabe5223ca8496af644883d8063007db2" title="svm_predict_values" alt="" coords="180,56,315,83"/>
+<area shape="rect" id="node3" href="$svm_8cpp.html#ae862a4ec5aef90b7ded1cd2a602271f6" title="svm_binary_svc_probability" alt="" coords="363,5,541,32"/>
+<area shape="rect" id="node7" href="$svm_8cpp.html#a1e5816ec29e6c51bc3daeab47cb7e8ef" title="svm_predict" alt="" coords="407,56,497,83"/>
+<area shape="rect" id="node8" href="$svm_8cpp.html#aa605ffa3e514ec953de3963f804b011c" title="svm_predict_probability" alt="" coords="589,107,747,133"/>
+<area shape="rect" id="node4" href="$svm_8cpp.html#ae6e4f84556602fab57ec5a330514b613" title="svm_train" alt="" coords="629,5,707,32"/>
+<area shape="rect" id="node5" href="$svm_8cpp.html#a3f5a9c2ab91444d122c461511af9efd2" title="svm_cross_validation" alt="" coords="795,56,939,83"/>
+<area shape="rect" id="node6" href="$svm_8cpp.html#a18e6f0da08035830a3f53829c3b26508" title="svm_svr_probability" alt="" coords="987,31,1121,57"/>
+</map>

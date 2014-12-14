@@ -1,0 +1,9 @@
+<map id="CalculatorForm" name="CalculatorForm">
+<area shape="rect" id="node10" href="$class_browser_main_form.html" title="File Browser Form을 구성해주는 Class. " alt="" coords="1547,749,1726,1017"/>
+<area shape="rect" id="node16" href="$class_show_terminate_popup.html" title="{ShowTerminatePopup\n|&#45; __pPopup_Terminate\l&#45; ID_BUTTON_TERMINATE\l&#45; ID_BUTTON_CANCEL\l|+ ShowTerminatePopup()\l+ ~ShowTerminatePopup()\l+ ShowPopup()\l+ HidePopup()\l+ OnActionPerformed()\l}" alt="" coords="1345,499,1525,665"/>
+<area shape="rect" id="node17" href="$class_popup_event_listener_terminate.html" title="File Browser에서 Back Button을 누르면 호출 되는 Class. " alt="" coords="1402,205,1597,341"/>
+<area shape="rect" id="node19" href="$class_svm_wrapper.html" title="{SvmWrapper\n|&#45; predict_probability\l&#45; max_line_len\l&#45; max_nr_attr\l&#45; PORTRAIT\l&#45; LANDSCAPE\l&#45; LANDREVERSE\l|+ SvmWrapper()\l+ predictt()\l+ predict()\l+ GetModelPath()\l+ GetOutputPath()\l&#45; init()\l}" alt="" coords="2056,771,2191,995"/>
+<area shape="rect" id="node20" href="$structsvm__node.html" title="{svm_node\n|+ index\l+ value\l|}" alt="" coords="2083,227,2163,319"/>
+<area shape="rect" id="node21" href="$structsvm__model.html" title="{svm_model\n|+ nr_class\l+ l\l+ sv_coef\l+ rho\l+ probA\l+ probB\l+ sv_indices\l+ label\l+ nSV\l+ free_sv\l|}" alt="" coords="2164,477,2259,687"/>
+<area shape="rect" id="node22" href="$structsvm__parameter.html" title="{svm_parameter\n|+ svm_type\l+ kernel_type\l+ degree\l+ gamma\l+ coef0\l+ cache_size\l+ eps\l+ C\l+ nr_weight\l+ weight_label\l+ weight\l+ nu\l+ p\l+ shrinking\l+ probability\l|}" alt="" coords="2188,132,2299,415"/>
+</map>

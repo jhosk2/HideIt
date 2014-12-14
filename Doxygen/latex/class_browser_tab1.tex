@@ -1,0 +1,451 @@
+\hypertarget{class_browser_tab1}{\section{Browser\+Tab1 클래스 참조}
+\label{class_browser_tab1}\index{Browser\+Tab1@{Browser\+Tab1}}
+}
+
+
+File Browser의 Management tab을 구성해주는 Class.  
+
+
+
+
+{\ttfamily \#include $<$Browser\+Tab1.\+h$>$}
+
+
+
+Browser\+Tab1에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_browser_tab1__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Browser\+Tab1에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_browser_tab1__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_browser_tab1_a42e0e4ea28b2debcfb5ee0e5dc2ecf09}{Browser\+Tab1} (void)
+\item 
+virtual \hyperlink{class_browser_tab1_ad1024dd5d5945a5d29be9306d5ae3013}{$\sim$\+Browser\+Tab1} (void)
+\item 
+bool \hyperlink{class_browser_tab1_ae8f2b22d3dd917b599c7f46549079687}{Initialize} (void)
+\item 
+virtual result \hyperlink{class_browser_tab1_ab3fa028108d66af5fa6bbe088cf44e5f}{On\+Initializing} (void)
+\item 
+virtual result \hyperlink{class_browser_tab1_aa87b7496a627892df34a96138337d7ca}{On\+Terminating} (void)
+\item 
+virtual void \hyperlink{class_browser_tab1_a6a40e7124eb0c67a3986b4122befe3d5}{On\+Scene\+Activated\+N} (const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&previous\+Scene\+Id, const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&current\+Scene\+Id, Tizen\+::\+Base\+::\+Collection\+::\+I\+List $\ast$p\+Args)
+\item 
+virtual void \hyperlink{class_browser_tab1_a572592e61e494f61b62b71e60270ef1d}{On\+Scene\+Deactivated} (const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&current\+Scene\+Id, const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&next\+Scene\+Id)
+\item 
+virtual void \hyperlink{class_browser_tab1_a535e5fc3e6a2e82ad029be81652d5509}{On\+Form\+Back\+Requested} (Tizen\+::\+Ui\+::\+Controls\+::\+Form \&source)
+\item 
+virtual void \hyperlink{class_browser_tab1_a5da5021cbb84ac88708ed984e1eca853}{On\+Touch\+Focus\+In} (const Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Graphics\+::\+Point \&current\+Position, const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&touch\+Info)
+\item 
+virtual void \hyperlink{class_browser_tab1_ae25d906cbfcd2505a3669111d672e79b}{On\+Touch\+Focus\+Out} (const Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Graphics\+::\+Point \&current\+Position, const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&touch\+Info)
+\item 
+virtual void \hyperlink{class_browser_tab1_a7d70ed9cfa3f2ed1df6d0aeacb21ee48}{On\+Touch\+Moved} (const Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Graphics\+::\+Point \&current\+Position, const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&touch\+Info)
+\item 
+virtual void \hyperlink{class_browser_tab1_af18debc3d96a67c757408b69efff9d2f}{On\+Touch\+Pressed} (const Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Graphics\+::\+Point \&current\+Position, const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&touch\+Info)
+\item 
+virtual void \hyperlink{class_browser_tab1_a958c88e3bc8de62132379fd12b9b1f97}{On\+Touch\+Released} (const Tizen\+::\+Ui\+::\+Control \&source, const Tizen\+::\+Graphics\+::\+Point \&current\+Position, const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&touch\+Info)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+Tizen\+::\+Ui\+::\+Controls\+::\+Label $\ast$ \hyperlink{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\+\_\+\+\_\+p\+Label\+\_\+\+Back}
+\item 
+\hyperlink{class_folder_browser}{Folder\+Browser} $\ast$ \hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folder\+Browser}
+\item 
+\hyperlink{class_proxy_sensor}{Proxy\+Sensor} $\ast$ \hyperlink{class_browser_tab1_a7dc2f8e362bbc5c88cedb59e0b38cbea}{sensor\+Proxy}
+\item 
+\hyperlink{class_show_terminate_popup}{Show\+Terminate\+Popup} \hyperlink{class_browser_tab1_a69eaa59d7c5277fe9819b3b7fa7bbea4}{terpopup}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+File Browser의 Management tab을 구성해주는 Class. 
+
+\begin{DoxyDate}{날짜}
+2014-\/12-\/13 
+\end{DoxyDate}
+\begin{DoxyVersion}{버전}
+0.\+0.\+1 
+\end{DoxyVersion}
+
+
+Browser\+Tab1.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_browser_tab1_a42e0e4ea28b2debcfb5ee0e5dc2ecf09}{\index{Browser\+Tab1@{Browser\+Tab1}!Browser\+Tab1@{Browser\+Tab1}}
+\index{Browser\+Tab1@{Browser\+Tab1}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{Browser\+Tab1}]{\setlength{\rightskip}{0pt plus 5cm}Browser\+Tab1\+::\+Browser\+Tab1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_browser_tab1_a42e0e4ea28b2debcfb5ee0e5dc2ecf09}
+
+
+Browser\+Tab1.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+11                              \{
+12     AppLog(\textcolor{stringliteral}{"Tap1 Creating"});
+13 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_ad1024dd5d5945a5d29be9306d5ae3013}{\index{Browser\+Tab1@{Browser\+Tab1}!````~Browser\+Tab1@{$\sim$\+Browser\+Tab1}}
+\index{````~Browser\+Tab1@{$\sim$\+Browser\+Tab1}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{$\sim$\+Browser\+Tab1}]{\setlength{\rightskip}{0pt plus 5cm}Browser\+Tab1\+::$\sim$\+Browser\+Tab1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_ad1024dd5d5945a5d29be9306d5ae3013}
+
+
+Browser\+Tab1.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+15                               \{
+16 
+17 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_browser_tab1_ae8f2b22d3dd917b599c7f46549079687}{\index{Browser\+Tab1@{Browser\+Tab1}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Browser\+Tab1\+::\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_browser_tab1_ae8f2b22d3dd917b599c7f46549079687}
+
+
+Browser\+Tab1.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+19                                  \{
+20     result r = Construct(\hyperlink{_app_resource_id_8h_aa4977f921a656ca704b1c6cf4cba205a}{IDL\_MANAGEMENT\_PANEL});
+21     \textcolor{keywordflow}{if} (IsFailed(r)) \{
+22         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+23     \}
+24     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+25 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_browser_tab1_ae8f2b22d3dd917b599c7f46549079687_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_browser_tab1_a535e5fc3e6a2e82ad029be81652d5509}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Form\+Back\+Requested@{On\+Form\+Back\+Requested}}
+\index{On\+Form\+Back\+Requested@{On\+Form\+Back\+Requested}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Form\+Back\+Requested}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Form\+Back\+Requested (
+\begin{DoxyParamCaption}
+\item[{Tizen\+::\+Ui\+::\+Controls\+::\+Form \&}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_a535e5fc3e6a2e82ad029be81652d5509}
+
+
+Browser\+Tab1.\+cpp 파일의 100 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+100                                                                  \{
+101     \textcolor{comment}{/*}
+102 \textcolor{comment}{    AppLog("BackBack");}
+103 \textcolor{comment}{    UiApp* pApp = UiApp::GetInstance();}
+104 \textcolor{comment}{    AppAssert(pApp);}
+105 \textcolor{comment}{    pApp->Terminate();}
+106 \textcolor{comment}{     */}
+107     AppLog(\textcolor{stringliteral}{"BackBack Tab1 "});
+108     \hyperlink{class_browser_tab1_a69eaa59d7c5277fe9819b3b7fa7bbea4}{terpopup}.\hyperlink{class_show_terminate_popup_aa3424f6b23949489b0e3f674ec9c7c1c}{ShowPopup}();
+109     \textcolor{comment}{//sensorProxy->~ProxySensor();}
+110 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_ab3fa028108d66af5fa6bbe088cf44e5f}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Initializing@{On\+Initializing}}
+\index{On\+Initializing@{On\+Initializing}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Initializing}]{\setlength{\rightskip}{0pt plus 5cm}result Browser\+Tab1\+::\+On\+Initializing (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_ab3fa028108d66af5fa6bbe088cf44e5f}
+
+
+Browser\+Tab1.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+27                                        \{
+28     result r = E\_SUCCESS;
+29 
+30     AppLog(\textcolor{stringliteral}{"Tap1 Init"});
+31     \textcolor{comment}{// Layout setting}
+32     \textcolor{keyword}{const} Form* pForm = \textcolor{keyword}{dynamic\_cast<}Form*\textcolor{keyword}{>}(GetParent());
+33     \textcolor{keywordflow}{if} (pForm) \{
+34         RelativeLayout* pRelativeLayout =
+35                 \textcolor{keyword}{dynamic\_cast<}RelativeLayout*\textcolor{keyword}{>}(pForm->GetLandscapeLayoutN());
+36         \textcolor{keywordflow}{if} (pRelativeLayout) \{
+37             pRelativeLayout->SetHorizontalFitPolicy(*\textcolor{keyword}{this}, FIT\_POLICY\_PARENT);
+38             pRelativeLayout->SetVerticalFitPolicy(*\textcolor{keyword}{this}, FIT\_POLICY\_PARENT);
+39             \textcolor{keyword}{delete} pRelativeLayout;
+40         \}
+41         pRelativeLayout =
+42                 \textcolor{keyword}{dynamic\_cast<}RelativeLayout*\textcolor{keyword}{>}(pForm->GetPortraitLayoutN());
+43         \textcolor{keywordflow}{if} (pRelativeLayout) \{
+44             pRelativeLayout->SetHorizontalFitPolicy(*\textcolor{keyword}{this}, FIT\_POLICY\_PARENT);
+45             pRelativeLayout->SetVerticalFitPolicy(*\textcolor{keyword}{this}, FIT\_POLICY\_PARENT);
+46             \textcolor{keyword}{delete} pRelativeLayout;
+47         \}
+48     \}
+49 
+50     \hyperlink{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\_\_pLabel\_Back} = \textcolor{keyword}{static\_cast<}Label*\textcolor{keyword}{>}(GetControl(
+      \hyperlink{_app_resource_id_8h_a69e9f116d4b974589b52a26093383d51}{IDC\_MANAGEMENT\_LABEL\_BACK},
+51             \textcolor{keyword}{true}));
+52     TryReturn(\hyperlink{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\_\_pLabel\_Back} != null, r = E\_SYSTEM,
+53             \textcolor{stringliteral}{"Panel::GetControl() failed"});
+54     \hyperlink{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\_\_pLabel\_Back}->AddTouchEventListener(*\textcolor{keyword}{this});
+55 
+56     Label* \_\_pLabel = \textcolor{keyword}{static\_cast<}Label*\textcolor{keyword}{>}(GetControl(\hyperlink{_app_resource_id_8h_aff978e851509c8ab30559a21d28a39eb}{IDC\_MANAGEMENT\_LABEL\_PATH}));
+57     TryReturn(\_\_pLabel != null, r = E\_SYSTEM, \textcolor{stringliteral}{"Panel::GetControl() failed"});
+58 
+59     IconListView* listview = \textcolor{keyword}{dynamic\_cast<}IconListView*\textcolor{keyword}{>}(GetControl(
+60             \hyperlink{_app_resource_id_8h_a82840bfda372ae82da0138a97f7e9783}{IDC\_MANAGEMENT\_ICONLISTVIEW}));
+61 
+62     \hyperlink{_list_view_item_popup_8h_a514e8b025bf71e7b0500f6f8efb635ce}{FILE\_STATE\_FLAG} = \hyperlink{_list_view_item_popup_8h_a2a28b5538cf5c338159be2e1c420261e}{FILESTATE\_DECRYPTION};
+63     \hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folderBrowser} = \textcolor{keyword}{new} \hyperlink{class_folder_browser}{FolderBrowser}(listview, \_\_pLabel);
+64 
+65     listview->SetItemProvider(*\hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folderBrowser});
+66     listview->AddIconListViewItemEventListener(*\hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folderBrowser});
+67 
+68     \textcolor{keywordflow}{return} r;
+69 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_a6a40e7124eb0c67a3986b4122befe3d5}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Scene\+Activated\+N@{On\+Scene\+Activated\+N}}
+\index{On\+Scene\+Activated\+N@{On\+Scene\+Activated\+N}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Scene\+Activated\+N}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Scene\+Activated\+N (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{previous\+Scene\+Id, }
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{current\+Scene\+Id, }
+\item[{Tizen\+::\+Base\+::\+Collection\+::\+I\+List $\ast$}]{p\+Args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_a6a40e7124eb0c67a3986b4122befe3d5}
+
+
+Browser\+Tab1.\+cpp 파일의 81 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+84                                          \{
+85     \textcolor{comment}{// TODO: Activate your scene here.}
+86     \hyperlink{_list_view_item_popup_8h_a514e8b025bf71e7b0500f6f8efb635ce}{FILE\_STATE\_FLAG} = \hyperlink{_list_view_item_popup_8h_a2a28b5538cf5c338159be2e1c420261e}{FILESTATE\_DECRYPTION};
+87     \hyperlink{class_browser_tab1_a7dc2f8e362bbc5c88cedb59e0b38cbea}{sensorProxy} = \textcolor{keyword}{new} \hyperlink{class_proxy_sensor}{ProxySensor}();
+88     \hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folderBrowser}->\hyperlink{class_folder_browser_a04d5bb9d0275ab67d6cc3b8d268b1b12}{Refresh}();
+89 
+90 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_a572592e61e494f61b62b71e60270ef1d}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Scene\+Deactivated@{On\+Scene\+Deactivated}}
+\index{On\+Scene\+Deactivated@{On\+Scene\+Deactivated}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Scene\+Deactivated}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Scene\+Deactivated (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{current\+Scene\+Id, }
+\item[{const Tizen\+::\+Ui\+::\+Scenes\+::\+Scene\+Id \&}]{next\+Scene\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_a572592e61e494f61b62b71e60270ef1d}
+
+
+Browser\+Tab1.\+cpp 파일의 92 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+94                                                  \{
+95     \textcolor{comment}{// TODO: Deactivate your scene here.}
+96     AppLog(\textcolor{stringliteral}{"Tap1 Deactivated"});
+97     \hyperlink{class_browser_tab1_a7dc2f8e362bbc5c88cedb59e0b38cbea}{sensorProxy}->\hyperlink{class_proxy_sensor_a26bdf3f2477f1ea84db56e4d4ebfc26e}{~ProxySensor}();
+98 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_aa87b7496a627892df34a96138337d7ca}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Terminating@{On\+Terminating}}
+\index{On\+Terminating@{On\+Terminating}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Terminating}]{\setlength{\rightskip}{0pt plus 5cm}result Browser\+Tab1\+::\+On\+Terminating (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_aa87b7496a627892df34a96138337d7ca}
+
+
+Browser\+Tab1.\+cpp 파일의 71 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+71                                       \{
+72     result r = E\_SUCCESS;
+73 
+74     \textcolor{comment}{// TODO: Add your termination code here}
+75     \textcolor{keyword}{delete} \hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folderBrowser};
+76     AppLog(\textcolor{stringliteral}{"Tap1 Terminating"});
+77 
+78     \textcolor{keywordflow}{return} r;
+79 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_a5da5021cbb84ac88708ed984e1eca853}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Touch\+Focus\+In@{On\+Touch\+Focus\+In}}
+\index{On\+Touch\+Focus\+In@{On\+Touch\+Focus\+In}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Touch\+Focus\+In}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Touch\+Focus\+In (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Graphics\+::\+Point \&}]{current\+Position, }
+\item[{const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&}]{touch\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_a5da5021cbb84ac88708ed984e1eca853}
+
+
+Browser\+Tab1.\+cpp 파일의 142 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+144                                                 \{
+145 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_ae25d906cbfcd2505a3669111d672e79b}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Touch\+Focus\+Out@{On\+Touch\+Focus\+Out}}
+\index{On\+Touch\+Focus\+Out@{On\+Touch\+Focus\+Out}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Touch\+Focus\+Out}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Touch\+Focus\+Out (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Graphics\+::\+Point \&}]{current\+Position, }
+\item[{const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&}]{touch\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_ae25d906cbfcd2505a3669111d672e79b}
+
+
+Browser\+Tab1.\+cpp 파일의 147 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+149                                                 \{
+150 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_a7d70ed9cfa3f2ed1df6d0aeacb21ee48}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Touch\+Moved@{On\+Touch\+Moved}}
+\index{On\+Touch\+Moved@{On\+Touch\+Moved}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Touch\+Moved}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Touch\+Moved (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Graphics\+::\+Point \&}]{current\+Position, }
+\item[{const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&}]{touch\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_a7d70ed9cfa3f2ed1df6d0aeacb21ee48}
+
+
+Browser\+Tab1.\+cpp 파일의 112 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+114                                                 \{
+115 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_af18debc3d96a67c757408b69efff9d2f}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Touch\+Pressed@{On\+Touch\+Pressed}}
+\index{On\+Touch\+Pressed@{On\+Touch\+Pressed}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Touch\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Touch\+Pressed (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Graphics\+::\+Point \&}]{current\+Position, }
+\item[{const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&}]{touch\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_af18debc3d96a67c757408b69efff9d2f}
+
+
+Browser\+Tab1.\+cpp 파일의 117 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+119                                                 \{
+120 
+121     Color* color = \textcolor{keyword}{new} Color(18, 102, 255, 255);
+122     \textcolor{keywordflow}{if} (source.GetName() == \hyperlink{_app_resource_id_8h_a69e9f116d4b974589b52a26093383d51}{IDC\_MANAGEMENT\_LABEL\_BACK}) \{
+123         \hyperlink{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\_\_pLabel\_Back}->SetBackgroundColor(*color);
+124     \}
+125     Invalidate(\textcolor{keyword}{true});
+126 \}
+\end{DoxyCode}
+\hypertarget{class_browser_tab1_a958c88e3bc8de62132379fd12b9b1f97}{\index{Browser\+Tab1@{Browser\+Tab1}!On\+Touch\+Released@{On\+Touch\+Released}}
+\index{On\+Touch\+Released@{On\+Touch\+Released}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{On\+Touch\+Released}]{\setlength{\rightskip}{0pt plus 5cm}void Browser\+Tab1\+::\+On\+Touch\+Released (
+\begin{DoxyParamCaption}
+\item[{const Tizen\+::\+Ui\+::\+Control \&}]{source, }
+\item[{const Tizen\+::\+Graphics\+::\+Point \&}]{current\+Position, }
+\item[{const Tizen\+::\+Ui\+::\+Touch\+Event\+Info \&}]{touch\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_browser_tab1_a958c88e3bc8de62132379fd12b9b1f97}
+
+
+Browser\+Tab1.\+cpp 파일의 128 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+130                                                 \{
+131 
+132     Color* color = \textcolor{keyword}{new} Color(112, 112, 112, 255);
+133 
+134     \textcolor{keywordflow}{if} (source.GetName() == \hyperlink{_app_resource_id_8h_a69e9f116d4b974589b52a26093383d51}{IDC\_MANAGEMENT\_LABEL\_BACK}) \{
+135         \hyperlink{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\_\_pLabel\_Back}->SetBackgroundColor(*color);
+136         \hyperlink{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{folderBrowser}->\hyperlink{class_folder_browser_a696779b24f262b38abc391da85d6da37}{GotoParent}();
+137     \}
+138     Invalidate(\textcolor{keyword}{true});
+139 
+140 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}{\index{Browser\+Tab1@{Browser\+Tab1}!\+\_\+\+\_\+p\+Label\+\_\+\+Back@{\+\_\+\+\_\+p\+Label\+\_\+\+Back}}
+\index{\+\_\+\+\_\+p\+Label\+\_\+\+Back@{\+\_\+\+\_\+p\+Label\+\_\+\+Back}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{\+\_\+\+\_\+p\+Label\+\_\+\+Back}]{\setlength{\rightskip}{0pt plus 5cm}Tizen\+::\+Ui\+::\+Controls\+::\+Label$\ast$ Browser\+Tab1\+::\+\_\+\+\_\+p\+Label\+\_\+\+Back\hspace{0.3cm}{\ttfamily [private]}}}\label{class_browser_tab1_ad072e2bcaa2a03d684ddfddd0d8dea77}
+
+
+Browser\+Tab1.\+h 파일의 61 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}{\index{Browser\+Tab1@{Browser\+Tab1}!folder\+Browser@{folder\+Browser}}
+\index{folder\+Browser@{folder\+Browser}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{folder\+Browser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Folder\+Browser}$\ast$ Browser\+Tab1\+::folder\+Browser\hspace{0.3cm}{\ttfamily [private]}}}\label{class_browser_tab1_a2a514b5068c1222055a103c67abeeb2a}
+
+
+Browser\+Tab1.\+h 파일의 62 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_browser_tab1_a7dc2f8e362bbc5c88cedb59e0b38cbea}{\index{Browser\+Tab1@{Browser\+Tab1}!sensor\+Proxy@{sensor\+Proxy}}
+\index{sensor\+Proxy@{sensor\+Proxy}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{sensor\+Proxy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Proxy\+Sensor}$\ast$ Browser\+Tab1\+::sensor\+Proxy\hspace{0.3cm}{\ttfamily [private]}}}\label{class_browser_tab1_a7dc2f8e362bbc5c88cedb59e0b38cbea}
+
+
+Browser\+Tab1.\+h 파일의 63 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_browser_tab1_a69eaa59d7c5277fe9819b3b7fa7bbea4}{\index{Browser\+Tab1@{Browser\+Tab1}!terpopup@{terpopup}}
+\index{terpopup@{terpopup}!Browser\+Tab1@{Browser\+Tab1}}
+\subsubsection[{terpopup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Show\+Terminate\+Popup} Browser\+Tab1\+::terpopup\hspace{0.3cm}{\ttfamily [private]}}}\label{class_browser_tab1_a69eaa59d7c5277fe9819b3b7fa7bbea4}
+
+
+Browser\+Tab1.\+h 파일의 64 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_browser_tab1_8h}{Browser\+Tab1.\+h}\item 
+src/\+File\+Browser/\hyperlink{_browser_tab1_8cpp}{Browser\+Tab1.\+cpp}\end{DoxyCompactItemize}

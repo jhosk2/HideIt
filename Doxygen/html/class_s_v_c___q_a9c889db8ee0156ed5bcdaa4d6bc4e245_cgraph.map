@@ -1,0 +1,7 @@
+<map id="SVC_Q::swap_index" name="SVC_Q::swap_index">
+<area shape="rect" id="node2" href="$class_cache.html#aaff2dc955f9492c044c98a5f09cfddcc" title="Cache::swap_index" alt="" coords="196,56,331,83"/>
+<area shape="rect" id="node4" href="$svm_8cpp.html#a91e77fa16b1c9bbbf90f2eea392997b1" title="swap" alt="" coords="414,107,466,133"/>
+<area shape="rect" id="node6" href="$class_kernel.html#adca807c5584bc42fd098cd9eb1f19621" title="Kernel::swap_index" alt="" coords="196,157,331,184"/>
+<area shape="rect" id="node3" href="$class_cache.html#ab83abc6ded621fa2575e3a44421e0cb4" title="Cache::lru_delete" alt="" coords="379,5,501,32"/>
+<area shape="rect" id="node5" href="$class_cache.html#a51e5ffc28e2ec6662ae13ab78ccc2243" title="Cache::lru_insert" alt="" coords="380,56,500,83"/>
+</map>

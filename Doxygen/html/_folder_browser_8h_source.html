@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>HideIt: inc/FolderBrowser.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">HideIt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_folder_browser_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">FolderBrowser.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_folder_browser_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * FolderBrowser.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Nov 27, 2014</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: jowonbin</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef FOLDERBROWSER_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define FOLDERBROWSER_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;FApp.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;FBase.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;FSystem.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;FIo.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;FUi.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;FSecurity.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_list_view_item_popup_8h.html">ListViewItemPopup.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_security.html">Tizen::Security</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_security_1_1_crypto.html">Tizen::Security::Crypto</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_io.html">Tizen::Io</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_base.html">Tizen::Base</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_base_1_1_collection.html">Tizen::Base::Collection</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_base_1_1_utility.html">Tizen::Base::Utility</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_graphics.html">Tizen::Graphics</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tizen_1_1_ui_1_1_controls.html">Tizen::Ui::Controls</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#a310e56072401d167ec479a192944cc5c">   29</a></span>&#160;<span class="preprocessor">#define HIDEITPATH Tizen::App::App::GetInstance()-&gt;GetAppDataPath() + L&quot;HideIt/&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#a536f167c46920a02a921ed149b74ddfc">   30</a></span>&#160;<span class="preprocessor">#define TEMPPATH &quot;/opt/media/.temp.&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301">   32</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301">filetype</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301ab985d8dbab4ba27192f572dc90d034ba">   34</a></span>&#160;    <a class="code" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301ab985d8dbab4ba27192f572dc90d034ba">H_TEXT</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301aa6be44e52b2ea1e9671482254a70dba0">   35</a></span>&#160;    <a class="code" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301aa6be44e52b2ea1e9671482254a70dba0">H_IMAGE</a>,</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301ad8a34e0e456a91ca22a267f2f7b44651">   36</a></span>&#160;    <a class="code" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301ad8a34e0e456a91ca22a267f2f7b44651">H_VIDEO</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301a29999a14bbcc6a2c7eac4af5f0383c9b">   37</a></span>&#160;    <a class="code" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301a29999a14bbcc6a2c7eac4af5f0383c9b">H_ETC</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301aad30772cd86a5fa22262bf9c16c2eb42">   38</a></span>&#160;    <a class="code" href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301aad30772cd86a5fa22262bf9c16c2eb42">H_ALL</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <a class="code" href="_folder_browser_8h.html#a0fab6cfad193ba9c1d78c6bb69c9426f">FileType</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_folder_browser.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_folder_browser.html">FolderBrowser</a> :</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span> Tizen::Ui::Controls::IIconListViewItemProvider,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span> Tizen::Ui::Controls::IIconListViewItemEventListener</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_folder_browser.html">FolderBrowser</a>(IconListView*);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_folder_browser.html">FolderBrowser</a>(IconListView*, Label*);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_folder_browser.html">FolderBrowser</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> GotoDirectoryItem( <span class="keyword">const</span> DirEntry&amp; entry );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> GotoParent();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> GotoHideParent();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> IsDirectory( String location );</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> Refresh();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> ToHideItFolder();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> OtherFolderInHideItFoler(<span class="keyword">const</span> String&amp; location );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> SetFilter(<a class="code" href="_folder_browser_8h.html#a0fab6cfad193ba9c1d78c6bb69c9426f">FileType</a> type);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> GotoDirectory( <span class="keyword">const</span> String&amp; location );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> IsFiltered( <span class="keyword">const</span> DirEntry&amp; entry );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Tizen::Ui::Controls::IconListViewItem *     CreateItem(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span>    DeleteItem(<span class="keywordtype">int</span> index, Tizen::Ui::Controls::IconListViewItem *pItem);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span>     GetItemCount(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span>  OnIconListViewItemStateChanged (Tizen::Ui::Controls::IconListView &amp;iconListView, <span class="keywordtype">int</span> index, Tizen::Ui::Controls::IconListViewItemStatus status);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a59c025c6956a8a9ef74395d12261a36e">   78</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#a59c025c6956a8a9ef74395d12261a36e">pBitmapFolder</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a7299cea38b070d659f6b2e35e4dbdd08">   79</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#a7299cea38b070d659f6b2e35e4dbdd08">pBitmapUp</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a4d40caed1664eca59bbf9e3da1cde15c">   80</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#a4d40caed1664eca59bbf9e3da1cde15c">pBitmapImage</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_folder_browser.html#ac204936172a6e66bcf444e2cd9ff7ec4">   81</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#ac204936172a6e66bcf444e2cd9ff7ec4">pBitmapText</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a375413fdf422f14ee9ea6ab055ffaebd">   82</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#a375413fdf422f14ee9ea6ab055ffaebd">pBitmapSound</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a90c038f6f300762824cdca08b339c974">   83</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#a90c038f6f300762824cdca08b339c974">pBitmapVideo</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_folder_browser.html#aa92204857b0b7a8d056ab74f5d9bc962">   84</a></span>&#160;    Tizen::Graphics::Bitmap* <a class="code" href="class_folder_browser.html#aa92204857b0b7a8d056ab74f5d9bc962">pBitmapMisc</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_folder_browser.html#aee2bb8ad9f494b0ada8ee359a2e34555">   86</a></span>&#160;    IconListView* <a class="code" href="class_folder_browser.html#aee2bb8ad9f494b0ada8ee359a2e34555">listView</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_folder_browser.html#ac56283b5a6a8dc00438d7bf4625c82bd">   87</a></span>&#160;    Label* <a class="code" href="class_folder_browser.html#ac56283b5a6a8dc00438d7bf4625c82bd">pLabel</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a1f7bc249da2f28c6a03759a983eacf75">   88</a></span>&#160;    String <a class="code" href="class_folder_browser.html#a1f7bc249da2f28c6a03759a983eacf75">currentLocation</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_folder_browser.html#acfb2670184ff88e3b06e2562d02983ce">   89</a></span>&#160;    String <a class="code" href="class_folder_browser.html#acfb2670184ff88e3b06e2562d02983ce">HidecurrentLocation</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a7573f676c492fcd3a5d63319cd5eb325">   90</a></span>&#160;    String <a class="code" href="class_folder_browser.html#a7573f676c492fcd3a5d63319cd5eb325">HideDefaultLocation</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_folder_browser.html#ae88620740bd179b78a573f1db28c50ba">   91</a></span>&#160;    ArrayList <a class="code" href="class_folder_browser.html#ae88620740bd179b78a573f1db28c50ba">items</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_folder_browser.html#ab240fcb3674e6887f601fd23c25477f3">   93</a></span>&#160;    <a class="code" href="_folder_browser_8h.html#a0fab6cfad193ba9c1d78c6bb69c9426f">FileType</a> <a class="code" href="class_folder_browser.html#ab240fcb3674e6887f601fd23c25477f3">fileType</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_folder_browser.html#a9715e8af0c63d75be7c1d65f3c4b47f8">   94</a></span>&#160;    <a class="code" href="class_list_view_item_popup.html">ListViewItemPopup</a> <a class="code" href="class_folder_browser.html#a9715e8af0c63d75be7c1d65f3c4b47f8">popup</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FOLDERBROWSER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_folder_browser_html_a375413fdf422f14ee9ea6ab055ffaebd"><div class="ttname"><a href="class_folder_browser.html#a375413fdf422f14ee9ea6ab055ffaebd">FolderBrowser::pBitmapSound</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapSound</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00082">FolderBrowser.h:82</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a59c025c6956a8a9ef74395d12261a36e"><div class="ttname"><a href="class_folder_browser.html#a59c025c6956a8a9ef74395d12261a36e">FolderBrowser::pBitmapFolder</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapFolder</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00078">FolderBrowser.h:78</a></div></div>
+<div class="ttc" id="_list_view_item_popup_8h_html"><div class="ttname"><a href="_list_view_item_popup_8h.html">ListViewItemPopup.h</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a9715e8af0c63d75be7c1d65f3c4b47f8"><div class="ttname"><a href="class_folder_browser.html#a9715e8af0c63d75be7c1d65f3c4b47f8">FolderBrowser::popup</a></div><div class="ttdeci">ListViewItemPopup popup</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00094">FolderBrowser.h:94</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a4d40caed1664eca59bbf9e3da1cde15c"><div class="ttname"><a href="class_folder_browser.html#a4d40caed1664eca59bbf9e3da1cde15c">FolderBrowser::pBitmapImage</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapImage</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00080">FolderBrowser.h:80</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_io_html"><div class="ttname"><a href="namespace_tizen_1_1_io.html">Io</a></div></div>
+<div class="ttc" id="class_folder_browser_html_ac56283b5a6a8dc00438d7bf4625c82bd"><div class="ttname"><a href="class_folder_browser.html#ac56283b5a6a8dc00438d7bf4625c82bd">FolderBrowser::pLabel</a></div><div class="ttdeci">Label * pLabel</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00087">FolderBrowser.h:87</a></div></div>
+<div class="ttc" id="class_folder_browser_html_ae88620740bd179b78a573f1db28c50ba"><div class="ttname"><a href="class_folder_browser.html#ae88620740bd179b78a573f1db28c50ba">FolderBrowser::items</a></div><div class="ttdeci">ArrayList items</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00091">FolderBrowser.h:91</a></div></div>
+<div class="ttc" id="_folder_browser_8h_html_af547d73b85f475c4abfafdb76bf0c301ad8a34e0e456a91ca22a267f2f7b44651"><div class="ttname"><a href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301ad8a34e0e456a91ca22a267f2f7b44651">H_VIDEO</a></div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00036">FolderBrowser.h:36</a></div></div>
+<div class="ttc" id="class_folder_browser_html"><div class="ttname"><a href="class_folder_browser.html">FolderBrowser</a></div><div class="ttdoc">File Browsing을 해주는 Class. </div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00046">FolderBrowser.h:46</a></div></div>
+<div class="ttc" id="class_folder_browser_html_aa92204857b0b7a8d056ab74f5d9bc962"><div class="ttname"><a href="class_folder_browser.html#aa92204857b0b7a8d056ab74f5d9bc962">FolderBrowser::pBitmapMisc</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapMisc</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00084">FolderBrowser.h:84</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_graphics_html"><div class="ttname"><a href="namespace_tizen_1_1_graphics.html">Graphics</a></div></div>
+<div class="ttc" id="class_folder_browser_html_acfb2670184ff88e3b06e2562d02983ce"><div class="ttname"><a href="class_folder_browser.html#acfb2670184ff88e3b06e2562d02983ce">FolderBrowser::HidecurrentLocation</a></div><div class="ttdeci">String HidecurrentLocation</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00089">FolderBrowser.h:89</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_security_1_1_crypto_html"><div class="ttname"><a href="namespace_tizen_1_1_security_1_1_crypto.html">Crypto</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a1f7bc249da2f28c6a03759a983eacf75"><div class="ttname"><a href="class_folder_browser.html#a1f7bc249da2f28c6a03759a983eacf75">FolderBrowser::currentLocation</a></div><div class="ttdeci">String currentLocation</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00088">FolderBrowser.h:88</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a7299cea38b070d659f6b2e35e4dbdd08"><div class="ttname"><a href="class_folder_browser.html#a7299cea38b070d659f6b2e35e4dbdd08">FolderBrowser::pBitmapUp</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapUp</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00079">FolderBrowser.h:79</a></div></div>
+<div class="ttc" id="_folder_browser_8h_html_a0fab6cfad193ba9c1d78c6bb69c9426f"><div class="ttname"><a href="_folder_browser_8h.html#a0fab6cfad193ba9c1d78c6bb69c9426f">FileType</a></div><div class="ttdeci">enum filetype FileType</div></div>
+<div class="ttc" id="_folder_browser_8h_html_af547d73b85f475c4abfafdb76bf0c301aa6be44e52b2ea1e9671482254a70dba0"><div class="ttname"><a href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301aa6be44e52b2ea1e9671482254a70dba0">H_IMAGE</a></div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00035">FolderBrowser.h:35</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_base_html"><div class="ttname"><a href="namespace_tizen_1_1_base.html">Base</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a90c038f6f300762824cdca08b339c974"><div class="ttname"><a href="class_folder_browser.html#a90c038f6f300762824cdca08b339c974">FolderBrowser::pBitmapVideo</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapVideo</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00083">FolderBrowser.h:83</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_base_1_1_collection_html"><div class="ttname"><a href="namespace_tizen_1_1_base_1_1_collection.html">Collection</a></div></div>
+<div class="ttc" id="_folder_browser_8h_html_af547d73b85f475c4abfafdb76bf0c301"><div class="ttname"><a href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301">filetype</a></div><div class="ttdeci">filetype</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00032">FolderBrowser.h:32</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_security_html"><div class="ttname"><a href="namespace_tizen_1_1_security.html">Security</a></div></div>
+<div class="ttc" id="class_folder_browser_html_ab240fcb3674e6887f601fd23c25477f3"><div class="ttname"><a href="class_folder_browser.html#ab240fcb3674e6887f601fd23c25477f3">FolderBrowser::fileType</a></div><div class="ttdeci">FileType fileType</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00093">FolderBrowser.h:93</a></div></div>
+<div class="ttc" id="_folder_browser_8h_html_af547d73b85f475c4abfafdb76bf0c301aad30772cd86a5fa22262bf9c16c2eb42"><div class="ttname"><a href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301aad30772cd86a5fa22262bf9c16c2eb42">H_ALL</a></div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00038">FolderBrowser.h:38</a></div></div>
+<div class="ttc" id="class_folder_browser_html_aee2bb8ad9f494b0ada8ee359a2e34555"><div class="ttname"><a href="class_folder_browser.html#aee2bb8ad9f494b0ada8ee359a2e34555">FolderBrowser::listView</a></div><div class="ttdeci">IconListView * listView</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00086">FolderBrowser.h:86</a></div></div>
+<div class="ttc" id="class_folder_browser_html_a7573f676c492fcd3a5d63319cd5eb325"><div class="ttname"><a href="class_folder_browser.html#a7573f676c492fcd3a5d63319cd5eb325">FolderBrowser::HideDefaultLocation</a></div><div class="ttdeci">String HideDefaultLocation</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00090">FolderBrowser.h:90</a></div></div>
+<div class="ttc" id="_folder_browser_8h_html_af547d73b85f475c4abfafdb76bf0c301ab985d8dbab4ba27192f572dc90d034ba"><div class="ttname"><a href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301ab985d8dbab4ba27192f572dc90d034ba">H_TEXT</a></div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00034">FolderBrowser.h:34</a></div></div>
+<div class="ttc" id="class_list_view_item_popup_html"><div class="ttname"><a href="class_list_view_item_popup.html">ListViewItemPopup</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_view_item_popup_8h_source.html#l00035">ListViewItemPopup.h:35</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_ui_1_1_controls_html"><div class="ttname"><a href="namespace_tizen_1_1_ui_1_1_controls.html">Controls</a></div></div>
+<div class="ttc" id="class_folder_browser_html_ac204936172a6e66bcf444e2cd9ff7ec4"><div class="ttname"><a href="class_folder_browser.html#ac204936172a6e66bcf444e2cd9ff7ec4">FolderBrowser::pBitmapText</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * pBitmapText</div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00081">FolderBrowser.h:81</a></div></div>
+<div class="ttc" id="_folder_browser_8h_html_af547d73b85f475c4abfafdb76bf0c301a29999a14bbcc6a2c7eac4af5f0383c9b"><div class="ttname"><a href="_folder_browser_8h.html#af547d73b85f475c4abfafdb76bf0c301a29999a14bbcc6a2c7eac4af5f0383c9b">H_ETC</a></div><div class="ttdef"><b>Definition:</b> <a href="_folder_browser_8h_source.html#l00037">FolderBrowser.h:37</a></div></div>
+<div class="ttc" id="namespace_tizen_1_1_base_1_1_utility_html"><div class="ttname"><a href="namespace_tizen_1_1_base_1_1_utility.html">Utility</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="_folder_browser_8h.html">FolderBrowser.h</a></li>
+    <li class="footer">생성시간 : 일 12월 14 2014 18:23:35, 프로젝트명 : HideIt, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

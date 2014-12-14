@@ -1,0 +1,7 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="node1" href="$class_q_matrix.html" title="QMatrix" alt="" coords="5,56,73,83"/>
+<area shape="rect" id="node2" href="$class_kernel.html" title="Kernel" alt="" coords="121,56,180,83"/>
+<area shape="rect" id="node3" href="$class_o_n_e___c_l_a_s_s___q.html" title="ONE_CLASS_Q" alt="" coords="228,5,345,32"/>
+<area shape="rect" id="node4" href="$class_s_v_c___q.html" title="SVC_Q" alt="" coords="253,56,320,83"/>
+<area shape="rect" id="node5" href="$class_s_v_r___q.html" title="SVR_Q" alt="" coords="253,107,320,133"/>
+</map>

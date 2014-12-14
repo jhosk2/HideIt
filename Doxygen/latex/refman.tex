@@ -1,0 +1,274 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage{hfont}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 생성시간 \+: 일 12월 14 2014 18\+:23\+:52, 프로젝트명 \+: Hide\+It, 생성자 \+:  Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 생성시간 \+: 일 12월 14 2014 18\+:23\+:52, 프로젝트명 \+: Hide\+It, 생성자 \+:  Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Hide\+It \\[1ex]\large 1.\+0.\+0 }\\
+\vspace*{1cm}
+{\large 다음에 의해 생성됨 \+:  Doxygen 1.8.8}\\
+\vspace*{0.5cm}
+{\small 일 12월 14 2014 18:23:52}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{계통도 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{파일 색인}
+\input{files}
+\chapter{클래스 문서화}
+\input{class_browser_main_form}
+\input{class_browser_tab1}
+\input{class_browser_tab2}
+\input{class_cache}
+\input{class_calculate}
+\input{class_calculator_form}
+\input{class_cryptor}
+\input{structdecision__function}
+\input{class_folder_browser}
+\input{struct_cache_1_1head__t}
+\input{class_hide_it_app}
+\input{class_hide_it_form_factory}
+\input{class_hide_it_frame}
+\input{class_hide_it_panel_factory}
+\input{class_kernel}
+\input{class_list_view_item_popup}
+\input{class_o_n_e___c_l_a_s_s___q}
+\input{class_popup_event_listener}
+\input{class_popup_event_listener_terminate}
+\input{class_proxy_sensor}
+\input{class_q_matrix}
+\input{class_scene_register}
+\input{class_setting_password_form}
+\input{class_show_terminate_popup}
+\input{struct_solver_1_1_solution_info}
+\input{class_solver}
+\input{class_solver___n_u}
+\input{class_s_v_c___q}
+\input{structsvm__model}
+\input{structsvm__node}
+\input{structsvm__parameter}
+\input{structsvm__problem}
+\input{class_svm_wrapper}
+\input{class_s_v_r___q}
+\input{class_text_viewer_form}
+\chapter{파일 문서화}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141205190918_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141209204728_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210170833_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210172024_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210174540_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210180221_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210182024_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210182249_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210182319_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210182448_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210182839_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210185521_8cs}
+\input{_i_rdr_l8_ks_w_y_8_hide_it__20141210192340_8cs}
+\input{_app_resource_id_8d}
+\input{_calculate_8d}
+\input{_calculator_form_8d}
+\input{svm-predict_8d}
+\input{svm_8d}
+\input{_svm_wrapper_8d}
+\input{_browser_main_form_8d}
+\input{_browser_tab1_8d}
+\input{_browser_tab2_8d}
+\input{_cryptor_8d}
+\input{_folder_browser_8d}
+\input{_list_view_item_popup_8d}
+\input{_proxy_sensor_8d}
+\input{_hide_it_app_8d}
+\input{_hide_it_entry_8d}
+\input{_hide_it_form_factory_8d}
+\input{_hide_it_frame_8d}
+\input{_hide_it_panel_factory_8d}
+\input{_scene_register_8d}
+\input{_setting_password_form_8d}
+\input{_show_terminate_popup_8d}
+\input{_text_viewer_form_8d}
+\input{_app_resource_id_8h}
+\input{_browser_main_form_8h}
+\input{_browser_tab1_8h}
+\input{_browser_tab2_8h}
+\input{_calculate_8h}
+\input{_calculator_form_8h}
+\input{_cryptor_8h}
+\input{_folder_browser_8h}
+\input{_hide_it_app_8h}
+\input{_hide_it_form_factory_8h}
+\input{_hide_it_frame_8h}
+\input{_hide_it_panel_factory_8h}
+\input{_list_view_item_popup_8h}
+\input{_proxy_sensor_8h}
+\input{_scene_register_8h}
+\input{_setting_password_form_8h}
+\input{_show_terminate_popup_8h}
+\input{svm_8h}
+\input{_svm_wrapper_8h}
+\input{_text_viewer_form_8h}
+\input{tizenx_8h}
+\input{_app_resource_id_8cpp}
+\input{_calculate_8cpp}
+\input{_calculator_form_8cpp}
+\input{svm-predict_8c}
+\input{svm_8cpp}
+\input{_svm_wrapper_8cpp}
+\input{_browser_main_form_8cpp}
+\input{_browser_tab1_8cpp}
+\input{_browser_tab2_8cpp}
+\input{_cryptor_8cpp}
+\input{_folder_browser_8cpp}
+\input{_list_view_item_popup_8cpp}
+\input{_proxy_sensor_8cpp}
+\input{_hide_it_app_8cpp}
+\input{_hide_it_entry_8cpp}
+\input{_hide_it_form_factory_8cpp}
+\input{_hide_it_frame_8cpp}
+\input{_hide_it_panel_factory_8cpp}
+\input{_scene_register_8cpp}
+\input{_setting_password_form_8cpp}
+\input{_show_terminate_popup_8cpp}
+\input{_text_viewer_form_8cpp}
+%--- End generated contents ---
+
+% Index
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{색인}
+\printindex
+
+\end{document}

@@ -1,0 +1,545 @@
+\hypertarget{class_cryptor}{\section{Cryptor 클래스 참조}
+\label{class_cryptor}\index{Cryptor@{Cryptor}}
+}
+
+
+Encryption와 Decryption을 해주는 Class.  
+
+
+
+
+{\ttfamily \#include $<$Cryptor.\+h$>$}
+
+
+
+Cryptor에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_cryptor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cryptor_a85f7a641e179ac55a461dd5cbba855cb}{Cryptor} ()
+\item 
+virtual \hyperlink{class_cryptor_af7753ec797d11b5ef418225cca325f4b}{$\sim$\+Cryptor} ()
+\item 
+void \hyperlink{class_cryptor_adfd6b30e2859df0dc7136ae3d90ddb31}{Encrypt} (const String \&file\+Path)
+\item 
+void \hyperlink{class_cryptor_a82e76152a3351f63ae517664187d5498}{Decrypt} (const String \&encrypted\+File\+Path, bool is\+Temp=false)
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_cryptor_ab3a8f4be601c346d5c2fb4c85aebe43d}{Init\+Database} ()
+\item 
+void \hyperlink{class_cryptor_ad99a9eff2c639cfbbf40fc49817f2ba4}{Get\+Src\+Path} (const String \&encrypted\+Path, String \&out)
+\item 
+void \hyperlink{class_cryptor_a96e75f3328715ed0b303887db77c3e0a}{Get\+Src\+Size} (const String \&encrypted\+Path, long long int \&out)
+\item 
+bool \hyperlink{class_cryptor_a6337e5d4b8034fbe75079e51cf47b0c6}{Add\+Row} (const String \&src, const String \&dest)
+\item 
+bool \hyperlink{class_cryptor_ae50f83111c55db7ea7b2052854bb6bb5}{Remove\+Row} (const String \&src)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+const String \hyperlink{class_cryptor_a631efae25eefeee21503de08c1a05f31}{db\+Name}
+\item 
+Database $\ast$ \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{p\+Database}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+Encryption와 Decryption을 해주는 Class. 
+
+\begin{DoxyDate}{날짜}
+2014-\/12-\/13 
+\end{DoxyDate}
+\begin{DoxyVersion}{버전}
+0.\+0.\+1 
+\end{DoxyVersion}
+
+
+Cryptor.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_cryptor_a85f7a641e179ac55a461dd5cbba855cb}{\index{Cryptor@{Cryptor}!Cryptor@{Cryptor}}
+\index{Cryptor@{Cryptor}!Cryptor@{Cryptor}}
+\subsubsection[{Cryptor}]{\setlength{\rightskip}{0pt plus 5cm}Cryptor\+::\+Cryptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cryptor_a85f7a641e179ac55a461dd5cbba855cb}
+
+
+Cryptor.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+12     : \hyperlink{class_cryptor_a631efae25eefeee21503de08c1a05f31}{dbName}( Tizen::App::App::GetInstance()->GetAppDataPath() + L\textcolor{stringliteral}{"HideIt.db"})\{
+13     \hyperlink{class_cryptor_ab3a8f4be601c346d5c2fb4c85aebe43d}{InitDatabase}();
+14 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_cryptor_a85f7a641e179ac55a461dd5cbba855cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_af7753ec797d11b5ef418225cca325f4b}{\index{Cryptor@{Cryptor}!````~Cryptor@{$\sim$\+Cryptor}}
+\index{````~Cryptor@{$\sim$\+Cryptor}!Cryptor@{Cryptor}}
+\subsubsection[{$\sim$\+Cryptor}]{\setlength{\rightskip}{0pt plus 5cm}Cryptor\+::$\sim$\+Cryptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_cryptor_af7753ec797d11b5ef418225cca325f4b}
+
+
+Cryptor.\+cpp 파일의 16 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+16                   \{
+17     \textcolor{keyword}{delete} \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase};
+18     \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase} = null;
+19 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_cryptor_a6337e5d4b8034fbe75079e51cf47b0c6}{\index{Cryptor@{Cryptor}!Add\+Row@{Add\+Row}}
+\index{Add\+Row@{Add\+Row}!Cryptor@{Cryptor}}
+\subsubsection[{Add\+Row}]{\setlength{\rightskip}{0pt plus 5cm}bool Cryptor\+::\+Add\+Row (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{src, }
+\item[{const String \&}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_a6337e5d4b8034fbe75079e51cf47b0c6}
+
+
+Cryptor.\+cpp 파일의 107 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+108 \{
+109     \hyperlink{class_cryptor_ae50f83111c55db7ea7b2052854bb6bb5}{RemoveRow}(dest);
+110 
+111     AppLog(\textcolor{stringliteral}{"Insert rows:"});
+112     \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->BeginTransaction();
+113 
+114     FileAttributes attr;
+115     File::GetAttributes(src, attr);
+116 
+117     String sql;
+118     sql.Append(L\textcolor{stringliteral}{"INSERT INTO HideIt (src, encrypted, size) VALUES ('"});
+119     sql.Append(src);
+120     sql.Append(\textcolor{stringliteral}{"', '"});
+121     sql.Append(dest);
+122     sql.Append(\textcolor{stringliteral}{"', "});
+123     sql.Append(attr.GetFileSize());
+124     sql.Append(\textcolor{stringliteral}{");"});
+125 
+126     result r = \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->ExecuteSql(sql, \textcolor{keyword}{true});
+127 
+128     \textcolor{keywordflow}{if} (r != E\_SUCCESS)
+129     \{
+130         \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->RollbackTransaction();
+131         \textcolor{keywordflow}{switch}( r )
+132         \{
+133         \textcolor{keywordflow}{case} E\_SUCCESS:
+134         \textcolor{keywordflow}{break};
+135         \textcolor{keywordflow}{case} E\_INVALID\_ARG:
+136         \textcolor{keywordflow}{break};
+137         \textcolor{keywordflow}{case} E\_INVALID\_OPERATION:
+138         \textcolor{keywordflow}{break};
+139         \textcolor{keywordflow}{case} E\_OBJECT\_LOCKED:
+140         \textcolor{keywordflow}{break};
+141         \textcolor{keywordflow}{case} E\_INVALID\_FORMAT:
+142         \textcolor{keywordflow}{break};
+143         \textcolor{keywordflow}{case} E\_STORAGE\_FULL:
+144         \textcolor{keywordflow}{break};
+145         \textcolor{keywordflow}{case} E\_IO:
+146         \textcolor{keywordflow}{break};
+147         \textcolor{keywordflow}{case} E\_SYSTEM:
+148         \textcolor{keywordflow}{break};
+149         \}
+150         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+151     \}
+152 
+153     \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->CommitTransaction();
+154 
+155     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+156 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_cryptor_a6337e5d4b8034fbe75079e51cf47b0c6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cryptor_a6337e5d4b8034fbe75079e51cf47b0c6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_a82e76152a3351f63ae517664187d5498}{\index{Cryptor@{Cryptor}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!Cryptor@{Cryptor}}
+\subsubsection[{Decrypt}]{\setlength{\rightskip}{0pt plus 5cm}void Cryptor\+::\+Decrypt (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{encrypted\+File\+Path, }
+\item[{bool}]{is\+Temp = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_cryptor_a82e76152a3351f63ae517664187d5498}
+
+
+Cryptor.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+38 \{
+39     ByteBuffer keyBytes;
+40     keyBytes.Construct(\hyperlink{_cryptor_8h_a830f141f456d8e1938b97999d31f567c}{secretKeyLen});
+41     keyBytes.SetArray(\hyperlink{_cryptor_8h_ae7bd5081d00f228f6cdb6eccc9384839}{secretKey}, 0, \hyperlink{_cryptor_8h_a830f141f456d8e1938b97999d31f567c}{secretKeyLen});
+42     keyBytes.Flip();
+43 
+44     String decryptedFilePath;
+45     \textcolor{keywordflow}{if} ( isTemp )
+46     \{
+47         String dest;
+48         \hyperlink{class_cryptor_ad99a9eff2c639cfbbf40fc49817f2ba4}{GetSrcPath}(encryptedFilePath, dest);
+49         String ext = File::GetFileExtension(dest);
+50 
+51         decryptedFilePath.Append(\hyperlink{_folder_browser_8h_a536f167c46920a02a921ed149b74ddfc}{TEMPPATH});
+52         decryptedFilePath.Append(File::GetFileExtension(encryptedFilePath));
+53     \}
+54     \textcolor{keywordflow}{else}
+55     \{
+56         String dest;
+57         \hyperlink{class_cryptor_ad99a9eff2c639cfbbf40fc49817f2ba4}{GetSrcPath}(encryptedFilePath, dest);
+58         decryptedFilePath.Append(dest);
+59     \}
+60 
+61     File encrypted;
+62     encrypted.Construct(encryptedFilePath,\textcolor{stringliteral}{"r"},keyBytes);
+63 
+64     File output;
+65     output.Construct(decryptedFilePath, \textcolor{stringliteral}{"w"});
+66 
+67     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} size;
+68     \hyperlink{class_cryptor_a96e75f3328715ed0b303887db77c3e0a}{GetSrcSize}(encryptedFilePath, size);
+69 
+70     ByteBuffer buffer;
+71     buffer.Construct((\textcolor{keywordtype}{int})size);
+72     result r = E\_SUCCESS;
+73 
+74     buffer.Clear();
+75     r = encrypted.Read(buffer);
+76     output.Write(buffer);
+77 
+78     \textcolor{keywordflow}{if} ( !isTemp )
+79         \hyperlink{class_cryptor_ae50f83111c55db7ea7b2052854bb6bb5}{RemoveRow}(encryptedFilePath);
+80 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_cryptor_a82e76152a3351f63ae517664187d5498_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_cryptor_a82e76152a3351f63ae517664187d5498_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_adfd6b30e2859df0dc7136ae3d90ddb31}{\index{Cryptor@{Cryptor}!Encrypt@{Encrypt}}
+\index{Encrypt@{Encrypt}!Cryptor@{Cryptor}}
+\subsubsection[{Encrypt}]{\setlength{\rightskip}{0pt plus 5cm}void Cryptor\+::\+Encrypt (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{file\+Path}
+\end{DoxyParamCaption}
+)}}\label{class_cryptor_adfd6b30e2859df0dc7136ae3d90ddb31}
+
+
+Cryptor.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+22 \{
+23    ByteBuffer keyBytes;
+24    keyBytes.Construct(\hyperlink{_cryptor_8h_a830f141f456d8e1938b97999d31f567c}{secretKeyLen});
+25    keyBytes.SetArray(\hyperlink{_cryptor_8h_ae7bd5081d00f228f6cdb6eccc9384839}{secretKey}, 0, \hyperlink{_cryptor_8h_a830f141f456d8e1938b97999d31f567c}{secretKeyLen});
+26    keyBytes.Flip();
+27 
+28    String encryptedFilePath(\hyperlink{_folder_browser_8h_a310e56072401d167ec479a192944cc5c}{HIDEITPATH});
+29    encryptedFilePath.Append(File::GetFileName(filePath));
+30 
+31    \hyperlink{class_cryptor_a6337e5d4b8034fbe75079e51cf47b0c6}{AddRow}(filePath, encryptedFilePath);
+32 
+33    File::ConvertToSecureFile(filePath,encryptedFilePath, keyBytes);
+34 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cryptor_adfd6b30e2859df0dc7136ae3d90ddb31_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_cryptor_adfd6b30e2859df0dc7136ae3d90ddb31_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_ad99a9eff2c639cfbbf40fc49817f2ba4}{\index{Cryptor@{Cryptor}!Get\+Src\+Path@{Get\+Src\+Path}}
+\index{Get\+Src\+Path@{Get\+Src\+Path}!Cryptor@{Cryptor}}
+\subsubsection[{Get\+Src\+Path}]{\setlength{\rightskip}{0pt plus 5cm}void Cryptor\+::\+Get\+Src\+Path (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{encrypted\+Path, }
+\item[{String \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_ad99a9eff2c639cfbbf40fc49817f2ba4}
+
+
+Cryptor.\+cpp 파일의 158 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+159 \{
+160     String sql = L\textcolor{stringliteral}{"SELECT src FROM HideIt WHERE encrypted = '"};
+161     sql.Append(encryptedPath);
+162     sql.Append(\textcolor{stringliteral}{"';"});
+163 
+164     DbEnumerator* pEnum = \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->QueryN(sql);
+165     \textcolor{keywordflow}{if} ( pEnum )
+166     \{
+167         String strVal;
+168         \textcolor{keywordflow}{while} (pEnum->MoveNext() == E\_SUCCESS)
+169         \{
+170             pEnum->GetStringAt(0, out);
+171         \}
+172     \}
+173 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cryptor_ad99a9eff2c639cfbbf40fc49817f2ba4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_a96e75f3328715ed0b303887db77c3e0a}{\index{Cryptor@{Cryptor}!Get\+Src\+Size@{Get\+Src\+Size}}
+\index{Get\+Src\+Size@{Get\+Src\+Size}!Cryptor@{Cryptor}}
+\subsubsection[{Get\+Src\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Cryptor\+::\+Get\+Src\+Size (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{encrypted\+Path, }
+\item[{long long int \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_a96e75f3328715ed0b303887db77c3e0a}
+
+
+Cryptor.\+cpp 파일의 175 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+176 \{
+177     String sql = L\textcolor{stringliteral}{"SELECT size FROM HideIt WHERE encrypted = '"};
+178     sql.Append(encryptedPath);
+179     sql.Append(\textcolor{stringliteral}{"';"});
+180 
+181     DbEnumerator* pEnum = \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->QueryN(sql);
+182     \textcolor{keywordflow}{if} ( pEnum )
+183     \{
+184         String strVal;
+185         \textcolor{keywordflow}{while} (pEnum->MoveNext() == E\_SUCCESS)
+186         \{
+187             pEnum->GetInt64At(0, out);
+188         \}
+189     \}
+190 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cryptor_a96e75f3328715ed0b303887db77c3e0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_ab3a8f4be601c346d5c2fb4c85aebe43d}{\index{Cryptor@{Cryptor}!Init\+Database@{Init\+Database}}
+\index{Init\+Database@{Init\+Database}!Cryptor@{Cryptor}}
+\subsubsection[{Init\+Database}]{\setlength{\rightskip}{0pt plus 5cm}bool Cryptor\+::\+Init\+Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_ab3a8f4be601c346d5c2fb4c85aebe43d}
+
+
+Cryptor.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+83 \{
+84     \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase} = \textcolor{keyword}{new} Database();
+85     \textcolor{keywordflow}{if} (!\hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase})
+86     \{
+87         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+88     \}
+89 
+90     result r = \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->Construct(\hyperlink{class_cryptor_a631efae25eefeee21503de08c1a05f31}{dbName}, \textcolor{stringliteral}{"a+"});
+91     \textcolor{keywordflow}{if} (IsFailed(r))
+92     \{
+93         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+94     \}
+95 
+96     String sql;
+97     sql.Append(L\textcolor{stringliteral}{"CREATE TABLE IF NOT EXISTS HideIt ( src TEXT, encrypted TEXT, size INT64)"});
+98     r = \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->ExecuteSql(sql, \textcolor{keyword}{true});
+99     \textcolor{keywordflow}{if} (IsFailed(r))
+100     \{
+101         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+102     \}
+103 
+104     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+105 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_cryptor_ab3a8f4be601c346d5c2fb4c85aebe43d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cryptor_ae50f83111c55db7ea7b2052854bb6bb5}{\index{Cryptor@{Cryptor}!Remove\+Row@{Remove\+Row}}
+\index{Remove\+Row@{Remove\+Row}!Cryptor@{Cryptor}}
+\subsubsection[{Remove\+Row}]{\setlength{\rightskip}{0pt plus 5cm}bool Cryptor\+::\+Remove\+Row (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_ae50f83111c55db7ea7b2052854bb6bb5}
+
+
+Cryptor.\+cpp 파일의 192 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+193 \{
+194     AppLog(\textcolor{stringliteral}{"Delete rows:"});
+195     \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->BeginTransaction();
+196 
+197     String sql;
+198     sql.Append(L\textcolor{stringliteral}{"DELETE FROM HideIt WHERE encrypted = '"});
+199     sql.Append(src);
+200     sql.Append(\textcolor{stringliteral}{"';"});
+201 
+202     result r = \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->ExecuteSql(sql, \textcolor{keyword}{true});
+203 
+204     \textcolor{keywordflow}{if} (r != E\_SUCCESS)
+205     \{
+206         \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->RollbackTransaction();
+207         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+208     \}
+209 
+210     \hyperlink{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{pDatabase}->CommitTransaction();
+211 
+212     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+213 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cryptor_ae50f83111c55db7ea7b2052854bb6bb5_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_cryptor_a631efae25eefeee21503de08c1a05f31}{\index{Cryptor@{Cryptor}!db\+Name@{db\+Name}}
+\index{db\+Name@{db\+Name}!Cryptor@{Cryptor}}
+\subsubsection[{db\+Name}]{\setlength{\rightskip}{0pt plus 5cm}const String Cryptor\+::db\+Name\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_a631efae25eefeee21503de08c1a05f31}
+
+
+Cryptor.\+h 파일의 49 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}{\index{Cryptor@{Cryptor}!p\+Database@{p\+Database}}
+\index{p\+Database@{p\+Database}!Cryptor@{Cryptor}}
+\subsubsection[{p\+Database}]{\setlength{\rightskip}{0pt plus 5cm}Database$\ast$ Cryptor\+::p\+Database\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cryptor_af995ba24eee0b7d4b12dbc1eaae049fd}
+
+
+Cryptor.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_cryptor_8h}{Cryptor.\+h}\item 
+src/\+File\+Browser/\hyperlink{_cryptor_8cpp}{Cryptor.\+cpp}\end{DoxyCompactItemize}

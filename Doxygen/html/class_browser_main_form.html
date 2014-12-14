@@ -1,0 +1,734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>HideIt: BrowserMainForm 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">HideIt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li class="current"><a href="annotated.html"><span>클래스</span></a></li>
+      <li><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>클래스&#160;목록</span></a></li>
+      <li><a href="classes.html"><span>클래스&#160;색인</span></a></li>
+      <li><a href="inherits.html"><span>클래스&#160;계통도</span></a></li>
+      <li><a href="functions.html"><span>클래스&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_browser_main_form.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
+<a href="#pro-static-attribs">정적 Protected 속성</a> &#124;
+<a href="#pri-methods">Private 멤버 함수</a> &#124;
+<a href="class_browser_main_form-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">BrowserMainForm 클래스 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>File Browser Form을 구성해주는 Class.  
+ <a href="class_browser_main_form.html#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a>&gt;</code></p>
+<div class="dynheader">
+BrowserMainForm에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+<div class="center"><img src="class_browser_main_form__inherit__graph.png" border="0" usemap="#_browser_main_form_inherit__map" alt="Inheritance graph"/></div>
+<map name="_browser_main_form_inherit__map" id="_browser_main_form_inherit__map">
+</map>
+</div>
+<div class="dynheader">
+BrowserMainForm에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_browser_main_form__coll__graph.png" border="0" usemap="#_browser_main_form_coll__map" alt="Collaboration graph"/></div>
+<map name="_browser_main_form_coll__map" id="_browser_main_form_coll__map">
+<area shape="rect" id="node7" href="class_show_terminate_popup.html" title="{ShowTerminatePopup\n|&#45; __pPopup_Terminate\l&#45; ID_BUTTON_TERMINATE\l&#45; ID_BUTTON_CANCEL\l|+ ShowTerminatePopup()\l+ ~ShowTerminatePopup()\l+ ShowPopup()\l+ HidePopup()\l+ OnActionPerformed()\l}" alt="" coords="133,331,313,496"/><area shape="rect" id="node8" href="class_popup_event_listener_terminate.html" title="File Browser에서 Back Button을 누르면 호출 되는 Class. " alt="" coords="190,132,385,268"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a8d1371e75706b74696b98fd7844fa944"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a8d1371e75706b74696b98fd7844fa944">BrowserMainForm</a> (void)</td></tr>
+<tr class="separator:a8d1371e75706b74696b98fd7844fa944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2bbb6ac4772c7ae7d15b46328afeb6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a5b2bbb6ac4772c7ae7d15b46328afeb6">~BrowserMainForm</a> (void)</td></tr>
+<tr class="separator:a5b2bbb6ac4772c7ae7d15b46328afeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738a1181319a716227fd2ae0feb26c98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a738a1181319a716227fd2ae0feb26c98">Initialize</a> (void)</td></tr>
+<tr class="separator:a738a1181319a716227fd2ae0feb26c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:a6767421f0f61a506e9b187449676fda2"><td class="memItemLeft" align="right" valign="top">Tizen::Ui::Controls::OptionMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a></td></tr>
+<tr class="separator:a6767421f0f61a506e9b187449676fda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebb215a8612469b49cd95dee767e9cc"><td class="memItemLeft" align="right" valign="top">Tizen::Graphics::Bitmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a9ebb215a8612469b49cd95dee767e9cc">__pTizenBitmap</a></td></tr>
+<tr class="separator:a9ebb215a8612469b49cd95dee767e9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80aa3a53602f568da86d0f3931b5a06d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_show_terminate_popup.html">ShowTerminatePopup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a80aa3a53602f568da86d0f3931b5a06d">terimPopup</a></td></tr>
+<tr class="separator:a80aa3a53602f568da86d0f3931b5a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+정적 Protected 속성</h2></td></tr>
+<tr class="memitem:a0a7d8a0178a9034082799ab0aeeb28f0"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a0a7d8a0178a9034082799ab0aeeb28f0">IDA_CONTEXT_ITEM</a> = 103</td></tr>
+<tr class="separator:a0a7d8a0178a9034082799ab0aeeb28f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53791859561cacbbdb6f3089f64fb9fc"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a53791859561cacbbdb6f3089f64fb9fc">ID_HEADER_ITEM1</a> = 101</td></tr>
+<tr class="separator:a53791859561cacbbdb6f3089f64fb9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a39b9df377880f65a4753679f43864"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#ab0a39b9df377880f65a4753679f43864">ID_HEADER_ITEM2</a> = 102</td></tr>
+<tr class="separator:ab0a39b9df377880f65a4753679f43864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 멤버 함수</h2></td></tr>
+<tr class="memitem:ae255219c114d47061ee45bd3f46764fd"><td class="memItemLeft" align="right" valign="top">virtual result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#ae255219c114d47061ee45bd3f46764fd">OnInitializing</a> (void)</td></tr>
+<tr class="separator:ae255219c114d47061ee45bd3f46764fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d722d1c1ba5fd373bf687ef64eaec2"><td class="memItemLeft" align="right" valign="top">virtual result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a02d722d1c1ba5fd373bf687ef64eaec2">OnTerminating</a> (void)</td></tr>
+<tr class="separator:a02d722d1c1ba5fd373bf687ef64eaec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ee65c2094bf2fba5b05d7bc3d79c75"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a63ee65c2094bf2fba5b05d7bc3d79c75">OnFormBackRequested</a> (Tizen::Ui::Controls::Form &amp;source)</td></tr>
+<tr class="separator:a63ee65c2094bf2fba5b05d7bc3d79c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdcd8ad801f22d26e080329c802e8c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a6bdcd8ad801f22d26e080329c802e8c5">OnActionPerformed</a> (const Tizen::Ui::Control &amp;source, int actionId)</td></tr>
+<tr class="separator:a6bdcd8ad801f22d26e080329c802e8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5617fd83776b9a4023f7393471d1b29f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#a5617fd83776b9a4023f7393471d1b29f">OnFormMenuRequested</a> (Tizen::Ui::Controls::Form &amp;source)</td></tr>
+<tr class="separator:a5617fd83776b9a4023f7393471d1b29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dda0a9d8e78bc5cfd18c55514836a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#ab4dda0a9d8e78bc5cfd18c55514836a1">OnSceneActivatedN</a> (const Tizen::Ui::Scenes::SceneId &amp;previousSceneId, const Tizen::Ui::Scenes::SceneId &amp;currentSceneId, Tizen::Base::Collection::IList *pArgs)</td></tr>
+<tr class="separator:ab4dda0a9d8e78bc5cfd18c55514836a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae128a257f33eead52e36476659e0e798"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_browser_main_form.html#ae128a257f33eead52e36476659e0e798">OnSceneDeactivated</a> (const Tizen::Ui::Scenes::SceneId &amp;currentSceneId, const Tizen::Ui::Scenes::SceneId &amp;nextSceneId)</td></tr>
+<tr class="separator:ae128a257f33eead52e36476659e0e798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>File Browser Form을 구성해주는 Class. </p>
+<p>Password를 변경할 수 있는 Option Menu와 File Browser Form의 Header를 정의해 주는 Class </p><dl class="section date"><dt>날짜</dt><dd>2014-12-13 </dd></dl>
+<dl class="section version"><dt>버전</dt><dd>0.0.1 </dd></dl>
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a class="anchor" id="a8d1371e75706b74696b98fd7844fa944"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BrowserMainForm::BrowserMainForm </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                     {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5b2bbb6ac4772c7ae7d15b46328afeb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BrowserMainForm::~BrowserMainForm </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                      {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a class="anchor" id="a738a1181319a716227fd2ae0feb26c98"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BrowserMainForm::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                     {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    result r = Construct(<a class="code" href="_app_resource_id_8h.html#a6fd4bc3c3d1627e5616fad131142de9c">IDF_FILE_BROWSER_FORM</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    TryReturn(r == E_SUCCESS, <span class="keyword">false</span>, <span class="stringliteral">&quot;Failed to construct form&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="_app_resource_id_8h_html_a6fd4bc3c3d1627e5616fad131142de9c"><div class="ttname"><a href="_app_resource_id_8h.html#a6fd4bc3c3d1627e5616fad131142de9c">IDF_FILE_BROWSER_FORM</a></div><div class="ttdeci">const wchar_t * IDF_FILE_BROWSER_FORM</div><div class="ttdef"><b>Definition:</b> <a href="_app_resource_id_8cpp_source.html#l00084">AppResourceId.cpp:84</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_browser_main_form_a738a1181319a716227fd2ae0feb26c98_icgraph.png" border="0" usemap="#class_browser_main_form_a738a1181319a716227fd2ae0feb26c98_icgraph" alt=""/></div>
+<map name="class_browser_main_form_a738a1181319a716227fd2ae0feb26c98_icgraph" id="class_browser_main_form_a738a1181319a716227fd2ae0feb26c98_icgraph">
+<area shape="rect" id="node2" href="class_hide_it_form_factory.html#a6add8bfadf5e59c6d4221f85161640fb" title="HideItFormFactory::\lCreateFormN" alt="" coords="236,5,373,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bdcd8ad801f22d26e080329c802e8c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BrowserMainForm::OnActionPerformed </td>
+          <td>(</td>
+          <td class="paramtype">const Tizen::Ui::Control &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>actionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00078">78</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                      {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    SceneManager* pSceneManager = SceneManager::GetInstance();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    AppAssert(pSceneManager);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">switch</span> (actionId) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_browser_main_form.html#a53791859561cacbbdb6f3089f64fb9fc">ID_HEADER_ITEM1</a>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        AppLog(<span class="stringliteral">&quot;ITME1&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        pSceneManager-&gt;GoForward(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                ForwardSceneTransition(<a class="code" href="_scene_register_8h.html#ad2cc89ed96c8bd4c94f954f01ef0f56e">SCENE_FILEBROWSER_MANAGEMENT</a>));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_browser_main_form.html#ab0a39b9df377880f65a4753679f43864">ID_HEADER_ITEM2</a>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        AppLog(<span class="stringliteral">&quot;ITME2&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        pSceneManager-&gt;GoForward(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                ForwardSceneTransition(<a class="code" href="_scene_register_8h.html#a941a02ceb430e35a99e905974dd4faf3">SCENE_FILEBROWSER_HIDDEN</a>));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_browser_main_form.html#a0a7d8a0178a9034082799ab0aeeb28f0">IDA_CONTEXT_ITEM</a>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        pSceneManager-&gt;GoForward(</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                ForwardSceneTransition(<a class="code" href="_scene_register_8h.html#ae2da98cb726565d357021f7d4e0b914e">SCENE_SETTING</a>,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        SCENE_TRANSITION_ANIMATION_TYPE_FADE_IN_OUT,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        SCENE_HISTORY_OPTION_NO_HISTORY,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        SCENE_DESTROY_OPTION_KEEP));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="ttc" id="class_browser_main_form_html_ab0a39b9df377880f65a4753679f43864"><div class="ttname"><a href="class_browser_main_form.html#ab0a39b9df377880f65a4753679f43864">BrowserMainForm::ID_HEADER_ITEM2</a></div><div class="ttdeci">static const int ID_HEADER_ITEM2</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00047">BrowserMainForm.h:47</a></div></div>
+<div class="ttc" id="class_browser_main_form_html_a53791859561cacbbdb6f3089f64fb9fc"><div class="ttname"><a href="class_browser_main_form.html#a53791859561cacbbdb6f3089f64fb9fc">BrowserMainForm::ID_HEADER_ITEM1</a></div><div class="ttdeci">static const int ID_HEADER_ITEM1</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00046">BrowserMainForm.h:46</a></div></div>
+<div class="ttc" id="_scene_register_8h_html_a941a02ceb430e35a99e905974dd4faf3"><div class="ttname"><a href="_scene_register_8h.html#a941a02ceb430e35a99e905974dd4faf3">SCENE_FILEBROWSER_HIDDEN</a></div><div class="ttdeci">const wchar_t * SCENE_FILEBROWSER_HIDDEN</div><div class="ttdef"><b>Definition:</b> <a href="_scene_register_8cpp_source.html#l00028">SceneRegister.cpp:28</a></div></div>
+<div class="ttc" id="_scene_register_8h_html_ae2da98cb726565d357021f7d4e0b914e"><div class="ttname"><a href="_scene_register_8h.html#ae2da98cb726565d357021f7d4e0b914e">SCENE_SETTING</a></div><div class="ttdeci">const wchar_t * SCENE_SETTING</div><div class="ttdef"><b>Definition:</b> <a href="_scene_register_8cpp_source.html#l00025">SceneRegister.cpp:25</a></div></div>
+<div class="ttc" id="class_browser_main_form_html_a0a7d8a0178a9034082799ab0aeeb28f0"><div class="ttname"><a href="class_browser_main_form.html#a0a7d8a0178a9034082799ab0aeeb28f0">BrowserMainForm::IDA_CONTEXT_ITEM</a></div><div class="ttdeci">static const int IDA_CONTEXT_ITEM</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00045">BrowserMainForm.h:45</a></div></div>
+<div class="ttc" id="_scene_register_8h_html_ad2cc89ed96c8bd4c94f954f01ef0f56e"><div class="ttname"><a href="_scene_register_8h.html#ad2cc89ed96c8bd4c94f954f01ef0f56e">SCENE_FILEBROWSER_MANAGEMENT</a></div><div class="ttdeci">const wchar_t * SCENE_FILEBROWSER_MANAGEMENT</div><div class="ttdef"><b>Definition:</b> <a href="_scene_register_8cpp_source.html#l00027">SceneRegister.cpp:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a63ee65c2094bf2fba5b05d7bc3d79c75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BrowserMainForm::OnFormBackRequested </td>
+          <td>(</td>
+          <td class="paramtype">Tizen::Ui::Controls::Form &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00106">106</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    AppLog(<span class="stringliteral">&quot;BackBack Form&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">//  UiApp* pApp = UiApp::GetInstance();</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//  AppAssert(pApp);</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//  pApp-&gt;Terminate();</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="class_browser_main_form.html#a80aa3a53602f568da86d0f3931b5a06d">terimPopup</a>.<a class="code" href="class_show_terminate_popup.html#aa3424f6b23949489b0e3f674ec9c7c1c">ShowPopup</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="ttc" id="class_browser_main_form_html_a80aa3a53602f568da86d0f3931b5a06d"><div class="ttname"><a href="class_browser_main_form.html#a80aa3a53602f568da86d0f3931b5a06d">BrowserMainForm::terimPopup</a></div><div class="ttdeci">ShowTerminatePopup terimPopup</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00049">BrowserMainForm.h:49</a></div></div>
+<div class="ttc" id="class_show_terminate_popup_html_aa3424f6b23949489b0e3f674ec9c7c1c"><div class="ttname"><a href="class_show_terminate_popup.html#aa3424f6b23949489b0e3f674ec9c7c1c">ShowTerminatePopup::ShowPopup</a></div><div class="ttdeci">void ShowPopup(void)</div><div class="ttdef"><b>Definition:</b> <a href="_show_terminate_popup_8cpp_source.html#l00076">ShowTerminatePopup.cpp:76</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5617fd83776b9a4023f7393471d1b29f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BrowserMainForm::OnFormMenuRequested </td>
+          <td>(</td>
+          <td class="paramtype">Tizen::Ui::Controls::Form &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00114">114</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a>-&gt;SetShowState(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a>-&gt;Show();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="ttc" id="class_browser_main_form_html_a6767421f0f61a506e9b187449676fda2"><div class="ttname"><a href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">BrowserMainForm::__pOption</a></div><div class="ttdeci">Tizen::Ui::Controls::OptionMenu * __pOption</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00044">BrowserMainForm.h:44</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae255219c114d47061ee45bd3f46764fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">result BrowserMainForm::OnInitializing </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                           {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    result r = E_SUCCESS;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// TODO: Add your initialization code here</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Header* pHeader = GetHeader();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (pHeader) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        pHeader-&gt;AddActionEventListener(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Setup back event listener</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//SetFormBackEventListener(reinterpret_cast&lt;BrowserTab1*&gt;(GetControl(IDL_MANAGEMENT_PANEL)));</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//SetFormBackEventListener(reinterpret_cast&lt;BrowserTab2*&gt;(GetControl(IDL_HIDDEN_FILES_PANEL)));</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    SetFormBackEventListener(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Image pimage;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    r = pimage.Construct();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    String filepath = App::GetInstance()-&gt;GetAppDataPath();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_browser_main_form.html#a9ebb215a8612469b49cd95dee767e9cc">__pTizenBitmap</a> = pimage.DecodeN(filepath + L<span class="stringliteral">&quot;icon_filebrowser.png&quot;</span>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            BITMAP_PIXEL_FORMAT_ARGB8888);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Set-up header</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    AppAssert(pHeader);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    pHeader-&gt;SetTitleIcon(<a class="code" href="class_browser_main_form.html#a9ebb215a8612469b49cd95dee767e9cc">__pTizenBitmap</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//Menu part</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    SetFormMenuEventListener(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a> = <span class="keyword">new</span> (std::nothrow) OptionMenu();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a>-&gt;Construct();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a>-&gt;AddItem(L<span class="stringliteral">&quot;Set Key Expresstion&quot;</span>, <a class="code" href="class_browser_main_form.html#a0a7d8a0178a9034082799ab0aeeb28f0">IDA_CONTEXT_ITEM</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a>-&gt;AddActionEventListener(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">__pOption</a>-&gt;SetShowState(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//*/</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="class_browser_main_form_html_a6767421f0f61a506e9b187449676fda2"><div class="ttname"><a href="class_browser_main_form.html#a6767421f0f61a506e9b187449676fda2">BrowserMainForm::__pOption</a></div><div class="ttdeci">Tizen::Ui::Controls::OptionMenu * __pOption</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00044">BrowserMainForm.h:44</a></div></div>
+<div class="ttc" id="class_browser_main_form_html_a9ebb215a8612469b49cd95dee767e9cc"><div class="ttname"><a href="class_browser_main_form.html#a9ebb215a8612469b49cd95dee767e9cc">BrowserMainForm::__pTizenBitmap</a></div><div class="ttdeci">Tizen::Graphics::Bitmap * __pTizenBitmap</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00048">BrowserMainForm.h:48</a></div></div>
+<div class="ttc" id="class_browser_main_form_html_a0a7d8a0178a9034082799ab0aeeb28f0"><div class="ttname"><a href="class_browser_main_form.html#a0a7d8a0178a9034082799ab0aeeb28f0">BrowserMainForm::IDA_CONTEXT_ITEM</a></div><div class="ttdeci">static const int IDA_CONTEXT_ITEM</div><div class="ttdef"><b>Definition:</b> <a href="_browser_main_form_8h_source.html#l00045">BrowserMainForm.h:45</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab4dda0a9d8e78bc5cfd18c55514836a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BrowserMainForm::OnSceneActivatedN </td>
+          <td>(</td>
+          <td class="paramtype">const Tizen::Ui::Scenes::SceneId &amp;&#160;</td>
+          <td class="paramname"><em>previousSceneId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Tizen::Ui::Scenes::SceneId &amp;&#160;</td>
+          <td class="paramname"><em>currentSceneId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tizen::Base::Collection::IList *&#160;</td>
+          <td class="paramname"><em>pArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00119">119</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                         {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae128a257f33eead52e36476659e0e798"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BrowserMainForm::OnSceneDeactivated </td>
+          <td>(</td>
+          <td class="paramtype">const Tizen::Ui::Scenes::SceneId &amp;&#160;</td>
+          <td class="paramname"><em>currentSceneId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Tizen::Ui::Scenes::SceneId &amp;&#160;</td>
+          <td class="paramname"><em>nextSceneId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00126">126</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                                 {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a02d722d1c1ba5fd373bf687ef64eaec2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">result BrowserMainForm::OnTerminating </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a> 파일의 <a class="el" href="_browser_main_form_8cpp_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                          {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    result r = E_SUCCESS;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// TODO: Add your termination code here</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이타 문서화</h2>
+<a class="anchor" id="a6767421f0f61a506e9b187449676fda2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tizen::Ui::Controls::OptionMenu* BrowserMainForm::__pOption</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00044">44</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ebb215a8612469b49cd95dee767e9cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tizen::Graphics::Bitmap* BrowserMainForm::__pTizenBitmap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53791859561cacbbdb6f3089f64fb9fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BrowserMainForm::ID_HEADER_ITEM1 = 101</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0a39b9df377880f65a4753679f43864"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BrowserMainForm::ID_HEADER_ITEM2 = 102</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a7d8a0178a9034082799ab0aeeb28f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BrowserMainForm::IDA_CONTEXT_ITEM = 103</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80aa3a53602f568da86d0f3931b5a06d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_show_terminate_popup.html">ShowTerminatePopup</a> BrowserMainForm::terimPopup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a> 파일의 <a class="el" href="_browser_main_form_8h_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>inc/<a class="el" href="_browser_main_form_8h_source.html">BrowserMainForm.h</a></li>
+<li>src/FileBrowser/<a class="el" href="_browser_main_form_8cpp_source.html">BrowserMainForm.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_browser_main_form.html">BrowserMainForm</a></li>
+    <li class="footer">생성시간 : 일 12월 14 2014 18:23:42, 프로젝트명 : HideIt, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

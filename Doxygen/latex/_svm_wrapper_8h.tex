@@ -1,0 +1,160 @@
+\hypertarget{_svm_wrapper_8h}{\section{inc/\+Svm\+Wrapper.h 파일 참조}
+\label{_svm_wrapper_8h}\index{inc/\+Svm\+Wrapper.\+h@{inc/\+Svm\+Wrapper.\+h}}
+}
+{\ttfamily \#include \char`\"{}svm.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Svm\+Wrapper.\+h에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{_svm_wrapper_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_svm_wrapper_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_svm_wrapper}{Svm\+Wrapper}
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{_svm_wrapper_8h_a2af63b8bc735adf0b29b08f5ff28f3c3}{F\+U\+N\+C} )(const char $\ast$,...)
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_svm_wrapper_8h_a3e290f6d7d61b2b843a4b8b1382f3958}{predict\+\_\+entry} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{타입정의 문서화}
+\hypertarget{_svm_wrapper_8h_a2af63b8bc735adf0b29b08f5ff28f3c3}{\index{Svm\+Wrapper.\+h@{Svm\+Wrapper.\+h}!F\+U\+N\+C@{F\+U\+N\+C}}
+\index{F\+U\+N\+C@{F\+U\+N\+C}!Svm\+Wrapper.\+h@{Svm\+Wrapper.\+h}}
+\subsubsection[{F\+U\+N\+C}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ F\+U\+N\+C)(const char $\ast$,...)}}\label{_svm_wrapper_8h_a2af63b8bc735adf0b29b08f5ff28f3c3}
+
+
+Svm\+Wrapper.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\hypertarget{_svm_wrapper_8h_a3e290f6d7d61b2b843a4b8b1382f3958}{\index{Svm\+Wrapper.\+h@{Svm\+Wrapper.\+h}!predict\+\_\+entry@{predict\+\_\+entry}}
+\index{predict\+\_\+entry@{predict\+\_\+entry}!Svm\+Wrapper.\+h@{Svm\+Wrapper.\+h}}
+\subsubsection[{predict\+\_\+entry}]{\setlength{\rightskip}{0pt plus 5cm}int predict\+\_\+entry (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{_svm_wrapper_8h_a3e290f6d7d61b2b843a4b8b1382f3958}
+
+
+svm-\/predict.\+c 파일의 171 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+172 \{
+173     FILE *input, *output;
+174     \textcolor{keywordtype}{int} i;
+175     \textcolor{comment}{// parse options}
+176     \textcolor{keywordflow}{for}(i=1;i<argc;i++)
+177     \{
+178         \textcolor{keywordflow}{if}(argv[i][0] != \textcolor{charliteral}{'-'}) \textcolor{keywordflow}{break};
+179         ++i;
+180         \textcolor{keywordflow}{switch}(argv[i-1][1])
+181         \{
+182             \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:
+183                 \hyperlink{svm-predict_8c_a1501132f5226b295e5300d74da55a2b9}{predict\_probability} = atoi(argv[i]);
+184                 \textcolor{keywordflow}{break};
+185             \textcolor{keywordflow}{case} \textcolor{charliteral}{'q'}:
+186                 \hyperlink{svm-predict_8c_ab42d5f876cd10cdae152b4acbf2e7b8b}{info} = &\hyperlink{svm-predict_8c_afbcd2ef701a510cd6c24fb0463ec6d7c}{print\_null};
+187                 i--;
+188                 \textcolor{keywordflow}{break};
+189             \textcolor{keywordflow}{default}:
+190                 fprintf(stderr,\textcolor{stringliteral}{"Unknown option: -%c\(\backslash\)n"}, argv[i-1][1]);
+191                 \hyperlink{svm-predict_8c_a8bbbfc2cd5ea26b69d3b880c6f509e93}{exit\_with\_help}();
+192                 \textcolor{keywordflow}{break};
+193         \}
+194     \}
+195 
+196     \textcolor{keywordflow}{if}(i>=argc-2)
+197         \hyperlink{svm-predict_8c_a8bbbfc2cd5ea26b69d3b880c6f509e93}{exit\_with\_help}();
+198 
+199     input = fopen(argv[i],\textcolor{stringliteral}{"r"});
+200     \textcolor{keywordflow}{if}(input == NULL)
+201     \{
+202         fprintf(stderr,\textcolor{stringliteral}{"can't open input file %s\(\backslash\)n"},argv[i]);
+203         exit(1);
+204     \}
+205 
+206     output = fopen(argv[i+2],\textcolor{stringliteral}{"w"});
+207     \textcolor{keywordflow}{if}(output == NULL)
+208     \{
+209         fprintf(stderr,\textcolor{stringliteral}{"can't open output file %s\(\backslash\)n"},argv[i+2]);
+210         exit(1);
+211     \}
+212 
+213     \textcolor{keywordflow}{if}((\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model}=\hyperlink{svm_8h_a569bb1a06e5181dfb19d66587463af4b}{svm\_load\_model}(argv[i+1]))==0)
+214     \{
+215         fprintf(stderr,\textcolor{stringliteral}{"can't open model file %s\(\backslash\)n"},argv[i+1]);
+216         exit(1);
+217     \}
+218 
+219     \hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x} = (\textcolor{keyword}{struct }\hyperlink{structsvm__node}{svm\_node} *) malloc(\hyperlink{svm-predict_8c_af95bde9162db2c5dd97e80795b3548ed}{max\_nr\_attr}*\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
+      \hyperlink{structsvm__node}{svm\_node}));
+220     \textcolor{keywordflow}{if}(\hyperlink{svm-predict_8c_a1501132f5226b295e5300d74da55a2b9}{predict\_probability})
+221     \{
+222         \textcolor{keywordflow}{if}(\hyperlink{svm_8h_aeb231380b36264637caeccdae4fbad1a}{svm\_check\_probability\_model}(\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})==0)
+223         \{
+224             fprintf(stderr,\textcolor{stringliteral}{"Model does not support probabiliy estimates\(\backslash\)n"});
+225             exit(1);
+226         \}
+227     \}
+228     \textcolor{keywordflow}{else}
+229     \{
+230         \textcolor{keywordflow}{if}(\hyperlink{svm_8h_aeb231380b36264637caeccdae4fbad1a}{svm\_check\_probability\_model}(\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model})!=0)
+231             \hyperlink{svm-predict_8c_ab42d5f876cd10cdae152b4acbf2e7b8b}{info}(\textcolor{stringliteral}{"Model supports probability estimates, but disabled in prediction.\(\backslash\)n"});
+232     \}
+233 
+234     \hyperlink{svm-predict_8c_af94afc3c606a11afa37cbccd25d09f17}{predict}(input,output);
+235     \hyperlink{svm_8h_afa14733010ded94cc8f2ba177b0b24c8}{svm\_free\_and\_destroy\_model}(&\hyperlink{svm-predict_8c_a50c87b127b14787341e9630f4f5c700a}{model});
+236     free(\hyperlink{svm-predict_8c_a9a5b72a4065074cac5da07efb80a1e79}{x});
+237     free(\hyperlink{svm-predict_8c_a8adb30f4f6669f927fd9232f686c637b}{line});
+238     fclose(input);
+239     fclose(output);
+240     \textcolor{keywordflow}{return} 0;
+241 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_svm_wrapper_8h_a3e290f6d7d61b2b843a4b8b1382f3958_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{_svm_wrapper_8h_a3e290f6d7d61b2b843a4b8b1382f3958_icgraph}
+\end{center}
+\end{figure}
+
+

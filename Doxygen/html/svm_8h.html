@@ -1,0 +1,1063 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>HideIt: inc/svm.h 파일 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">HideIt
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('svm_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">클래스</a> &#124;
+<a href="#define-members">매크로</a> &#124;
+<a href="#enum-members">열거형 타입</a> &#124;
+<a href="#func-members">함수</a> &#124;
+<a href="#var-members">변수</a>  </div>
+  <div class="headertitle">
+<div class="title">svm.h 파일 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h__dep__incl.png" border="0" usemap="#inc_2svm_8hdep" alt=""/></div>
+<map name="inc_2svm_8hdep" id="inc_2svm_8hdep">
+<area shape="rect" id="node2" href="_svm_wrapper_8h.html" title="inc/SvmWrapper.h" alt="" coords="218,87,346,114"/><area shape="rect" id="node6" href="_svm_wrapper_8cpp.html" title="src/Calculator/SvmWrapper.cpp" alt="" coords="281,169,486,196"/><area shape="rect" id="node7" href="svm-predict_8c.html" title="src/Calculator/svm\l&#45;predict.c" alt="" coords="421,80,551,121"/><area shape="rect" id="node8" href="svm_8cpp.html" title="src/Calculator/svm.cpp" alt="" coords="575,87,730,114"/><area shape="rect" id="node3" href="_calculator_form_8h.html" title="inc/CalculatorForm.h" alt="" coords="113,169,256,196"/><area shape="rect" id="node4" href="_calculator_form_8cpp.html" title="src/Calculator/Calculator\lForm.cpp" alt="" coords="5,244,169,285"/><area shape="rect" id="node5" href="_hide_it_form_factory_8cpp.html" title="src/HideItFormFactory.cpp" alt="" coords="194,251,370,278"/></map>
+</div>
+</div>
+<p><a href="svm_8h_source.html">이 파일의 소스 코드 페이지로 가기</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsvm__node.html">svm_node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsvm__problem.html">svm_problem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsvm__parameter.html">svm_parameter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsvm__model.html">svm_model</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+매크로</h2></td></tr>
+<tr class="memitem:ac7f5361b69ddd196a885f142b3c1d261"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#ac7f5361b69ddd196a885f142b3c1d261">LIBSVM_VERSION</a>&#160;&#160;&#160;319</td></tr>
+<tr class="separator:ac7f5361b69ddd196a885f142b3c1d261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+열거형 타입</h2></td></tr>
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8">C_SVC</a>, 
+<a class="el" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc">NU_SVC</a>, 
+<a class="el" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b">ONE_CLASS</a>, 
+<a class="el" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a">EPSILON_SVR</a>, 
+<br />
+&#160;&#160;<a class="el" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309">NU_SVR</a>
+<br />
+ }</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb">LINEAR</a>, 
+<a class="el" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd">POLY</a>, 
+<a class="el" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f">RBF</a>, 
+<a class="el" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883">SIGMOID</a>, 
+<br />
+&#160;&#160;<a class="el" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285">PRECOMPUTED</a>
+<br />
+ }</td></tr>
+<tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:a79ce3e65d01f2be1a4e5288c588c48a8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a79ce3e65d01f2be1a4e5288c588c48a8">svm_train</a> (const struct <a class="el" href="structsvm__problem.html">svm_problem</a> *prob, const struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *param)</td></tr>
+<tr class="separator:a79ce3e65d01f2be1a4e5288c588c48a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe12fd0b263f0b31fdce8d48d9c38a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#abe12fd0b263f0b31fdce8d48d9c38a32">svm_cross_validation</a> (const struct <a class="el" href="structsvm__problem.html">svm_problem</a> *prob, const struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *param, int nr_fold, double *target)</td></tr>
+<tr class="separator:abe12fd0b263f0b31fdce8d48d9c38a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6aefb92d3b0b1a5158bd4b15ca8f8e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#ae6aefb92d3b0b1a5158bd4b15ca8f8e2">svm_save_model</a> (const char *model_file_name, const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>)</td></tr>
+<tr class="separator:ae6aefb92d3b0b1a5158bd4b15ca8f8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569bb1a06e5181dfb19d66587463af4b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a569bb1a06e5181dfb19d66587463af4b">svm_load_model</a> (const char *model_file_name)</td></tr>
+<tr class="separator:a569bb1a06e5181dfb19d66587463af4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0a326d36e24044cf958a420d6f4e19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#add0a326d36e24044cf958a420d6f4e19">svm_get_svm_type</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>)</td></tr>
+<tr class="separator:add0a326d36e24044cf958a420d6f4e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c7339cbc8a38eb9f1e8ad6fbe11ae8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a73c7339cbc8a38eb9f1e8ad6fbe11ae8">svm_get_nr_class</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>)</td></tr>
+<tr class="separator:a73c7339cbc8a38eb9f1e8ad6fbe11ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eafdf09b884847a04a72cf22ddb95f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a1eafdf09b884847a04a72cf22ddb95f2">svm_get_labels</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>, int *label)</td></tr>
+<tr class="separator:a1eafdf09b884847a04a72cf22ddb95f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61677f9adc1d3f0f6d55a4256923d43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#ae61677f9adc1d3f0f6d55a4256923d43">svm_get_sv_indices</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>, int *sv_indices)</td></tr>
+<tr class="separator:ae61677f9adc1d3f0f6d55a4256923d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4430a93a840cff5c3d67be2c6a0de89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#ae4430a93a840cff5c3d67be2c6a0de89">svm_get_nr_sv</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>)</td></tr>
+<tr class="separator:ae4430a93a840cff5c3d67be2c6a0de89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f15a9a6c23b2f0927fc48ef2f549001"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a3f15a9a6c23b2f0927fc48ef2f549001">svm_get_svr_probability</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>)</td></tr>
+<tr class="separator:a3f15a9a6c23b2f0927fc48ef2f549001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34079376b55cfef083b8ff523d77f55"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#aa34079376b55cfef083b8ff523d77f55">svm_predict_values</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>, const struct <a class="el" href="structsvm__node.html">svm_node</a> *<a class="el" href="svm-predict_8c.html#a9a5b72a4065074cac5da07efb80a1e79">x</a>, double *dec_values)</td></tr>
+<tr class="separator:aa34079376b55cfef083b8ff523d77f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c913d98f7cd411b147f8990a97f576"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#af7c913d98f7cd411b147f8990a97f576">svm_predict</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>, const struct <a class="el" href="structsvm__node.html">svm_node</a> *<a class="el" href="svm-predict_8c.html#a9a5b72a4065074cac5da07efb80a1e79">x</a>)</td></tr>
+<tr class="separator:af7c913d98f7cd411b147f8990a97f576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301070a1fda12e1257d76c08f97322a5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a301070a1fda12e1257d76c08f97322a5">svm_predict_probability</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>, const struct <a class="el" href="structsvm__node.html">svm_node</a> *<a class="el" href="svm-predict_8c.html#a9a5b72a4065074cac5da07efb80a1e79">x</a>, double *prob_estimates)</td></tr>
+<tr class="separator:a301070a1fda12e1257d76c08f97322a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851dce2f69b666a414d67e0edef3ead9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a851dce2f69b666a414d67e0edef3ead9">svm_free_model_content</a> (struct <a class="el" href="structsvm__model.html">svm_model</a> *model_ptr)</td></tr>
+<tr class="separator:a851dce2f69b666a414d67e0edef3ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa14733010ded94cc8f2ba177b0b24c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#afa14733010ded94cc8f2ba177b0b24c8">svm_free_and_destroy_model</a> (struct <a class="el" href="structsvm__model.html">svm_model</a> **model_ptr_ptr)</td></tr>
+<tr class="separator:afa14733010ded94cc8f2ba177b0b24c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf17ba299f99cb74dc97f64bb29f4c06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#aaf17ba299f99cb74dc97f64bb29f4c06">svm_destroy_param</a> (struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *param)</td></tr>
+<tr class="separator:aaf17ba299f99cb74dc97f64bb29f4c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72a8c645b58830df32383fd1835aad0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#aa72a8c645b58830df32383fd1835aad0">svm_check_parameter</a> (const struct <a class="el" href="structsvm__problem.html">svm_problem</a> *prob, const struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *param)</td></tr>
+<tr class="separator:aa72a8c645b58830df32383fd1835aad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb231380b36264637caeccdae4fbad1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#aeb231380b36264637caeccdae4fbad1a">svm_check_probability_model</a> (const struct <a class="el" href="structsvm__model.html">svm_model</a> *<a class="el" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>)</td></tr>
+<tr class="separator:aeb231380b36264637caeccdae4fbad1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308f7948988441f4a1a5c8c8abc367be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a308f7948988441f4a1a5c8c8abc367be">svm_set_print_string_function</a> (void(*print_func)(const char *))</td></tr>
+<tr class="separator:a308f7948988441f4a1a5c8c8abc367be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+변수</h2></td></tr>
+<tr class="memitem:a9ba41253b462f42e64917cc38e0f2cc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svm_8h.html#a9ba41253b462f42e64917cc38e0f2cc7">libsvm_version</a></td></tr>
+<tr class="separator:a9ba41253b462f42e64917cc38e0f2cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">매크로 문서화</h2>
+<a class="anchor" id="ac7f5361b69ddd196a885f142b3c1d261"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIBSVM_VERSION&#160;&#160;&#160;319</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8h_source.html">svm.h</a> 파일의 <a class="el" href="svm_8h_source.html#l00004">4</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">열거형 타입 문서화</h2>
+<a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8"></a>C_SVC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc"></a>NU_SVC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b"></a>ONE_CLASS&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a"></a>EPSILON_SVR&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309"></a>NU_SVR&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p><a class="el" href="svm_8h_source.html">svm.h</a> 파일의 <a class="el" href="svm_8h_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{ <a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8">C_SVC</a>, <a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc">NU_SVC</a>, <a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b">ONE_CLASS</a>, <a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a">EPSILON_SVR</a>, <a class="code" href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309">NU_SVR</a> };  <span class="comment">/* svm_type */</span></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8bfb80856312eb703072e02f7ebd5e6b">ONE_CLASS</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8">C_SVC</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc">NU_SVC</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a">EPSILON_SVR</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+<div class="ttc" id="svm_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309"><div class="ttname"><a href="svm_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309">NU_SVR</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00025">svm.h:25</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb"></a>LINEAR&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd"></a>POLY&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f"></a>RBF&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883"></a>SIGMOID&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285"></a>PRECOMPUTED&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p><a class="el" href="svm_8h_source.html">svm.h</a> 파일의 <a class="el" href="svm_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{ <a class="code" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb">LINEAR</a>, <a class="code" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd">POLY</a>, <a class="code" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f">RBF</a>, <a class="code" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883">SIGMOID</a>, <a class="code" href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285">PRECOMPUTED</a> }; <span class="comment">/* kernel_type */</span></div>
+<div class="ttc" id="svm_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285"><div class="ttname"><a href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285">PRECOMPUTED</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00026">svm.h:26</a></div></div>
+<div class="ttc" id="svm_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f"><div class="ttname"><a href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f">RBF</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00026">svm.h:26</a></div></div>
+<div class="ttc" id="svm_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd"><div class="ttname"><a href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd">POLY</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00026">svm.h:26</a></div></div>
+<div class="ttc" id="svm_8h_html_adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883"><div class="ttname"><a href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883">SIGMOID</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00026">svm.h:26</a></div></div>
+<div class="ttc" id="svm_8h_html_adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb"><div class="ttname"><a href="svm_8h.html#adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb">LINEAR</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00026">svm.h:26</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">함수 문서화</h2>
+<a class="anchor" id="aa72a8c645b58830df32383fd1835aad0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* svm_check_parameter </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__problem.html">svm_problem</a> *&#160;</td>
+          <td class="paramname"><em>prob</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeb231380b36264637caeccdae4fbad1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svm_check_probability_model </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_aeb231380b36264637caeccdae4fbad1a_icgraph.png" border="0" usemap="#svm_8h_aeb231380b36264637caeccdae4fbad1a_icgraph" alt=""/></div>
+<map name="svm_8h_aeb231380b36264637caeccdae4fbad1a_icgraph" id="svm_8h_aeb231380b36264637caeccdae4fbad1a_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="219,5,316,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7" title="SvmWrapper::init" alt="" coords="207,56,328,83"/><area shape="rect" id="node3" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="376,5,523,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="378,56,521,83"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="571,56,797,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="845,56,1032,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="1080,56,1295,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abe12fd0b263f0b31fdce8d48d9c38a32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_cross_validation </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__problem.html">svm_problem</a> *&#160;</td>
+          <td class="paramname"><em>prob</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nr_fold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf17ba299f99cb74dc97f64bb29f4c06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_destroy_param </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8cpp_source.html">svm.cpp</a> 파일의 <a class="el" href="svm_8cpp_source.html#l03023">3023</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l03024"></a><span class="lineno"> 3024</span>&#160;{</div>
+<div class="line"><a name="l03025"></a><span class="lineno"> 3025</span>&#160;    free(param-&gt;<a class="code" href="structsvm__parameter.html#a06753922bb0282240f35ae7683f8d69a">weight_label</a>);</div>
+<div class="line"><a name="l03026"></a><span class="lineno"> 3026</span>&#160;    free(param-&gt;<a class="code" href="structsvm__parameter.html#afff750f99180b5ddf735404496b6c196">weight</a>);</div>
+<div class="line"><a name="l03027"></a><span class="lineno"> 3027</span>&#160;}</div>
+<div class="ttc" id="structsvm__parameter_html_a06753922bb0282240f35ae7683f8d69a"><div class="ttname"><a href="structsvm__parameter.html#a06753922bb0282240f35ae7683f8d69a">svm_parameter::weight_label</a></div><div class="ttdeci">int * weight_label</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00041">svm.h:41</a></div></div>
+<div class="ttc" id="structsvm__parameter_html_afff750f99180b5ddf735404496b6c196"><div class="ttname"><a href="structsvm__parameter.html#afff750f99180b5ddf735404496b6c196">svm_parameter::weight</a></div><div class="ttdeci">double * weight</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00042">svm.h:42</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_aaf17ba299f99cb74dc97f64bb29f4c06_icgraph.png" border="0" usemap="#svm_8h_aaf17ba299f99cb74dc97f64bb29f4c06_icgraph" alt=""/></div>
+<map name="svm_8h_aaf17ba299f99cb74dc97f64bb29f4c06_icgraph" id="svm_8h_aaf17ba299f99cb74dc97f64bb29f4c06_icgraph">
+<area shape="rect" id="node2" href="svm_8cpp.html#ae862a4ec5aef90b7ded1cd2a602271f6" title="svm_binary_svc_probability" alt="" coords="192,31,371,57"/><area shape="rect" id="node3" href="svm_8cpp.html#ae6e4f84556602fab57ec5a330514b613" title="svm_train" alt="" coords="419,31,496,57"/><area shape="rect" id="node4" href="svm_8cpp.html#a3f5a9c2ab91444d122c461511af9efd2" title="svm_cross_validation" alt="" coords="544,5,688,32"/><area shape="rect" id="node5" href="svm_8cpp.html#a18e6f0da08035830a3f53829c3b26508" title="svm_svr_probability" alt="" coords="736,31,871,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afa14733010ded94cc8f2ba177b0b24c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_free_and_destroy_model </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsvm__model.html">svm_model</a> **&#160;</td>
+          <td class="paramname"><em>model_ptr_ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8cpp_source.html">svm.cpp</a> 파일의 <a class="el" href="svm_8cpp_source.html#l03013">3013</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l03014"></a><span class="lineno"> 3014</span>&#160;{</div>
+<div class="line"><a name="l03015"></a><span class="lineno"> 3015</span>&#160;    <span class="keywordflow">if</span>(model_ptr_ptr != NULL &amp;&amp; *model_ptr_ptr != NULL)</div>
+<div class="line"><a name="l03016"></a><span class="lineno"> 3016</span>&#160;    {</div>
+<div class="line"><a name="l03017"></a><span class="lineno"> 3017</span>&#160;        <a class="code" href="svm_8cpp.html#aacfd6b0d366697f63c942036b93370d4">svm_free_model_content</a>(*model_ptr_ptr);</div>
+<div class="line"><a name="l03018"></a><span class="lineno"> 3018</span>&#160;        free(*model_ptr_ptr);</div>
+<div class="line"><a name="l03019"></a><span class="lineno"> 3019</span>&#160;        *model_ptr_ptr = NULL;</div>
+<div class="line"><a name="l03020"></a><span class="lineno"> 3020</span>&#160;    }</div>
+<div class="line"><a name="l03021"></a><span class="lineno"> 3021</span>&#160;}</div>
+<div class="ttc" id="svm_8cpp_html_aacfd6b0d366697f63c942036b93370d4"><div class="ttname"><a href="svm_8cpp.html#aacfd6b0d366697f63c942036b93370d4">svm_free_model_content</a></div><div class="ttdeci">void svm_free_model_content(svm_model *model_ptr)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l02978">svm.cpp:2978</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_afa14733010ded94cc8f2ba177b0b24c8_cgraph.png" border="0" usemap="#svm_8h_afa14733010ded94cc8f2ba177b0b24c8_cgraph" alt=""/></div>
+<map name="svm_8h_afa14733010ded94cc8f2ba177b0b24c8_cgraph" id="svm_8h_afa14733010ded94cc8f2ba177b0b24c8_cgraph">
+<area shape="rect" id="node2" href="svm_8cpp.html#aacfd6b0d366697f63c942036b93370d4" title="svm_free_model_content" alt="" coords="204,13,369,39"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_afa14733010ded94cc8f2ba177b0b24c8_icgraph.png" border="0" usemap="#svm_8h_afa14733010ded94cc8f2ba177b0b24c8_icgraph" alt=""/></div>
+<map name="svm_8h_afa14733010ded94cc8f2ba177b0b24c8_icgraph" id="svm_8h_afa14733010ded94cc8f2ba177b0b24c8_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="245,5,342,32"/><area shape="rect" id="node4" href="svm_8cpp.html#ae862a4ec5aef90b7ded1cd2a602271f6" title="svm_binary_svc_probability" alt="" coords="204,56,383,83"/><area shape="rect" id="node6" href="svm_8cpp.html#a3f5a9c2ab91444d122c461511af9efd2" title="svm_cross_validation" alt="" coords="727,107,871,133"/><area shape="rect" id="node8" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="222,157,365,184"/><area shape="rect" id="node3" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="471,5,617,32"/><area shape="rect" id="node5" href="svm_8cpp.html#ae6e4f84556602fab57ec5a330514b613" title="svm_train" alt="" coords="505,56,583,83"/><area shape="rect" id="node7" href="svm_8cpp.html#a18e6f0da08035830a3f53829c3b26508" title="svm_svr_probability" alt="" coords="980,81,1115,108"/><area shape="rect" id="node9" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="431,157,657,184"/><area shape="rect" id="node10" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="705,157,892,184"/><area shape="rect" id="node11" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="940,157,1155,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a851dce2f69b666a414d67e0edef3ead9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_free_model_content </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model_ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8cpp_source.html">svm.cpp</a> 파일의 <a class="el" href="svm_8cpp_source.html#l02978">2978</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l02979"></a><span class="lineno"> 2979</span>&#160;{</div>
+<div class="line"><a name="l02980"></a><span class="lineno"> 2980</span>&#160;    <span class="keywordflow">if</span>(model_ptr-&gt;<a class="code" href="structsvm__model.html#a2ae57ce1fa43497d151aff26c21a13a1">free_sv</a> &amp;&amp; model_ptr-&gt;<a class="code" href="structsvm__model.html#ab858d7eed0bd3cc4c33c094872643d0a">l</a> &gt; 0 &amp;&amp; model_ptr-&gt;<a class="code" href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">SV</a> != NULL)</div>
+<div class="line"><a name="l02981"></a><span class="lineno"> 2981</span>&#160;        free((<span class="keywordtype">void</span> *)(model_ptr-&gt;<a class="code" href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">SV</a>[0]));</div>
+<div class="line"><a name="l02982"></a><span class="lineno"> 2982</span>&#160;    <span class="keywordflow">if</span>(model_ptr-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a>)</div>
+<div class="line"><a name="l02983"></a><span class="lineno"> 2983</span>&#160;    {</div>
+<div class="line"><a name="l02984"></a><span class="lineno"> 2984</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;model_ptr-&gt;<a class="code" href="structsvm__model.html#a5af6e0cfb063e8aac03c99aa9d319116">nr_class</a>-1;i++)</div>
+<div class="line"><a name="l02985"></a><span class="lineno"> 2985</span>&#160;            free(model_ptr-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a>[i]);</div>
+<div class="line"><a name="l02986"></a><span class="lineno"> 2986</span>&#160;    }</div>
+<div class="line"><a name="l02987"></a><span class="lineno"> 2987</span>&#160;</div>
+<div class="line"><a name="l02988"></a><span class="lineno"> 2988</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">SV</a>);</div>
+<div class="line"><a name="l02989"></a><span class="lineno"> 2989</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">SV</a> = NULL;</div>
+<div class="line"><a name="l02990"></a><span class="lineno"> 2990</span>&#160;</div>
+<div class="line"><a name="l02991"></a><span class="lineno"> 2991</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a>);</div>
+<div class="line"><a name="l02992"></a><span class="lineno"> 2992</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a> = NULL;</div>
+<div class="line"><a name="l02993"></a><span class="lineno"> 2993</span>&#160;</div>
+<div class="line"><a name="l02994"></a><span class="lineno"> 2994</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#a16e4dea1508f93ece4384ec35c991887">rho</a>);</div>
+<div class="line"><a name="l02995"></a><span class="lineno"> 2995</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#a16e4dea1508f93ece4384ec35c991887">rho</a> = NULL;</div>
+<div class="line"><a name="l02996"></a><span class="lineno"> 2996</span>&#160;</div>
+<div class="line"><a name="l02997"></a><span class="lineno"> 2997</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#ac66d192809e92b95875bdf8ebb749060">label</a>);</div>
+<div class="line"><a name="l02998"></a><span class="lineno"> 2998</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#ac66d192809e92b95875bdf8ebb749060">label</a>= NULL;</div>
+<div class="line"><a name="l02999"></a><span class="lineno"> 2999</span>&#160;</div>
+<div class="line"><a name="l03000"></a><span class="lineno"> 3000</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#adf5f28fcdd3ca1c5b23c1f6167710a04">probA</a>);</div>
+<div class="line"><a name="l03001"></a><span class="lineno"> 3001</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#adf5f28fcdd3ca1c5b23c1f6167710a04">probA</a> = NULL;</div>
+<div class="line"><a name="l03002"></a><span class="lineno"> 3002</span>&#160;</div>
+<div class="line"><a name="l03003"></a><span class="lineno"> 3003</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#a73ba8feaaf3c2c38c6bb81f7bcb5809e">probB</a>);</div>
+<div class="line"><a name="l03004"></a><span class="lineno"> 3004</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#a73ba8feaaf3c2c38c6bb81f7bcb5809e">probB</a>= NULL;</div>
+<div class="line"><a name="l03005"></a><span class="lineno"> 3005</span>&#160;</div>
+<div class="line"><a name="l03006"></a><span class="lineno"> 3006</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#add7f649bf78428c38a282ed8776fa433">sv_indices</a>);</div>
+<div class="line"><a name="l03007"></a><span class="lineno"> 3007</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#add7f649bf78428c38a282ed8776fa433">sv_indices</a> = NULL;</div>
+<div class="line"><a name="l03008"></a><span class="lineno"> 3008</span>&#160;</div>
+<div class="line"><a name="l03009"></a><span class="lineno"> 3009</span>&#160;    free(model_ptr-&gt;<a class="code" href="structsvm__model.html#a1d342c9b9e5e4a6377862e13123a25ef">nSV</a>);</div>
+<div class="line"><a name="l03010"></a><span class="lineno"> 3010</span>&#160;    model_ptr-&gt;<a class="code" href="structsvm__model.html#a1d342c9b9e5e4a6377862e13123a25ef">nSV</a> = NULL;</div>
+<div class="line"><a name="l03011"></a><span class="lineno"> 3011</span>&#160;}</div>
+<div class="ttc" id="structsvm__model_html_a1d342c9b9e5e4a6377862e13123a25ef"><div class="ttname"><a href="structsvm__model.html#a1d342c9b9e5e4a6377862e13123a25ef">svm_model::nSV</a></div><div class="ttdeci">int * nSV</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00067">svm.h:67</a></div></div>
+<div class="ttc" id="structsvm__model_html_ab858d7eed0bd3cc4c33c094872643d0a"><div class="ttname"><a href="structsvm__model.html#ab858d7eed0bd3cc4c33c094872643d0a">svm_model::l</a></div><div class="ttdeci">int l</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00056">svm.h:56</a></div></div>
+<div class="ttc" id="structsvm__model_html_a96da6fe173a7150dae95bf55d5539e45"><div class="ttname"><a href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">svm_model::SV</a></div><div class="ttdeci">struct svm_node ** SV</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00057">svm.h:57</a></div></div>
+<div class="ttc" id="structsvm__model_html_a73ba8feaaf3c2c38c6bb81f7bcb5809e"><div class="ttname"><a href="structsvm__model.html#a73ba8feaaf3c2c38c6bb81f7bcb5809e">svm_model::probB</a></div><div class="ttdeci">double * probB</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00061">svm.h:61</a></div></div>
+<div class="ttc" id="structsvm__model_html_adf5f28fcdd3ca1c5b23c1f6167710a04"><div class="ttname"><a href="structsvm__model.html#adf5f28fcdd3ca1c5b23c1f6167710a04">svm_model::probA</a></div><div class="ttdeci">double * probA</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00060">svm.h:60</a></div></div>
+<div class="ttc" id="structsvm__model_html_a5af6e0cfb063e8aac03c99aa9d319116"><div class="ttname"><a href="structsvm__model.html#a5af6e0cfb063e8aac03c99aa9d319116">svm_model::nr_class</a></div><div class="ttdeci">int nr_class</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00055">svm.h:55</a></div></div>
+<div class="ttc" id="structsvm__model_html_ac66d192809e92b95875bdf8ebb749060"><div class="ttname"><a href="structsvm__model.html#ac66d192809e92b95875bdf8ebb749060">svm_model::label</a></div><div class="ttdeci">int * label</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00066">svm.h:66</a></div></div>
+<div class="ttc" id="structsvm__model_html_add7f649bf78428c38a282ed8776fa433"><div class="ttname"><a href="structsvm__model.html#add7f649bf78428c38a282ed8776fa433">svm_model::sv_indices</a></div><div class="ttdeci">int * sv_indices</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00062">svm.h:62</a></div></div>
+<div class="ttc" id="structsvm__model_html_a16e4dea1508f93ece4384ec35c991887"><div class="ttname"><a href="structsvm__model.html#a16e4dea1508f93ece4384ec35c991887">svm_model::rho</a></div><div class="ttdeci">double * rho</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00059">svm.h:59</a></div></div>
+<div class="ttc" id="structsvm__model_html_a978084d722ac886100ffcc35fc931143"><div class="ttname"><a href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">svm_model::sv_coef</a></div><div class="ttdeci">double ** sv_coef</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00058">svm.h:58</a></div></div>
+<div class="ttc" id="structsvm__model_html_a2ae57ce1fa43497d151aff26c21a13a1"><div class="ttname"><a href="structsvm__model.html#a2ae57ce1fa43497d151aff26c21a13a1">svm_model::free_sv</a></div><div class="ttdeci">int free_sv</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00070">svm.h:70</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a851dce2f69b666a414d67e0edef3ead9_icgraph.png" border="0" usemap="#svm_8h_a851dce2f69b666a414d67e0edef3ead9_icgraph" alt=""/></div>
+<map name="svm_8h_a851dce2f69b666a414d67e0edef3ead9_icgraph" id="svm_8h_a851dce2f69b666a414d67e0edef3ead9_icgraph">
+<area shape="rect" id="node2" href="svm_8cpp.html#a300e06f7195c7ccb83571580d5865923" title="svm_free_and_destroy\l_model" alt="" coords="219,74,369,115"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="458,5,555,32"/><area shape="rect" id="node5" href="svm_8cpp.html#ae862a4ec5aef90b7ded1cd2a602271f6" title="svm_binary_svc_probability" alt="" coords="417,56,596,83"/><area shape="rect" id="node7" href="svm_8cpp.html#a3f5a9c2ab91444d122c461511af9efd2" title="svm_cross_validation" alt="" coords="940,107,1084,133"/><area shape="rect" id="node9" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="435,157,578,184"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="684,5,831,32"/><area shape="rect" id="node6" href="svm_8cpp.html#ae6e4f84556602fab57ec5a330514b613" title="svm_train" alt="" coords="719,56,796,83"/><area shape="rect" id="node8" href="svm_8cpp.html#a18e6f0da08035830a3f53829c3b26508" title="svm_svr_probability" alt="" coords="1193,81,1328,108"/><area shape="rect" id="node10" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="644,157,871,184"/><area shape="rect" id="node11" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="919,157,1105,184"/><area shape="rect" id="node12" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="1153,157,1368,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1eafdf09b884847a04a72cf22ddb95f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_get_labels </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a1eafdf09b884847a04a72cf22ddb95f2_icgraph.png" border="0" usemap="#svm_8h_a1eafdf09b884847a04a72cf22ddb95f2_icgraph" alt=""/></div>
+<map name="svm_8h_a1eafdf09b884847a04a72cf22ddb95f2_icgraph" id="svm_8h_a1eafdf09b884847a04a72cf22ddb95f2_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="205,5,266,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="164,56,307,83"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="419,5,517,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="649,5,796,32"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="355,56,581,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="629,56,816,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="864,56,1079,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a73c7339cbc8a38eb9f1e8ad6fbe11ae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svm_get_nr_class </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a73c7339cbc8a38eb9f1e8ad6fbe11ae8_icgraph.png" border="0" usemap="#svm_8h_a73c7339cbc8a38eb9f1e8ad6fbe11ae8_icgraph" alt=""/></div>
+<map name="svm_8h_a73c7339cbc8a38eb9f1e8ad6fbe11ae8_icgraph" id="svm_8h_a73c7339cbc8a38eb9f1e8ad6fbe11ae8_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="221,5,282,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="180,56,323,83"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="435,5,533,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="665,5,812,32"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="371,56,597,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="645,56,832,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="880,56,1095,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4430a93a840cff5c3d67be2c6a0de89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svm_get_nr_sv </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae61677f9adc1d3f0f6d55a4256923d43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_get_sv_indices </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sv_indices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add0a326d36e24044cf958a420d6f4e19"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svm_get_svm_type </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_add0a326d36e24044cf958a420d6f4e19_icgraph.png" border="0" usemap="#svm_8h_add0a326d36e24044cf958a420d6f4e19_icgraph" alt=""/></div>
+<map name="svm_8h_add0a326d36e24044cf958a420d6f4e19_icgraph" id="svm_8h_add0a326d36e24044cf958a420d6f4e19_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="226,5,287,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="185,56,328,83"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="441,5,538,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="671,5,817,32"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="376,56,603,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="651,56,837,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="885,56,1100,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f15a9a6c23b2f0927fc48ef2f549001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double svm_get_svr_probability </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a3f15a9a6c23b2f0927fc48ef2f549001_icgraph.png" border="0" usemap="#svm_8h_a3f15a9a6c23b2f0927fc48ef2f549001_icgraph" alt=""/></div>
+<map name="svm_8h_a3f15a9a6c23b2f0927fc48ef2f549001_icgraph" id="svm_8h_a3f15a9a6c23b2f0927fc48ef2f549001_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="253,5,314,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="212,56,355,83"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="467,5,565,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="697,5,844,32"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="403,56,629,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="677,56,864,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="912,56,1127,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a569bb1a06e5181dfb19d66587463af4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structsvm__model.html">svm_model</a>* svm_load_model </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>model_file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8cpp_source.html">svm.cpp</a> 파일의 <a class="el" href="svm_8cpp_source.html#l02873">2873</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l02874"></a><span class="lineno"> 2874</span>&#160;{</div>
+<div class="line"><a name="l02875"></a><span class="lineno"> 2875</span>&#160;    FILE *<a class="code" href="_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs.html#a3baae9b5c592a9305d36e70a7ce56fef">fp</a> = fopen(model_file_name,<span class="stringliteral">&quot;rb&quot;</span>);</div>
+<div class="line"><a name="l02876"></a><span class="lineno"> 2876</span>&#160;    <span class="keywordflow">if</span>(fp==NULL) <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l02877"></a><span class="lineno"> 2877</span>&#160;</div>
+<div class="line"><a name="l02878"></a><span class="lineno"> 2878</span>&#160;    <span class="keywordtype">char</span> *old_locale = strdup(setlocale(LC_ALL, NULL));</div>
+<div class="line"><a name="l02879"></a><span class="lineno"> 2879</span>&#160;    setlocale(LC_ALL, <span class="stringliteral">&quot;C&quot;</span>);</div>
+<div class="line"><a name="l02880"></a><span class="lineno"> 2880</span>&#160;</div>
+<div class="line"><a name="l02881"></a><span class="lineno"> 2881</span>&#160;    <span class="comment">// read parameters</span></div>
+<div class="line"><a name="l02882"></a><span class="lineno"> 2882</span>&#160;</div>
+<div class="line"><a name="l02883"></a><span class="lineno"> 2883</span>&#160;    <a class="code" href="structsvm__model.html">svm_model</a> *<a class="code" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a> = <a class="code" href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a>(<a class="code" href="structsvm__model.html">svm_model</a>,1);</div>
+<div class="line"><a name="l02884"></a><span class="lineno"> 2884</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#a16e4dea1508f93ece4384ec35c991887">rho</a> = NULL;</div>
+<div class="line"><a name="l02885"></a><span class="lineno"> 2885</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#adf5f28fcdd3ca1c5b23c1f6167710a04">probA</a> = NULL;</div>
+<div class="line"><a name="l02886"></a><span class="lineno"> 2886</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#a73ba8feaaf3c2c38c6bb81f7bcb5809e">probB</a> = NULL;</div>
+<div class="line"><a name="l02887"></a><span class="lineno"> 2887</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#add7f649bf78428c38a282ed8776fa433">sv_indices</a> = NULL;</div>
+<div class="line"><a name="l02888"></a><span class="lineno"> 2888</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#ac66d192809e92b95875bdf8ebb749060">label</a> = NULL;</div>
+<div class="line"><a name="l02889"></a><span class="lineno"> 2889</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#a1d342c9b9e5e4a6377862e13123a25ef">nSV</a> = NULL;</div>
+<div class="line"><a name="l02890"></a><span class="lineno"> 2890</span>&#160;    </div>
+<div class="line"><a name="l02891"></a><span class="lineno"> 2891</span>&#160;    <span class="comment">// read header</span></div>
+<div class="line"><a name="l02892"></a><span class="lineno"> 2892</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97">read_model_header</a>(fp, model))</div>
+<div class="line"><a name="l02893"></a><span class="lineno"> 2893</span>&#160;    {</div>
+<div class="line"><a name="l02894"></a><span class="lineno"> 2894</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;ERROR: fscanf failed to read model\n&quot;</span>);</div>
+<div class="line"><a name="l02895"></a><span class="lineno"> 2895</span>&#160;        setlocale(LC_ALL, old_locale);</div>
+<div class="line"><a name="l02896"></a><span class="lineno"> 2896</span>&#160;        free(old_locale);</div>
+<div class="line"><a name="l02897"></a><span class="lineno"> 2897</span>&#160;        free(model-&gt;<a class="code" href="structsvm__model.html#a16e4dea1508f93ece4384ec35c991887">rho</a>);</div>
+<div class="line"><a name="l02898"></a><span class="lineno"> 2898</span>&#160;        free(model-&gt;<a class="code" href="structsvm__model.html#ac66d192809e92b95875bdf8ebb749060">label</a>);</div>
+<div class="line"><a name="l02899"></a><span class="lineno"> 2899</span>&#160;        free(model-&gt;<a class="code" href="structsvm__model.html#a1d342c9b9e5e4a6377862e13123a25ef">nSV</a>);</div>
+<div class="line"><a name="l02900"></a><span class="lineno"> 2900</span>&#160;        free(model);</div>
+<div class="line"><a name="l02901"></a><span class="lineno"> 2901</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l02902"></a><span class="lineno"> 2902</span>&#160;    }</div>
+<div class="line"><a name="l02903"></a><span class="lineno"> 2903</span>&#160;    </div>
+<div class="line"><a name="l02904"></a><span class="lineno"> 2904</span>&#160;    <span class="comment">// read sv_coef and SV</span></div>
+<div class="line"><a name="l02905"></a><span class="lineno"> 2905</span>&#160;</div>
+<div class="line"><a name="l02906"></a><span class="lineno"> 2906</span>&#160;    <span class="keywordtype">int</span> elements = 0;</div>
+<div class="line"><a name="l02907"></a><span class="lineno"> 2907</span>&#160;    <span class="keywordtype">long</span> pos = ftell(fp);</div>
+<div class="line"><a name="l02908"></a><span class="lineno"> 2908</span>&#160;</div>
+<div class="line"><a name="l02909"></a><span class="lineno"> 2909</span>&#160;    <a class="code" href="svm_8cpp.html#acad24c15bee67d2026f56bc94a1188c7">max_line_len</a> = 1024;</div>
+<div class="line"><a name="l02910"></a><span class="lineno"> 2910</span>&#160;    <a class="code" href="svm_8cpp.html#a8adb30f4f6669f927fd9232f686c637b">line</a> = <a class="code" href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a>(<span class="keywordtype">char</span>,<a class="code" href="svm_8cpp.html#acad24c15bee67d2026f56bc94a1188c7">max_line_len</a>);</div>
+<div class="line"><a name="l02911"></a><span class="lineno"> 2911</span>&#160;    <span class="keywordtype">char</span> *p,*endptr,*idx,*val;</div>
+<div class="line"><a name="l02912"></a><span class="lineno"> 2912</span>&#160;</div>
+<div class="line"><a name="l02913"></a><span class="lineno"> 2913</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a">readline</a>(fp)!=NULL)</div>
+<div class="line"><a name="l02914"></a><span class="lineno"> 2914</span>&#160;    {</div>
+<div class="line"><a name="l02915"></a><span class="lineno"> 2915</span>&#160;        p = strtok(<a class="code" href="svm_8cpp.html#a8adb30f4f6669f927fd9232f686c637b">line</a>,<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l02916"></a><span class="lineno"> 2916</span>&#160;        <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l02917"></a><span class="lineno"> 2917</span>&#160;        {</div>
+<div class="line"><a name="l02918"></a><span class="lineno"> 2918</span>&#160;            p = strtok(NULL,<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l02919"></a><span class="lineno"> 2919</span>&#160;            <span class="keywordflow">if</span>(p == NULL)</div>
+<div class="line"><a name="l02920"></a><span class="lineno"> 2920</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02921"></a><span class="lineno"> 2921</span>&#160;            ++elements;</div>
+<div class="line"><a name="l02922"></a><span class="lineno"> 2922</span>&#160;        }</div>
+<div class="line"><a name="l02923"></a><span class="lineno"> 2923</span>&#160;    }</div>
+<div class="line"><a name="l02924"></a><span class="lineno"> 2924</span>&#160;    elements += model-&gt;<a class="code" href="structsvm__model.html#ab858d7eed0bd3cc4c33c094872643d0a">l</a>;</div>
+<div class="line"><a name="l02925"></a><span class="lineno"> 2925</span>&#160;</div>
+<div class="line"><a name="l02926"></a><span class="lineno"> 2926</span>&#160;    fseek(fp,pos,SEEK_SET);</div>
+<div class="line"><a name="l02927"></a><span class="lineno"> 2927</span>&#160;</div>
+<div class="line"><a name="l02928"></a><span class="lineno"> 2928</span>&#160;    <span class="keywordtype">int</span> m = model-&gt;<a class="code" href="structsvm__model.html#a5af6e0cfb063e8aac03c99aa9d319116">nr_class</a> - 1;</div>
+<div class="line"><a name="l02929"></a><span class="lineno"> 2929</span>&#160;    <span class="keywordtype">int</span> l = model-&gt;<a class="code" href="structsvm__model.html#ab858d7eed0bd3cc4c33c094872643d0a">l</a>;</div>
+<div class="line"><a name="l02930"></a><span class="lineno"> 2930</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a> = <a class="code" href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a>(<span class="keywordtype">double</span> *,m);</div>
+<div class="line"><a name="l02931"></a><span class="lineno"> 2931</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l02932"></a><span class="lineno"> 2932</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;m;i++)</div>
+<div class="line"><a name="l02933"></a><span class="lineno"> 2933</span>&#160;        model-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a>[i] = <a class="code" href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a>(<span class="keywordtype">double</span>,l);</div>
+<div class="line"><a name="l02934"></a><span class="lineno"> 2934</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">SV</a> = <a class="code" href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a>(<a class="code" href="structsvm__node.html">svm_node</a>*,l);</div>
+<div class="line"><a name="l02935"></a><span class="lineno"> 2935</span>&#160;    <a class="code" href="structsvm__node.html">svm_node</a> *x_space = NULL;</div>
+<div class="line"><a name="l02936"></a><span class="lineno"> 2936</span>&#160;    <span class="keywordflow">if</span>(l&gt;0) x_space = <a class="code" href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a>(<a class="code" href="structsvm__node.html">svm_node</a>,elements);</div>
+<div class="line"><a name="l02937"></a><span class="lineno"> 2937</span>&#160;</div>
+<div class="line"><a name="l02938"></a><span class="lineno"> 2938</span>&#160;    <span class="keywordtype">int</span> j=0;</div>
+<div class="line"><a name="l02939"></a><span class="lineno"> 2939</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;l;i++)</div>
+<div class="line"><a name="l02940"></a><span class="lineno"> 2940</span>&#160;    {</div>
+<div class="line"><a name="l02941"></a><span class="lineno"> 2941</span>&#160;        <a class="code" href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a">readline</a>(fp);</div>
+<div class="line"><a name="l02942"></a><span class="lineno"> 2942</span>&#160;        model-&gt;<a class="code" href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">SV</a>[i] = &amp;x_space[j];</div>
+<div class="line"><a name="l02943"></a><span class="lineno"> 2943</span>&#160;</div>
+<div class="line"><a name="l02944"></a><span class="lineno"> 2944</span>&#160;        p = strtok(<a class="code" href="svm_8cpp.html#a8adb30f4f6669f927fd9232f686c637b">line</a>, <span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a name="l02945"></a><span class="lineno"> 2945</span>&#160;        model-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a>[0][i] = strtod(p,&amp;endptr);</div>
+<div class="line"><a name="l02946"></a><span class="lineno"> 2946</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k=1;k&lt;m;k++)</div>
+<div class="line"><a name="l02947"></a><span class="lineno"> 2947</span>&#160;        {</div>
+<div class="line"><a name="l02948"></a><span class="lineno"> 2948</span>&#160;            p = strtok(NULL, <span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a name="l02949"></a><span class="lineno"> 2949</span>&#160;            model-&gt;<a class="code" href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">sv_coef</a>[k][i] = strtod(p,&amp;endptr);</div>
+<div class="line"><a name="l02950"></a><span class="lineno"> 2950</span>&#160;        }</div>
+<div class="line"><a name="l02951"></a><span class="lineno"> 2951</span>&#160;</div>
+<div class="line"><a name="l02952"></a><span class="lineno"> 2952</span>&#160;        <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l02953"></a><span class="lineno"> 2953</span>&#160;        {</div>
+<div class="line"><a name="l02954"></a><span class="lineno"> 2954</span>&#160;            idx = strtok(NULL, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l02955"></a><span class="lineno"> 2955</span>&#160;            val = strtok(NULL, <span class="stringliteral">&quot; \t&quot;</span>);</div>
+<div class="line"><a name="l02956"></a><span class="lineno"> 2956</span>&#160;</div>
+<div class="line"><a name="l02957"></a><span class="lineno"> 2957</span>&#160;            <span class="keywordflow">if</span>(val == NULL)</div>
+<div class="line"><a name="l02958"></a><span class="lineno"> 2958</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02959"></a><span class="lineno"> 2959</span>&#160;            x_space[j].<a class="code" href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">index</a> = (int) strtol(idx,&amp;endptr,10);</div>
+<div class="line"><a name="l02960"></a><span class="lineno"> 2960</span>&#160;            x_space[j].<a class="code" href="structsvm__node.html#a9ca47b8a156238d04213453f3b89e177">value</a> = strtod(val,&amp;endptr);</div>
+<div class="line"><a name="l02961"></a><span class="lineno"> 2961</span>&#160;</div>
+<div class="line"><a name="l02962"></a><span class="lineno"> 2962</span>&#160;            ++j;</div>
+<div class="line"><a name="l02963"></a><span class="lineno"> 2963</span>&#160;        }</div>
+<div class="line"><a name="l02964"></a><span class="lineno"> 2964</span>&#160;        x_space[j++].<a class="code" href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">index</a> = -1;</div>
+<div class="line"><a name="l02965"></a><span class="lineno"> 2965</span>&#160;    }</div>
+<div class="line"><a name="l02966"></a><span class="lineno"> 2966</span>&#160;    free(<a class="code" href="svm_8cpp.html#a8adb30f4f6669f927fd9232f686c637b">line</a>);</div>
+<div class="line"><a name="l02967"></a><span class="lineno"> 2967</span>&#160;</div>
+<div class="line"><a name="l02968"></a><span class="lineno"> 2968</span>&#160;    setlocale(LC_ALL, old_locale);</div>
+<div class="line"><a name="l02969"></a><span class="lineno"> 2969</span>&#160;    free(old_locale);</div>
+<div class="line"><a name="l02970"></a><span class="lineno"> 2970</span>&#160;</div>
+<div class="line"><a name="l02971"></a><span class="lineno"> 2971</span>&#160;    <span class="keywordflow">if</span> (ferror(fp) != 0 || fclose(fp) != 0)</div>
+<div class="line"><a name="l02972"></a><span class="lineno"> 2972</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l02973"></a><span class="lineno"> 2973</span>&#160;</div>
+<div class="line"><a name="l02974"></a><span class="lineno"> 2974</span>&#160;    model-&gt;<a class="code" href="structsvm__model.html#a2ae57ce1fa43497d151aff26c21a13a1">free_sv</a> = 1; <span class="comment">// XXX</span></div>
+<div class="line"><a name="l02975"></a><span class="lineno"> 2975</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a>;</div>
+<div class="line"><a name="l02976"></a><span class="lineno"> 2976</span>&#160;}</div>
+<div class="ttc" id="svm_8cpp_html_a8adb30f4f6669f927fd9232f686c637b"><div class="ttname"><a href="svm_8cpp.html#a8adb30f4f6669f927fd9232f686c637b">line</a></div><div class="ttdeci">static char * line</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l02735">svm.cpp:2735</a></div></div>
+<div class="ttc" id="structsvm__model_html_a1d342c9b9e5e4a6377862e13123a25ef"><div class="ttname"><a href="structsvm__model.html#a1d342c9b9e5e4a6377862e13123a25ef">svm_model::nSV</a></div><div class="ttdeci">int * nSV</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00067">svm.h:67</a></div></div>
+<div class="ttc" id="structsvm__node_html_a9ca47b8a156238d04213453f3b89e177"><div class="ttname"><a href="structsvm__node.html#a9ca47b8a156238d04213453f3b89e177">svm_node::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00015">svm.h:15</a></div></div>
+<div class="ttc" id="structsvm__model_html_ab858d7eed0bd3cc4c33c094872643d0a"><div class="ttname"><a href="structsvm__model.html#ab858d7eed0bd3cc4c33c094872643d0a">svm_model::l</a></div><div class="ttdeci">int l</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00056">svm.h:56</a></div></div>
+<div class="ttc" id="structsvm__model_html_a96da6fe173a7150dae95bf55d5539e45"><div class="ttname"><a href="structsvm__model.html#a96da6fe173a7150dae95bf55d5539e45">svm_model::SV</a></div><div class="ttdeci">struct svm_node ** SV</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00057">svm.h:57</a></div></div>
+<div class="ttc" id="structsvm__model_html_a73ba8feaaf3c2c38c6bb81f7bcb5809e"><div class="ttname"><a href="structsvm__model.html#a73ba8feaaf3c2c38c6bb81f7bcb5809e">svm_model::probB</a></div><div class="ttdeci">double * probB</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00061">svm.h:61</a></div></div>
+<div class="ttc" id="svm_8cpp_html_acad24c15bee67d2026f56bc94a1188c7"><div class="ttname"><a href="svm_8cpp.html#acad24c15bee67d2026f56bc94a1188c7">max_line_len</a></div><div class="ttdeci">static int max_line_len</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l02736">svm.cpp:2736</a></div></div>
+<div class="ttc" id="structsvm__model_html_adf5f28fcdd3ca1c5b23c1f6167710a04"><div class="ttname"><a href="structsvm__model.html#adf5f28fcdd3ca1c5b23c1f6167710a04">svm_model::probA</a></div><div class="ttdeci">double * probA</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00060">svm.h:60</a></div></div>
+<div class="ttc" id="structsvm__model_html_a5af6e0cfb063e8aac03c99aa9d319116"><div class="ttname"><a href="structsvm__model.html#a5af6e0cfb063e8aac03c99aa9d319116">svm_model::nr_class</a></div><div class="ttdeci">int nr_class</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00055">svm.h:55</a></div></div>
+<div class="ttc" id="structsvm__model_html"><div class="ttname"><a href="structsvm__model.html">svm_model</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00052">svm.h:52</a></div></div>
+<div class="ttc" id="svm_8cpp_html_aa324656b7bb4eb3ee42699d33c21ef7a"><div class="ttname"><a href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a">readline</a></div><div class="ttdeci">static char * readline(FILE *input)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l02738">svm.cpp:2738</a></div></div>
+<div class="ttc" id="svm_8cpp_html_ac948c7ac7389151985a1e96151bcfa97"><div class="ttname"><a href="svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97">read_model_header</a></div><div class="ttdeci">bool read_model_header(FILE *fp, svm_model *model)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l02764">svm.cpp:2764</a></div></div>
+<div class="ttc" id="svm-predict_8c_html_a50c87b127b14787341e9630f4f5c700a"><div class="ttname"><a href="svm-predict_8c.html#a50c87b127b14787341e9630f4f5c700a">model</a></div><div class="ttdeci">struct svm_model * model</div><div class="ttdef"><b>Definition:</b> <a href="svm-predict_8c_source.html#l00015">svm-predict.c:15</a></div></div>
+<div class="ttc" id="structsvm__model_html_ac66d192809e92b95875bdf8ebb749060"><div class="ttname"><a href="structsvm__model.html#ac66d192809e92b95875bdf8ebb749060">svm_model::label</a></div><div class="ttdeci">int * label</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00066">svm.h:66</a></div></div>
+<div class="ttc" id="structsvm__model_html_add7f649bf78428c38a282ed8776fa433"><div class="ttname"><a href="structsvm__model.html#add7f649bf78428c38a282ed8776fa433">svm_model::sv_indices</a></div><div class="ttdeci">int * sv_indices</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00062">svm.h:62</a></div></div>
+<div class="ttc" id="structsvm__model_html_a16e4dea1508f93ece4384ec35c991887"><div class="ttname"><a href="structsvm__model.html#a16e4dea1508f93ece4384ec35c991887">svm_model::rho</a></div><div class="ttdeci">double * rho</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00059">svm.h:59</a></div></div>
+<div class="ttc" id="svm_8cpp_html_a9191047fd644a5f519152ecb4aa60357"><div class="ttname"><a href="svm_8cpp.html#a9191047fd644a5f519152ecb4aa60357">Malloc</a></div><div class="ttdeci">#define Malloc(type, n)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l00039">svm.cpp:39</a></div></div>
+<div class="ttc" id="structsvm__node_html_aa733ca75ee5a5c0f36af5ddb4c6394d9"><div class="ttname"><a href="structsvm__node.html#aa733ca75ee5a5c0f36af5ddb4c6394d9">svm_node::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00014">svm.h:14</a></div></div>
+<div class="ttc" id="structsvm__model_html_a978084d722ac886100ffcc35fc931143"><div class="ttname"><a href="structsvm__model.html#a978084d722ac886100ffcc35fc931143">svm_model::sv_coef</a></div><div class="ttdeci">double ** sv_coef</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00058">svm.h:58</a></div></div>
+<div class="ttc" id="structsvm__model_html_a2ae57ce1fa43497d151aff26c21a13a1"><div class="ttname"><a href="structsvm__model.html#a2ae57ce1fa43497d151aff26c21a13a1">svm_model::free_sv</a></div><div class="ttdeci">int free_sv</div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00070">svm.h:70</a></div></div>
+<div class="ttc" id="structsvm__node_html"><div class="ttname"><a href="structsvm__node.html">svm_node</a></div><div class="ttdef"><b>Definition:</b> <a href="svm_8h_source.html#l00012">svm.h:12</a></div></div>
+<div class="ttc" id="_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_html_a3baae9b5c592a9305d36e70a7ce56fef"><div class="ttname"><a href="_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs.html#a3baae9b5c592a9305d36e70a7ce56fef">fp</a></div><div class="ttdeci">S W Version Information uid Register Information fp</div><div class="ttdef"><b>Definition:</b> <a href="_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_source.html#l00025">IRdrL8KsWY.HideIt_20141205190851.cs:25</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a569bb1a06e5181dfb19d66587463af4b_cgraph.png" border="0" usemap="#svm_8h_a569bb1a06e5181dfb19d66587463af4b_cgraph" alt=""/></div>
+<map name="svm_8h_a569bb1a06e5181dfb19d66587463af4b_cgraph" id="svm_8h_a569bb1a06e5181dfb19d66587463af4b_cgraph">
+<area shape="rect" id="node2" href="svm_8cpp.html#ac948c7ac7389151985a1e96151bcfa97" title="read_model_header" alt="" coords="172,5,307,32"/><area shape="rect" id="node3" href="svm_8cpp.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="206,56,273,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a569bb1a06e5181dfb19d66587463af4b_icgraph.png" border="0" usemap="#svm_8h_a569bb1a06e5181dfb19d66587463af4b_icgraph" alt=""/></div>
+<map name="svm_8h_a569bb1a06e5181dfb19d66587463af4b_icgraph" id="svm_8h_a569bb1a06e5181dfb19d66587463af4b_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="184,5,281,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#af06622d63ce23b77ac29aa29298110d7" title="SvmWrapper::init" alt="" coords="172,56,293,83"/><area shape="rect" id="node3" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="341,5,488,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="343,56,486,83"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="536,56,763,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="811,56,997,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="1045,56,1260,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af7c913d98f7cd411b147f8990a97f576"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double svm_predict </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__node.html">svm_node</a> *&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_af7c913d98f7cd411b147f8990a97f576_icgraph.png" border="0" usemap="#svm_8h_af7c913d98f7cd411b147f8990a97f576_icgraph" alt=""/></div>
+<map name="svm_8h_af7c913d98f7cd411b147f8990a97f576_icgraph" id="svm_8h_af7c913d98f7cd411b147f8990a97f576_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="185,5,246,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="144,56,287,83"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="399,5,497,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="629,5,776,32"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="335,56,561,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="609,56,796,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="844,56,1059,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a301070a1fda12e1257d76c08f97322a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double svm_predict_probability </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__node.html">svm_node</a> *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>prob_estimates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a301070a1fda12e1257d76c08f97322a5_icgraph.png" border="0" usemap="#svm_8h_a301070a1fda12e1257d76c08f97322a5_icgraph" alt=""/></div>
+<map name="svm_8h_a301070a1fda12e1257d76c08f97322a5_icgraph" id="svm_8h_a301070a1fda12e1257d76c08f97322a5_icgraph">
+<area shape="rect" id="node2" href="svm-predict_8c.html#af94afc3c606a11afa37cbccd25d09f17" title="predict" alt="" coords="251,5,313,32"/><area shape="rect" id="node5" href="class_svm_wrapper.html#a2f3adec2bc81b6c37416156465485e9c" title="SvmWrapper::predict" alt="" coords="211,56,353,83"/><area shape="rect" id="node3" href="svm-predict_8c.html#a3e290f6d7d61b2b843a4b8b1382f3958" title="predict_entry" alt="" coords="466,5,563,32"/><area shape="rect" id="node4" href="class_svm_wrapper.html#a454766365e910aa34b39dbba67d5caaf" title="SvmWrapper::predictt" alt="" coords="696,5,843,32"/><area shape="rect" id="node6" href="class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="401,56,628,83"/><area shape="rect" id="node7" href="class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="676,56,863,83"/><area shape="rect" id="node8" href="class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="911,56,1125,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa34079376b55cfef083b8ff523d77f55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double svm_predict_values </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__node.html">svm_node</a> *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>dec_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6aefb92d3b0b1a5158bd4b15ca8f8e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svm_save_model </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>model_file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__model.html">svm_model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a308f7948988441f4a1a5c8c8abc367be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svm_set_print_string_function </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(const char *)&#160;</td>
+          <td class="paramname"><em>print_func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8cpp_source.html">svm.cpp</a> 파일의 <a class="el" href="svm_8cpp_source.html#l03158">3158</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;{</div>
+<div class="line"><a name="l03160"></a><span class="lineno"> 3160</span>&#160;    <span class="keywordflow">if</span>(print_func == NULL)</div>
+<div class="line"><a name="l03161"></a><span class="lineno"> 3161</span>&#160;        <a class="code" href="svm_8cpp.html#a9a4e68dbfe2b342ff45c12c638ec39cb">svm_print_string</a> = &amp;<a class="code" href="svm_8cpp.html#a4edee28127eebfbcdab94b75c57341c5">print_string_stdout</a>;</div>
+<div class="line"><a name="l03162"></a><span class="lineno"> 3162</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l03163"></a><span class="lineno"> 3163</span>&#160;        <a class="code" href="svm_8cpp.html#a9a4e68dbfe2b342ff45c12c638ec39cb">svm_print_string</a> = print_func;</div>
+<div class="line"><a name="l03164"></a><span class="lineno"> 3164</span>&#160;}</div>
+<div class="ttc" id="svm_8cpp_html_a9a4e68dbfe2b342ff45c12c638ec39cb"><div class="ttname"><a href="svm_8cpp.html#a9a4e68dbfe2b342ff45c12c638ec39cb">svm_print_string</a></div><div class="ttdeci">static void(* svm_print_string)(const char *)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l00046">svm.cpp:46</a></div></div>
+<div class="ttc" id="svm_8cpp_html_a4edee28127eebfbcdab94b75c57341c5"><div class="ttname"><a href="svm_8cpp.html#a4edee28127eebfbcdab94b75c57341c5">print_string_stdout</a></div><div class="ttdeci">static void print_string_stdout(const char *s)</div><div class="ttdef"><b>Definition:</b> <a href="svm_8cpp_source.html#l00041">svm.cpp:41</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="svm_8h_a308f7948988441f4a1a5c8c8abc367be_cgraph.png" border="0" usemap="#svm_8h_a308f7948988441f4a1a5c8c8abc367be_cgraph" alt=""/></div>
+<map name="svm_8h_a308f7948988441f4a1a5c8c8abc367be_cgraph" id="svm_8h_a308f7948988441f4a1a5c8c8abc367be_cgraph">
+<area shape="rect" id="node2" href="svm_8cpp.html#a4edee28127eebfbcdab94b75c57341c5" title="print_string_stdout" alt="" coords="195,13,324,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a79ce3e65d01f2be1a4e5288c588c48a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structsvm__model.html">svm_model</a>* svm_train </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__problem.html">svm_problem</a> *&#160;</td>
+          <td class="paramname"><em>prob</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structsvm__parameter.html">svm_parameter</a> *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">변수 문서화</h2>
+<a class="anchor" id="a9ba41253b462f42e64917cc38e0f2cc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int libsvm_version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="svm_8cpp_source.html">svm.cpp</a> 파일의 <a class="el" href="svm_8cpp_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="svm_8h.html">svm.h</a></li>
+    <li class="footer">생성시간 : 일 12월 14 2014 18:23:38, 프로젝트명 : HideIt, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

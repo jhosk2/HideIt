@@ -1,0 +1,967 @@
+\hypertarget{class_solver___n_u}{\section{Solver\+\_\+\+N\+U 클래스 참조}
+\label{class_solver___n_u}\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+}
+
+
+Solver\+\_\+\+N\+U에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_solver___n_u__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Solver\+\_\+\+N\+U에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_solver___n_u__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_solver___n_u_a4f05e99c9939dcdf36840f27b1a9dde7}{Solver\+\_\+\+N\+U} ()
+\item 
+void \hyperlink{class_solver___n_u_a3852f49023c0032934508156d7a9f132}{Solve} (int \hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l}, const \hyperlink{class_q_matrix}{Q\+Matrix} \&\hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}, const double $\ast$\hyperlink{class_solver_a882cce072f56679880d409e3e73f7ae8}{p}, const \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} $\ast$\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}, double $\ast$\hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}, double \hyperlink{class_solver_a2e45dbea8be469bf8247e14768549dd5}{Cp}, double \hyperlink{class_solver_a38d741d194839fb445f982dd78e0b97b}{Cn}, double \hyperlink{class_solver_a718333cc2c1d40abf9c292a788cba1e5}{eps}, \hyperlink{struct_solver_1_1_solution_info}{Solution\+Info} $\ast$\hyperlink{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{si}, int shrinking)
+\end{DoxyCompactItemize}
+\subsection*{Protected 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aeb78558e05ec0672378c3e801e866560}{L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D}, 
+\hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aef825a32b2471cdb0724cfa9c1f051fd}{U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+N\+D}, 
+\hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03a904f6af2170b6f900fbd3d46cd055c76}{F\+R\+E\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_solver_ae55a8581815436d13e760dadaec34e2a}{get\+\_\+\+C} (int i)
+\item 
+void \hyperlink{class_solver_a5a978b4ff9b60b2d75e54970fd6a2c20}{update\+\_\+alpha\+\_\+status} (int i)
+\item 
+bool \hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\+\_\+upper\+\_\+bound} (int i)
+\item 
+bool \hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\+\_\+lower\+\_\+bound} (int i)
+\item 
+bool \hyperlink{class_solver_a7b5e230875b8b5f06150ff0690e36b47}{is\+\_\+free} (int i)
+\item 
+void \hyperlink{class_solver_a043f498c1dda0122859d03f9cd07dc08}{swap\+\_\+index} (int i, int j)
+\item 
+void \hyperlink{class_solver_a7e34992ede606a336606ae54f6e963e6}{reconstruct\+\_\+gradient} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\+\_\+size}
+\item 
+\hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} $\ast$ \hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}
+\item 
+double $\ast$ \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}
+\item 
+char $\ast$ \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\+\_\+status}
+\item 
+double $\ast$ \hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}
+\item 
+const \hyperlink{class_q_matrix}{Q\+Matrix} $\ast$ \hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}
+\item 
+const double $\ast$ \hyperlink{class_solver_a7c7b7b1207983543855165e8eb249f2a}{Q\+D}
+\item 
+double \hyperlink{class_solver_a718333cc2c1d40abf9c292a788cba1e5}{eps}
+\item 
+double \hyperlink{class_solver_a2e45dbea8be469bf8247e14768549dd5}{Cp}
+\item 
+double \hyperlink{class_solver_a38d741d194839fb445f982dd78e0b97b}{Cn}
+\item 
+double $\ast$ \hyperlink{class_solver_a882cce072f56679880d409e3e73f7ae8}{p}
+\item 
+int $\ast$ \hyperlink{class_solver_a6382277606a9b3df3d2f0ac947e1cde3}{active\+\_\+set}
+\item 
+double $\ast$ \hyperlink{class_solver_a89e58cf39a0415c9032b8ec2f4575dcc}{G\+\_\+bar}
+\item 
+int \hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l}
+\item 
+bool \hyperlink{class_solver_a62ded1c184aeb28f8dee04eb4a10530a}{unshrink}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_solver___n_u_a39577d8d09b1d04500c41a999dfd21e9}{select\+\_\+working\+\_\+set} (int \&i, int \&j)
+\item 
+double \hyperlink{class_solver___n_u_aa4514c004c2a398ae320c6c619f67c98}{calculate\+\_\+rho} ()
+\item 
+bool \hyperlink{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3}{be\+\_\+shrunk} (int i, double Gmax1, double Gmax2, double Gmax3, double Gmax4)
+\item 
+void \hyperlink{class_solver___n_u_a6670a539940f4efdc40d2c9e75a9da1b}{do\+\_\+shrinking} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_solver_1_1_solution_info}{Solution\+Info} $\ast$ \hyperlink{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{si}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+svm.\+cpp 파일의 1009 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 열거형 문서화}
+\hypertarget{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D@{L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D@{L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D}}\item[{\em 
+\hypertarget{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aeb78558e05ec0672378c3e801e866560}{L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D}\label{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aeb78558e05ec0672378c3e801e866560}
+}]\index{U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+N\+D@{U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+N\+D}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+N\+D@{U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+N\+D}}\item[{\em 
+\hypertarget{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aef825a32b2471cdb0724cfa9c1f051fd}{U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+N\+D}\label{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aef825a32b2471cdb0724cfa9c1f051fd}
+}]\index{F\+R\+E\+E@{F\+R\+E\+E}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!F\+R\+E\+E@{F\+R\+E\+E}}\item[{\em 
+\hypertarget{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03a904f6af2170b6f900fbd3d46cd055c76}{F\+R\+E\+E}\label{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03a904f6af2170b6f900fbd3d46cd055c76}
+}]\end{description}
+\end{Desc}
+
+
+svm.\+cpp 파일의 413 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+413 \{ \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aeb78558e05ec0672378c3e801e866560}{LOWER\_BOUND}, \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aef825a32b2471cdb0724cfa9c1f051fd}{UPPER\_BOUND}, \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03a904f6af2170b6f900fbd3d46cd055c76}{FREE} \};
+\end{DoxyCode}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_solver___n_u_a4f05e99c9939dcdf36840f27b1a9dde7}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{Solver\+\_\+\+N\+U}]{\setlength{\rightskip}{0pt plus 5cm}Solver\+\_\+\+N\+U\+::\+Solver\+\_\+\+N\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_solver___n_u_a4f05e99c9939dcdf36840f27b1a9dde7}
+
+
+svm.\+cpp 파일의 1012 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1012 \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!be\+\_\+shrunk@{be\+\_\+shrunk}}
+\index{be\+\_\+shrunk@{be\+\_\+shrunk}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{be\+\_\+shrunk}]{\setlength{\rightskip}{0pt plus 5cm}bool Solver\+\_\+\+N\+U\+::be\+\_\+shrunk (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{double}]{Gmax1, }
+\item[{double}]{Gmax2, }
+\item[{double}]{Gmax3, }
+\item[{double}]{Gmax4}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3}
+
+
+svm.\+cpp 파일의 1141 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1142 \{
+1143     \textcolor{keywordflow}{if}(\hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\_upper\_bound}(i))
+1144     \{
+1145         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i]==+1)
+1146             \textcolor{keywordflow}{return}(-\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax1);
+1147         \textcolor{keywordflow}{else}    
+1148             \textcolor{keywordflow}{return}(-\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax4);
+1149     \}
+1150     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\_lower\_bound}(i))
+1151     \{
+1152         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i]==+1)
+1153             \textcolor{keywordflow}{return}(\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax2);
+1154         \textcolor{keywordflow}{else}    
+1155             \textcolor{keywordflow}{return}(\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax3);
+1156     \}
+1157     \textcolor{keywordflow}{else}
+1158         \textcolor{keywordflow}{return}(\textcolor{keyword}{false});
+1159 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver___n_u_aa4514c004c2a398ae320c6c619f67c98}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!calculate\+\_\+rho@{calculate\+\_\+rho}}
+\index{calculate\+\_\+rho@{calculate\+\_\+rho}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{calculate\+\_\+rho}]{\setlength{\rightskip}{0pt plus 5cm}double Solver\+\_\+\+N\+U\+::calculate\+\_\+rho (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_solver___n_u_aa4514c004c2a398ae320c6c619f67c98}
+
+
+\hyperlink{class_solver_ad00b01f72232ca932cad68e58c9cde5a}{Solver}(으)로부터 재구현되었습니다.
+
+
+
+svm.\+cpp 파일의 1213 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1214 \{
+1215     \textcolor{keywordtype}{int} nr\_free1 = 0,nr\_free2 = 0;
+1216     \textcolor{keywordtype}{double} ub1 = \hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}, ub2 = \hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1217     \textcolor{keywordtype}{double} lb1 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}, lb2 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1218     \textcolor{keywordtype}{double} sum\_free1 = 0, sum\_free2 = 0;
+1219 
+1220     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};i++)
+1221     \{
+1222         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i]==+1)
+1223         \{
+1224             \textcolor{keywordflow}{if}(\hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\_upper\_bound}(i))
+1225                 lb1 = \hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(lb1,\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i]);
+1226             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\_lower\_bound}(i))
+1227                 ub1 = \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(ub1,\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i]);
+1228             \textcolor{keywordflow}{else}
+1229             \{
+1230                 ++nr\_free1;
+1231                 sum\_free1 += \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i];
+1232             \}
+1233         \}
+1234         \textcolor{keywordflow}{else}
+1235         \{
+1236             \textcolor{keywordflow}{if}(\hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\_upper\_bound}(i))
+1237                 lb2 = \hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(lb2,\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i]);
+1238             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\_lower\_bound}(i))
+1239                 ub2 = \hyperlink{svm_8cpp_a348440c5435269ac7c60d2e2d8916f48}{min}(ub2,\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i]);
+1240             \textcolor{keywordflow}{else}
+1241             \{
+1242                 ++nr\_free2;
+1243                 sum\_free2 += \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i];
+1244             \}
+1245         \}
+1246     \}
+1247 
+1248     \textcolor{keywordtype}{double} \hyperlink{_i_rdr_l8_ks_w_y_8_hide_it__20141205190851_8cs_ae612cc539f07f8d377722bd9a41b7a98}{r1},r2;
+1249     \textcolor{keywordflow}{if}(nr\_free1 > 0)
+1250         r1 = sum\_free1/nr\_free1;
+1251     \textcolor{keywordflow}{else}
+1252         r1 = (ub1+lb1)/2;
+1253     
+1254     \textcolor{keywordflow}{if}(nr\_free2 > 0)
+1255         r2 = sum\_free2/nr\_free2;
+1256     \textcolor{keywordflow}{else}
+1257         r2 = (ub2+lb2)/2;
+1258     
+1259     \hyperlink{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{si}->\hyperlink{struct_solver_1_1_solution_info_a3db948f9e914e1f9976523cfdc7c1bbe}{r} = (r1+r2)/2;
+1260     \textcolor{keywordflow}{return} (r1-r2)/2;
+1261 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver___n_u_aa4514c004c2a398ae320c6c619f67c98_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver___n_u_a6670a539940f4efdc40d2c9e75a9da1b}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!do\+\_\+shrinking@{do\+\_\+shrinking}}
+\index{do\+\_\+shrinking@{do\+\_\+shrinking}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{do\+\_\+shrinking}]{\setlength{\rightskip}{0pt plus 5cm}void Solver\+\_\+\+N\+U\+::do\+\_\+shrinking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_solver___n_u_a6670a539940f4efdc40d2c9e75a9da1b}
+
+
+\hyperlink{class_solver_ad3f6665a1ca590e56b3d51f8ddcc347c}{Solver}(으)로부터 재구현되었습니다.
+
+
+
+svm.\+cpp 파일의 1161 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1162 \{
+1163     \textcolor{keywordtype}{double} Gmax1 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}; \textcolor{comment}{// max \{ -y\_i * grad(f)\_i | y\_i = +1, i in I\_up(\(\backslash\)alpha) \}}
+1164     \textcolor{keywordtype}{double} Gmax2 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}; \textcolor{comment}{// max \{ y\_i * grad(f)\_i | y\_i = +1, i in I\_low(\(\backslash\)alpha) \}}
+1165     \textcolor{keywordtype}{double} Gmax3 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}; \textcolor{comment}{// max \{ -y\_i * grad(f)\_i | y\_i = -1, i in I\_up(\(\backslash\)alpha) \}}
+1166     \textcolor{keywordtype}{double} Gmax4 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}; \textcolor{comment}{// max \{ y\_i * grad(f)\_i | y\_i = -1, i in I\_low(\(\backslash\)alpha) \}}
+1167 
+1168     \textcolor{comment}{// find maximal violating pair first}
+1169     \textcolor{keywordtype}{int} i;
+1170     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};i++)
+1171     \{
+1172         \textcolor{keywordflow}{if}(!\hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\_upper\_bound}(i))
+1173         \{
+1174             \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i]==+1)
+1175             \{
+1176                 \textcolor{keywordflow}{if}(-\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax1) Gmax1 = -\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i];
+1177             \}
+1178             \textcolor{keywordflow}{else}    \textcolor{keywordflow}{if}(-\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax4) Gmax4 = -\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i];
+1179         \}
+1180         \textcolor{keywordflow}{if}(!\hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\_lower\_bound}(i))
+1181         \{
+1182             \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i]==+1)
+1183             \{   
+1184                 \textcolor{keywordflow}{if}(\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax2) Gmax2 = \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i];
+1185             \}
+1186             \textcolor{keywordflow}{else}    \textcolor{keywordflow}{if}(\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] > Gmax3) Gmax3 = \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i];
+1187         \}
+1188     \}
+1189 
+1190     \textcolor{keywordflow}{if}(\hyperlink{class_solver_a62ded1c184aeb28f8dee04eb4a10530a}{unshrink} == \textcolor{keyword}{false} && \hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(Gmax1+Gmax2,Gmax3+Gmax4) <= \hyperlink{class_solver_a718333cc2c1d40abf9c292a788cba1e5}{eps}*10) 
+1191     \{
+1192         \hyperlink{class_solver_a62ded1c184aeb28f8dee04eb4a10530a}{unshrink} = \textcolor{keyword}{true};
+1193         \hyperlink{class_solver_a7e34992ede606a336606ae54f6e963e6}{reconstruct\_gradient}();
+1194         active\_size = \hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l};
+1195     \}
+1196 
+1197     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};i++)
+1198         \textcolor{keywordflow}{if} (\hyperlink{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3}{be\_shrunk}(i, Gmax1, Gmax2, Gmax3, Gmax4))
+1199         \{
+1200             active\_size--;
+1201             \textcolor{keywordflow}{while} (active\_size > i)
+1202             \{
+1203                 \textcolor{keywordflow}{if} (!\hyperlink{class_solver___n_u_ab22738c68164e939d7d0d5de5a5b15f3}{be\_shrunk}(active\_size, Gmax1, Gmax2, Gmax3, Gmax4))
+1204                 \{
+1205                     \hyperlink{class_solver_a043f498c1dda0122859d03f9cd07dc08}{swap\_index}(i,active\_size);
+1206                     \textcolor{keywordflow}{break};
+1207                 \}
+1208                 active\_size--;
+1209             \}
+1210         \}
+1211 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver___n_u_a6670a539940f4efdc40d2c9e75a9da1b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_ae55a8581815436d13e760dadaec34e2a}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!get\+\_\+\+C@{get\+\_\+\+C}}
+\index{get\+\_\+\+C@{get\+\_\+\+C}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{get\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}double Solver\+::get\+\_\+\+C (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_ae55a8581815436d13e760dadaec34e2a}
+
+
+svm.\+cpp 파일의 426 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+427     \{
+428         \textcolor{keywordflow}{return} (\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i] > 0)? \hyperlink{class_solver_a2e45dbea8be469bf8247e14768549dd5}{Cp} : \hyperlink{class_solver_a38d741d194839fb445f982dd78e0b97b}{Cn};
+429     \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_ae55a8581815436d13e760dadaec34e2a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_a7b5e230875b8b5f06150ff0690e36b47}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!is\+\_\+free@{is\+\_\+free}}
+\index{is\+\_\+free@{is\+\_\+free}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{is\+\_\+free}]{\setlength{\rightskip}{0pt plus 5cm}bool Solver\+::is\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a7b5e230875b8b5f06150ff0690e36b47}
+
+
+svm.\+cpp 파일의 440 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+440 \{ \textcolor{keywordflow}{return} \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i] == \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03a904f6af2170b6f900fbd3d46cd055c76}{FREE}; \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_a7b5e230875b8b5f06150ff0690e36b47_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_a5876eedb0a6de6954f6037af0992cbed}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!is\+\_\+lower\+\_\+bound@{is\+\_\+lower\+\_\+bound}}
+\index{is\+\_\+lower\+\_\+bound@{is\+\_\+lower\+\_\+bound}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{is\+\_\+lower\+\_\+bound}]{\setlength{\rightskip}{0pt plus 5cm}bool Solver\+::is\+\_\+lower\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a5876eedb0a6de6954f6037af0992cbed}
+
+
+svm.\+cpp 파일의 439 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+439 \{ \textcolor{keywordflow}{return} \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i] == \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aeb78558e05ec0672378c3e801e866560}{LOWER\_BOUND}; \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_a5876eedb0a6de6954f6037af0992cbed_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!is\+\_\+upper\+\_\+bound@{is\+\_\+upper\+\_\+bound}}
+\index{is\+\_\+upper\+\_\+bound@{is\+\_\+upper\+\_\+bound}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{is\+\_\+upper\+\_\+bound}]{\setlength{\rightskip}{0pt plus 5cm}bool Solver\+::is\+\_\+upper\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}
+
+
+svm.\+cpp 파일의 438 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+438 \{ \textcolor{keywordflow}{return} \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i] == \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aef825a32b2471cdb0724cfa9c1f051fd}{UPPER\_BOUND}; \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_a98d878b13d6f710fcaa0b16e657a37b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_a7e34992ede606a336606ae54f6e963e6}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!reconstruct\+\_\+gradient@{reconstruct\+\_\+gradient}}
+\index{reconstruct\+\_\+gradient@{reconstruct\+\_\+gradient}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{reconstruct\+\_\+gradient}]{\setlength{\rightskip}{0pt plus 5cm}void Solver\+::reconstruct\+\_\+gradient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a7e34992ede606a336606ae54f6e963e6}
+
+
+svm.\+cpp 파일의 462 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+463 \{
+464     \textcolor{comment}{// reconstruct inactive elements of G from G\_bar and free variables}
+465 
+466     \textcolor{keywordflow}{if}(\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size} == \hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l}) \textcolor{keywordflow}{return};
+467 
+468     \textcolor{keywordtype}{int} i,j;
+469     \textcolor{keywordtype}{int} nr\_free = 0;
+470 
+471     \textcolor{keywordflow}{for}(j=\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};j<\hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l};j++)
+472         \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[j] = \hyperlink{class_solver_a89e58cf39a0415c9032b8ec2f4575dcc}{G\_bar}[j] + \hyperlink{class_solver_a882cce072f56679880d409e3e73f7ae8}{p}[j];
+473 
+474     \textcolor{keywordflow}{for}(j=0;j<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};j++)
+475         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a7b5e230875b8b5f06150ff0690e36b47}{is\_free}(j))
+476             nr\_free++;
+477 
+478     \textcolor{keywordflow}{if}(2*nr\_free < active\_size)
+479         \hyperlink{svm_8cpp_ab834c069665121a3467868539fde9101}{info}(\textcolor{stringliteral}{"\(\backslash\)nWARNING: using -h 0 may be faster\(\backslash\)n"});
+480 
+481     \textcolor{keywordflow}{if} (nr\_free*l > 2*active\_size*(l-active\_size))
+482     \{
+483         \textcolor{keywordflow}{for}(i=active\_size;i<\hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l};i++)
+484         \{
+485             \textcolor{keyword}{const} \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} *Q\_i = \hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}->\hyperlink{class_q_matrix_a87c11086390c81293d2978e042be3d10}{get\_Q}(i,active\_size);
+486             \textcolor{keywordflow}{for}(j=0;j<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};j++)
+487                 \textcolor{keywordflow}{if}(\hyperlink{class_solver_a7b5e230875b8b5f06150ff0690e36b47}{is\_free}(j))
+488                     \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i] += \hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}[j] * Q\_i[j];
+489         \}
+490     \}
+491     \textcolor{keywordflow}{else}
+492     \{
+493         \textcolor{keywordflow}{for}(i=0;i<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};i++)
+494             \textcolor{keywordflow}{if}(\hyperlink{class_solver_a7b5e230875b8b5f06150ff0690e36b47}{is\_free}(i))
+495             \{
+496                 \textcolor{keyword}{const} \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} *Q\_i = \hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}->\hyperlink{class_q_matrix_a87c11086390c81293d2978e042be3d10}{get\_Q}(i,l);
+497                 \textcolor{keywordtype}{double} alpha\_i = \hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}[i];
+498                 \textcolor{keywordflow}{for}(j=active\_size;j<\hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l};j++)
+499                     \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[j] += alpha\_i * Q\_i[j];
+500             \}
+501     \}
+502 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_solver_a7e34992ede606a336606ae54f6e963e6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_a7e34992ede606a336606ae54f6e963e6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver___n_u_a39577d8d09b1d04500c41a999dfd21e9}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!select\+\_\+working\+\_\+set@{select\+\_\+working\+\_\+set}}
+\index{select\+\_\+working\+\_\+set@{select\+\_\+working\+\_\+set}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{select\+\_\+working\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}int Solver\+\_\+\+N\+U\+::select\+\_\+working\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{int \&}]{i, }
+\item[{int \&}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_solver___n_u_a39577d8d09b1d04500c41a999dfd21e9}
+
+
+\hyperlink{class_solver_a95fb4eaf33362558e1fc768f4db019d3}{Solver}(으)로부터 재구현되었습니다.
+
+
+
+svm.\+cpp 파일의 1029 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1030 \{
+1031     \textcolor{comment}{// return i,j such that y\_i = y\_j and}
+1032     \textcolor{comment}{// i: maximizes -y\_i * grad(f)\_i, i in I\_up(\(\backslash\)alpha)}
+1033     \textcolor{comment}{// j: minimizes the decrease of obj value}
+1034     \textcolor{comment}{//    (if quadratic coefficeint <= 0, replace it with tau)}
+1035     \textcolor{comment}{//    -y\_j*grad(f)\_j < -y\_i*grad(f)\_i, j in I\_low(\(\backslash\)alpha)}
+1036 
+1037     \textcolor{keywordtype}{double} Gmaxp = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1038     \textcolor{keywordtype}{double} Gmaxp2 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1039     \textcolor{keywordtype}{int} Gmaxp\_idx = -1;
+1040 
+1041     \textcolor{keywordtype}{double} Gmaxn = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1042     \textcolor{keywordtype}{double} Gmaxn2 = -\hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1043     \textcolor{keywordtype}{int} Gmaxn\_idx = -1;
+1044 
+1045     \textcolor{keywordtype}{int} Gmin\_idx = -1;
+1046     \textcolor{keywordtype}{double} obj\_diff\_min = \hyperlink{svm_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+1047 
+1048     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} t=0;t<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};t++)
+1049         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[t]==+1)
+1050         \{
+1051             \textcolor{keywordflow}{if}(!\hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\_upper\_bound}(t))
+1052                 \textcolor{keywordflow}{if}(-\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[t] >= Gmaxp)
+1053                 \{
+1054                     Gmaxp = -\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[t];
+1055                     Gmaxp\_idx = t;
+1056                 \}
+1057         \}
+1058         \textcolor{keywordflow}{else}
+1059         \{
+1060             \textcolor{keywordflow}{if}(!\hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\_lower\_bound}(t))
+1061                 \textcolor{keywordflow}{if}(\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[t] >= Gmaxn)
+1062                 \{
+1063                     Gmaxn = \hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[t];
+1064                     Gmaxn\_idx = t;
+1065                 \}
+1066         \}
+1067 
+1068     \textcolor{keywordtype}{int} ip = Gmaxp\_idx;
+1069     \textcolor{keywordtype}{int} in = Gmaxn\_idx;
+1070     \textcolor{keyword}{const} \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} *Q\_ip = NULL;
+1071     \textcolor{keyword}{const} \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} *Q\_in = NULL;
+1072     \textcolor{keywordflow}{if}(ip != -1) \textcolor{comment}{// NULL Q\_ip not accessed: Gmaxp=-INF if ip=-1}
+1073         Q\_ip = \hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}->\hyperlink{class_q_matrix_a87c11086390c81293d2978e042be3d10}{get\_Q}(ip,active\_size);
+1074     \textcolor{keywordflow}{if}(in != -1)
+1075         Q\_in = \hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}->\hyperlink{class_q_matrix_a87c11086390c81293d2978e042be3d10}{get\_Q}(in,active\_size);
+1076 
+1077     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_solver_a06ba1b87b3749cc545e573151b7beca0}{active\_size};j++)
+1078     \{
+1079         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[j]==+1)
+1080         \{
+1081             \textcolor{keywordflow}{if} (!\hyperlink{class_solver_a5876eedb0a6de6954f6037af0992cbed}{is\_lower\_bound}(j))   
+1082             \{
+1083                 \textcolor{keywordtype}{double} grad\_diff=Gmaxp+\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[j];
+1084                 \textcolor{keywordflow}{if} (G[j] >= Gmaxp2)
+1085                     Gmaxp2 = G[j];
+1086                 \textcolor{keywordflow}{if} (grad\_diff > 0)
+1087                 \{
+1088                     \textcolor{keywordtype}{double} obj\_diff;
+1089                     \textcolor{keywordtype}{double} quad\_coef = \hyperlink{class_solver_a7c7b7b1207983543855165e8eb249f2a}{QD}[ip]+\hyperlink{class_solver_a7c7b7b1207983543855165e8eb249f2a}{QD}[j]-2*Q\_ip[j];
+1090                     \textcolor{keywordflow}{if} (quad\_coef > 0)
+1091                         obj\_diff = -(grad\_diff*grad\_diff)/quad\_coef;
+1092                     \textcolor{keywordflow}{else}
+1093                         obj\_diff = -(grad\_diff*grad\_diff)/\hyperlink{svm_8cpp_a3d8c9c145887af5174ba4cc6789862ad}{TAU};
+1094 
+1095                     \textcolor{keywordflow}{if} (obj\_diff <= obj\_diff\_min)
+1096                     \{
+1097                         Gmin\_idx=j;
+1098                         obj\_diff\_min = obj\_diff;
+1099                     \}
+1100                 \}
+1101             \}
+1102         \}
+1103         \textcolor{keywordflow}{else}
+1104         \{
+1105             \textcolor{keywordflow}{if} (!\hyperlink{class_solver_a98d878b13d6f710fcaa0b16e657a37b6}{is\_upper\_bound}(j))
+1106             \{
+1107                 \textcolor{keywordtype}{double} grad\_diff=Gmaxn-G[j];
+1108                 \textcolor{keywordflow}{if} (-G[j] >= Gmaxn2)
+1109                     Gmaxn2 = -G[j];
+1110                 \textcolor{keywordflow}{if} (grad\_diff > 0)
+1111                 \{
+1112                     \textcolor{keywordtype}{double} obj\_diff;
+1113                     \textcolor{keywordtype}{double} quad\_coef = \hyperlink{class_solver_a7c7b7b1207983543855165e8eb249f2a}{QD}[in]+\hyperlink{class_solver_a7c7b7b1207983543855165e8eb249f2a}{QD}[j]-2*Q\_in[j];
+1114                     \textcolor{keywordflow}{if} (quad\_coef > 0)
+1115                         obj\_diff = -(grad\_diff*grad\_diff)/quad\_coef;
+1116                     \textcolor{keywordflow}{else}
+1117                         obj\_diff = -(grad\_diff*grad\_diff)/\hyperlink{svm_8cpp_a3d8c9c145887af5174ba4cc6789862ad}{TAU};
+1118 
+1119                     \textcolor{keywordflow}{if} (obj\_diff <= obj\_diff\_min)
+1120                     \{
+1121                         Gmin\_idx=j;
+1122                         obj\_diff\_min = obj\_diff;
+1123                     \}
+1124                 \}
+1125             \}
+1126         \}
+1127     \}
+1128 
+1129     \textcolor{keywordflow}{if}(\hyperlink{svm_8cpp_a7cba98555a7346b01e4cc06205527d8a}{max}(Gmaxp+Gmaxp2,Gmaxn+Gmaxn2) < \hyperlink{class_solver_a718333cc2c1d40abf9c292a788cba1e5}{eps})
+1130         \textcolor{keywordflow}{return} 1;
+1131 
+1132     \textcolor{keywordflow}{if} (\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[Gmin\_idx] == +1)
+1133         out\_i = Gmaxp\_idx;
+1134     \textcolor{keywordflow}{else}
+1135         out\_i = Gmaxn\_idx;
+1136     out\_j = Gmin\_idx;
+1137 
+1138     \textcolor{keywordflow}{return} 0;
+1139 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver___n_u_a39577d8d09b1d04500c41a999dfd21e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver___n_u_a3852f49023c0032934508156d7a9f132}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Solve@{Solve}}
+\index{Solve@{Solve}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{Solve}]{\setlength{\rightskip}{0pt plus 5cm}void Solver\+\_\+\+N\+U\+::\+Solve (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{const {\bf Q\+Matrix} \&}]{Q, }
+\item[{const double $\ast$}]{p, }
+\item[{const {\bf schar} $\ast$}]{y, }
+\item[{double $\ast$}]{alpha, }
+\item[{double}]{Cp, }
+\item[{double}]{Cn, }
+\item[{double}]{eps, }
+\item[{{\bf Solution\+Info} $\ast$}]{si, }
+\item[{int}]{shrinking}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_solver___n_u_a3852f49023c0032934508156d7a9f132}
+
+
+svm.\+cpp 파일의 1013 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1016     \{
+1017         this->\hyperlink{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{si} = \hyperlink{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{si};
+1018         \hyperlink{class_solver_aa3ab5672a26826f9dc1ac9145620a823}{Solver::Solve}(\hyperlink{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{l},Q,\hyperlink{class_solver_a882cce072f56679880d409e3e73f7ae8}{p},\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y},\hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha},\hyperlink{class_solver_a2e45dbea8be469bf8247e14768549dd5}{Cp},\hyperlink{class_solver_a38d741d194839fb445f982dd78e0b97b}{Cn},\hyperlink{class_solver_a718333cc2c1d40abf9c292a788cba1e5}{eps},\hyperlink{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{si},shrinking);
+1019     \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver___n_u_a3852f49023c0032934508156d7a9f132_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver___n_u_a3852f49023c0032934508156d7a9f132_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_a043f498c1dda0122859d03f9cd07dc08}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!swap\+\_\+index@{swap\+\_\+index}}
+\index{swap\+\_\+index@{swap\+\_\+index}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{swap\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}void Solver\+::swap\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a043f498c1dda0122859d03f9cd07dc08}
+
+
+svm.\+cpp 파일의 450 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+451 \{
+452     \hyperlink{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{Q}->\hyperlink{class_q_matrix_acb4e256ebe3008dff0d4b5414102dbe7}{swap\_index}(i,j);
+453     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[i],\hyperlink{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{y}[j]);
+454     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[i],\hyperlink{class_solver_ad8ab27068f2e045591970aae1201afe9}{G}[j]);
+455     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i],\hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[j]);
+456     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}[i],\hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}[j]);
+457     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_a882cce072f56679880d409e3e73f7ae8}{p}[i],\hyperlink{class_solver_a882cce072f56679880d409e3e73f7ae8}{p}[j]);
+458     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_a6382277606a9b3df3d2f0ac947e1cde3}{active\_set}[i],\hyperlink{class_solver_a6382277606a9b3df3d2f0ac947e1cde3}{active\_set}[j]);
+459     \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_solver_a89e58cf39a0415c9032b8ec2f4575dcc}{G\_bar}[i],\hyperlink{class_solver_a89e58cf39a0415c9032b8ec2f4575dcc}{G\_bar}[j]);
+460 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_solver_a043f498c1dda0122859d03f9cd07dc08_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_a043f498c1dda0122859d03f9cd07dc08_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_solver_a5a978b4ff9b60b2d75e54970fd6a2c20}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!update\+\_\+alpha\+\_\+status@{update\+\_\+alpha\+\_\+status}}
+\index{update\+\_\+alpha\+\_\+status@{update\+\_\+alpha\+\_\+status}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{update\+\_\+alpha\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}void Solver\+::update\+\_\+alpha\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a5a978b4ff9b60b2d75e54970fd6a2c20}
+
+
+svm.\+cpp 파일의 430 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+431     \{
+432         \textcolor{keywordflow}{if}(\hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}[i] >= \hyperlink{class_solver_ae55a8581815436d13e760dadaec34e2a}{get\_C}(i))
+433             \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i] = \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aef825a32b2471cdb0724cfa9c1f051fd}{UPPER\_BOUND};
+434         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{alpha}[i] <= 0)
+435             \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i] = \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03aeb78558e05ec0672378c3e801e866560}{LOWER\_BOUND};
+436         \textcolor{keywordflow}{else} \hyperlink{class_solver_a9fe653e04c43956d5fb86635651b0003}{alpha\_status}[i] = \hyperlink{class_solver_a86c1a7637bc803ef8496c7dbf7f00b03a904f6af2170b6f900fbd3d46cd055c76}{FREE};
+437     \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_solver_a5a978b4ff9b60b2d75e54970fd6a2c20_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_solver_a5a978b4ff9b60b2d75e54970fd6a2c20_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_solver_a6382277606a9b3df3d2f0ac947e1cde3}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!active\+\_\+set@{active\+\_\+set}}
+\index{active\+\_\+set@{active\+\_\+set}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{active\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Solver\+::active\+\_\+set\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a6382277606a9b3df3d2f0ac947e1cde3}
+
+
+svm.\+cpp 파일의 421 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a06ba1b87b3749cc545e573151b7beca0}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!active\+\_\+size@{active\+\_\+size}}
+\index{active\+\_\+size@{active\+\_\+size}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{active\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int Solver\+::active\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a06ba1b87b3749cc545e573151b7beca0}
+
+
+svm.\+cpp 파일의 410 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!alpha@{alpha}}
+\index{alpha@{alpha}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Solver\+::alpha\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a00d7a7cefa2504d41c7db6cd7cc6b428}
+
+
+svm.\+cpp 파일의 415 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a9fe653e04c43956d5fb86635651b0003}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!alpha\+\_\+status@{alpha\+\_\+status}}
+\index{alpha\+\_\+status@{alpha\+\_\+status}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{alpha\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Solver\+::alpha\+\_\+status\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a9fe653e04c43956d5fb86635651b0003}
+
+
+svm.\+cpp 파일의 414 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a38d741d194839fb445f982dd78e0b97b}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Cn@{Cn}}
+\index{Cn@{Cn}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{Cn}]{\setlength{\rightskip}{0pt plus 5cm}double Solver\+::\+Cn\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a38d741d194839fb445f982dd78e0b97b}
+
+
+svm.\+cpp 파일의 419 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a2e45dbea8be469bf8247e14768549dd5}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Cp@{Cp}}
+\index{Cp@{Cp}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{Cp}]{\setlength{\rightskip}{0pt plus 5cm}double Solver\+::\+Cp\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a2e45dbea8be469bf8247e14768549dd5}
+
+
+svm.\+cpp 파일의 419 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a718333cc2c1d40abf9c292a788cba1e5}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!eps@{eps}}
+\index{eps@{eps}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{eps}]{\setlength{\rightskip}{0pt plus 5cm}double Solver\+::eps\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a718333cc2c1d40abf9c292a788cba1e5}
+
+
+svm.\+cpp 파일의 418 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_ad8ab27068f2e045591970aae1201afe9}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!G@{G}}
+\index{G@{G}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{G}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Solver\+::\+G\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_ad8ab27068f2e045591970aae1201afe9}
+
+
+svm.\+cpp 파일의 412 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a89e58cf39a0415c9032b8ec2f4575dcc}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!G\+\_\+bar@{G\+\_\+bar}}
+\index{G\+\_\+bar@{G\+\_\+bar}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{G\+\_\+bar}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Solver\+::\+G\+\_\+bar\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a89e58cf39a0415c9032b8ec2f4575dcc}
+
+
+svm.\+cpp 파일의 422 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!l@{l}}
+\index{l@{l}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}int Solver\+::l\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a88832d45b6de977b1cbb2afd4c0e494c}
+
+
+svm.\+cpp 파일의 423 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a882cce072f56679880d409e3e73f7ae8}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!p@{p}}
+\index{p@{p}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Solver\+::p\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a882cce072f56679880d409e3e73f7ae8}
+
+
+svm.\+cpp 파일의 420 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Q@{Q}}
+\index{Q@{Q}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{Q}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+Matrix}$\ast$ Solver\+::\+Q\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a2d3461718f0570bdc47f5dfb31d61e0a}
+
+
+svm.\+cpp 파일의 416 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a7c7b7b1207983543855165e8eb249f2a}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!Q\+D@{Q\+D}}
+\index{Q\+D@{Q\+D}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{Q\+D}]{\setlength{\rightskip}{0pt plus 5cm}const double$\ast$ Solver\+::\+Q\+D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a7c7b7b1207983543855165e8eb249f2a}
+
+
+svm.\+cpp 파일의 417 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!si@{si}}
+\index{si@{si}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{si}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Solution\+Info}$\ast$ Solver\+\_\+\+N\+U\+::si\hspace{0.3cm}{\ttfamily [private]}}}\label{class_solver___n_u_ab4f51d421dfaec61482401ff5ef0d86c}
+
+
+svm.\+cpp 파일의 1021 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a62ded1c184aeb28f8dee04eb4a10530a}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!unshrink@{unshrink}}
+\index{unshrink@{unshrink}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{unshrink}]{\setlength{\rightskip}{0pt plus 5cm}bool Solver\+::unshrink\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a62ded1c184aeb28f8dee04eb4a10530a}
+
+
+svm.\+cpp 파일의 424 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_solver_a3acc1043d06dedf87f054ff3eea5c426}{\index{Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}!y@{y}}
+\index{y@{y}!Solver\+\_\+\+N\+U@{Solver\+\_\+\+N\+U}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf schar}$\ast$ Solver\+::y\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_solver_a3acc1043d06dedf87f054ff3eea5c426}
+
+
+svm.\+cpp 파일의 411 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Calculator/\hyperlink{svm_8cpp}{svm.\+cpp}\end{DoxyCompactItemize}

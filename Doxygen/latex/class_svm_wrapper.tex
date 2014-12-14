@@ -1,0 +1,522 @@
+\hypertarget{class_svm_wrapper}{\section{Svm\+Wrapper 클래스 참조}
+\label{class_svm_wrapper}\index{Svm\+Wrapper@{Svm\+Wrapper}}
+}
+
+
+{\ttfamily \#include $<$Svm\+Wrapper.\+h$>$}
+
+
+
+Svm\+Wrapper에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_svm_wrapper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_svm_wrapper_a81d04cd6c08b9cb263c1f4a7151dd572}{Svm\+Wrapper} ()
+\item 
+void \hyperlink{class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf}{predictt} ()
+\item 
+double \hyperlink{class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c}{predict} (const std\+::vector$<$ std\+::string $>$ \&input, \hyperlink{_svm_wrapper_8h_a2af63b8bc735adf0b29b08f5ff28f3c3}{F\+U\+N\+C} func)
+\item 
+std\+::string \hyperlink{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1}{Get\+Model\+Path} ()
+\item 
+std\+::string \hyperlink{class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb}{Get\+Output\+Path} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7}{init} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsvm__model}{svm\+\_\+model} $\ast$ \hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model}
+\item 
+struct \hyperlink{structsvm__node}{svm\+\_\+node} $\ast$ \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x}
+\item 
+int \hyperlink{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{predict\+\_\+probability}
+\item 
+int \hyperlink{class_svm_wrapper_a6921acb6aa7fdaf8a784c4e9df839ad1}{max\+\_\+line\+\_\+len}
+\item 
+int \hyperlink{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{max\+\_\+nr\+\_\+attr}
+\end{DoxyCompactItemize}
+\subsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_svm_wrapper_a15817ef9250668698357b03178838c63}{P\+O\+R\+T\+R\+A\+I\+T} = 1
+\item 
+static const int \hyperlink{class_svm_wrapper_a00905fc7b3ee662dc4ae5aabb5e2aadc}{L\+A\+N\+D\+S\+C\+A\+P\+E} = 1
+\item 
+static const int \hyperlink{class_svm_wrapper_a110ad1be7ec6ee74987b023d96b1b9f2}{L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Svm\+Wrapper.\+h 파일의 10 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_svm_wrapper_a81d04cd6c08b9cb263c1f4a7151dd572}{\index{Svm\+Wrapper@{Svm\+Wrapper}!Svm\+Wrapper@{Svm\+Wrapper}}
+\index{Svm\+Wrapper@{Svm\+Wrapper}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{Svm\+Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}Svm\+Wrapper\+::\+Svm\+Wrapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_svm_wrapper_a81d04cd6c08b9cb263c1f4a7151dd572}
+
+
+Svm\+Wrapper.\+h 파일의 13 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+14             :\hyperlink{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{predict\_probability}(0),
+15              \hyperlink{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{max\_nr\_attr}(64)
+16         \{
+17 
+18         \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1}{\index{Svm\+Wrapper@{Svm\+Wrapper}!Get\+Model\+Path@{Get\+Model\+Path}}
+\index{Get\+Model\+Path@{Get\+Model\+Path}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{Get\+Model\+Path}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Svm\+Wrapper\+::\+Get\+Model\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1}
+
+
+Svm\+Wrapper.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+34                                   \{
+35     Tizen::Base::String resPath = Tizen::App::App::GetInstance()->GetAppResourcePath();
+36 \textcolor{comment}{//  switch(type)}
+37 \textcolor{comment}{//  \{}
+38 \textcolor{comment}{//  case PORTRAIT:}
+39 \textcolor{comment}{//      resPath.Append("portrait.txt.model");}
+40 \textcolor{comment}{//      break;}
+41 \textcolor{comment}{//  case LANDSCAPE:}
+42 \textcolor{comment}{//      resPath.Append("landscape.txt.model");}
+43 \textcolor{comment}{//      break;}
+44 \textcolor{comment}{//  case LANDREVERSE:}
+45 \textcolor{comment}{//      resPath.Append("reverse.txt.model");}
+46 \textcolor{comment}{//      break;}
+47 \textcolor{comment}{//  \}}
+48 
+49     resPath.Append(\textcolor{stringliteral}{"model.txt"});
+50 
+51     std::string after;
+52     std::wstring before(resPath.GetPointer());
+53     after.assign(before.begin(), before.end());
+54 
+55     \textcolor{keywordflow}{return} after.c\_str();
+56 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb}{\index{Svm\+Wrapper@{Svm\+Wrapper}!Get\+Output\+Path@{Get\+Output\+Path}}
+\index{Get\+Output\+Path@{Get\+Output\+Path}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{Get\+Output\+Path}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Svm\+Wrapper\+::\+Get\+Output\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb}
+
+
+Svm\+Wrapper.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+58                                    \{
+59     Tizen::Base::String resPath = Tizen::App::App::GetInstance()->GetAppDataPath();
+60     resPath.Append(\textcolor{stringliteral}{"result.txt"});
+61 
+62     std::string after;
+63     std::wstring before(resPath.GetPointer());
+64     after.assign(before.begin(), before.end());
+65 
+66     \textcolor{keywordflow}{return} after.c\_str();
+67 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7}{\index{Svm\+Wrapper@{Svm\+Wrapper}!init@{init}}
+\index{init@{init}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}bool Svm\+Wrapper\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7}
+
+
+Svm\+Wrapper.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{keywordflow}{if}((\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model}=\hyperlink{svm_8h_a569bb1a06e5181dfb19d66587463af4b}{svm\_load\_model}(\hyperlink{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1}{GetModelPath}().c\_str()))==0)
+72     \{
+73         AppLog(\textcolor{stringliteral}{"can't open model file %s\(\backslash\)n"},\hyperlink{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1}{GetModelPath}().c\_str());
+74         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+75     \}
+76 
+77     \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x} = (\textcolor{keyword}{struct }\hyperlink{structsvm__node}{svm\_node} *) malloc(\hyperlink{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{max\_nr\_attr}*\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
+      \hyperlink{structsvm__node}{svm\_node}));
+78     \textcolor{keywordflow}{if}(\hyperlink{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{predict\_probability})
+79     \{
+80         \textcolor{keywordflow}{if}(\hyperlink{svm_8h_aeb231380b36264637caeccdae4fbad1a}{svm\_check\_probability\_model}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model})==0)
+81         \{
+82             AppLog(\textcolor{stringliteral}{"Model does not support probabiliy estimates\(\backslash\)n"});
+83             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+84         \}
+85     \}
+86     \textcolor{keywordflow}{else}
+87     \{
+88         \textcolor{keywordflow}{if}(\hyperlink{svm_8h_aeb231380b36264637caeccdae4fbad1a}{svm\_check\_probability\_model}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model})!=0)
+89             AppLog(\textcolor{stringliteral}{"Model supports probability estimates, but disabled in prediction.\(\backslash\)n"});
+90     \}
+91 
+92     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+93 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c}{\index{Svm\+Wrapper@{Svm\+Wrapper}!predict@{predict}}
+\index{predict@{predict}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{predict}]{\setlength{\rightskip}{0pt plus 5cm}double Svm\+Wrapper\+::predict (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{input, }
+\item[{{\bf F\+U\+N\+C}}]{func}
+\end{DoxyParamCaption}
+)}}\label{class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c}
+
+
+Svm\+Wrapper.\+cpp 파일의 95 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+96 \{
+97     \textcolor{keywordflow}{if} ( \textcolor{keyword}{false} == \hyperlink{class_svm_wrapper_af06622d63ce23b77ac29aa29298110d7}{init}() )
+98     \{
+99         AppLog(\textcolor{stringliteral}{"svm init fail"});
+100         \textcolor{keywordflow}{return} -1;
+101     \}
+102 
+103     \textcolor{keywordtype}{int} correct = 0;
+104     \textcolor{keywordtype}{int} total = 0;
+105     \textcolor{keywordtype}{double} error = 0;
+106     \textcolor{keywordtype}{double} sump = 0, sumt = 0, sumpp = 0, sumtt = 0, sumpt = 0;
+107 
+108     \textcolor{keywordtype}{int} svm\_type=\hyperlink{svm_8h_add0a326d36e24044cf958a420d6f4e19}{svm\_get\_svm\_type}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model});
+109     \textcolor{keywordtype}{int} nr\_class=\hyperlink{svm_8h_a73c7339cbc8a38eb9f1e8ad6fbe11ae8}{svm\_get\_nr\_class}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model});
+110 
+111     \textcolor{keywordtype}{double} *prob\_estimates=NULL;
+112     \textcolor{keywordtype}{int} j;
+113 
+114     \textcolor{keywordflow}{if}(\hyperlink{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{predict\_probability})
+115     \{
+116         \textcolor{keywordflow}{if} (svm\_type==\hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR} || svm\_type==\hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR})
+117         \{
+118             func(\textcolor{stringliteral}{"Prob. model for test data: target value = predicted value + z,\(\backslash\)nz: Laplace distribution
+       e^(-|z|/sigma)/(2sigma),sigma=%g\(\backslash\)n"},\hyperlink{svm_8h_a3f15a9a6c23b2f0927fc48ef2f549001}{svm\_get\_svr\_probability}(
+      \hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model}));
+119         \}
+120         \textcolor{keywordflow}{else}
+121         \{
+122             \textcolor{keywordtype}{int} *labels=(\textcolor{keywordtype}{int} *) malloc(nr\_class*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+123             \hyperlink{svm_8h_a1eafdf09b884847a04a72cf22ddb95f2}{svm\_get\_labels}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model},labels);
+124             prob\_estimates = (\textcolor{keywordtype}{double} *) malloc(nr\_class*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+125             func(\textcolor{stringliteral}{"labels"});
+126             \textcolor{keywordflow}{for}(j=0;j<nr\_class;j++)
+127                 func(\textcolor{stringliteral}{" %d"},labels[j]);
+128             func(\textcolor{stringliteral}{"\(\backslash\)n"});
+129             free(labels);
+130         \}
+131     \}
+132 
+133     \hyperlink{class_svm_wrapper_a6921acb6aa7fdaf8a784c4e9df839ad1}{max\_line\_len} = 1024;
+134 
+135     \textcolor{keywordtype}{double} predict\_label=0;
+136     \textcolor{keywordflow}{for}(std::vector<std::string>::const\_iterator itr = input.begin();itr!=input.end();++itr )
+137     \{
+138         \textcolor{keywordtype}{char} \hyperlink{svm-predict_8c_a8adb30f4f6669f927fd9232f686c637b}{line}[1024] =\{0,\};
+139         strcpy( line, (*itr).c\_str());
+140 
+141         \textcolor{keywordtype}{int} i = 0;
+142         \textcolor{keywordtype}{double} target\_label;
+143         \textcolor{keywordtype}{char} *idx, *val, *label, *endptr;
+144         \textcolor{keywordtype}{int} inst\_max\_index = -1; \textcolor{comment}{// strtol gives 0 if wrong format, and precomputed kernel has <index>
+       start from 0}
+145 
+146         label = strtok(line,\textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)n"});
+147         \textcolor{keywordflow}{if}(label == NULL) \textcolor{comment}{// empty line}
+148             func(\textcolor{stringliteral}{"Wrong input format at line %d\(\backslash\)n"}, total+1);
+149 
+150         target\_label = strtod(label,&endptr);
+151         \textcolor{keywordflow}{if}(endptr == label || *endptr != \textcolor{charliteral}{'\(\backslash\)0'})
+152             func(\textcolor{stringliteral}{"Wrong input format at line %d\(\backslash\)n"}, total+1);
+153 
+154         \textcolor{keywordflow}{while}(1)
+155         \{
+156             \textcolor{keywordflow}{if}(i>=\hyperlink{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{max\_nr\_attr}-1) \textcolor{comment}{// need one more for index = -1}
+157             \{
+158                 \hyperlink{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{max\_nr\_attr} *= 2;
+159                 \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x} = (\textcolor{keyword}{struct }\hyperlink{structsvm__node}{svm\_node} *) realloc(\hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x},\hyperlink{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{max\_nr\_attr}*\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
+      \hyperlink{structsvm__node}{svm\_node}));
+160             \}
+161 
+162             idx = strtok(NULL,\textcolor{stringliteral}{":"});
+163             val = strtok(NULL,\textcolor{stringliteral}{" \(\backslash\)t"});
+164 
+165             \textcolor{keywordflow}{if}(val == NULL)
+166                 \textcolor{keywordflow}{break};
+167             errno = 0;
+168             \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x}[i].\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} = (int) strtol(idx,&endptr,10);
+169             \textcolor{keywordflow}{if}(endptr == idx || errno != 0 || *endptr != \textcolor{charliteral}{'\(\backslash\)0'} || \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x}[i].\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} <= inst\_max\_index)
+170                 func(\textcolor{stringliteral}{"Wrong input format at line %d\(\backslash\)n"}, total+1);
+171             \textcolor{keywordflow}{else}
+172                 inst\_max\_index = \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x}[i].\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index};
+173 
+174             errno = 0;
+175             \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x}[i].\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} = strtod(val,&endptr);
+176             \textcolor{keywordflow}{if}(endptr == val || errno != 0 || (*endptr != \textcolor{charliteral}{'\(\backslash\)0'} && !isspace(*endptr)))
+177                 func(\textcolor{stringliteral}{"Wrong input format at line %d\(\backslash\)n"}, total+1);
+178 
+179             ++i;
+180         \}
+181         \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x}[i].\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} = -1;
+182 
+183         \textcolor{keywordflow}{if} (\hyperlink{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{predict\_probability} && (svm\_type==\hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba89cc33eead98f5e072fd76dcdb8da6f8}{C\_SVC} || svm\_type==
+      \hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55baca90881af01036a7221b791eb08d03fc}{NU\_SVC}))
+184         \{
+185             predict\_label = \hyperlink{svm_8h_a301070a1fda12e1257d76c08f97322a5}{svm\_predict\_probability}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model},
+      \hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x},prob\_estimates);
+186             func(\textcolor{stringliteral}{"%g"},predict\_label);
+187             \textcolor{keywordflow}{for}(j=0;j<nr\_class;j++)
+188                 func(\textcolor{stringliteral}{" %g"},prob\_estimates[j]);
+189             func(\textcolor{stringliteral}{"\(\backslash\)n"});
+190         \}
+191         \textcolor{keywordflow}{else}
+192         \{
+193             predict\_label = \hyperlink{svm_8h_af7c913d98f7cd411b147f8990a97f576}{svm\_predict}(\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model},\hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x});
+194             func(\textcolor{stringliteral}{"%g\(\backslash\)n"},predict\_label);
+195         \}
+196 
+197         \textcolor{keywordflow}{if}(predict\_label == target\_label)
+198             ++correct;
+199         error += (predict\_label-target\_label)*(predict\_label-target\_label);
+200         sump += predict\_label;
+201         sumt += target\_label;
+202         sumpp += predict\_label*predict\_label;
+203         sumtt += target\_label*target\_label;
+204         sumpt += predict\_label*target\_label;
+205         ++total;
+206 
+207     \}
+208 
+209     \textcolor{keywordflow}{if} (svm\_type==\hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55ba9e113c85baa91dc44fe128028e384309}{NU\_SVR} || svm\_type==\hyperlink{svm_8h_a06fc87d81c62e9abb8790b6e5713c55bae8edabc208c6076619bdfb064b68815a}{EPSILON\_SVR})
+210     \{
+211         func(\textcolor{stringliteral}{"Mean squared error = %g (regression)\(\backslash\)n"},error/total);
+212         func(\textcolor{stringliteral}{"Squared correlation coefficient = %g (regression)\(\backslash\)n"},
+213             ((total*sumpt-sump*sumt)*(total*sumpt-sump*sumt))/
+214             ((total*sumpp-sump*sump)*(total*sumtt-sumt*sumt))
+215             );
+216     \}
+217     \textcolor{keywordflow}{else}
+218         func(\textcolor{stringliteral}{"Accuracy = %g%% (%d/%d) (classification)\(\backslash\)n"},
+219             (\textcolor{keywordtype}{double})correct/total*100,correct,total);
+220     \textcolor{keywordflow}{if}(\hyperlink{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{predict\_probability})
+221         free(prob\_estimates);
+222 
+223     \hyperlink{svm_8h_afa14733010ded94cc8f2ba177b0b24c8}{svm\_free\_and\_destroy\_model}(&\hyperlink{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{model});
+224     free(\hyperlink{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{x});
+225 
+226     \textcolor{keywordflow}{return} predict\_label;
+227 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_a2f3adec2bc81b6c37416156465485e9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf}{\index{Svm\+Wrapper@{Svm\+Wrapper}!predictt@{predictt}}
+\index{predictt@{predictt}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{predictt}]{\setlength{\rightskip}{0pt plus 5cm}void Svm\+Wrapper\+::predictt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf}
+
+
+Svm\+Wrapper.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+16 \{
+17     Tizen::Base::String resPath = Tizen::App::App::GetInstance()->GetAppResourcePath();
+18 
+19     resPath.Append(\textcolor{stringliteral}{"test.txt"});
+20 
+21     std::string after;
+22     std::wstring before(resPath.GetPointer());
+23     after.assign(before.begin(), before.end());
+24 
+25     \textcolor{keywordtype}{char} ** argv = \textcolor{keyword}{new} \textcolor{keywordtype}{char}*[4];
+26     argv[0] = \textcolor{stringliteral}{""};
+27     argv[1] = \textcolor{keyword}{const\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(after.c\_str());
+28     argv[2] = \textcolor{keyword}{const\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\hyperlink{class_svm_wrapper_aff945103751fb220525ddd4fd102bda1}{GetModelPath}().c\_str());
+29     argv[3] = \textcolor{keyword}{const\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\hyperlink{class_svm_wrapper_a6401e2559203adaff909ba3862d91ceb}{GetOutputPath}().c\_str());
+30 
+31     \hyperlink{_svm_wrapper_8h_a3e290f6d7d61b2b843a4b8b1382f3958}{predict\_entry}(4, argv);
+32 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_svm_wrapper_a454766365e910aa34b39dbba67d5caaf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_svm_wrapper_a110ad1be7ec6ee74987b023d96b1b9f2}{\index{Svm\+Wrapper@{Svm\+Wrapper}!L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E@{L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E}}
+\index{L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E@{L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int Svm\+Wrapper\+::\+L\+A\+N\+D\+R\+E\+V\+E\+R\+S\+E = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_svm_wrapper_a110ad1be7ec6ee74987b023d96b1b9f2}
+
+
+Svm\+Wrapper.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_a00905fc7b3ee662dc4ae5aabb5e2aadc}{\index{Svm\+Wrapper@{Svm\+Wrapper}!L\+A\+N\+D\+S\+C\+A\+P\+E@{L\+A\+N\+D\+S\+C\+A\+P\+E}}
+\index{L\+A\+N\+D\+S\+C\+A\+P\+E@{L\+A\+N\+D\+S\+C\+A\+P\+E}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{L\+A\+N\+D\+S\+C\+A\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int Svm\+Wrapper\+::\+L\+A\+N\+D\+S\+C\+A\+P\+E = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_svm_wrapper_a00905fc7b3ee662dc4ae5aabb5e2aadc}
+
+
+Svm\+Wrapper.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_a6921acb6aa7fdaf8a784c4e9df839ad1}{\index{Svm\+Wrapper@{Svm\+Wrapper}!max\+\_\+line\+\_\+len@{max\+\_\+line\+\_\+len}}
+\index{max\+\_\+line\+\_\+len@{max\+\_\+line\+\_\+len}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{max\+\_\+line\+\_\+len}]{\setlength{\rightskip}{0pt plus 5cm}int Svm\+Wrapper\+::max\+\_\+line\+\_\+len\hspace{0.3cm}{\ttfamily [private]}}}\label{class_svm_wrapper_a6921acb6aa7fdaf8a784c4e9df839ad1}
+
+
+Svm\+Wrapper.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}{\index{Svm\+Wrapper@{Svm\+Wrapper}!max\+\_\+nr\+\_\+attr@{max\+\_\+nr\+\_\+attr}}
+\index{max\+\_\+nr\+\_\+attr@{max\+\_\+nr\+\_\+attr}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{max\+\_\+nr\+\_\+attr}]{\setlength{\rightskip}{0pt plus 5cm}int Svm\+Wrapper\+::max\+\_\+nr\+\_\+attr\hspace{0.3cm}{\ttfamily [private]}}}\label{class_svm_wrapper_ac3f77511deba1c80caa8e7150097d8d6}
+
+
+Svm\+Wrapper.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}{\index{Svm\+Wrapper@{Svm\+Wrapper}!model@{model}}
+\index{model@{model}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{model}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf svm\+\_\+model}$\ast$ Svm\+Wrapper\+::model\hspace{0.3cm}{\ttfamily [private]}}}\label{class_svm_wrapper_a2acad681f29bd8269c5b11aa568222ec}
+
+
+Svm\+Wrapper.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_a15817ef9250668698357b03178838c63}{\index{Svm\+Wrapper@{Svm\+Wrapper}!P\+O\+R\+T\+R\+A\+I\+T@{P\+O\+R\+T\+R\+A\+I\+T}}
+\index{P\+O\+R\+T\+R\+A\+I\+T@{P\+O\+R\+T\+R\+A\+I\+T}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{P\+O\+R\+T\+R\+A\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int Svm\+Wrapper\+::\+P\+O\+R\+T\+R\+A\+I\+T = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_svm_wrapper_a15817ef9250668698357b03178838c63}
+
+
+Svm\+Wrapper.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}{\index{Svm\+Wrapper@{Svm\+Wrapper}!predict\+\_\+probability@{predict\+\_\+probability}}
+\index{predict\+\_\+probability@{predict\+\_\+probability}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{predict\+\_\+probability}]{\setlength{\rightskip}{0pt plus 5cm}int Svm\+Wrapper\+::predict\+\_\+probability\hspace{0.3cm}{\ttfamily [private]}}}\label{class_svm_wrapper_a18cae78dd4b43d0dc1f2e4d2446b3568}
+
+
+Svm\+Wrapper.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}{\index{Svm\+Wrapper@{Svm\+Wrapper}!x@{x}}
+\index{x@{x}!Svm\+Wrapper@{Svm\+Wrapper}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf svm\+\_\+node}$\ast$ Svm\+Wrapper\+::x\hspace{0.3cm}{\ttfamily [private]}}}\label{class_svm_wrapper_abf0dcde4c2d3ec163b487fdf6cc883bc}
+
+
+Svm\+Wrapper.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_svm_wrapper_8h}{Svm\+Wrapper.\+h}\item 
+src/\+Calculator/\hyperlink{_svm_wrapper_8cpp}{Svm\+Wrapper.\+cpp}\end{DoxyCompactItemize}

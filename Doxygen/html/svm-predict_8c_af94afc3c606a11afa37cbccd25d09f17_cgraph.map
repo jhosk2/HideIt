@@ -1,0 +1,10 @@
+<map id="predict" name="predict">
+<area shape="rect" id="node2" href="$svm_8h.html#add0a326d36e24044cf958a420d6f4e19" title="svm_get_svm_type" alt="" coords="128,5,260,32"/>
+<area shape="rect" id="node3" href="$svm_8h.html#a73c7339cbc8a38eb9f1e8ad6fbe11ae8" title="svm_get_nr_class" alt="" coords="131,56,257,83"/>
+<area shape="rect" id="node4" href="$svm_8h.html#a3f15a9a6c23b2f0927fc48ef2f549001" title="svm_get_svr_probability" alt="" coords="115,107,273,133"/>
+<area shape="rect" id="node5" href="$svm_8h.html#a1eafdf09b884847a04a72cf22ddb95f2" title="svm_get_labels" alt="" coords="139,157,249,184"/>
+<area shape="rect" id="node6" href="$svm-predict_8c.html#aa324656b7bb4eb3ee42699d33c21ef7a" title="readline" alt="" coords="161,208,227,235"/>
+<area shape="rect" id="node7" href="$svm-predict_8c.html#ada0be431a4ed2ba4b1a09d4449f2c75b" title="exit_input_error" alt="" coords="139,259,249,285"/>
+<area shape="rect" id="node8" href="$svm_8h.html#a301070a1fda12e1257d76c08f97322a5" title="svm_predict_probability" alt="" coords="115,309,273,336"/>
+<area shape="rect" id="node9" href="$svm_8h.html#af7c913d98f7cd411b147f8990a97f576" title="svm_predict" alt="" coords="149,360,239,387"/>
+</map>

@@ -1,0 +1,355 @@
+\hypertarget{class_s_v_c___q}{\section{S\+V\+C\+\_\+\+Q 클래스 참조}
+\label{class_s_v_c___q}\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+}
+
+
+S\+V\+C\+\_\+\+Q에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_s_v_c___q__inherit__graph}
+\end{center}
+\end{figure}
+
+
+S\+V\+C\+\_\+\+Q에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_v_c___q__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_v_c___q_a23d7cf0b0606ccf2cb987205b94dddc7}{S\+V\+C\+\_\+\+Q} (const \hyperlink{structsvm__problem}{svm\+\_\+problem} \&prob, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} \&param, const \hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} $\ast$y\+\_\+)
+\item 
+\hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} $\ast$ \hyperlink{class_s_v_c___q_a9341b6030b3fdc88466e4a602b5abff0}{get\+\_\+\+Q} (int i, int len) const 
+\item 
+double $\ast$ \hyperlink{class_s_v_c___q_ac73020a6e438e209d63223e1fa8cac29}{get\+\_\+\+Q\+D} () const 
+\item 
+void \hyperlink{class_s_v_c___q_a9c889db8ee0156ed5bcdaa4d6bc4e245}{swap\+\_\+index} (int i, int j) const 
+\item 
+\hyperlink{class_s_v_c___q_af491500a4a6e2df46083098ee3397142}{$\sim$\+S\+V\+C\+\_\+\+Q} ()
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127}{k\+\_\+function} (const \hyperlink{structsvm__node}{svm\+\_\+node} $\ast$\hyperlink{class_kernel_a725a35660c4309605c2628fa8290ce5f}{x}, const \hyperlink{structsvm__node}{svm\+\_\+node} $\ast$\hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y}, const \hyperlink{structsvm__parameter}{svm\+\_\+parameter} \&param)
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+double(Kernel\+::$\ast$ \hyperlink{class_kernel_a575eeb588e8a5c62ff3228a35e255a02}{kernel\+\_\+function} )(int i, int j) const 
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{svm_8cpp_a0fd9ce9d735064461bebfe6037026093}{schar} $\ast$ \hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y}
+\item 
+\hyperlink{class_cache}{Cache} $\ast$ \hyperlink{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}{cache}
+\item 
+double $\ast$ \hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{Q\+D}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+svm.\+cpp 파일의 1266 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_s_v_c___q_a23d7cf0b0606ccf2cb987205b94dddc7}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{S\+V\+C\+\_\+\+Q}]{\setlength{\rightskip}{0pt plus 5cm}S\+V\+C\+\_\+\+Q\+::\+S\+V\+C\+\_\+\+Q (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+problem} \&}]{prob, }
+\item[{const {\bf svm\+\_\+parameter} \&}]{param, }
+\item[{const {\bf schar} $\ast$}]{y\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_s_v_c___q_a23d7cf0b0606ccf2cb987205b94dddc7}
+
+
+svm.\+cpp 파일의 1269 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1270     :\hyperlink{class_kernel_a25ffaa0c67cc5b8c7fcdb6f97ca1725f}{Kernel}(prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}, prob.\hyperlink{structsvm__problem_acddda9b49a8e38bbda079f35c2e18984}{x}, param)
+1271     \{
+1272         \hyperlink{svm_8cpp_af2d4d35f18533f3571dad9ce21f8e1cc}{clone}(\hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y},y\_,prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l});
+1273         \hyperlink{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}{cache} = \textcolor{keyword}{new} \hyperlink{class_cache}{Cache}(prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l},(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int})(param.\hyperlink{structsvm__parameter_a00286b7e0767e45d68ac7abceb60c821}{cache\_size}*(1<<20)));
+1274         \hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{QD} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l}];
+1275         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<prob.\hyperlink{structsvm__problem_a4350eb6820f0d6126bffb6264cec65b3}{l};i++)
+1276             \hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{QD}[i] = (this->*\hyperlink{class_kernel_a575eeb588e8a5c62ff3228a35e255a02}{kernel\_function})(i,i);
+1277     \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_s_v_c___q_a23d7cf0b0606ccf2cb987205b94dddc7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_s_v_c___q_af491500a4a6e2df46083098ee3397142}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!````~S\+V\+C\+\_\+\+Q@{$\sim$\+S\+V\+C\+\_\+\+Q}}
+\index{````~S\+V\+C\+\_\+\+Q@{$\sim$\+S\+V\+C\+\_\+\+Q}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{$\sim$\+S\+V\+C\+\_\+\+Q}]{\setlength{\rightskip}{0pt plus 5cm}S\+V\+C\+\_\+\+Q\+::$\sim$\+S\+V\+C\+\_\+\+Q (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_s_v_c___q_af491500a4a6e2df46083098ee3397142}
+
+
+svm.\+cpp 파일의 1304 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1305     \{
+1306         \textcolor{keyword}{delete}[] \hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y};
+1307         \textcolor{keyword}{delete} \hyperlink{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}{cache};
+1308         \textcolor{keyword}{delete}[] \hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{QD};
+1309     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_s_v_c___q_a9341b6030b3fdc88466e4a602b5abff0}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!get\+\_\+\+Q@{get\+\_\+\+Q}}
+\index{get\+\_\+\+Q@{get\+\_\+\+Q}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{get\+\_\+\+Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Qfloat}$\ast$ S\+V\+C\+\_\+\+Q\+::get\+\_\+\+Q (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_s_v_c___q_a9341b6030b3fdc88466e4a602b5abff0}
+
+
+\hyperlink{class_kernel_a30483355cbb8b5ab4e4c7a93bcef7429}{Kernel}를 구현.
+
+
+
+svm.\+cpp 파일의 1279 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1280     \{
+1281         \hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat} *data;
+1282         \textcolor{keywordtype}{int} start, j;
+1283         \textcolor{keywordflow}{if}((start = \hyperlink{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}{cache}->\hyperlink{class_cache_aca49263fb34641e208884cc223b25317}{get\_data}(i,&data,len)) < len)
+1284         \{
+1285             \textcolor{keywordflow}{for}(j=start;j<len;j++)
+1286                 data[j] = (\hyperlink{svm_8cpp_a8755d90a54ecfb8d15051af3e0542592}{Qfloat})(\hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y}[i]*\hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y}[j]*(this->*\hyperlink{class_kernel_a575eeb588e8a5c62ff3228a35e255a02}{kernel\_function})(i,j));
+1287         \}
+1288         \textcolor{keywordflow}{return} data;
+1289     \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_v_c___q_a9341b6030b3fdc88466e4a602b5abff0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_s_v_c___q_ac73020a6e438e209d63223e1fa8cac29}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!get\+\_\+\+Q\+D@{get\+\_\+\+Q\+D}}
+\index{get\+\_\+\+Q\+D@{get\+\_\+\+Q\+D}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{get\+\_\+\+Q\+D}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ S\+V\+C\+\_\+\+Q\+::get\+\_\+\+Q\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_s_v_c___q_ac73020a6e438e209d63223e1fa8cac29}
+
+
+\hyperlink{class_kernel_a5b7fde9af9d10f7b8f7105eb85bf3d5b}{Kernel}를 구현.
+
+
+
+svm.\+cpp 파일의 1291 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1292     \{
+1293         \textcolor{keywordflow}{return} \hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{QD};
+1294     \}
+\end{DoxyCode}
+\hypertarget{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!k\+\_\+function@{k\+\_\+function}}
+\index{k\+\_\+function@{k\+\_\+function}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{k\+\_\+function}]{\setlength{\rightskip}{0pt plus 5cm}double Kernel\+::k\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{const {\bf svm\+\_\+node} $\ast$}]{x, }
+\item[{const {\bf svm\+\_\+node} $\ast$}]{y, }
+\item[{const {\bf svm\+\_\+parameter} \&}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}}\label{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127}
+
+
+svm.\+cpp 파일의 316 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+318 \{
+319     \textcolor{keywordflow}{switch}(param.\hyperlink{structsvm__parameter_a4188713ba31fc3d101244a6bcc09a760}{kernel\_type})
+320     \{
+321         \textcolor{keywordflow}{case} \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}:
+322             \textcolor{keywordflow}{return} \hyperlink{class_kernel_af258ecfb8ca0182e6a79c06291586e5b}{dot}(x,y);
+323         \textcolor{keywordflow}{case} \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7d85766d041d397d096dcbc0d7c793fd}{POLY}:
+324             \textcolor{keywordflow}{return} \hyperlink{svm_8cpp_a07a43a87f274795074408da4b34d46c4}{powi}(param.\hyperlink{structsvm__parameter_a91667b90506e171482b5fc619377110d}{gamma}*\hyperlink{class_kernel_af258ecfb8ca0182e6a79c06291586e5b}{dot}(x,y)+param.\hyperlink{structsvm__parameter_a3ab3555a96a578bea6e5285a5db0a4db}{coef0},param.
+      \hyperlink{structsvm__parameter_afef1c4508ec0045c236a3308b0fa5138}{degree});
+325         \textcolor{keywordflow}{case} \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a7e039b006aa5830e8c45a1ccd0c4204f}{RBF}:
+326         \{
+327             \textcolor{keywordtype}{double} sum = 0;
+328             \textcolor{keywordflow}{while}(x->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} != -1 && y->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} !=-1)
+329             \{
+330                 \textcolor{keywordflow}{if}(x->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} == y->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index})
+331                 \{
+332                     \textcolor{keywordtype}{double} d = x->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} - y->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value};
+333                     sum += d*d;
+334                     ++\hyperlink{class_kernel_a725a35660c4309605c2628fa8290ce5f}{x};
+335                     ++y;
+336                 \}
+337                 \textcolor{keywordflow}{else}
+338                 \{
+339                     \textcolor{keywordflow}{if}(x->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} > y->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index})
+340                     \{   
+341                         sum += y->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} * y->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value};
+342                         ++y;
+343                     \}
+344                     \textcolor{keywordflow}{else}
+345                     \{
+346                         sum += x->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} * x->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value};
+347                         ++\hyperlink{class_kernel_a725a35660c4309605c2628fa8290ce5f}{x};
+348                     \}
+349                 \}
+350             \}
+351 
+352             \textcolor{keywordflow}{while}(x->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} != -1)
+353             \{
+354                 sum += x->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} * x->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value};
+355                 ++\hyperlink{class_kernel_a725a35660c4309605c2628fa8290ce5f}{x};
+356             \}
+357 
+358             \textcolor{keywordflow}{while}(y->\hyperlink{structsvm__node_aa733ca75ee5a5c0f36af5ddb4c6394d9}{index} != -1)
+359             \{
+360                 sum += y->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value} * y->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value};
+361                 ++y;
+362             \}
+363             
+364             \textcolor{keywordflow}{return} exp(-param.\hyperlink{structsvm__parameter_a91667b90506e171482b5fc619377110d}{gamma}*sum);
+365         \}
+366         \textcolor{keywordflow}{case} \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a11c1096689b7d3504dbcc4f61d854883}{SIGMOID}:
+367             \textcolor{keywordflow}{return} tanh(param.\hyperlink{structsvm__parameter_a91667b90506e171482b5fc619377110d}{gamma}*\hyperlink{class_kernel_af258ecfb8ca0182e6a79c06291586e5b}{dot}(x,y)+param.\hyperlink{structsvm__parameter_a3ab3555a96a578bea6e5285a5db0a4db}{coef0});
+368         \textcolor{keywordflow}{case} \hyperlink{svm_8h_adf764cbdea00d65edcd07bb9953ad2b7a27a6ccce9f5a44692a040b08a6923285}{PRECOMPUTED}:  \textcolor{comment}{//x: test (validation), y: SV}
+369             \textcolor{keywordflow}{return} x[(int)(y->\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value})].\hyperlink{structsvm__node_a9ca47b8a156238d04213453f3b89e177}{value};
+370         \textcolor{keywordflow}{default}:
+371             \textcolor{keywordflow}{return} 0;  \textcolor{comment}{// Unreachable }
+372     \}
+373 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kernel_a6ff0d4ac64bf7fba29d2ca3433dd5127_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_s_v_c___q_a9c889db8ee0156ed5bcdaa4d6bc4e245}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!swap\+\_\+index@{swap\+\_\+index}}
+\index{swap\+\_\+index@{swap\+\_\+index}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{swap\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}void S\+V\+C\+\_\+\+Q\+::swap\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_s_v_c___q_a9c889db8ee0156ed5bcdaa4d6bc4e245}
+
+
+\hyperlink{class_kernel_adca807c5584bc42fd098cd9eb1f19621}{Kernel}(으)로부터 재구현되었습니다.
+
+
+
+svm.\+cpp 파일의 1296 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1297     \{
+1298         \hyperlink{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}{cache}->\hyperlink{class_cache_aaff2dc955f9492c044c98a5f09cfddcc}{swap\_index}(i,j);
+1299         \hyperlink{class_kernel_adca807c5584bc42fd098cd9eb1f19621}{Kernel::swap\_index}(i,j);
+1300         \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y}[i],\hyperlink{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{y}[j]);
+1301         \hyperlink{svm_8cpp_a91e77fa16b1c9bbbf90f2eea392997b1}{swap}(\hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{QD}[i],\hyperlink{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{QD}[j]);
+1302     \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_v_c___q_a9c889db8ee0156ed5bcdaa4d6bc4e245_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!cache@{cache}}
+\index{cache@{cache}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cache}$\ast$ S\+V\+C\+\_\+\+Q\+::cache\hspace{0.3cm}{\ttfamily [private]}}}\label{class_s_v_c___q_a70e4787695cadf49495accdd36fb140f}
+
+
+svm.\+cpp 파일의 1312 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_kernel_a575eeb588e8a5c62ff3228a35e255a02}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!kernel\+\_\+function@{kernel\+\_\+function}}
+\index{kernel\+\_\+function@{kernel\+\_\+function}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{kernel\+\_\+function}]{\setlength{\rightskip}{0pt plus 5cm}double(Kernel\+::$\ast$ Kernel\+::kernel\+\_\+function)(int i, int j) const \hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_kernel_a575eeb588e8a5c62ff3228a35e255a02}
+
+
+svm.\+cpp 파일의 218 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!Q\+D@{Q\+D}}
+\index{Q\+D@{Q\+D}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{Q\+D}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ S\+V\+C\+\_\+\+Q\+::\+Q\+D\hspace{0.3cm}{\ttfamily [private]}}}\label{class_s_v_c___q_a635d129ea1d840296db2e8e1d4ada404}
+
+
+svm.\+cpp 파일의 1313 번째 라인에서 정의되었습니다.
+
+\hypertarget{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}{\index{S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}!y@{y}}
+\index{y@{y}!S\+V\+C\+\_\+\+Q@{S\+V\+C\+\_\+\+Q}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf schar}$\ast$ S\+V\+C\+\_\+\+Q\+::y\hspace{0.3cm}{\ttfamily [private]}}}\label{class_s_v_c___q_a6a37679890a665d32286a3ab047fc0f4}
+
+
+svm.\+cpp 파일의 1311 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Calculator/\hyperlink{svm_8cpp}{svm.\+cpp}\end{DoxyCompactItemize}

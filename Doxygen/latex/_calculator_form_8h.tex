@@ -1,0 +1,91 @@
+\hypertarget{_calculator_form_8h}{\section{inc/\+Calculator\+Form.h 파일 참조}
+\label{_calculator_form_8h}\index{inc/\+Calculator\+Form.\+h@{inc/\+Calculator\+Form.\+h}}
+}
+{\ttfamily \#include $<$F\+App.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Base.\+h$>$}\\*
+{\ttfamily \#include $<$F\+System.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Ui.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Ui\+Ime.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Graphics.\+h$>$}\\*
+{\ttfamily \#include $<$gl.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Uix.\+h$>$}\\*
+{\ttfamily \#include $<$F\+Io.\+h$>$}\\*
+{\ttfamily \#include $<$Svm\+Wrapper.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Browser\+Main\+Form.\+h\char`\"{}}\\*
+Calculator\+Form.\+h에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_calculator_form}{Calculator\+Form}
+\begin{DoxyCompactList}\small\item\em Calculator Form을 구성해주는 Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{_calculator_form_8h_a89016affff07b7f39247021035532b50}{string\+\_\+format} (const std\+::string fmt,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\hypertarget{_calculator_form_8h_a89016affff07b7f39247021035532b50}{\index{Calculator\+Form.\+h@{Calculator\+Form.\+h}!string\+\_\+format@{string\+\_\+format}}
+\index{string\+\_\+format@{string\+\_\+format}!Calculator\+Form.\+h@{Calculator\+Form.\+h}}
+\subsubsection[{string\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string string\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_calculator_form_8h_a89016affff07b7f39247021035532b50}
+
+
+Calculator\+Form.\+cpp 파일의 1333 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1333                                                   \{
+1334     \textcolor{keywordtype}{int} size = ((int) fmt.size()) * 2 + 50; \textcolor{comment}{// use a rubric appropriate for your code}
+1335     std::string str;
+1336     va\_list ap;
+1337     \textcolor{keywordflow}{while} (1) \{ \textcolor{comment}{// maximum 2 passes on a POSIX system...}
+1338         str.resize(size);
+1339         va\_start(ap, fmt);
+1340         \textcolor{keywordtype}{int} n = vsnprintf((\textcolor{keywordtype}{char} *) str.data(), size, fmt.c\_str(), ap);
+1341         va\_end(ap);
+1342         \textcolor{keywordflow}{if} (n > -1 && n < size) \{ \textcolor{comment}{// everything worked}
+1343             str.resize(n);
+1344             \textcolor{keywordflow}{return} str;
+1345         \}
+1346         \textcolor{keywordflow}{if} (n > -1) \textcolor{comment}{// needed size returned}
+1347             size = n + 1; \textcolor{comment}{// for null char}
+1348         \textcolor{keywordflow}{else}
+1349             size *= 2; \textcolor{comment}{// guess at a larger size (o/s specific)}
+1350     \}
+1351     \textcolor{keywordflow}{return} str;
+1352 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_calculator_form_8h_a89016affff07b7f39247021035532b50_icgraph}
+\end{center}
+\end{figure}
+
+

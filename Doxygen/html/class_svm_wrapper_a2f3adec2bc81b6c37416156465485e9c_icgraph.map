@@ -1,0 +1,5 @@
+<map id="SvmWrapper::predict" name="SvmWrapper::predict">
+<area shape="rect" id="node2" href="$class_calculator_form.html#ae739bb0f8aea14c0ae2d440950130bc2" title="CalculatorForm::FeatureProcessing" alt="" coords="196,5,423,32"/>
+<area shape="rect" id="node3" href="$class_calculator_form.html#a2ea52e1ac047a01188384b416d41c461" title="CalculatorForm::StopSensor" alt="" coords="471,5,657,32"/>
+<area shape="rect" id="node4" href="$class_calculator_form.html#a65cd7728c92b73141787a9c2333462d7" title="CalculatorForm::OnDataReceived" alt="" coords="705,5,920,32"/>
+</map>

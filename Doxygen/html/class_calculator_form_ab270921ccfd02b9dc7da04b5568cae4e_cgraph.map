@@ -1,0 +1,6 @@
+<map id="CalculatorForm::OnTouchReleased" name="CalculatorForm::OnTouchReleased">
+<area shape="rect" id="node2" href="$class_calculator_form.html#af8fd474cf2173be9fa0dbbdfc114b5b3" title="CalculatorForm::Before" alt="" coords="293,5,448,32"/>
+<area shape="rect" id="node3" href="$class_calculator_form.html#af9b618f4e52e683e4af58fbd6c0d9f1b" title="CalculatorForm::ShowResult" alt="" coords="277,56,464,83"/>
+<area shape="rect" id="node4" href="$class_calculate.html#a0ad76f7ee31bea1dec46e560d10fca75" title="Calculate::Run" alt="" coords="317,107,424,133"/>
+<area shape="rect" id="node5" href="$class_calculate.html#a50d0dfb999edd48ae45b8023e6a69d6a" title="Calculate::WStringtostring" alt="" coords="512,107,687,133"/>
+</map>

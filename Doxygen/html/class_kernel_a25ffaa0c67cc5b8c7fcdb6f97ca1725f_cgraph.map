@@ -1,0 +1,10 @@
+<map id="Kernel::Kernel" name="Kernel::Kernel">
+<area shape="rect" id="node2" href="$class_kernel.html#a9ccd52d8f291ab38be66944257420a87" title="Kernel::kernel_linear" alt="" coords="179,5,319,32"/>
+<area shape="rect" id="node3" href="$class_kernel.html#af258ecfb8ca0182e6a79c06291586e5b" title="Kernel::dot" alt="" coords="389,107,475,133"/>
+<area shape="rect" id="node4" href="$class_kernel.html#af9a74728d70af7ec68947b1e443a5dc5" title="Kernel::kernel_poly" alt="" coords="183,208,316,235"/>
+<area shape="rect" id="node6" href="$class_kernel.html#a78f1025eae410c560c8e55845b2fcb3f" title="Kernel::kernel_rbf" alt="" coords="188,107,311,133"/>
+<area shape="rect" id="node7" href="$class_kernel.html#a16d668579ecb347c4188f8772ca00547" title="Kernel::kernel_sigmoid" alt="" coords="172,157,327,184"/>
+<area shape="rect" id="node8" href="$class_kernel.html#aa7bce181dce4b32b1d84b0483006d934" title="Kernel::kernel_precomputed" alt="" coords="157,259,341,285"/>
+<area shape="rect" id="node9" href="$svm_8cpp.html#af2d4d35f18533f3571dad9ce21f8e1cc" title="clone" alt="" coords="223,309,276,336"/>
+<area shape="rect" id="node5" href="$svm_8cpp.html#a07a43a87f274795074408da4b34d46c4" title="powi" alt="" coords="408,208,456,235"/>
+</map>
