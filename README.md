@@ -18,55 +18,20 @@ HideIt은 타이젠 네이티브 기반의 어플리케이션으로서, 기기 �
 
    <a href="https://github.com/jhosk2/HideIt.git" target="_blank">최신 git</a> 를 Clone합니다.
    
+- **Tizen IDE에 프로젝트 임포트**: 
 
+   Tizen IDE 내의 Project Explorer에서 우클릭 후 Import 선택
+   Clone 한 경로를 선택하면 됩니다.
+   
 ### 사용법
 
-1. Tizen
-2. Add any listeners.
-3. Login.
-4. ...
+1. Tizen IDE를 통해 에뮬레이터를 켭니다. 혹은 디바이스를 연결합니다.
+2. Connection Explorer에 타겟 디바이스가 표시되는 것을 확인하고 Run as로 실행합니다.
+3. 맨 처음 표시되는 계산기에서 1234(초기 비밀번호)를 입력하고 좌우 틸트하면 내부 파일브라우저가 실행됩니다.
+4. 파일 브라우저에서 디바이스의 메뉴 버튼을 누르면 비밀번호를 변경할 수 있습니다.
 
-### Example
+## 질문 및 버그 제보?
 
-```java
-final LolChat api = new LolChat(ChatServer.EUW, FriendRequestPolicy.ACCEPT_ALL, new RiotApiKey("RIOT-API-KEY", RateLimit.DEFAULT));
-if (api.login("myusername", "mypassword")) {
-
-	// Example 1: Send Chat Message to all your friends
-	for (Friend f : api.getFriends()) {
-		f.sendMessage("Hello " + f.getName());
-	}
-
-	// Example 2: Send Chat Message to all your friends and wait for an
-	// response
-	for (Friend f : api.getFriends()) {
-		f.sendMessage("Hello " + f.getName(), new ChatListener() {
-
-			@Override
-			public void onMessage(Friend friend, String message) {
-				System.out.println("Friend " + friend.getName()
-						+ " responded to my Hello World!");
-			}
-		});
-	}
-
-	// Example3: Send Chat Message to an specific friend
-	Friend f = api.getFriendByName("Dyrus");
-	if (f != null && f.isOnline()) {
-		f.sendMessage("Hi, I'm your biggest fan!");
-	}
-}
-```
-
-[more examples](example)
-
-### Javadocs
-
-[here](http://www.javadoc.io/doc/com.github.theholywaffle/lolchatapi)
-
-## Questions or bugs?
-
-Please let me know them [here](../../issues). I'll help you out as soon as I can.
+질문이나 버그가 있다면 다음 주소로 메일 주십시오. [here](podothecat@gmail.com). 가능한 한 빨리 응답해드리겠습니다.
 
 ___
-*밚eague of Legends XMPP Chat Library isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends ?Riot Games, Inc.?
