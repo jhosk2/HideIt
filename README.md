@@ -16,7 +16,7 @@ HideIt은 타이젠 네이티브 기반의 어플리케이션으로서, 기기 �
 
 - **Github에서 Clone받기**: 
 
-   Download the <a href="https://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.github.theholywaffle&a=lolchatapi&v=LATEST&c=with-dependencies" target="_blank">latest release</a> and add it to the buildpath of your project. 
+   <a href="https://github.com/jhosk2/HideIt.git" target="_blank">최신 git</a> 를 Clone합니다.
 
 ### Usage
 
